@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help Center — MyGoldFolio</title>
+  <meta name="description" content="Learn how to use every feature in MyGoldFolio — margins, alerts, backup, scenarios, and more." />
+  <meta property="og:title" content="Help Center — MyGoldFolio" />
+  <meta property="og:description" content="Learn how to use every feature in MyGoldFolio — margins, alerts, backup, scenarios, and more." />
+  <meta property="og:image" content="/images/g3.png" />
+  <link rel="icon" href="/images/icon.png" />
+  <link rel="canonical" href="https://mygoldfolio.de/help/" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{navy:'#0F0F1A','navy-light':'#1A1A2E',border:'#1E3A5C',gold:'#D4A843',muted:'#666677',mint:'#00D68F',amber:'#FFE27A',coral:'#FF4757',purple:'#A78BFA'}}}}</script>
+  <style>
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    .pill-bar { -ms-overflow-style: none; scrollbar-width: none; }
+    .pill-bar::-webkit-scrollbar { display: none; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What are buy and sell margins?", "acceptedAnswer": { "@type": "Answer", "text": "When you buy physical gold, you pay more than the raw spot price — that markup is the buy margin. When you sell, you receive less than spot — that discount is the sell margin. Together they form the dealer's spread." }},
+      { "@type": "Question", "name": "How is my P&L calculated?", "acceptedAnswer": { "@type": "Answer", "text": "P&L compares what you would receive if you sold now (spot price minus sell margin, times your grams) against what you originally paid. It accounts for your actual purchase cost and the dealer's sell-side spread." }},
+      { "@type": "Question", "name": "How do I back up my data?", "acceptedAnswer": { "@type": "Answer", "text": "Go to Settings, open Export & Backup, and tap Backup. You can save the JSON file to your device or share it. To restore, tap Import Backup and select a previously saved file." }},
+      { "@type": "Question", "name": "What types of alerts are available?", "acceptedAnswer": { "@type": "Answer", "text": "Price alerts trigger when spot crosses a threshold. Milestone alerts fire once when your portfolio value hits a target. P&L watchers notify you when your net profit or loss swings beyond a set amount. Goal alerts fire when you reach your gram or P&L targets." }},
+      { "@type": "Question", "name": "How does the tax-free countdown work?", "acceptedAnswer": { "@type": "Answer", "text": "Each holding tracks how many days since purchase. Once the holding period exceeds your configured tax-free threshold (default 365 days), it is marked as tax-free. The countdown shows exactly how many days remain." }}
+    ]
+  }
+  </script>
+</head>
+<body class="bg-navy text-gray-200 min-h-screen flex flex-col">
+  <nav class="border-b border-border/30 bg-navy/80 sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="text-lg font-extrabold text-white">My<span class="text-gold">Gold</span>Folio</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">&larr; Back to App</a>
+    </div>
+  </nav>
+
+  <main class="flex-1 max-w-3xl mx-auto px-6 py-12 w-full">
+
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Help Center</p>
+      <h1 class="text-3xl font-black text-white mb-3">How to use My<span class="text-gold">Gold</span>Folio</h1>
+      <p class="text-sm text-muted max-w-md mx-auto">Everything you need to know about tracking your gold portfolio, from first purchase to advanced alerts.</p>
+    </div>
+
+    <!-- Jump-to navigation pills -->
+    <div class="pill-bar flex gap-2 overflow-x-auto pb-4 mb-10 -mx-2 px-2">
+      <a href="#getting-started" class="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border border-border/30 text-muted hover:text-gold hover:border-gold/40 transition">Getting Started</a>
+      <a href="#prices" class="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border border-border/30 text-muted hover:text-gold hover:border-gold/40 transition">Prices</a>
+      <a href="#margins" class="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border border-border/30 text-muted hover:text-gold hover:border-gold/40 transition">Margins</a>
+      <a href="#pnl" class="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border border-border/30 text-muted hover:text-gold hover:border-gold/40 transition">P&amp;L</a>
+      <a href="#selling" class="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border border-border/30 text-muted hover:text-gold hover:border-gold/40 transition">Selling</a>
+      <a href="#tax" class="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border border-border/30 text-muted hover:text-gold hover:border-gold/40 transition">Tax-Free</a>
+      <a href="#scenarios" class="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border border-border/30 text-muted hover:text-gold hover:border-gold/40 transition">Scenarios</a>
+      <a href="#alerts" class="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border border-border/30 text-muted hover:text-gold hover:border-gold/40 transition">Alerts</a>
+      <a href="#background" class="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border border-border/30 text-muted hover:text-gold hover:border-gold/40 transition">Background Fetch</a>
+      <a href="#display" class="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border border-border/30 text-muted hover:text-gold hover:border-gold/40 transition">Display</a>
+      <a href="#goals" class="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border border-border/30 text-muted hover:text-gold hover:border-gold/40 transition">Goals</a>
+      <a href="#simulators" class="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border border-border/30 text-muted hover:text-gold hover:border-gold/40 transition">Simulators</a>
+      <a href="#backup" class="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border border-border/30 text-muted hover:text-gold hover:border-gold/40 transition">Backup</a>
+      <a href="#security" class="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border border-border/30 text-muted hover:text-gold hover:border-gold/40 transition">Security</a>
+      <a href="#purity" class="flex-shrink-0 text-xs font-semibold px-3 py-1.5 rounded-full border border-border/30 text-muted hover:text-gold hover:border-gold/40 transition">Purity</a>
+    </div>
+
+    <!-- ─── Getting Started ─────────────────────────────────── -->
+    <section id="getting-started" class="mb-12 scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4">
+        <ion-icon name="rocket-outline" class="text-gold" style="font-size:18px;"></ion-icon>
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide">Getting Started</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How do I add my first gold purchase?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Open the <strong class="text-gray-200">Portfolio</strong> tab and tap the <strong class="text-gray-200">+</strong> button. Fill in the category (e.g. coin, bar, jewellery), weight in grams, total cost in EUR, purchase date, and optionally a location and notes. Tap <strong class="text-gray-200">Save</strong> and your holding appears immediately with live P&L.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What information do I need for each holding?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed"><strong class="text-gray-200">Required:</strong> category, weight (grams), total cost (EUR), and purchase date. <strong class="text-gray-200">Optional:</strong> location, notes, purity, and margin profile. The more you fill in, the richer your analytics will be.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What are the different portfolio view modes?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed"><strong class="text-gray-200">List</strong> shows full holding cards that expand on tap for detailed stats. <strong class="text-gray-200">Compact</strong> groups holdings by category with collapsible groups. <strong class="text-gray-200">Timeline</strong> sorts holdings by their tax-free date. Switch between them using the view toggle at the top of the Portfolio tab.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            Can I edit or delete a holding after adding it?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Yes. Long-press any holding to open the action menu with <strong class="text-gray-200">Edit</strong>, <strong class="text-gray-200">Duplicate</strong>, <strong class="text-gray-200">Sell</strong>, and <strong class="text-gray-200">Delete</strong> options. In List view you can also tap to expand, then use the buttons at the bottom of the detail card.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How do I duplicate a holding?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Long-press the holding and choose <strong class="text-gray-200">Duplicate</strong>. A new add form opens pre-filled with the same category, location, weight, purity, margin profile, and notes. The date is set to today and the cost is blank so you can enter the new purchase details.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What does excluding a holding do?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Excluded holdings are kept in your portfolio but removed from all calculations — total grams, P&L, break-even, and portfolio weight. This is useful for holdings you've gifted, pledged, or simply want to track without affecting your active figures. Toggle the switch in the holding detail card.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ─── Gold Prices ─────────────────────────────────────── -->
+    <section id="prices" class="mb-12 scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4">
+        <ion-icon name="trending-up-outline" class="text-gold" style="font-size:18px;"></ion-icon>
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide">Gold Prices</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            Where do the gold prices come from?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">The app includes three independent price sources that reflect near-real-time London/New York market data. If one source is unavailable, the app automatically tries the next. No API keys are required.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How often are prices updated?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Prices update each time you pull to refresh on any tab, or automatically if you've configured a <strong class="text-gray-200">Dashboard refresh rate</strong> in Settings (e.g. every 15, 30, or 60 minutes). Background fetch can also update prices when the app is closed.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What does the price chart show?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">The bar chart on the Prices tab visualises your saved price history. You can pan and tap to crosshair individual data points. Below the chart you'll see 7-day, 30-day, and 90-day change indicators showing how the spot price has moved.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What is the 24h window?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">The 24h window shows the <strong class="text-gray-200">high</strong>, <strong class="text-gray-200">low</strong>, <strong class="text-gray-200">range</strong>, and <strong class="text-gray-200">move %</strong> for spot gold over the last 24 hours. It gives you a quick sense of intraday volatility.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            Can I pin specific prices in the history?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Yes. In the price history table on the Prices tab, tap the pin icon on any row to mark it. Pinned entries are preserved even when older data is automatically pruned, so you can bookmark important price points for reference.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What happens if a price source is unavailable?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">The app automatically tries the next source in order. If all sources fail, a banner appears showing how long ago the last successful fetch was. Your portfolio continues to display using the most recent known price. You can configure the source priority order in Settings.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ─── Margins ─────────────────────────────────────────── -->
+    <section id="margins" class="mb-12 scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4">
+        <ion-icon name="cash-outline" class="text-gold" style="font-size:18px;"></ion-icon>
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide">Margins (Buy &amp; Sell Spread)</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What are buy and sell margins?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">When you buy physical gold, you typically pay more than the raw spot price — that markup is the <strong class="text-gray-200">buy margin</strong>. When you sell back, you receive less than spot — that discount is the <strong class="text-gray-200">sell margin</strong>. Together they form the dealer's spread (the round-trip cost of buying and selling).</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How do margins affect my break-even price?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Your break-even is the spot price at which selling would exactly cover your cost. Since you lose the sell margin on each gram sold, break-even is higher than your paid-per-gram price. Lower margins mean a lower break-even and faster path to profit.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What are margin profiles?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Margin profiles let you save named sets of buy/sell margins for different dealers or banks. For example, you might have "Dealer A" with tight spreads and "Bank B" with wider ones. You can create up to 10 profiles in <strong class="text-gray-200">Settings &rarr; Margin Profiles</strong>.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How do I assign a margin profile to a holding?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">When adding or editing a holding, a <strong class="text-gray-200">Margin Profile</strong> picker appears (if you've created any profiles). Select the profile that matches the dealer you bought from. Holdings without an assigned profile use the default global margins.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What does "Default" margin mean?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">The default margin is the global buy/sell spread set at the top of the Margin Profiles section in Settings. Any holding that doesn't have a specific profile assigned will use these default values for all calculations.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ─── P&L ─────────────────────────────────────────────── -->
+    <section id="pnl" class="mb-12 scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4">
+        <ion-icon name="analytics-outline" class="text-gold" style="font-size:18px;"></ion-icon>
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide">Profit &amp; Loss</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How is my P&amp;L calculated?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">P&L compares what you would receive if you sold now (spot price minus your sell margin, multiplied by your grams) against what you originally paid. It gives you a realistic picture by accounting for the dealer's sell-side spread.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What is the break-even price?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Break-even is the spot price at which selling your gold would return exactly what you paid. It factors in the sell margin, so it's higher than your cost-per-gram. Once spot exceeds your break-even, you're in profit.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What does "Gap to B/E" mean?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Gap to B/E (Break-Even) is the difference between the current spot price and your break-even price per gram. A <strong class="text-gray-200">positive</strong> gap (green) means you're above break-even and in profit. A <strong class="text-gray-200">negative</strong> gap (red) means spot still needs to rise before you break even.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What is the return percentage?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Return % shows your net P&L as a percentage of your total cost. For example, if you paid &euro;5,000 and your current sell value is &euro;5,500, your return is +10%. This makes it easy to compare performance across holdings of different sizes.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What is portfolio weight?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Portfolio weight shows what percentage of your total portfolio cost a single holding represents. A holding that cost &euro;2,000 in a &euro;10,000 portfolio has a 20% weight. It helps you see how concentrated your investment is.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ─── Selling ─────────────────────────────────────────── -->
+    <section id="selling" class="mb-12 scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4">
+        <ion-icon name="arrow-down-circle-outline" class="text-gold" style="font-size:18px;"></ion-icon>
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide">Selling</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How do I record a sale?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Long-press a holding and choose <strong class="text-gray-200">Sell</strong>, or tap a holding to expand it and use the Sell button. Enter the grams sold and the price per gram you received. The app records the sale and automatically tracks the realised profit or loss.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            Can I sell part of a holding?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Yes. Enter any amount up to the holding's total grams. The holding will show the remaining grams and a "partially sold" indicator. If you sell all grams, the holding is marked as <strong class="text-gray-200">FULLY SOLD</strong> and dimmed in your portfolio.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            Where can I see my sell history?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Scroll down on the Portfolio tab to find the <strong class="text-gray-200">Sell History</strong> section. It lists every sale with date, grams, rate, proceeds, and the per-allocation P&L. A summary bar at the top shows your total realised P&L.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What are realised vs unrealised P&amp;L?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed"><strong class="text-gray-200">Realised P&L</strong> is the actual profit or loss from completed sales — money in your pocket. <strong class="text-gray-200">Unrealised P&L</strong> is the paper profit or loss on holdings you still own, based on the current spot price. Both are shown in the portfolio stats bar.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ─── Tax-Free ────────────────────────────────────────── -->
+    <section id="tax" class="mb-12 scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4">
+        <ion-icon name="calendar-outline" class="text-gold" style="font-size:18px;"></ion-icon>
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide">Tax-Free Countdown</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How does the tax-free countdown work?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Each holding tracks how many days have passed since purchase. Once that exceeds your configured tax-free holding period (default: 365 days), the holding is marked <strong class="text-gray-200">TAX FREE</strong>. The countdown shows exactly how many days remain for each holding.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            Can I change the tax-free holding period?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Yes. Go to <strong class="text-gray-200">Settings</strong> and adjust the <strong class="text-gray-200">Tax-Free Days</strong> value. Different countries have different holding period requirements (e.g. 365 days in Germany). All countdowns and tax status badges update immediately.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What does the tax status bar show?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">The tax status bar on the Dashboard shows a visual split of your total grams into <strong class="text-gray-200">tax-free</strong> (green) and <strong class="text-gray-200">taxable</strong> (amber) portions. It helps you see at a glance how much of your portfolio has reached the tax-free threshold.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ─── Scenarios ───────────────────────────────────────── -->
+    <section id="scenarios" class="mb-12 scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4">
+        <ion-icon name="flask-outline" class="text-gold" style="font-size:18px;"></ion-icon>
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide">Scenarios &amp; What-If</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What are scenarios?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Scenarios let you explore "what if gold reaches X price?" without affecting your real data. The Scenarios tab shows a table of hypothetical prices with the resulting sell value, P&L, and return for each. You can add your own target prices or use the smart generator.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How does the smart scenario generator work?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">It analyses your recent price history (up to 30 days) to detect the current market trend, then generates 6 meaningful price targets — including bull, bear, and sideways scenarios. It also injects your break-even price and notable milestones like all-time highs.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What does the price slider do?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">The slider at the top of the Scenarios tab lets you drag to any price and instantly see your portfolio's sell value and P&L at that price. It's a quick way to explore a range of outcomes without adding individual scenario rows.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What do the trend badges mean?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">The trend badge in the Scenarios header (e.g. "Mild uptrend 30d") shows the detected market direction based on recent price history. It ranges from strong bull to strong bear. Tap it to jump to the Prices tab for more detail.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ─── Alerts ──────────────────────────────────────────── -->
+    <section id="alerts" class="mb-12 scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4">
+        <ion-icon name="notifications-outline" class="text-gold" style="font-size:18px;"></ion-icon>
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide">Alerts &amp; Notifications</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What types of alerts are available?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">The app offers several alert types: <strong class="text-gray-200">Price alerts</strong> (spot crosses a target), <strong class="text-gray-200">Milestone alerts</strong> (portfolio value hits a milestone), <strong class="text-gray-200">P&L watchers</strong> (profit/loss swings beyond a threshold), <strong class="text-gray-200">Goal alerts</strong> (gram or P&L goal reached), plus built-in alerts for tax-free dates, break-even crossings, all-time highs, sell windows, and purchase anniversaries.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How do price alerts work?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Set a target price and choose <strong class="text-gray-200">above</strong> or <strong class="text-gray-200">below</strong>. When the spot price crosses your threshold, you get a notification. Price alerts can fire during foreground use or via background fetch. You can add an optional label to remember why you set it.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What are milestone alerts?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Milestones fire <strong class="text-gray-200">once</strong> when your total portfolio value reaches a target amount (e.g. &euro;10,000). After firing, the alert is consumed. To get notified at the same value again, re-add it.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What are P&amp;L watchers?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">P&L watchers notify you when your net profit or loss swings beyond a set amount (e.g. &plusmn;&euro;500). Unlike milestones, watchers <strong class="text-gray-200">automatically re-arm</strong> — once the P&L returns within range, the watcher resets and will fire again on the next swing.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How do goal alerts work?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">If you've set a gram goal or P&L goal in the Goals section, you can enable an alert for each. The alert fires when your portfolio reaches the target. It re-arms if you increase the goal or if your portfolio drops back below the threshold.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What is the sell window alert?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">The sell window alert notifies you when <strong class="text-gray-200">all</strong> of your holdings are simultaneously in profit. This signals a potential optimal selling window. It clears when any holding drops back into a loss.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            Where can I see my alert history?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">In <strong class="text-gray-200">Settings</strong>, scroll to the alerts section and expand <strong class="text-gray-200">Alert History</strong>. It shows a timestamped log of every alert that has fired, including the type, message, and the spot price at the time.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ─── Background Fetch ────────────────────────────────── -->
+    <section id="background" class="mb-12 scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4">
+        <ion-icon name="cloud-download-outline" class="text-gold" style="font-size:18px;"></ion-icon>
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide">Background Fetch</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What is background fetch?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Background fetch allows the app to check gold prices and run your alerts even when the app is closed. When enabled, it uses Android's work scheduling system to periodically fetch the latest price and send notifications if any alerts trigger.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How do I set up scheduled price checks?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">In <strong class="text-gray-200">Settings &rarr; Background Fetch</strong>, enable the toggle and add one or more schedules. You can set specific times (e.g. 09:00 and 18:00) and choose daily, weekly (specific days), or monthly (specific date) frequency.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            Why might background fetch not work reliably?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Android's battery optimisation can delay or skip background tasks. For best results, the app will prompt you to exempt it from battery optimisation on first enable. Some manufacturers (Samsung, Xiaomi, Huawei) have aggressive power management — you may need to adjust their device-specific settings.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ─── Display & Currency ──────────────────────────────── -->
+    <section id="display" class="mb-12 scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4">
+        <ion-icon name="color-palette-outline" class="text-gold" style="font-size:18px;"></ion-icon>
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide">Display &amp; Currency</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How do I change the display currency?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Go to <strong class="text-gray-200">Settings &rarr; Display</strong> and select your preferred currency. All screens update instantly. Your data is always stored in EUR internally — the display simply converts using live exchange rates.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What currencies and weight units are supported?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed"><strong class="text-gray-200">Currencies:</strong> EUR, USD, GBP, INR, AED, SAR, TRY, and EGP. <strong class="text-gray-200">Weight units:</strong> grams (g), troy ounces (ozt), and tola. Switch at any time in Settings — all prices and weights across every screen update immediately.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How do exchange rates work?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Exchange rates are fetched automatically when you select a non-EUR currency and cached for one hour. The app refreshes rates in the background as needed. If rates can't be fetched, the last known rates are used until a connection is available.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What is privacy mode?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Tap the eye icon on the Dashboard to toggle privacy mode. When active, all monetary values across every screen are masked with dots. Useful when checking the app in public — your portfolio structure is visible but no amounts are shown.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ─── Goals ───────────────────────────────────────────── -->
+    <section id="goals" class="mb-12 scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4">
+        <ion-icon name="flag-outline" class="text-gold" style="font-size:18px;"></ion-icon>
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide">Goals</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How do I set a gram or P&amp;L goal?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">In <strong class="text-gray-200">Settings</strong>, scroll to the <strong class="text-gray-200">Portfolio</strong> section. Enter a target in the <strong class="text-gray-200">Gram Goal</strong> or <strong class="text-gray-200">P&L Goal</strong> field. Set to 0 to disable. You can also enable alerts to get notified when a goal is reached.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            Where do goals appear?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Active goals appear in the <strong class="text-gray-200">Goals</strong> section on the Dashboard with animated progress bars showing how close you are to each target. The section can be hidden via Settings if you prefer a cleaner dashboard.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ─── Simulators ──────────────────────────────────────── -->
+    <section id="simulators" class="mb-12 scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4">
+        <ion-icon name="calculator-outline" class="text-gold" style="font-size:18px;"></ion-icon>
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide">Simulators</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What is the Buy More simulator?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">The Buy More simulator lets you explore "what if I buy X more grams?" without actually adding a holding. Enter a hypothetical weight and cost to see how it would change your average paid price, total grams, break-even, and portfolio P&L.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What is the Sell simulator?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">The Sell simulator shows what you'd receive if you sold a given amount of grams at the current spot price (after sell margin). It displays the proceeds, realised P&L, and remaining portfolio stats — all hypothetical, nothing is recorded.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            Do simulators change my actual data?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">No. Both simulators are purely hypothetical — they never modify your holdings, sell history, or any stored data. They're safe to use as many times as you like for planning purposes.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ─── Backup & Export ─────────────────────────────────── -->
+    <section id="backup" class="mb-12 scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4">
+        <ion-icon name="save-outline" class="text-gold" style="font-size:18px;"></ion-icon>
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide">Backup &amp; Export</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How do I back up my data?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Go to <strong class="text-gray-200">Settings &rarr; Export &amp; Backup</strong> and tap <strong class="text-gray-200">Backup</strong>. Choose to save the JSON file to your device or share it (e.g. via email, cloud storage, or messaging). We recommend backing up regularly since all data is stored locally.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How do I restore from a backup?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">In the same Export &amp; Backup section, tap <strong class="text-gray-200">Import Backup</strong> and select a previously saved .json file. The app validates the file, restores your data, and restarts. Your security settings (PIN, biometric lock) are not overwritten by the backup.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What data is included in a backup?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Backups include your holdings, sell history, price history, all settings and preferences, alerts, scenarios, and goals. <strong class="text-gray-200">Not included:</strong> security settings (PIN, biometric lock), API usage counters, and cached exchange rates — these stay on your current device.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What are the CSV export options?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Three CSV exports are available: <strong class="text-gray-200">Price History</strong> (spot prices over time with buy/sell rates), <strong class="text-gray-200">Portfolio</strong> (all holdings and sell events with cost, purity, and margin profile), and <strong class="text-gray-200">Tax Report</strong> (sell allocations with acquisition dates, holding periods, and tax status). Each can be saved to device or shared.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ─── Security ────────────────────────────────────────── -->
+    <section id="security" class="mb-12 scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4">
+        <ion-icon name="lock-closed-outline" class="text-gold" style="font-size:18px;"></ion-icon>
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide">Security</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            How do I enable app lock?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Go to <strong class="text-gray-200">Settings &rarr; Security</strong> and enable <strong class="text-gray-200">Biometric Lock</strong>. The app will require fingerprint or face authentication each time you open it. You'll also set a 4-digit fallback PIN in case biometrics aren't available.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What is the fallback PIN?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">The fallback PIN is a 4-digit code you set when enabling biometric lock. It serves as an alternative unlock method if your fingerprint or face sensor isn't working. The PIN is stored securely on your device and is never included in backups.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ─── Purity ──────────────────────────────────────────── -->
+    <section id="purity" class="mb-12 scroll-mt-24">
+      <div class="flex items-center gap-2 mb-4">
+        <ion-icon name="diamond-outline" class="text-gold" style="font-size:18px;"></ion-icon>
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide">Purity</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            What is the purity setting on a holding?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Purity indicates the gold fineness of your holding in millesimal notation (e.g. 999.9 for 24K, 916 for 22K, 750 for 18K). You can select a common preset or enter a custom value when adding or editing a holding.</p>
+        </details>
+
+        <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
+          <summary class="flex items-center justify-between px-5 py-4 font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
+            Does purity affect my P&amp;L calculations?
+            <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
+          </summary>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Purity is a <strong class="text-gray-200">display-only</strong> badge — it does not affect P&L, break-even, or any other calculations. It's shown as an informational label so you can track the fineness of each piece. In the detail card, a "pure content" field shows the equivalent fine gold weight for reference.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ─── Still have questions? ───────────────────────────── -->
+    <div class="text-center mt-4 mb-8 py-8 border-t border-border/20">
+      <p class="text-sm text-muted mb-3">Still have a question?</p>
+      <a href="/feedback/" class="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 text-gold font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-gold/20 transition">
+        <ion-icon name="chatbubble-ellipses-outline" style="font-size:16px;"></ion-icon>
+        Send us feedback
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="border-t border-border/20 py-8 px-6">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted">
+      <p>&copy; 2026 SmartDailyApps. All rights reserved.</p>
+      <div class="flex flex-wrap justify-center gap-5">
+        <a href="/" class="hover:text-gold transition">Home</a>
+        <a href="/gallery/" class="hover:text-gold transition">Gallery</a>
+        <a href="/roadmap/" class="hover:text-gold transition">Roadmap</a>
+        <a href="/changelog/" class="hover:text-gold transition">Changelog</a>
+        <a href="/privacy/" class="hover:text-gold transition">Privacy</a>
+        <a href="/contact/" class="hover:text-gold transition">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

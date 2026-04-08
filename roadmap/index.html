@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roadmap — MyGoldFolio</title>
+  <meta name="description" content="What's shipped, what's in progress, and what's planned for MyGoldFolio." />
+  <meta property="og:title" content="Roadmap — MyGoldFolio" />
+  <meta property="og:description" content="What's shipped, what's in progress, and what's planned for MyGoldFolio." />
+  <meta property="og:image" content="/images/g3.png" />
+  <link rel="icon" href="/images/icon.png" />
+  <link rel="canonical" href="https://mygoldfolio.de/roadmap/" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{navy:'#0F0F1A','navy-light':'#1A1A2E',border:'#1E3A5C',gold:'#D4A843',muted:'#666677',mint:'#00D68F',amber:'#FFE27A',coral:'#FF4757',purple:'#A78BFA'}}}}</script>
+  <style>body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;}</style>
+</head>
+<body class="bg-navy text-gray-200 min-h-screen flex flex-col">
+  <nav class="border-b border-border/30 bg-navy/80 sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="text-lg font-extrabold text-white">My<span class="text-gold">Gold</span>Folio</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← Back to App</a>
+    </div>
+  </nav>
+
+  <main class="flex-1 max-w-5xl mx-auto px-6 py-12 w-full">
+
+    <div class="text-center mb-12">
+      <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Roadmap</p>
+      <h1 class="text-3xl font-black text-white mb-3">What's coming to My<span class="text-gold">Gold</span>Folio</h1>
+      <p class="text-sm text-muted max-w-sm mx-auto">Shipped features, active work, and planned improvements. Have an idea? <a href="/feedback/" class="text-gold hover:underline">Submit feedback →</a></p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- Shipped -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-2.5 h-2.5 rounded-full bg-mint"></span>
+          <h2 class="text-sm font-bold text-mint uppercase tracking-wide">Shipped</h2>
+        </div>
+        <div class="space-y-3">
+
+          <div class="bg-navy-light border border-border/20 rounded-xl p-4">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <p class="text-sm font-semibold text-gray-200">Smart scenario generator</p>
+              <span class="text-xs text-muted bg-navy px-2 py-0.5 rounded-full flex-shrink-0">v1.5.3</span>
+            </div>
+            <p class="text-xs text-muted leading-relaxed">Auto-generates 6 price scenarios from 30-day trend analysis (Bull/Bear/Sideways). ATH and break-even injection.</p>
+          </div>
+
+          <div class="bg-navy-light border border-border/20 rounded-xl p-4">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <p class="text-sm font-semibold text-gray-200">3-source price fallback</p>
+              <span class="text-xs text-muted bg-navy px-2 py-0.5 rounded-full flex-shrink-0">v1.5.8</span>
+            </div>
+            <p class="text-xs text-muted leading-relaxed">Automatic fallthrough across 3 built-in sources. No API keys needed.</p>
+          </div>
+
+          <div class="bg-navy-light border border-border/20 rounded-xl p-4">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <p class="text-sm font-semibold text-gray-200">8 currencies &amp; 3 weight units</p>
+              <span class="text-xs text-muted bg-navy px-2 py-0.5 rounded-full flex-shrink-0">v1.9.0</span>
+            </div>
+            <p class="text-xs text-muted leading-relaxed">EUR, USD, GBP, INR, AED, SAR, TRY, EGP. Gram, troy oz, and tola. Switch at any time — all screens update instantly. Live exchange rate cache (1h TTL).</p>
+          </div>
+
+          <div class="bg-navy-light border border-border/20 rounded-xl p-4">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <p class="text-sm font-semibold text-gray-200">Multi-margin profiles</p>
+              <span class="text-xs text-muted bg-navy px-2 py-0.5 rounded-full flex-shrink-0">v1.9.2</span>
+            </div>
+            <p class="text-xs text-muted leading-relaxed">Named buy/sell margin sets for different dealers. Assign a margin profile per holding.</p>
+          </div>
+
+          <div class="bg-navy-light border border-border/20 rounded-xl p-4">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <p class="text-sm font-semibold text-gray-200">Smart history retention</p>
+              <span class="text-xs text-muted bg-navy px-2 py-0.5 rounded-full flex-shrink-0">v1.9.2</span>
+            </div>
+            <p class="text-xs text-muted leading-relaxed">Intelligent pruning keeps recent data granular, older data summarised. No manual cleanup needed.</p>
+          </div>
+
+          <div class="bg-navy-light border border-border/20 rounded-xl p-4">
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <p class="text-sm font-semibold text-gray-200">Extended BG fetch schedules</p>
+              <span class="text-xs text-muted bg-navy px-2 py-0.5 rounded-full flex-shrink-0">v1.9.2</span>
+            </div>
+            <p class="text-xs text-muted leading-relaxed">Daily, weekly, or monthly background price checks in addition to hourly.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- In Progress -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-2.5 h-2.5 rounded-full bg-gold animate-pulse"></span>
+          <h2 class="text-sm font-bold text-gold uppercase tracking-wide">In Progress</h2>
+        </div>
+        <div class="space-y-3">
+
+          <div class="bg-navy-light border border-gold/20 rounded-xl p-4">
+            <p class="text-sm font-semibold text-gray-200 mb-1">Google Play Store launch</p>
+            <p class="text-xs text-muted leading-relaxed">Preparing the app for public release on the Google Play Store. Sign up above to be notified.</p>
+          </div>
+
+          <div class="bg-navy-light border border-border/20 rounded-xl p-4">
+            <p class="text-sm font-semibold text-gray-200 mb-1">Website enhancements</p>
+            <p class="text-xs text-muted leading-relaxed">FAQ, live gold price widget, roadmap, email capture, and mobile navigation improvements.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Planned -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-2.5 h-2.5 rounded-full bg-purple"></span>
+          <h2 class="text-sm font-bold text-purple uppercase tracking-wide">Planned</h2>
+        </div>
+        <div class="space-y-3">
+
+
+
+          <div class="bg-navy-light border border-border/20 rounded-xl p-4">
+            <p class="text-sm font-semibold text-gray-200 mb-1">Home screen widget</p>
+            <p class="text-xs text-muted leading-relaxed">A lightweight Android widget showing live spot price and portfolio value — no need to open the app.</p>
+          </div>
+
+          <div class="bg-navy-light border border-border/20 rounded-xl p-4">
+            <p class="text-sm font-semibold text-gray-200 mb-1">Google Drive backup sync</p>
+            <p class="text-xs text-muted leading-relaxed">Optional automatic backup of portfolio data to your personal Google Drive. Fully opt-in.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-12 text-center bg-navy-light/40 border border-border/20 rounded-2xl p-8">
+      <p class="text-sm text-gray-300 font-semibold mb-2">Have a feature idea?</p>
+      <p class="text-xs text-muted mb-5">Vote on planned features or submit your own suggestion on the feedback board.</p>
+      <a href="/feedback/"
+         class="inline-flex items-center gap-2 bg-gold text-navy font-bold px-6 py-2.5 rounded-xl hover:opacity-90 transition text-sm">
+        Submit Feedback →
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="border-t border-border/20 py-8 px-6 mt-12">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted">
+      <p>&copy; 2026 SmartDailyApps</p>
+      <div class="flex gap-6">
+        <a href="/" class="hover:text-gold transition">App</a>
+        <a href="/changelog/" class="hover:text-gold transition">Changelog</a>
+        <a href="/feedback/" class="hover:text-gold transition">Feedback</a>
+        <a href="/" class="hover:text-gold transition">Home</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

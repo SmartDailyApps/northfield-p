@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — MyGoldFolio</title>
+  <meta name="description" content="Screenshots of MyGoldFolio — the gold investment tracker for Android." />
+  <meta property="og:title" content="Gallery — MyGoldFolio" />
+  <meta property="og:description" content="Screenshots of MyGoldFolio — the gold investment tracker for Android." />
+  <meta property="og:image" content="/images/g3.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/images/icon.png" />
+  <link rel="canonical" href="https://mygoldfolio.de/gallery/" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0F0F1A',
+            'navy-light': '#1A1A2E',
+            border: '#1E3A5C',
+            gold: '#D4A843',
+            amber: '#FFE27A',
+            muted: '#666677',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+
+    .gallery-frame {
+      border-radius: 12px; border: 4px solid #2a2a40;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      overflow: hidden; cursor: pointer; aspect-ratio: 9/18;
+      background: #0F0F1A; transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .gallery-frame:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(212,168,67,0.35), 0 12px 32px rgba(0,0,0,0.5);
+    }
+    .gallery-frame img { width:100%; height:100%; object-fit:cover; display:block; }
+
+    #lightbox {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.92); z-index: 9999;
+      align-items: center; justify-content: center;
+    }
+    #lightbox.open { display: flex; }
+    #lb-img { max-height: 90vh; max-width: 90vw; border-radius: 12px; border: 1px solid #1E3A5C; }
+    #lb-prev, #lb-next {
+      position: fixed; top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,0.1); border: none; color: white;
+      font-size: 2rem; padding: 12px 16px; cursor: pointer; border-radius: 8px;
+      transition: background 0.2s;
+    }
+    #lb-prev:hover, #lb-next:hover { background: rgba(212,168,67,0.2); }
+    #lb-prev { left: 16px; }
+    #lb-next { right: 16px; }
+    #lb-close {
+      position: fixed; top: 20px; right: 24px; background: none;
+      border: none; color: white; font-size: 2rem; cursor: pointer; line-height: 1;
+    }
+    /* Lightbox label */
+    #lb-label {
+      position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%);
+      background: rgba(15,15,26,0.85); border: 1px solid #1E3A5C;
+      color: #E8E8E8; font-size: 12px; font-family: 'Inter', sans-serif;
+      padding: 5px 14px; border-radius: 20px; pointer-events: none;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body class="bg-navy text-gray-200 min-h-screen flex flex-col">
+
+  <nav class="border-b border-border/30 backdrop-blur-sm bg-navy/80 sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="text-lg font-extrabold text-white"><span class="text-gold">Smart</span>DailyApps</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">← My<span class="text-gold">Gold</span>Folio</a>
+    </div>
+  </nav>
+
+  <main class="flex-1 max-w-5xl mx-auto px-6 py-12 w-full">
+
+    <div class="text-center mb-10" data-aos="fade-up">
+      <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Gallery</p>
+      <h1 class="text-3xl font-black text-white mb-3">See It in Action</h1>
+      <p class="text-gray-400 text-sm max-w-sm mx-auto">Tap any screen to enlarge. Swipe or use arrow keys to navigate.</p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+
+      <div data-aos="fade-up" data-aos-delay="0">
+        <div class="gallery-frame" data-lightbox data-index="0">
+          <img src="/images/s1.jpg" alt="Dashboard" loading="lazy" />
+        </div>
+        <p class="text-xs text-center text-muted mt-2">Dashboard</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="50">
+        <div class="gallery-frame" data-lightbox data-index="1">
+          <img src="/images/s2.jpg" alt="Privacy Mode" loading="lazy" />
+        </div>
+        <p class="text-xs text-center text-muted mt-2">Privacy Mode</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <div class="gallery-frame" data-lightbox data-index="2">
+          <img src="/images/s3.jpg" alt="Portfolio — List" loading="lazy" />
+        </div>
+        <p class="text-xs text-center text-muted mt-2">Portfolio List</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="150">
+        <div class="gallery-frame" data-lightbox data-index="3">
+          <img src="/images/s4.jpg" alt="Portfolio — Compact" loading="lazy" />
+        </div>
+        <p class="text-xs text-center text-muted mt-2">Portfolio Compact</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <div class="gallery-frame" data-lightbox data-index="4">
+          <img src="/images/s5.jpg" alt="Sell Tracking" loading="lazy" />
+        </div>
+        <p class="text-xs text-center text-muted mt-2">Sell Tracking</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="250">
+        <div class="gallery-frame" data-lightbox data-index="5">
+          <img src="/images/s6.jpg" alt="Prices" loading="lazy" />
+        </div>
+        <p class="text-xs text-center text-muted mt-2">Prices</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="300">
+        <div class="gallery-frame" data-lightbox data-index="6">
+          <img src="/images/s7.jpg" alt="Scenarios" loading="lazy" />
+        </div>
+        <p class="text-xs text-center text-muted mt-2">Scenarios</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="350">
+        <div class="gallery-frame" data-lightbox data-index="7">
+          <img src="/images/s8.jpg" alt="Alerts" loading="lazy" />
+        </div>
+        <p class="text-xs text-center text-muted mt-2">Alerts</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="400">
+        <div class="gallery-frame" data-lightbox data-index="8">
+          <img src="/images/s9.jpg" alt="Export" loading="lazy" />
+        </div>
+        <p class="text-xs text-center text-muted mt-2">Export</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="450">
+        <div class="gallery-frame" data-lightbox data-index="9">
+          <img src="/images/s10.jpg" alt="Price Sources" loading="lazy" />
+        </div>
+        <p class="text-xs text-center text-muted mt-2">Price Sources</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="500">
+        <div class="gallery-frame" data-lightbox data-index="10">
+          <img src="/images/s12.jpg" alt="Security" loading="lazy" />
+        </div>
+        <p class="text-xs text-center text-muted mt-2">Security</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="border-t border-border/20 py-8 px-6 mt-8">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted">
+      <p>&copy; 2026 SmartDailyApps. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="/" class="hover:text-gold transition">MyGoldFolio</a>
+        <a href="/privacy/" class="hover:text-gold transition">Privacy</a>
+        <a href="/contact/" class="hover:text-gold transition">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <button id="lb-close" aria-label="Close">&times;</button>
+    <button id="lb-prev" aria-label="Previous">&#8249;</button>
+    <img id="lb-img" src="" alt="Screenshot" />
+    <button id="lb-next" aria-label="Next">&#8250;</button>
+    <div id="lb-label"></div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800, once: true, offset: 60 });</script>
+
+  <script>
+    const lbImages = [
+      '/images/s1.jpg','/images/s2.jpg','/images/s3.jpg','/images/s4.jpg',
+      '/images/s5.jpg','/images/s6.jpg','/images/s7.jpg','/images/s8.jpg',
+      '/images/s9.jpg','/images/s10.jpg','/images/s12.jpg'
+    ];
+    const lbLabels = [
+      'Dashboard','Privacy Mode','Portfolio List','Portfolio Compact',
+      'Sell Tracking','Prices','Scenarios','Alerts',
+      'Export','Price Sources','Security'
+    ];
+    let lbCur = 0;
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    const lbLabelEl = document.getElementById('lb-label');
+
+    function lbUpdateLabel() {
+      lbLabelEl.textContent = lbLabels[lbCur] + ' · ' + (lbCur + 1) + '/' + lbImages.length;
+    }
+    function lbOpen(i) { lbCur = i; lbImg.src = lbImages[i]; lbUpdateLabel(); lb.classList.add('open'); }
+    function lbClose() { lb.classList.remove('open'); }
+    function lbPrev() { lbCur = (lbCur - 1 + lbImages.length) % lbImages.length; lbImg.src = lbImages[lbCur]; lbUpdateLabel(); }
+    function lbNext() { lbCur = (lbCur + 1) % lbImages.length; lbImg.src = lbImages[lbCur]; lbUpdateLabel(); }
+
+    document.querySelectorAll('[data-lightbox]').forEach(el => {
+      el.addEventListener('click', () => lbOpen(parseInt(el.dataset.index)));
+    });
+    document.getElementById('lb-close').addEventListener('click', lbClose);
+    document.getElementById('lb-prev').addEventListener('click', lbPrev);
+    document.getElementById('lb-next').addEventListener('click', lbNext);
+    lb.addEventListener('click', e => { if (e.target === lb) lbClose(); });
+
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') lbClose();
+      if (e.key === 'ArrowLeft') lbPrev();
+      if (e.key === 'ArrowRight') lbNext();
+    });
+
+    let lbTouchX = 0;
+    lb.addEventListener('touchstart', e => { lbTouchX = e.touches[0].clientX; });
+    lb.addEventListener('touchend', e => {
+      const d = e.changedTouches[0].clientX - lbTouchX;
+      if (Math.abs(d) > 50) { d < 0 ? lbNext() : lbPrev(); }
+    });
+  </script>
+
+</body>
+</html>
