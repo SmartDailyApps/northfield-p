@@ -1,6 +1,6 @@
 (function () {
-  var SUPPORTED = ['en', 'de', 'tr', 'fr'];
-  var LABELS = { en: 'EN', de: 'DE', tr: 'TR', fr: 'FR' };
+  var SUPPORTED = ['en', 'de', 'tr', 'fr', 'es', 'it', 'pt'];
+  var LABELS = { en: 'EN', de: 'DE', tr: 'TR', fr: 'FR', es: 'ES', it: 'IT', pt: 'PT-BR' };
   var STORAGE_KEY = 'sda_locale_pref_' + window.location.hostname;
 
   function withTrailingSlash(path) {
