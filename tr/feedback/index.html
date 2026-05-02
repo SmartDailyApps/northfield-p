@@ -49,6 +49,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             border: '#1E3A5C',
             gold: '#D4A843',
             mint: '#00D68F',
+            amber: '#FFE27A',
             muted: '#666677',
           }
         }
@@ -57,6 +58,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
   <style>
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+    .mgf-surface { background: linear-gradient(180deg, rgba(26,26,46,.92), rgba(15,15,26,.98)); }
+    .feedback-hero, .roadmap-hero { position: relative; overflow: hidden; }
+    .feedback-hero::before, .roadmap-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 18% 12%, rgba(212,168,67,.18), transparent 30%), linear-gradient(135deg, rgba(0,214,143,.12), transparent 45%); pointer-events: none; }
+    .feedback-panel, .roadmap-card { border: 1px solid rgba(212,168,67,.22); background: rgba(26,26,46,.68); box-shadow: 0 24px 80px rgba(0,0,0,.28); }
+    .feedback-tab { border: 1px solid rgba(255,255,255,.10); background: rgba(255,255,255,.04); color: #c9c9d6; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+    .feedback-tab:hover { transform: translateY(-1px); border-color: rgba(212,168,67,.45); }
+    .feedback-tab[aria-selected="true"] { background: rgba(212,168,67,.16); border-color: rgba(212,168,67,.75); color: #FFE27A; }
+    .feedback-input { width: 100%; border: 1px solid rgba(255,255,255,.12); background: rgba(15,15,26,.74); color: #f7f7fb; border-radius: .75rem; padding: .8rem .9rem; outline: none; }
+    .feedback-input:focus { border-color: rgba(212,168,67,.8); box-shadow: 0 0 0 3px rgba(212,168,67,.14); }
+    .mode-panel[hidden] { display: none; }
+    .honeypot { position: absolute; left: -9999px; opacity: 0; }
+    .roadmap-rail { position: relative; }
+    .roadmap-rail::before { content: ''; position: absolute; left: 1.05rem; top: .4rem; bottom: .4rem; width: 2px; background: linear-gradient(#00D68F, #D4A843, #8B7CFF); animation: railGlow 4s ease-in-out infinite; }
+    .roadmap-card { position: relative; opacity: 0; transform: translateY(18px); animation: cardIn .7s ease forwards; animation-delay: var(--delay, 0ms); }
+    .roadmap-dot { position: absolute; left: -3.15rem; top: 1.35rem; width: 2.4rem; height: 2.4rem; border-radius: 999px; display: grid; place-items: center; background: #0F0F1A; border: 1px solid rgba(212,168,67,.55); color: #FFE27A; box-shadow: 0 0 28px rgba(212,168,67,.22); z-index: 2; }
+    @keyframes cardIn { to { opacity: 1; transform: translateY(0); } }
+    @keyframes railGlow { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .roadmap-card, .roadmap-rail::before { animation: none; opacity: 1; transform: none; } .feedback-tab:hover { transform: none; } }
+    @media (max-width: 720px) { .roadmap-rail::before { left: .72rem; } .roadmap-dot { left: -2.73rem; } }
+
   </style>
 </head>
 <body class="bg-navy text-gray-200 min-h-screen flex flex-col">
@@ -72,50 +93,100 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </nav>
 
-  <main class="flex-1 max-w-5xl mx-auto px-6 py-12 w-full">
-    <div class="text-center mb-10">
-      <p class="text-xs font-bold tracking-[0.22em] text-gold uppercase mb-3">Geri Bildirim Merkezi</p>
-      <h1 class="text-3xl md:text-4xl font-black text-white mb-3">MyGoldFolio'yu gelistirmeye yardim et</h1>
-      <p class="text-sm text-gray-400 max-w-2xl mx-auto">Ihtiyacina gore en hizli yolu sec: hata bildirimi, ozellik istegi, yol haritasi oylamasi veya dogrudan iletisim.</p>
-    </div>
+  <main class="flex-1 w-full" data-feedback-page>
+    <section class="feedback-hero border-b border-border/25">
+      <div class="relative max-w-6xl mx-auto px-6 py-12 md:py-16">
+        <p class="text-xs font-bold tracking-[0.22em] text-gold uppercase mb-3">Geri bildirim merkezi</p>
+        <div class="grid lg:grid-cols-[1.05fr_.95fr] gap-8 items-end">
+          <div>
+            <h1 class="text-3xl md:text-5xl font-black text-white mb-4">MyGoldFolio yönünü sen de şekillendir</h1>
+            <p class="text-base text-gray-300 max-w-2xl">Hesap oluşturmadan hata, özellik fikri veya genel geri bildirim gönder.</p>
+          </div>
+          <div class="feedback-panel rounded-2xl p-5">
+            <p class="text-sm text-gray-300 mb-4">Mesajın doğrudan SmartDailyApps’e gider. Canny hesabı, herkese açık profil veya giriş yok.</p>
+            <div class="grid sm:grid-cols-3 gap-2" role="tablist" aria-label="Feedback type">
+              <button type="button" class="feedback-tab rounded-xl px-3 py-3 text-left" data-feedback-tab="general" aria-selected="true"><span class="block text-sm font-bold">Geri bildirim</span><span class="block text-xs mt-1 text-gray-400">Neyin belirsiz, faydalı veya eksik olduğunu paylaş.</span></button>
+              <button type="button" class="feedback-tab rounded-xl px-3 py-3 text-left" data-feedback-tab="bug" aria-selected="false"><span class="block text-sm font-bold">Hata bildir</span><span class="block text-xs mt-1 text-gray-400">Tekrarlanabilir sorunları bağlamıyla bildir.</span></button>
+              <button type="button" class="feedback-tab rounded-xl px-3 py-3 text-left" data-feedback-tab="feature" aria-selected="false"><span class="block text-sm font-bold">Özellik fikri</span><span class="block text-xs mt-1 text-gray-400">Takibi kolaylaştıracak akışı anlat.</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <a href="https://smartdailyapps.com/tr/contact/" target="_blank" rel="noopener" class="rounded-xl border border-border/35 bg-navy-light/55 p-5 hover:border-gold/35 transition">
-        <p class="text-xs text-gold font-bold tracking-wide uppercase mb-2">Iletisim</p>
-        <h2 class="text-base font-extrabold text-white mb-2">Bize ulasin</h2>
-        <p class="text-sm text-gray-400">Genel sorular, is birligi talepleri ve destek iletisimi.</p>
-      </a>
+    <section class="max-w-6xl mx-auto px-6 py-10 md:py-12 grid lg:grid-cols-[.78fr_1.22fr] gap-6">
+      <aside class="space-y-4">
+        <a href="https://smartdailyapps.com/tr/contact/" target="_blank" rel="noopener" class="block feedback-panel rounded-2xl p-5 hover:border-gold/50 transition">
+          <p class="text-xs text-gold uppercase font-bold tracking-wide mb-2">Contact</p>
+          <h2 class="text-lg font-extrabold text-white mb-2">Doğrudan iletişim?</h2>
+          <p class="text-sm text-gray-400 mb-4">Destek, iş birliği veya genel sorular için e-posta kullan.</p>
+          <span class="text-sm text-gold font-bold">SmartDailyApps ile iletişim</span>
+        </a>
+        <a href="/tr/roadmap/" class="block feedback-panel rounded-2xl p-5 hover:border-gold/50 transition">
+          <p class="text-xs text-gold uppercase font-bold tracking-wide mb-2">Roadmap</p>
+          <h2 class="text-lg font-extrabold text-white mb-2">Ürün yönünü gör</h2>
+          <p class="text-sm text-gray-400 mb-4">Nelerin yayında olduğunu ve sıradaki araştırmaları incele.</p>
+          <span class="text-sm text-gold font-bold">Yol haritası</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.mygoldfolio.app" target="_blank" rel="noopener" class="block feedback-panel rounded-2xl p-5 hover:border-gold/50 transition">
+          <p class="text-xs text-gold uppercase font-bold tracking-wide mb-2">Google Play</p>
+          <h2 class="text-lg font-extrabold text-white mb-2">Memnun musun?</h2>
+          <p class="text-sm text-gray-400 mb-4">Play Store puanı daha fazla altın yatırımcısına ulaşmamıza yardım eder.</p>
+          <span class="text-sm text-gold font-bold">Google Play’de puanla</span>
+        </a>
+      </aside>
 
-      <a href="https://smartdailyapps.canny.io/mygoldfolio" target="_blank" rel="noopener" class="rounded-xl border border-border/35 bg-navy-light/55 p-5 hover:border-gold/35 transition">
-        <p class="text-xs text-gold font-bold tracking-wide uppercase mb-2">Hata bildirimi</p>
-        <h2 class="text-base font-extrabold text-white mb-2">Hata bildir</h2>
-        <p class="text-sm text-gray-400">Tekrarlanabilir sorunlari cihaz detaylari ve beklenen davranisla birlikte bildir.</p>
-      </a>
+      <form id="feedback-form" class="feedback-panel rounded-2xl p-5 md:p-7 relative" action="https://formspree.io/f/xojrvreb" method="POST" data-feedback-form data-locale="tr" data-success="Teşekkürler. Geri bildirimin gönderildi." data-error="Gönderilemedi. Tekrar dene veya info@smartdailyapps.com adresine yaz." data-sending="Gönderiliyor..." data-subject-base="MyGoldFolio geri bildirim" data-title-general="Geri bildirim gönder" data-title-bug="Hata bildir" data-title-feature="Özellik öner" data-submit-general="Gönder" data-submit-bug="Hata gönder" data-submit-feature="Öneri gönder">
+        <input type="hidden" name="_subject" value="MyGoldFolio geri bildirim" data-feedback-subject />
+        <input type="hidden" name="product" value="MyGoldFolio" />
+        <input type="hidden" name="locale" value="tr" />
+        <input type="hidden" name="feedback_type" value="general" data-feedback-type />
+        <input type="hidden" name="source" value="website" data-feedback-source />
+        <input type="hidden" name="page_url" value="https://mygoldfolio.de/tr/feedback/" data-feedback-page-url />
+        <input class="honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
 
-      <a href="https://smartdailyapps.canny.io/mygoldfolio" target="_blank" rel="noopener" class="rounded-xl border border-border/35 bg-navy-light/55 p-5 hover:border-gold/35 transition">
-        <p class="text-xs text-gold font-bold tracking-wide uppercase mb-2">Ozellik fikri</p>
-        <h2 class="text-base font-extrabold text-white mb-2">Ozellik iste</h2>
-        <p class="text-sm text-gray-400">Yeni is akislari, analizler veya kullanilabilirlik iyilestirmeleri oner.</p>
-      </a>
+        <div class="mb-6">
+          <p class="text-xs text-gold uppercase font-bold tracking-wide mb-2">MyGoldFolio</p>
+          <h2 class="text-2xl font-black text-white" data-feedback-heading>Geri bildirim gönder</h2>
+          <p class="text-sm text-gray-400 mt-2">Lütfen portföy değerleri, PIN veya hassas finansal bilgi ekleme.</p>
+        </div>
 
-      <a href="https://smartdailyapps.canny.io/mygoldfolio" target="_blank" rel="noopener" class="rounded-xl border border-border/35 bg-navy-light/55 p-5 hover:border-gold/35 transition">
-        <p class="text-xs text-gold font-bold tracking-wide uppercase mb-2">Topluluk sesi</p>
-        <h2 class="text-base font-extrabold text-white mb-2">Geri bildirim paylas</h2>
-        <p class="text-sm text-gray-400">Urun yonunu ve netligini iyilestirmek icin gorusunu paylas.</p>
-      </a>
+        <div class="grid md:grid-cols-2 gap-4 mb-4">
+          <label class="block text-sm text-gray-300">E-posta (opsiyonel)<input class="feedback-input mt-2" type="email" name="email" placeholder="sen@example.com" /></label>
+          <label class="block text-sm text-gray-300">App sürümü (opsiyonel)<input class="feedback-input mt-2" type="text" name="app_version" placeholder="Biliniyorsa 3.1.0" /></label>
+        </div>
 
-      <a href="https://mygoldfolio.de/tr/roadmap/" class="rounded-xl border border-border/35 bg-navy-light/55 p-5 hover:border-gold/35 transition">
-        <p class="text-xs text-gold font-bold tracking-wide uppercase mb-2">Yol Haritasi</p>
-        <h2 class="text-base font-extrabold text-white mb-2">Yol haritasini gor</h2>
-        <p class="text-sm text-gray-400">Yayinlananlari, uzerinde calisilanlari ve siradaki planlari gor.</p>
-      </a>
+        <div class="mode-panel mb-4" data-mode-panel="bug" hidden>
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <label class="block text-sm text-gray-300">Cihaz / Android sürümü (opsiyonel)<input class="feedback-input mt-2" type="text" name="device" placeholder="Samsung S24 Ultra, Android 15" /></label>
+            <label class="block text-sm text-gray-300">Gerçek sonuç (opsiyonel)<input class="feedback-input mt-2" type="text" name="actual_result" /></label>
+          </div>
+          <label class="block text-sm text-gray-300 mb-4">Tekrarlama adımları (opsiyonel)<textarea class="feedback-input mt-2 min-h-[110px]" name="steps_to_reproduce" placeholder="1. Aç...
+2. Dokun...
+3. Gör..."></textarea></label>
+          <label class="block text-sm text-gray-300">Beklenen sonuç (opsiyonel)<input class="feedback-input mt-2" type="text" name="expected_result" /></label>
+        </div>
 
-      <a href="https://play.google.com/store/apps/details?id=com.mygoldfolio.app" target="_blank" rel="noopener" class="rounded-xl border border-border/35 bg-navy-light/55 p-5 hover:border-gold/35 transition">
-        <p class="text-xs text-gold font-bold tracking-wide uppercase mb-2">Puanlama</p>
-        <h2 class="text-base font-extrabold text-white mb-2">Uygulamayi puanla</h2>
-        <p class="text-sm text-gray-400">Gorunurluge destek olmak icin Google Play'de puanini paylas.</p>
-      </a>
-    </div>
+        <div class="mode-panel mb-4" data-mode-panel="feature" hidden>
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="block text-sm text-gray-300">Özellik başlığı (opsiyonel)<input class="feedback-input mt-2" type="text" name="feature_title" placeholder="Fikir için kısa ad" /></label>
+            <label class="block text-sm text-gray-300">Neden önemli? (opsiyonel)<input class="feedback-input mt-2" type="text" name="feature_use_case" /></label>
+          </div>
+        </div>
+
+        <label class="block text-sm text-gray-300">Mesaj<textarea class="feedback-input mt-2 min-h-[150px]" name="message" required placeholder="Neyi bilmemizi istersin?"></textarea></label>
+
+        <div class="mt-5 rounded-2xl border border-mint/35 bg-mint/10 p-4" data-feedback-success-panel role="status" aria-live="polite" tabindex="-1" hidden>
+          <p class="text-sm font-bold text-mint">Teşekkürler, geri bildirimin gönderildi.</p>
+          <p class="text-sm text-gray-300 mt-1">Her mesajı okuyoruz. Sırada ne olduğunu da görebilirsin.</p>
+          <a href="/tr/roadmap/" class="inline-flex w-fit mt-3 text-sm font-bold text-gold hover:text-amber transition">Roadmap’i aç</a>
+        </div>
+        <div class="mt-5 flex flex-col sm:flex-row sm:items-center gap-3 justify-between">
+          <p class="text-sm text-gray-400" data-feedback-status role="status" aria-live="polite"></p>
+          <button class="bg-gold text-navy font-bold px-5 py-3 rounded-xl hover:bg-amber transition" type="submit" data-feedback-submit>Gönder</button>
+        </div>
+      </form>
+    </section>
   </main>
 
   <footer class="border-t border-border/20 py-8 px-6">
@@ -128,6 +199,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      const root = document.querySelector('[data-feedback-page]');
+      if (!root) return;
+      const form = root.querySelector('[data-feedback-form]');
+      const tabs = Array.from(root.querySelectorAll('[data-feedback-tab]'));
+      const panels = Array.from(root.querySelectorAll('[data-mode-panel]'));
+      const typeInput = root.querySelector('[data-feedback-type]');
+      const sourceInput = root.querySelector('[data-feedback-source]');
+      const pageUrlInput = root.querySelector('[data-feedback-page-url]');
+      const subjectInput = root.querySelector('[data-feedback-subject]');
+      const status = root.querySelector('[data-feedback-status]');
+      const submit = root.querySelector('[data-feedback-submit]');
+      const heading = root.querySelector('[data-feedback-heading]');
+      const successPanel = root.querySelector('[data-feedback-success-panel]');
+      const params = new URLSearchParams(window.location.search);
+      const allowed = ['general', 'bug', 'feature'];
+      const labels = Object.fromEntries(tabs.map((tab) => [tab.dataset.feedbackTab, tab.querySelector('span')?.textContent || tab.dataset.feedbackTab]));
+      const subjectBase = form.dataset.subjectBase || 'MyGoldFolio feedback';
+
+      function dataKey(prefix, mode) {
+        return prefix + mode.charAt(0).toUpperCase() + mode.slice(1);
+      }
+
+      function setMode(mode) {
+        const next = allowed.includes(mode) ? mode : 'general';
+        tabs.forEach((tab) => tab.setAttribute('aria-selected', String(tab.dataset.feedbackTab === next)));
+        panels.forEach((panel) => { panel.hidden = panel.dataset.modePanel !== next; });
+        if (typeInput) typeInput.value = next;
+        if (subjectInput) subjectInput.value = subjectBase + ' - ' + (labels[next] || next);
+        if (heading) heading.textContent = form.dataset[dataKey('title', next)] || labels[next] || next;
+        if (submit) submit.textContent = form.dataset[dataKey('submit', next)] || form.dataset[dataKey('title', next)] || labels[next] || next;
+      }
+
+      tabs.forEach((tab) => tab.addEventListener('click', () => {
+        if (successPanel) successPanel.hidden = true;
+        if (status) status.textContent = '';
+        setMode(tab.dataset.feedbackTab);
+      }));
+      setMode(params.get('type') || 'general');
+      if (sourceInput) sourceInput.value = params.get('source') || 'website';
+      if (pageUrlInput) pageUrlInput.value = window.location.href;
+
+      form.addEventListener('submit', async (event) => {
+        if (!window.fetch) return;
+        event.preventDefault();
+        if (successPanel) successPanel.hidden = true;
+        if (status) status.textContent = form.dataset.sending || 'Sending...';
+        if (submit) submit.disabled = true;
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { Accept: 'application/json' },
+          });
+          if (!response.ok) throw new Error('Form submission failed');
+          const selectedMode = typeInput?.value || 'general';
+          form.reset();
+          setMode(selectedMode);
+          if (pageUrlInput) pageUrlInput.value = window.location.href;
+          if (sourceInput) sourceInput.value = params.get('source') || 'website';
+          if (status) status.textContent = '';
+          if (successPanel) {
+            successPanel.hidden = false;
+            successPanel.focus({ preventScroll: true });
+          }
+        } catch (error) {
+          if (status) status.textContent = form.dataset.error || 'Could not send feedback.';
+        } finally {
+          if (submit) submit.disabled = false;
+        }
+      });
+    })();
+  </script>
   <script src="/images/locale-switcher.js"></script>
 </body>
 </html>

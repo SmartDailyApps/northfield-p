@@ -59,6 +59,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
   <style>
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+    .mgf-surface { background: linear-gradient(180deg, rgba(26,26,46,.92), rgba(15,15,26,.98)); }
+    .feedback-hero, .roadmap-hero { position: relative; overflow: hidden; }
+    .feedback-hero::before, .roadmap-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 18% 12%, rgba(212,168,67,.18), transparent 30%), linear-gradient(135deg, rgba(0,214,143,.12), transparent 45%); pointer-events: none; }
+    .feedback-panel, .roadmap-card { border: 1px solid rgba(212,168,67,.22); background: rgba(26,26,46,.68); box-shadow: 0 24px 80px rgba(0,0,0,.28); }
+    .feedback-tab { border: 1px solid rgba(255,255,255,.10); background: rgba(255,255,255,.04); color: #c9c9d6; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+    .feedback-tab:hover { transform: translateY(-1px); border-color: rgba(212,168,67,.45); }
+    .feedback-tab[aria-selected="true"] { background: rgba(212,168,67,.16); border-color: rgba(212,168,67,.75); color: #FFE27A; }
+    .feedback-input { width: 100%; border: 1px solid rgba(255,255,255,.12); background: rgba(15,15,26,.74); color: #f7f7fb; border-radius: .75rem; padding: .8rem .9rem; outline: none; }
+    .feedback-input:focus { border-color: rgba(212,168,67,.8); box-shadow: 0 0 0 3px rgba(212,168,67,.14); }
+    .mode-panel[hidden] { display: none; }
+    .honeypot { position: absolute; left: -9999px; opacity: 0; }
+    .roadmap-rail { position: relative; }
+    .roadmap-rail::before { content: ''; position: absolute; left: 1.05rem; top: .4rem; bottom: .4rem; width: 2px; background: linear-gradient(#00D68F, #D4A843, #8B7CFF); animation: railGlow 4s ease-in-out infinite; }
+    .roadmap-card { position: relative; opacity: 0; transform: translateY(18px); animation: cardIn .7s ease forwards; animation-delay: var(--delay, 0ms); }
+    .roadmap-dot { position: absolute; left: -3.15rem; top: 1.35rem; width: 2.4rem; height: 2.4rem; border-radius: 999px; display: grid; place-items: center; background: #0F0F1A; border: 1px solid rgba(212,168,67,.55); color: #FFE27A; box-shadow: 0 0 28px rgba(212,168,67,.22); z-index: 2; }
+    @keyframes cardIn { to { opacity: 1; transform: translateY(0); } }
+    @keyframes railGlow { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .roadmap-card, .roadmap-rail::before { animation: none; opacity: 1; transform: none; } .feedback-tab:hover { transform: none; } }
+    @media (max-width: 720px) { .roadmap-rail::before { left: .72rem; } .roadmap-dot { left: -2.73rem; } }
+
   </style>
 </head>
 <body class="bg-navy text-gray-200 min-h-screen flex flex-col">
@@ -74,53 +94,85 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </nav>
 
-  <main class="flex-1 max-w-6xl mx-auto px-6 py-12 w-full">
-    <div class="text-center mb-10">
-      <p class="text-xs font-bold tracking-[0.22em] text-gold uppercase mb-3">Product Roadmap</p>
-      <h1 class="text-3xl md:text-4xl font-black text-white mb-3">Now, Next, Later</h1>
-      <p class="text-sm text-gray-400 max-w-2xl mx-auto">A transparent view of shipped outcomes and active priorities. Scope can evolve based on user feedback and release validation.</p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-4">
-      <section class="rounded-2xl border border-mint/35 bg-mint/10 p-5">
-        <h2 class="text-sm font-bold uppercase tracking-[0.16em] text-mint mb-3">Now (Shipped)</h2>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li>Freemium model + Premium Lifetime</li>
-          <li>Advanced chart windows and premium gating</li>
-          <li>Export & backup improvements</li>
-          <li>DE / TR / FR / ES / IT / PT-BR app language support</li>
-          <li>BRL display currency support</li>
-        </ul>
-      </section>
-
-      <section class="rounded-2xl border border-gold/35 bg-gold/10 p-5">
-        <h2 class="text-sm font-bold uppercase tracking-[0.16em] text-gold mb-3">Next (In Progress)</h2>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li>Play Store production rollout stabilization</li>
-          <li>Release-candidate validation and store submission</li>
-          <li>Metadata and indexing hardening</li>
-          <li>Post-release feedback fixes</li>
-        </ul>
-      </section>
-
-      <section class="rounded-2xl border border-violet/35 bg-violet/10 p-5">
-        <h2 class="text-sm font-bold uppercase tracking-[0.16em] text-violet mb-3">Later (Planned)</h2>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li>iPhone app support (planned)</li>
-          <li>Additional languages (AR and more)</li>
-          <li>Expanded strategy tools and workflow depth</li>
-          <li>Post-launch UX refinement wave</li>
-        </ul>
-      </section>
-    </div>
-
-    <div class="mt-10 rounded-2xl border border-border/35 bg-navy-light/55 p-6 text-center">
-      <p class="text-sm text-gray-300 mb-2">Want to influence priorities?</p>
-      <div class="flex flex-wrap items-center justify-center gap-3">
-        <a href="/feedback/" class="inline-flex items-center gap-2 bg-gold text-navy font-bold px-4 py-2 rounded-xl text-sm hover:bg-amber transition">Share Feedback</a>
-        <a href="/changelog/" class="inline-flex items-center gap-2 border border-gold/40 text-gold px-4 py-2 rounded-xl text-sm hover:bg-gold/10 transition">View Changelog</a>
+  <main class="flex-1 w-full">
+    <section class="roadmap-hero border-b border-border/25">
+      <div class="relative max-w-6xl mx-auto px-6 py-12 md:py-16">
+        <p class="text-xs font-bold tracking-[0.22em] text-gold uppercase mb-3">Product roadmap</p>
+        <div class="max-w-3xl">
+          <div class="inline-flex rounded-full border border-mint/35 bg-mint/10 px-3 py-1 text-xs font-bold text-mint mb-4">v3.1.0 live</div>
+          <h1 class="text-3xl md:text-5xl font-black text-white mb-4">From release to refinement</h1>
+          <p class="text-base text-gray-300">A public view of what is live, what is being stabilized, and what we are exploring next.</p>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 py-10 md:py-12">
+      <div class="roadmap-rail space-y-5 md:space-y-6">
+        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-9 md:ml-12" style="--delay:0ms">
+          <div class="roadmap-dot">1</div>
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+            <h2 class="text-2xl font-black text-white">Shipped</h2>
+            <span class="inline-flex w-fit rounded-full border border-gold/35 bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold">Live now</span>
+          </div>
+          <ul class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Spanish, Italian, and Brazilian Portuguese</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">BRL display currency</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Premium badge visual polish</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">First-party feedback hub</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-9 md:ml-12" style="--delay:120ms">
+          <div class="roadmap-dot">2</div>
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+            <h2 class="text-2xl font-black text-white">Active</h2>
+            <span class="inline-flex w-fit rounded-full border border-gold/35 bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold">Stabilizing</span>
+          </div>
+          <ul class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Production feedback fixes</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Search visibility and indexing cleanup</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Notification text hardening</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Release quality gates</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-9 md:ml-12" style="--delay:240ms">
+          <div class="roadmap-dot">3</div>
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+            <h2 class="text-2xl font-black text-white">Exploring</h2>
+            <span class="inline-flex w-fit rounded-full border border-gold/35 bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold">Discovery</span>
+          </div>
+          <ul class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Organic growth rollout</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Promo video and store media</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">iOS feasibility</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">More languages, including Arabic/RTL</li>
+          </ul>
+        </article>
+
+        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-9 md:ml-12" style="--delay:360ms">
+          <div class="roadmap-dot">4</div>
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+            <h2 class="text-2xl font-black text-white">Later</h2>
+            <span class="inline-flex w-fit rounded-full border border-gold/35 bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold">Planned</span>
+          </div>
+          <ul class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">CSV price history import</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Home screen widget</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Google Drive backup sync</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">More strategy and workflow depth</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="mt-10 roadmap-card rounded-2xl p-6 text-center" style="--delay:520ms">
+        <p class="text-sm text-gray-300 mb-4">A public view of what is live, what is being stabilized, and what we are exploring next.</p>
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <a href="/feedback/" class="inline-flex items-center gap-2 bg-gold text-navy font-bold px-4 py-2 rounded-xl text-sm hover:bg-amber transition">Share feedback</a>
+          <a href="/changelog/" class="inline-flex items-center gap-2 border border-gold/40 text-gold px-4 py-2 rounded-xl text-sm hover:bg-gold/10 transition">View changelog</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="border-t border-border/20 py-8 px-6">
