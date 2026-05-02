@@ -103,7 +103,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="text-base text-gray-300 max-w-2xl">Send a bug report, feature idea, or general feedback without creating an account.</p>
           </div>
           <div class="feedback-panel rounded-2xl p-5">
-            <p class="text-sm text-gray-300 mb-4">Your message goes directly to SmartDailyApps. No Canny account, no public profile, no sign-in.</p>
             <div class="grid sm:grid-cols-3 gap-2" role="tablist" aria-label="Feedback type">
               <button type="button" class="feedback-tab rounded-xl px-3 py-3 text-left" data-feedback-tab="general" aria-selected="true"><span class="block text-sm font-bold">Feedback</span><span class="block text-xs mt-1 text-gray-400">Share what feels unclear, useful, or missing.</span></button>
               <button type="button" class="feedback-tab rounded-xl px-3 py-3 text-left" data-feedback-tab="bug" aria-selected="false"><span class="block text-sm font-bold">Bug report</span><span class="block text-xs mt-1 text-gray-400">Report reproducible issues with context.</span></button>
@@ -115,28 +114,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <section class="max-w-6xl mx-auto px-6 py-10 md:py-12 grid lg:grid-cols-[.78fr_1.22fr] gap-6">
-      <aside class="space-y-4">
-        <a href="https://smartdailyapps.com/contact/" target="_blank" rel="noopener" class="block feedback-panel rounded-2xl p-5 hover:border-gold/50 transition">
-          <p class="text-xs text-gold uppercase font-bold tracking-wide mb-2">Contact</p>
-          <h2 class="text-lg font-extrabold text-white mb-2">Need direct contact?</h2>
-          <p class="text-sm text-gray-400 mb-4">Use email for account, partnership, or support questions.</p>
-          <span class="text-sm text-gold font-bold">Contact SmartDailyApps</span>
-        </a>
-        <a href="/roadmap/" class="block feedback-panel rounded-2xl p-5 hover:border-gold/50 transition">
-          <p class="text-xs text-gold uppercase font-bold tracking-wide mb-2">Roadmap</p>
-          <h2 class="text-lg font-extrabold text-white mb-2">See product direction</h2>
-          <p class="text-sm text-gray-400 mb-4">Review what shipped and what is being explored next.</p>
-          <span class="text-sm text-gold font-bold">Open roadmap</span>
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.mygoldfolio.app" target="_blank" rel="noopener" class="block feedback-panel rounded-2xl p-5 hover:border-gold/50 transition">
-          <p class="text-xs text-gold uppercase font-bold tracking-wide mb-2">Google Play</p>
-          <h2 class="text-lg font-extrabold text-white mb-2">Already happy?</h2>
-          <p class="text-sm text-gray-400 mb-4">A Play Store rating helps more gold investors find the app.</p>
-          <span class="text-sm text-gold font-bold">Rate on Google Play</span>
-        </a>
-      </aside>
-
-      <form id="feedback-form" class="feedback-panel rounded-2xl p-5 md:p-7 relative" action="https://formspree.io/f/xojrvreb" method="POST" data-feedback-form data-locale="en" data-success="Thanks. Your feedback was sent." data-error="Could not send feedback. Please try again or email info@smartdailyapps.com." data-sending="Sending..." data-subject-base="MyGoldFolio feedback" data-title-general="Send feedback" data-title-bug="Report a bug" data-title-feature="Request a feature" data-submit-general="Send feedback" data-submit-bug="Send bug report" data-submit-feature="Send feature idea">
+      <form id="feedback-form" class="feedback-panel rounded-2xl p-5 md:p-7 relative order-1 lg:order-2" action="https://formspree.io/f/xojrvreb" method="POST" data-feedback-form data-locale="en" data-success="Thanks. Your feedback was sent." data-error="Could not send feedback. Please try again or email info@smartdailyapps.com." data-sending="Sending..." data-subject-base="MyGoldFolio feedback" data-title-general="Send feedback" data-title-bug="Report a bug" data-title-feature="Request a feature" data-submit-general="Send feedback" data-submit-bug="Send bug report" data-submit-feature="Send feature idea">
         <input type="hidden" name="_subject" value="MyGoldFolio feedback" data-feedback-subject />
         <input type="hidden" name="product" value="MyGoldFolio" />
         <input type="hidden" name="locale" value="en" />
@@ -186,6 +164,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <button class="bg-gold text-navy font-bold px-5 py-3 rounded-xl hover:bg-amber transition" type="submit" data-feedback-submit>Send feedback</button>
         </div>
       </form>
+
+      <aside class="space-y-4 order-2 lg:order-1">
+        <a href="https://smartdailyapps.com/contact/" target="_blank" rel="noopener" class="block feedback-panel rounded-2xl p-5 hover:border-gold/50 transition">
+          <p class="text-xs text-gold uppercase font-bold tracking-wide mb-2">Contact</p>
+          <h2 class="text-lg font-extrabold text-white mb-2">Need direct contact?</h2>
+          <p class="text-sm text-gray-400 mb-4">Use email for account, partnership, or support questions.</p>
+          <span class="text-sm text-gold font-bold">Contact SmartDailyApps</span>
+        </a>
+        <a href="/roadmap/" class="block feedback-panel rounded-2xl p-5 hover:border-gold/50 transition">
+          <p class="text-xs text-gold uppercase font-bold tracking-wide mb-2">Roadmap</p>
+          <h2 class="text-lg font-extrabold text-white mb-2">See product direction</h2>
+          <p class="text-sm text-gray-400 mb-4">Review what shipped and what is being explored next.</p>
+          <span class="text-sm text-gold font-bold">Open roadmap</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.mygoldfolio.app" target="_blank" rel="noopener" class="block feedback-panel rounded-2xl p-5 hover:border-gold/50 transition">
+          <p class="text-xs text-gold uppercase font-bold tracking-wide mb-2">Google Play</p>
+          <h2 class="text-lg font-extrabold text-white mb-2">Already happy?</h2>
+          <p class="text-sm text-gray-400 mb-4">A Play Store rating helps more gold investors find the app.</p>
+          <span class="text-sm text-gold font-bold">Rate on Google Play</span>
+        </a>
+      </aside>
     </section>
   </main>
 
