@@ -100,7 +100,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "name": "Quelles devises sont prises en charge ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "8 devises prises en charge : EUR, USD, GBP, INR, AED, SAR, TRY et EGP. Le poids peut etre affiche en grammes, onces troy ou tola."
+          "text": "9 devises prises en charge : EUR, USD, GBP, INR, AED, SAR, TRY, EGP et BRL. Le poids peut etre affiche en grammes, onces troy ou tola."
         }
       },
       {
@@ -199,6 +199,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       display: flex; align-items: center; justify-content: center; flex-shrink: 0;
       font-size: 26px;
     }
+
+
+    @media (max-width: 640px) {
+      #plans { padding-left: .75rem; padding-right: .75rem; }
+      #plans .max-w-3xl { max-width: 100%; }
+      .plans-table-wrap { overflow-x: hidden; }
+      .plans-table { table-layout: fixed; width: 100%; font-size: 10.5px; line-height: 1.25; }
+      .plans-table col:nth-child(1) { width: 39%; }
+      .plans-table col:nth-child(2) { width: 22%; }
+      .plans-table col:nth-child(3) { width: 39%; }
+      .plans-table th,
+      .plans-table td { padding: .62rem .35rem; white-space: normal; overflow-wrap: anywhere; word-break: normal; hyphens: auto; vertical-align: top; }
+      .plans-table th:first-child,
+      .plans-table td:first-child { padding-left: .55rem; }
+      .plans-table th:nth-child(3),
+      .plans-table td:nth-child(3) { padding-right: .55rem; }
+      .plans-table th span.inline-flex { padding: .22rem .38rem; font-size: .62rem; line-height: 1.1; letter-spacing: .08em; white-space: normal; }
+      .plans-table th span.block { display: none; }
+      .plans-table td:first-child .inline-flex { align-items: flex-start; gap: .28rem; }
+      .plans-table td:first-child ion-icon { flex-shrink: 0; margin-top: .05rem; font-size: 12px; }
+      .plans-table td:nth-child(2),
+      .plans-table td:nth-child(3) { text-align: center; }
+    }
+    @media (max-width: 380px) {
+      #plans { padding-left: .5rem; padding-right: .5rem; }
+      .plans-table { font-size: 10px; }
+      .plans-table th,
+      .plans-table td { padding: .56rem .28rem; }
+      .plans-table td:first-child ion-icon { display: none; }
+    }
+
   </style>
 </head>
 <body class="bg-navy text-gray-200" style="overflow-x: hidden;">
@@ -277,19 +308,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="w-1.5 h-1.5 bg-gold rounded-full"></span>Seuil de rentabilite &amp; compte a rebours fiscal
           </span>
           <span class="text-xs bg-navy/60 border border-border/40 text-gray-300 px-3 py-1.5 rounded-full flex items-center gap-2">
-            <span class="w-1.5 h-1.5 bg-gold rounded-full"></span>Surveillance en arriere-plan
+            <span class="w-1.5 h-1.5 bg-gold rounded-full"></span>Arrière-plan
           </span>
         </div>
-
         <!-- CTAs -->
         <div class="flex flex-wrap justify-center md:justify-start gap-4">
-          <a href="#features" class="cta-pulse inline-flex items-center gap-2 bg-gold text-navy font-bold px-7 py-3.5 rounded-xl hover:bg-amber transition text-sm">
-            Decouvrir les fonctions ↓
+          <a href="#download" class="cta-pulse inline-flex items-center gap-2 bg-gold text-navy font-bold px-7 py-3.5 rounded-xl hover:bg-amber transition text-sm">
+            <ion-icon name="logo-google-playstore"></ion-icon>Installer gratuitement
           </a>
-          <a href="#built-for-gold" class="inline-flex items-center gap-2 border border-gold/50 text-gold font-bold px-7 py-3.5 rounded-xl hover:bg-gold/10 transition text-sm">
-            Pourquoi MyGoldFolio
+          <a href="#plans" class="inline-flex items-center gap-2 border border-gold/50 text-gold font-bold px-7 py-3.5 rounded-xl hover:bg-gold/10 transition text-sm">
+            <ion-icon name="diamond-outline"></ion-icon>Voir Premium
           </a>
         </div>
+        <p class="mt-4 text-xs text-gray-400 flex flex-wrap justify-center md:justify-start gap-x-3 gap-y-1">
+          <span>Pas de compte. Pas de pub. Les donnees restent sur votre appareil.</span>
+        </p>
       </div>
 
       <!-- Phone mockup column -->
@@ -325,12 +358,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="text-center mb-10" data-aos="fade-up">
         <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Pourquoi MyGoldFolio</p>
         <h2 class="text-2xl md:text-3xl font-black text-white mb-3">Concu pour tous ceux qui suivent l'or</h2>
-        <p class="text-gray-400 text-sm max-w-2xl mx-auto">Suivez lingots physiques, pieces et or en ligne au meme endroit, puis planifiez votre prochain mouvement avec des scenarios clairs et des alertes intelligentes.</p>
+        <p class="text-gray-400 text-sm max-w-2xl mx-auto">Suivez lingots, pieces, bijoux et or en ligne au meme endroit, puis planifiez votre prochain mouvement avec des scenarios clairs et des alertes intelligentes.</p>
       </div>
       <div class="grid md:grid-cols-3 gap-4" data-aos="fade-up">
         <div class="bg-navy-light/55 border border-border/25 rounded-xl p-5 text-center">
           <p class="text-gold font-extrabold text-lg mb-1">Tous les types d'or</p>
-          <p class="text-gray-400 text-sm">Physique, pieces et or en ligne - dans une seule vue portefeuille.</p>
+          <p class="text-gray-400 text-sm">Lingots, pieces, bijoux et or en ligne - dans une seule vue portefeuille.</p>
         </div>
         <div class="bg-navy-light/55 border border-border/25 rounded-xl p-5 text-center">
           <p class="text-gold font-extrabold text-lg mb-1">Suivre et simuler</p>
@@ -347,6 +380,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Stats strip -->
   <div class="border-y border-border/20 bg-navy-light/20 px-6 py-5" data-aos="fade-up">
     <div class="max-w-5xl mx-auto flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-gray-400">
+      <span data-release-proof class="inline-flex items-center gap-2 rounded-full border border-gold/25 bg-gold/10 px-3 py-1 text-gold font-bold">
+        <ion-icon name="rocket-outline"></ion-icon><a href="/fr/changelog/" class="hover:text-amber transition">v3.1.0 live · 7 langues · 9 devises · BRL</a>
+      </span>
+      <span class="text-border hidden sm:inline">·</span>
       <!-- Live price widget (hidden until JS resolves) -->
       <span id="live-price-stat" class="hidden items-center gap-2">
         <span class="relative flex h-2 w-2">
@@ -358,7 +395,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="text-border hidden sm:inline" id="live-sep" style="display:none!important">·</span>
       <span><span class="text-white font-bold">Alertes intelligentes</span> · prix, seuil, objectifs, fiscal</span>
       <span class="text-border hidden sm:inline">·</span>
-      <span><span class="text-white font-bold">8 devises</span> · g, oz, tola</span>
+      <span><span class="text-white font-bold">9 devises</span> · g, oz, tola</span>
       <span class="text-border hidden sm:inline">·</span>
       <span><span class="text-white font-bold">Achat, vente &amp; scenarios</span> outils</span>
       <span class="text-border hidden sm:inline">·</span>
@@ -392,6 +429,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="flex-1 text-center md:text-left">
           <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Centre de controle</p>
           <div class="feat-icon bg-amber/10 text-amber mb-5 mx-auto md:mx-0"><ion-icon name="speedometer-outline"></ion-icon></div>
+          <div class="feature-plan-badge mb-3">
+            <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Base gratuite</span>
+          </div>
           <h3 class="text-2xl font-bold text-white mb-2">Votre or en un coup d'oeil</h3>
           <p class="text-gray-300 font-medium mb-3">Prix en direct, valeur du portefeuille et profit dans une vue claire.</p>
           <p class="text-gray-400 leading-relaxed text-base">Voyez votre position globale instantanement sans changer d'ecran. Prix du marche, capital investi et rendement sont visibles en meme temps.</p>
@@ -405,6 +445,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="flex-1 text-center md:text-left">
           <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Clarte marche</p>
           <div class="feat-icon bg-gold/10 text-gold mb-5 mx-auto md:mx-0"><ion-icon name="pulse-outline"></ion-icon></div>
+          <div class="feature-plan-badge mb-3">
+            <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Base gratuite</span>
+          </div>
           <h3 class="text-2xl font-bold text-white mb-2">Des prix qui comptent</h3>
           <p class="text-gray-300 font-medium mb-3">Spot, achat, vente et spread dans une vue en direct.</p>
           <p class="text-gray-400 leading-relaxed text-base">Suivez les chiffres sur lesquels vous tradez vraiment, pas seulement un spot de vitrine. Comparez mouvement marche et realite dealer en quelques secondes.</p>
@@ -414,10 +457,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- Row 3: Portfolio -->
       <div class="flex flex-col md:flex-row items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s3-fr.png" alt="Positions portefeuille" loading="lazy" /></div></div>
+        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s3-fr.png" alt="Positions" loading="lazy" /></div></div>
         <div class="flex-1 text-center md:text-left">
           <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Intelligence positions</p>
           <div class="feat-icon bg-mint/10 text-mint mb-5 mx-auto md:mx-0"><ion-icon name="albums-outline"></ion-icon></div>
+          <div class="feature-plan-badge mb-3">
+            <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Base gratuite</span>
+          </div>
           <h3 class="text-2xl font-bold text-white mb-2">Suivez chaque position</h3>
           <p class="text-gray-300 font-medium mb-3">Suivez valeur, rendement et seuil de rentabilite sur tout votre portefeuille.</p>
           <p class="text-gray-400 leading-relaxed text-base">Chaque position reste lisible avec son contexte de performance pour identifier ce qui impacte vraiment le resultat global.</p>
@@ -431,8 +477,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="flex-1 text-center md:text-left">
           <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Analyse des sorties</p>
           <div class="feat-icon bg-coral/10 text-coral mb-5 mx-auto md:mx-0"><ion-icon name="exit-outline"></ion-icon></div>
+          <div class="feature-plan-badge mb-3">
+            <span class="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/[0.06] text-gray-200 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="notifications-outline"></ion-icon>Gratuit + Premium</span>
+          </div>
           <h3 class="text-2xl font-bold text-white mb-2">Analysez chaque vente</h3>
-          <p class="text-gray-300 font-medium mb-3">Historique premium des ventes avec suivi du P&L realise.</p>
+          <p class="text-gray-300 font-medium mb-3">Enregistrez les ventes, suivez les gains/pertes réalisés et débloquez des outils de vente avancés avec Premium.</p>
           <p class="text-gray-400 leading-relaxed text-base">Chaque vente est conservee avec produit et resultat realise. Vos prochaines decisions reposent sur des sorties mesurees.</p>
           <p class="text-gold/90 text-sm font-semibold mt-3">Avantage: historique des sorties reel, souvent absent ailleurs.</p>
         </div>
@@ -444,6 +493,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="flex-1 text-center md:text-left">
           <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Avantage timing</p>
           <div class="feat-icon bg-gold/10 text-gold mb-5 mx-auto md:mx-0"><ion-icon name="calendar-clear-outline"></ion-icon></div>
+          <div class="feature-plan-badge mb-3">
+            <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Base gratuite</span>
+          </div>
           <h3 class="text-2xl font-bold text-white mb-2">Suivez votre progression exoneree d'impot</h3>
           <p class="text-gray-300 font-medium mb-3">Suivez grammes imposables et exoneres avec une barre de compte a rebours claire.</p>
           <p class="text-gray-400 leading-relaxed text-base">Visualisez instantanement la part deja eligible et la part encore soumise au delai fiscal.</p>
@@ -457,6 +509,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="flex-1 text-center md:text-left">
           <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Laboratoire de decision</p>
           <div class="feat-icon bg-purple/10 text-purple mb-5 mx-auto md:mx-0"><ion-icon name="sparkles-outline"></ion-icon></div>
+          <div class="feature-plan-badge mb-3">
+            <span class="inline-flex items-center gap-1 rounded-full border border-gold/40 bg-gold/10 text-gold shadow-gold/10 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="diamond-outline"></ion-icon>Premium</span>
+          </div>
           <h3 class="text-2xl font-bold text-white mb-2">Testez votre portefeuille</h3>
           <p class="text-gray-300 font-medium mb-3">Projetez gain, perte et seuil de rentabilite selon differents mouvements de prix.</p>
           <p class="text-gray-400 leading-relaxed text-base">Lancez des scenarios avant que le marche bouge et decidez sur des chiffres concrets, pas sur des suppositions.</p>
@@ -470,6 +525,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="flex-1 text-center md:text-left">
           <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Plan d'execution</p>
           <div class="feat-icon bg-mint/10 text-mint mb-5 mx-auto md:mx-0"><ion-icon name="git-compare-outline"></ion-icon></div>
+          <div class="feature-plan-badge mb-3">
+            <span class="inline-flex items-center gap-1 rounded-full border border-gold/40 bg-gold/10 text-gold shadow-gold/10 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="diamond-outline"></ion-icon>Premium</span>
+          </div>
           <h3 class="text-2xl font-bold text-white mb-2">Simulez chaque decision</h3>
           <p class="text-gray-300 font-medium mb-3">Planifiez achats et ventes en toute confiance.</p>
           <p class="text-gray-400 leading-relaxed text-base">Testez produit de vente et impact d'achat avant d'agir. Voyez l'effet sur votre seuil de rentabilite avant engagement de capital.</p>
@@ -483,6 +541,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="flex-1 text-center md:text-left">
           <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Toujours actif</p>
           <div class="feat-icon bg-gold/10 text-gold mb-5 mx-auto md:mx-0"><ion-icon name="notifications-outline"></ion-icon></div>
+          <div class="feature-plan-badge mb-3">
+            <span class="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/[0.06] text-gray-200 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="notifications-outline"></ion-icon>Gratuit + Premium</span>
+          </div>
           <h3 class="text-2xl font-bold text-white mb-2">Configurez des alertes, recevez des notifications</h3>
           <p class="text-gray-300 font-medium mb-3">Definissez des declencheurs et recevez des mises a jour de prix instantanees.</p>
           <p class="text-gray-400 leading-relaxed text-base">Definissez vos seuils une seule fois, puis laissez la surveillance de fond ne remonter que les mouvements utiles a votre strategie.</p>
@@ -565,51 +626,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <!-- Testimonials -->
+  <!-- Use Cases -->
   <section class="px-6 py-16">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-10" data-aos="fade-up">
-        <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Avis des utilisateurs</p>
-        <h2 class="text-2xl md:text-3xl font-black text-white">Premiers retours</h2>
+        <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Cas d’usage</p>
+        <h2 class="text-2xl md:text-3xl font-black text-white">Concu pour de vrais flux de suivi de l’or</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up">
-
-        <div class="bg-navy-light/50 border border-border/20 rounded-2xl p-6">
-          <div class="flex items-center gap-1 text-gold mb-4">
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
+        <div class="bg-navy-light/50 border border-border/20 rounded-2xl p-6 hover:border-gold/35 transition">
+          <div class="w-11 h-11 rounded-2xl bg-gold/10 text-gold grid place-items-center mb-4">
+            <ion-icon name="lock-closed-outline" style="font-size:22px;"></ion-icon>
           </div>
-          <p class="text-gray-300 text-sm leading-relaxed mb-4">"Enfin une appli qui comprend vraiment l'or. Le compte a rebours fiscal a lui seul evite les formules de tableur."</p>
-          <p class="text-xs text-muted">— Testeur precoce, Allemagne</p>
+          <h3 class="text-lg font-extrabold text-white mb-2">Le holder prive</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Suivre lingots, pieces, bijoux et or en ligne dans un portefeuille local sans creer un autre compte financier.</p>
         </div>
-
-        <div class="bg-navy-light/50 border border-border/20 rounded-2xl p-6">
-          <div class="flex items-center gap-1 text-gold mb-4">
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
+        <div class="bg-navy-light/50 border border-border/20 rounded-2xl p-6 hover:border-gold/35 transition">
+          <div class="w-11 h-11 rounded-2xl bg-gold/10 text-gold grid place-items-center mb-4">
+            <ion-icon name="git-compare-outline" style="font-size:22px;"></ion-icon>
           </div>
-          <p class="text-gray-300 text-sm leading-relaxed mb-4">"J'adore les controles de confidentialite. Mes positions restent locales et je choisis si je partage ou non des statistiques anonymes."</p>
-          <p class="text-xs text-muted">— Utilisateur beta, Royaume-Uni</p>
+          <h3 class="text-lg font-extrabold text-white mb-2">Le planificateur</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Verifier achat, vente et scenarios avant que les decisions deviennent urgentes.</p>
         </div>
-
-        <div class="bg-navy-light/50 border border-border/20 rounded-2xl p-6">
-          <div class="flex items-center gap-1 text-gold mb-4">
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
+        <div class="bg-navy-light/50 border border-border/20 rounded-2xl p-6 hover:border-gold/35 transition">
+          <div class="w-11 h-11 rounded-2xl bg-gold/10 text-gold grid place-items-center mb-4">
+            <ion-icon name="notifications-outline" style="font-size:22px;"></ion-icon>
           </div>
-          <p class="text-gray-300 text-sm leading-relaxed mb-4">"La fonction de scenarios intelligents est excellente. Elle fait des analyses "et si" sur de vraies tendances, pas sur des chiffres aleatoires."</p>
-          <p class="text-xs text-muted">— Adopteur precoce, EAU</p>
+          <h3 class="text-lg font-extrabold text-white mb-2">L’utilisateur d’alertes</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Definir les seuils importants une fois et laisser la surveillance signaler les mouvements utiles.</p>
         </div>
-
       </div>
     </div>
   </section>
@@ -623,37 +668,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="text-gray-400 text-sm max-w-2xl mx-auto">Voyez clairement ce qui reste gratuit et ce que Premium debloque cote analyses et outils Pro.</p>
       </div>
 
-      <div class="bg-navy-light/40 border border-border/20 rounded-2xl overflow-hidden" data-aos="fade-up">
-        <div class="overflow-x-auto">
-          <table class="w-full table-fixed text-xs sm:text-sm">
+      <div data-premium-teaser class="mb-6 rounded-[1.75rem] border border-gold/20 bg-[linear-gradient(135deg,rgba(212,168,67,0.12),rgba(255,255,255,0.025))] p-5 shadow-xl shadow-gold/5" data-aos="fade-up">
+        <p class="text-xs font-black uppercase tracking-[0.2em] text-gold mb-2">Focus Premium</p>
+        <h3 class="text-xl md:text-2xl font-black text-white mb-2">Pour les portefeuilles plus grands, les analyses plus profondes et les decisions plus calmes.</h3>
+        <p class="text-sm text-gray-400 mb-4">Commencez gratuitement, puis debloquez Premium dans l’app si vous avez besoin de limites plus hautes et d’outils avances.</p>
+        <div class="grid sm:grid-cols-3 gap-3">
+            <div class="rounded-2xl border border-gold/15 bg-white/[0.035] p-4">
+              <ion-icon name="layers-outline" class="text-gold text-xl"></ion-icon>
+              <p class="mt-2 text-sm font-bold text-white">Positions illimitees</p>
+            </div>
+            <div class="rounded-2xl border border-gold/15 bg-white/[0.035] p-4">
+              <ion-icon name="sparkles-outline" class="text-gold text-xl"></ion-icon>
+              <p class="mt-2 text-sm font-bold text-white">Planification avancee</p>
+            </div>
+            <div class="rounded-2xl border border-gold/15 bg-white/[0.035] p-4">
+              <ion-icon name="download-outline" class="text-gold text-xl"></ion-icon>
+              <p class="mt-2 text-sm font-bold text-white">Export + historique profond</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden rounded-2xl border border-gold/25 bg-[radial-gradient(circle_at_top_right,rgba(245,197,66,0.16),transparent_34%),linear-gradient(180deg,rgba(17,28,48,0.92),rgba(5,11,24,0.96))] shadow-2xl shadow-gold/10" data-aos="fade-up">
+        <div class="pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-gold/20 blur-3xl"></div>
+        <div class="plans-table-wrap">
+          <table class="plans-table w-full table-fixed text-[11px] sm:text-sm">
+            <colgroup>
+              <col class="w-[42%]">
+              <col class="w-[23%]">
+              <col class="w-[35%] bg-gold/[0.055]">
+            </colgroup>
             <thead>
               <tr class="border-b border-border/20 bg-white/[0.02]">
-                <th class="w-[50%] text-left px-4 py-4 text-gray-400 font-semibold text-xs uppercase tracking-wide">Fonction</th>
-                <th class="w-[25%] px-4 py-4 text-center font-bold text-xs uppercase tracking-wide text-white">Free</th>
-                <th class="w-[25%] px-4 py-4 text-center font-bold text-xs uppercase tracking-wide text-gold">Premium</th>
+                <th class="w-[42%] text-left px-4 py-4 text-gray-400 font-semibold text-xs uppercase tracking-wide">Fonction</th>
+                <th class="w-[23%] px-4 py-4 text-center font-bold text-xs uppercase tracking-wide text-white">
+                  <span class="inline-flex items-center justify-center gap-1 rounded-full border border-white/10 bg-white/[0.055] px-3 py-1"><ion-icon name="leaf-outline"></ion-icon>Gratuit</span>
+                  <span class="mt-1 block text-[10px] font-medium normal-case tracking-normal text-gray-500">Suivi essentiel</span>
+                </th>
+                <th class="w-[35%] px-4 py-4 text-center font-bold text-xs uppercase tracking-wide text-gold">
+                  <span class="inline-flex items-center justify-center gap-1 rounded-full border border-gold/40 bg-gold/15 px-3 py-1 shadow-lg shadow-gold/10"><ion-icon name="diamond-outline"></ion-icon>Premium</span>
+                  <span class="mt-1 block text-[10px] font-medium normal-case tracking-normal text-gold/70">Deblocage Lifetime</span>
+                </th>
               </tr>
             </thead>
             <tbody class="divide-y divide-border/10">
-              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="cash-outline" class="text-gold"></ion-icon><span>Prix de l'or en direct</span></span></td><td class="px-4 py-3.5 text-center text-mint font-bold">Inclus</td><td class="px-4 py-3.5 text-center text-gold font-bold">Repli + sources premium optionnelles</td></tr>
-              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="sync-outline" class="text-gold"></ion-icon><span>Surveillance en arriere-plan</span></span></td><td class="px-4 py-3.5 text-center text-gray-300"><span class="text-coral font-semibold">1</span> planification unique</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Surveillance automatique adaptee a votre routine</td></tr>
-              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="notifications-outline" class="text-gold"></ion-icon><span>Alertes de prix (Au-dessus/En-dessous)</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Jusqu'a <span class="text-coral font-semibold">2</span> alertes</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Alertes illimitees pour ne rater aucune cible</td></tr>
-              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="wallet-outline" class="text-gold"></ion-icon><span>Positions portefeuille</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Jusqu'a <span class="text-coral font-semibold">5</span></td><td class="px-4 py-3.5 text-center text-gold font-semibold">Illimite</td></tr>
-              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="swap-horizontal-outline" class="text-gold"></ion-icon><span>Outils de planification achat/vente</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Non inclus</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Vente des positions + simulateurs smart</td></tr>
-              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="flag-outline" class="text-gold"></ion-icon><span>Evenements portefeuille</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Non inclus</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Reperez les moments cles (hauts + fenetre de vente)</td></tr>
-              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="eye-outline" class="text-gold"></ion-icon><span>Surveillance portefeuille</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Non inclus</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Reperez l'elan de profit avant qu'il tourne</td></tr>
-              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="save-outline" class="text-gold"></ion-icon><span>Stockage historique des prix</span></span></td><td class="px-4 py-3.5 text-center text-gray-300"><span class="text-coral font-semibold">60</span> enregistrements</td><td class="px-4 py-3.5 text-center text-gold font-semibold">500 enregistrements</td></tr>
-              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="stats-chart-outline" class="text-gold"></ion-icon><span>Fenetres de graphique</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Court terme (<span class="text-coral font-semibold">7</span> et <span class="text-coral font-semibold">30</span> jours)</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Voir les mouvements court terme et les tendances long terme</td></tr>
-              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="download-outline" class="text-gold"></ion-icon><span>Workflow export &amp; sauvegarde</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Non inclus</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Share Card + export avance</td></tr>
-              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="shield-checkmark-outline" class="text-gold"></ion-icon><span>Modele de confidentialite</span></span></td><td class="px-4 py-3.5 text-center text-mint font-bold">Sur appareil</td><td class="px-4 py-3.5 text-center text-gold font-bold">Sur appareil</td></tr>
-              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="pricetag-outline" class="text-gold"></ion-icon><span>Prix</span></span></td><td class="px-4 py-3.5 text-center text-mint font-semibold">Gratuit</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Paiement unique Lifetime</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="cash-outline" class="text-gold"></ion-icon><span>Prix or live</span></span></td><td class="px-4 py-3.5 text-center text-mint font-bold">Inclus</td><td class="px-4 py-3.5 text-center text-gold font-bold">Repli + APIs premium</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="sync-outline" class="text-gold"></ion-icon><span>Arrière-plan</span></span></td><td class="px-4 py-3.5 text-center text-gray-300"><span class="text-coral font-semibold">1</span> unique</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Quotidien / hebdo / mensuel</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="notifications-outline" class="text-gold"></ion-icon><span>Alertes prix</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Jusqu'a <span class="text-coral font-semibold">2</span> alertes</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Alertes illimitées</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="wallet-outline" class="text-gold"></ion-icon><span>Positions</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Jusqu'a <span class="text-coral font-semibold">5</span></td><td class="px-4 py-3.5 text-center text-gold font-semibold">Illimite</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="swap-horizontal-outline" class="text-gold"></ion-icon><span>Achat / vente</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Non inclus</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Vente + simulateurs</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="flag-outline" class="text-gold"></ion-icon><span>Événements</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Non inclus</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Hauts + fenêtre vente</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="eye-outline" class="text-gold"></ion-icon><span>Vigie P&amp;L</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Non inclus</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Momentum profit</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="save-outline" class="text-gold"></ion-icon><span>Historique prix</span></span></td><td class="px-4 py-3.5 text-center text-gray-300"><span class="text-coral font-semibold">60</span> enregistrements</td><td class="px-4 py-3.5 text-center text-gold font-semibold">500 enregistrements</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="stats-chart-outline" class="text-gold"></ion-icon><span>Périodes graphique</span></span></td><td class="px-4 py-3.5 text-center text-gray-300"><span class="text-coral font-semibold">7j</span> + <span class="text-coral font-semibold">30j</span></td><td class="px-4 py-3.5 text-center text-gold font-semibold">Plus de périodes</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="download-outline" class="text-gold"></ion-icon><span>Export &amp; sauvegarde</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Non inclus</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Partage + export</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="shield-checkmark-outline" class="text-gold"></ion-icon><span>Confidentialité</span></span></td><td class="px-4 py-3.5 text-center text-mint font-bold">Sur appareil</td><td class="px-4 py-3.5 text-center text-gold font-bold">Sur appareil</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="pricetag-outline" class="text-gold"></ion-icon><span>Prix</span></span></td><td class="px-4 py-3.5 text-center text-mint font-semibold">Gratuit</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Lifetime</td></tr>
             </tbody>
           </table>
         </div>
-        <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href="#download" class="inline-flex items-center gap-2 bg-gold text-navy font-bold px-5 py-2.5 rounded-xl hover:bg-amber transition text-sm">Commencer gratuitement</a>
-          <a href="#download" class="inline-flex items-center gap-2 border border-gold/40 text-gold font-bold px-5 py-2.5 rounded-xl hover:bg-gold/10 transition text-sm">Debloquer Premium (Paiement unique)</a>
+        <div class="border-t border-gold/10 bg-black/10 px-5 py-6 sm:px-6">
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a href="#download" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/[0.07] px-5 py-3 text-sm font-bold text-white transition hover:border-white/25 hover:bg-white/[0.12]"><ion-icon name="download-outline"></ion-icon>Commencer gratuitement</a>
+            <a href="https://play.google.com/store/apps/details?id=com.mygoldfolio.app&referrer=utm_source%3Dmygoldfolio.de%26utm_medium%3Dsite%26utm_campaign%3Dplans_premium" target="_blank" rel="noopener" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-gold to-amber px-5 py-3 text-sm font-black text-navy shadow-xl shadow-gold/25 transition hover:-translate-y-0.5 hover:shadow-gold/35"><ion-icon name="diamond-outline"></ion-icon>Installer, puis debloquer Premium</a>
+          </div>
+          <p class="mt-3 text-center text-xs text-gray-500">L'installation est gratuite. Premium s'achete dans l'application Android sous forme de deblocage Lifetime unique.</p>
         </div>
-        <p class="mt-3 text-center text-xs text-gray-500">Commencez gratuitement a tout moment. Passez en Premium seulement si vous avez besoin d'un suivi avance.</p>
       </div>
     </div>
   </section>
@@ -688,7 +767,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Quelles devises sont prises en charge ?
             <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
           </summary>
-          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">8 devises prises en charge : EUR, USD, GBP, INR, AED, SAR, TRY et EGP. Les donnees portefeuille sont stockees en EUR en interne. L'affichage convertit avec les taux en direct (cache 1h). Le poids peut etre affiche en grammes, onces troy ou tola.</p>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">9 devises prises en charge : EUR, USD, GBP, INR, AED, SAR, TRY, EGP et BRL. Les donnees portefeuille sont stockees en EUR en interne. L'affichage convertit avec les taux en direct (cache 1h). Le poids peut etre affiche en grammes, onces troy ou tola.</p>
         </details>
 
         <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
@@ -730,31 +809,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Telecharger CTA -->
   <section id="download" class="px-6 py-20 text-center relative overflow-hidden">
     <div class="absolute inset-0" style="background: radial-gradient(ellipse at center, rgba(212,168,67,0.07) 0%, transparent 65%);"></div>
-    <div class="relative max-w-lg mx-auto" data-aos="fade-up">
-      <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-4">Telecharger</p>
-      <h2 class="text-3xl font-black text-white mb-3">Commencez a suivre votre or correctement</h2>
-      <p class="text-gray-300 mb-2 max-w-sm mx-auto">Aucun compte requis. Pas de pub. Pas d'abonnement.</p>
-      <p class="text-xs text-muted mb-8">Android 10+ · 100% hors ligne · Gratuit</p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-        <a href="https://play.google.com/store/apps/details?id=com.mygoldfolio.app"
-           target="_blank" rel="noopener noreferrer">
-          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-               alt="Get it on Google Play" class="h-16 hover:opacity-90 transition" />
-        </a>
-        <button
-          type="button"
-          disabled
-          class="inline-flex items-center gap-2 h-12 px-5 rounded-xl border border-border/40 bg-navy-light/60 text-gray-400 cursor-not-allowed select-none"
-          aria-disabled="true"
-          title="Apple iOS — Coming soon"
-        >
-          <ion-icon name="logo-apple" style="font-size:18px;"></ion-icon>
-          <span class="text-sm font-semibold">Apple iOS — Coming soon</span>
-        </button>
+    <div class="relative max-w-3xl mx-auto" data-aos="fade-up">
+      <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-4">Telechargement</p>
+      <h2 class="text-3xl md:text-4xl font-black text-white mb-3">Installez gratuitement. Debloquez Premium seulement si necessaire.</h2>
+      <p class="text-gray-300 mb-6 max-w-2xl mx-auto">MyGoldFolio est gratuit a installer. Premium s’achete dans l’app Android comme deblocage Lifetime unique.</p>
+      <div class="rounded-[2rem] border border-gold/20 bg-[radial-gradient(circle_at_top,rgba(212,168,67,0.14),rgba(26,26,46,0.55))] p-5 md:p-6 shadow-2xl shadow-gold/10">
+        <div class="mb-5 flex flex-wrap items-center justify-center gap-2 text-xs font-semibold text-gray-300">
+          <span class="rounded-full border border-white/10 bg-white/[0.055] px-3 py-1">Android 10+</span><span class="rounded-full border border-white/10 bg-white/[0.055] px-3 py-1">Offline-first</span><span class="rounded-full border border-white/10 bg-white/[0.055] px-3 py-1">Sans abonnement</span><span class="rounded-full border border-white/10 bg-white/[0.055] px-3 py-1">Premium optionnel</span>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href="https://play.google.com/store/apps/details?id=com.mygoldfolio.app&referrer=utm_source%3Dmygoldfolio.de%26utm_medium%3Dsite%26utm_campaign%3Ddownload_section" target="_blank" rel="noopener noreferrer">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                 alt="Get it on Google Play" class="h-16 hover:opacity-90 transition" />
+          </a>
+          <button
+            type="button"
+            disabled
+            class="inline-flex items-center gap-2 h-12 px-5 rounded-xl border border-border/40 bg-navy-light/60 text-gray-400 cursor-not-allowed select-none"
+            aria-disabled="true"
+            title="Apple iOS — Coming soon"
+          >
+            <ion-icon name="logo-apple" style="font-size:18px;"></ion-icon>
+            <span class="text-sm font-semibold">Apple iOS — Coming soon</span>
+          </button>
+        </div>
+        <p class="mt-4 text-xs text-gray-500">Google Play s’ouvre dans un nouvel onglet. L’achat Premium se fait dans l’app installee.</p>
       </div>
 
       <!-- Email capture -->
-      <div class="border-t border-border/20 pt-8 mt-2">
+      <div class="mt-8 rounded-2xl border border-border/20 bg-navy-light/35 px-5 py-6">
         <p class="text-sm text-gray-300 font-semibold mb-1">Restez informe</p>
         <p class="text-xs text-muted mb-5">Recevez les nouveautes et mises a jour.</p>
 

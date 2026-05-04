@@ -71,13 +71,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .mode-panel[hidden] { display: none; }
     .honeypot { position: absolute; left: -9999px; opacity: 0; }
     .roadmap-rail { position: relative; }
-    .roadmap-rail::before { content: ''; position: absolute; left: 1.05rem; top: .4rem; bottom: .4rem; width: 2px; background: linear-gradient(#00D68F, #D4A843, #8B7CFF); animation: railGlow 4s ease-in-out infinite; }
+    .roadmap-rail::before { content: ''; position: absolute; left: 1.45rem; top: .4rem; bottom: .4rem; width: 2px; background: linear-gradient(#00D68F, #D4A843, #8B7CFF); animation: railGlow 4s ease-in-out infinite; }
     .roadmap-card { position: relative; opacity: 0; transform: translateY(18px); animation: cardIn .7s ease forwards; animation-delay: var(--delay, 0ms); }
-    .roadmap-dot { position: absolute; left: -3.15rem; top: 1.35rem; width: 2.4rem; height: 2.4rem; border-radius: 999px; display: grid; place-items: center; background: #0F0F1A; border: 1px solid rgba(212,168,67,.55); color: #FFE27A; box-shadow: 0 0 28px rgba(212,168,67,.22); z-index: 2; }
+    .roadmap-dot { position: absolute; left: -4.05rem; top: 1.35rem; width: 2.4rem; height: 2.4rem; border-radius: 999px; display: grid; place-items: center; background: #0F0F1A; border: 1px solid rgba(212,168,67,.55); color: #FFE27A; box-shadow: 0 0 28px rgba(212,168,67,.22); z-index: 2; }
     @keyframes cardIn { to { opacity: 1; transform: translateY(0); } }
     @keyframes railGlow { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
     @media (prefers-reduced-motion: reduce) { .roadmap-card, .roadmap-rail::before { animation: none; opacity: 1; transform: none; } .feedback-tab:hover { transform: none; } }
-    @media (max-width: 720px) { .roadmap-rail::before { left: .72rem; } .roadmap-dot { left: -2.73rem; } }
+    @media (max-width: 720px) { .roadmap-rail::before { left: 1.05rem; } .roadmap-dot { left: -3.45rem; width: 2.15rem; height: 2.15rem; font-size: .82rem; } }
 
   </style>
 </head>
@@ -108,59 +108,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section class="max-w-6xl mx-auto px-6 py-10 md:py-12">
       <div class="roadmap-rail space-y-5 md:space-y-6">
-        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-9 md:ml-12" style="--delay:0ms">
+        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-14 md:ml-16" style="--delay:0ms">
           <div class="roadmap-dot">1</div>
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
             <h2 class="text-2xl font-black text-white">Ausgeliefert</h2>
             <span class="inline-flex w-fit rounded-full border border-gold/35 bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold">Live</span>
           </div>
           <ul class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Spanisch, Italienisch und brasilianisches Portugiesisch</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">BRL als Anzeigewährung</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Premium-Badge visuell verbessert</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Erstes eigenes Feedback-Zentrum</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Spanisch, Italienisch und brasilianisches Portugiesisch</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Jetzt in Produktion verfuegbar.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">BRL als Anzeigewährung</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Jetzt in Produktion verfuegbar.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Premium-Badge visuell verbessert</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Jetzt in Produktion verfuegbar.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Erstes eigenes Feedback-Zentrum</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Jetzt in Produktion verfuegbar.</span></li>
           </ul>
         </article>
 
-        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-9 md:ml-12" style="--delay:120ms">
+        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-14 md:ml-16" style="--delay:120ms">
           <div class="roadmap-dot">2</div>
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
             <h2 class="text-2xl font-black text-white">Aktiv</h2>
             <span class="inline-flex w-fit rounded-full border border-gold/35 bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold">Stabilisierung</span>
           </div>
           <ul class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Feedback-Fixes aus Produktion</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Search-Console- und Indexierungsarbeit</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Benachrichtigungstexte härten</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Release-Qualitätsgates</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Feedback-Fixes aus Produktion</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Verbessert Zuverlaessigkeit und Qualitaet.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Search-Console- und Indexierungsarbeit</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Verbessert Zuverlaessigkeit und Qualitaet.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Benachrichtigungstexte härten</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Verbessert Zuverlaessigkeit und Qualitaet.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Release-Qualitätsgates</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Verbessert Zuverlaessigkeit und Qualitaet.</span></li>
           </ul>
         </article>
 
-        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-9 md:ml-12" style="--delay:240ms">
+        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-14 md:ml-16" style="--delay:240ms">
           <div class="roadmap-dot">3</div>
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
             <h2 class="text-2xl font-black text-white">In Prüfung</h2>
             <span class="inline-flex w-fit rounded-full border border-gold/35 bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold">Discovery</span>
           </div>
           <ul class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Organischer Wachstumsrollout</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Promo-Video und Store-Medien</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">iOS-Machbarkeit</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Weitere Sprachen, inklusive Arabisch/RTL</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Organischer Wachstumsrollout</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Wird vor Umsetzung validiert.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Promo-Video und Store-Medien</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Wird vor Umsetzung validiert.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">iOS-Machbarkeit</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Wird vor Umsetzung validiert.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Weitere Sprachen, inklusive Arabisch/RTL</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Wird vor Umsetzung validiert.</span></li>
           </ul>
         </article>
 
-        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-9 md:ml-12" style="--delay:360ms">
+        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-14 md:ml-16" style="--delay:360ms">
           <div class="roadmap-dot">4</div>
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
             <h2 class="text-2xl font-black text-white">Später</h2>
             <span class="inline-flex w-fit rounded-full border border-gold/35 bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold">Geplant</span>
           </div>
           <ul class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">CSV-Import für Preisverlauf</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Homescreen-Widget</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Google-Drive-Backup-Sync</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Mehr Strategie- und Workflow-Tiefe</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">CSV-Import für Preisverlauf</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Kandidat fuer spaetere Releases.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Homescreen-Widget</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Kandidat fuer spaetere Releases.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Google-Drive-Backup-Sync</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Kandidat fuer spaetere Releases.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Mehr Strategie- und Workflow-Tiefe</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Kandidat fuer spaetere Releases.</span></li>
           </ul>
         </article>
       </div>

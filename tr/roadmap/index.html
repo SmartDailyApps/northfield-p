@@ -71,13 +71,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .mode-panel[hidden] { display: none; }
     .honeypot { position: absolute; left: -9999px; opacity: 0; }
     .roadmap-rail { position: relative; }
-    .roadmap-rail::before { content: ''; position: absolute; left: 1.05rem; top: .4rem; bottom: .4rem; width: 2px; background: linear-gradient(#00D68F, #D4A843, #8B7CFF); animation: railGlow 4s ease-in-out infinite; }
+    .roadmap-rail::before { content: ''; position: absolute; left: 1.45rem; top: .4rem; bottom: .4rem; width: 2px; background: linear-gradient(#00D68F, #D4A843, #8B7CFF); animation: railGlow 4s ease-in-out infinite; }
     .roadmap-card { position: relative; opacity: 0; transform: translateY(18px); animation: cardIn .7s ease forwards; animation-delay: var(--delay, 0ms); }
-    .roadmap-dot { position: absolute; left: -3.15rem; top: 1.35rem; width: 2.4rem; height: 2.4rem; border-radius: 999px; display: grid; place-items: center; background: #0F0F1A; border: 1px solid rgba(212,168,67,.55); color: #FFE27A; box-shadow: 0 0 28px rgba(212,168,67,.22); z-index: 2; }
+    .roadmap-dot { position: absolute; left: -4.05rem; top: 1.35rem; width: 2.4rem; height: 2.4rem; border-radius: 999px; display: grid; place-items: center; background: #0F0F1A; border: 1px solid rgba(212,168,67,.55); color: #FFE27A; box-shadow: 0 0 28px rgba(212,168,67,.22); z-index: 2; }
     @keyframes cardIn { to { opacity: 1; transform: translateY(0); } }
     @keyframes railGlow { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
     @media (prefers-reduced-motion: reduce) { .roadmap-card, .roadmap-rail::before { animation: none; opacity: 1; transform: none; } .feedback-tab:hover { transform: none; } }
-    @media (max-width: 720px) { .roadmap-rail::before { left: .72rem; } .roadmap-dot { left: -2.73rem; } }
+    @media (max-width: 720px) { .roadmap-rail::before { left: 1.05rem; } .roadmap-dot { left: -3.45rem; width: 2.15rem; height: 2.15rem; font-size: .82rem; } }
 
   </style>
 </head>
@@ -108,59 +108,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section class="max-w-6xl mx-auto px-6 py-10 md:py-12">
       <div class="roadmap-rail space-y-5 md:space-y-6">
-        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-9 md:ml-12" style="--delay:0ms">
+        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-14 md:ml-16" style="--delay:0ms">
           <div class="roadmap-dot">1</div>
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
             <h2 class="text-2xl font-black text-white">Yayında</h2>
             <span class="inline-flex w-fit rounded-full border border-gold/35 bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold">Şimdi</span>
           </div>
           <ul class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">İspanyolca, İtalyanca ve Brezilya Portekizcesi</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">BRL görüntüleme para birimi</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Premium rozeti görsel yenileme</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Birinci taraf geri bildirim merkezi</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">İspanyolca, İtalyanca ve Brezilya Portekizcesi</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Su anda production ortaminda mevcut.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">BRL görüntüleme para birimi</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Su anda production ortaminda mevcut.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Premium rozeti görsel yenileme</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Su anda production ortaminda mevcut.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Birinci taraf geri bildirim merkezi</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Su anda production ortaminda mevcut.</span></li>
           </ul>
         </article>
 
-        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-9 md:ml-12" style="--delay:120ms">
+        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-14 md:ml-16" style="--delay:120ms">
           <div class="roadmap-dot">2</div>
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
             <h2 class="text-2xl font-black text-white">Aktif</h2>
             <span class="inline-flex w-fit rounded-full border border-gold/35 bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold">Stabilizasyon</span>
           </div>
           <ul class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Üretim geri bildirim düzeltmeleri</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Arama görünürlüğü ve indeksleme</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Bildirim metni sağlamlaştırma</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Sürüm kalite kapıları</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Üretim geri bildirim düzeltmeleri</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Guvenilirlik ve kaliteyi iyilestirir.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Arama görünürlüğü ve indeksleme</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Guvenilirlik ve kaliteyi iyilestirir.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Bildirim metni sağlamlaştırma</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Guvenilirlik ve kaliteyi iyilestirir.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Sürüm kalite kapıları</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Guvenilirlik ve kaliteyi iyilestirir.</span></li>
           </ul>
         </article>
 
-        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-9 md:ml-12" style="--delay:240ms">
+        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-14 md:ml-16" style="--delay:240ms">
           <div class="roadmap-dot">3</div>
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
             <h2 class="text-2xl font-black text-white">Araştırılıyor</h2>
             <span class="inline-flex w-fit rounded-full border border-gold/35 bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold">Keşif</span>
           </div>
           <ul class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Organik büyüme dağıtımı</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Tanıtım videosu ve mağaza medyası</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">iOS fizibilitesi</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Arapça/RTL dahil daha fazla dil</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Organik büyüme dağıtımı</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Karar verilmeden once dogrulaniyor.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Tanıtım videosu ve mağaza medyası</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Karar verilmeden once dogrulaniyor.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">iOS fizibilitesi</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Karar verilmeden once dogrulaniyor.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Arapça/RTL dahil daha fazla dil</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Karar verilmeden once dogrulaniyor.</span></li>
           </ul>
         </article>
 
-        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-9 md:ml-12" style="--delay:360ms">
+        <article class="roadmap-card rounded-2xl p-5 md:p-6 ml-14 md:ml-16" style="--delay:360ms">
           <div class="roadmap-dot">4</div>
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
             <h2 class="text-2xl font-black text-white">Sonra</h2>
             <span class="inline-flex w-fit rounded-full border border-gold/35 bg-gold/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gold">Planlandı</span>
           </div>
           <ul class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">CSV fiyat geçmişi içe aktarma</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Ana ekran widget’ı</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Google Drive yedek senkronu</li>
-            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3">Daha derin strateji araçları</li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">CSV fiyat geçmişi içe aktarma</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Gelecek surumler icin aday.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Ana ekran widget’ı</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Gelecek surumler icin aday.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Google Drive yedek senkronu</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Gelecek surumler icin aday.</span></li>
+            <li class="rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 hover:border-gold/30 transition"><span class="block font-semibold text-white">Daha derin strateji araçları</span><span class="roadmap-benefit mt-1 block text-xs text-gray-500">Gelecek surumler icin aday.</span></li>
           </ul>
         </article>
       </div>
