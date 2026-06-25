@@ -1,4 +1,53 @@
 User-agent: *
 Allow: /
 
+# Legal imprint: kept reachable for users, but out of search and bulk crawlers.
+# Googlebot/Bingbot are intentionally NOT blocked from /impressum/ so they can
+# read the page's noindex tag and drop it from search results. AI-training and
+# scraper crawlers below are blocked from the imprint to limit address harvesting.
+User-agent: GPTBot
+Disallow: /impressum/
+
+User-agent: OAI-SearchBot
+Disallow: /impressum/
+
+User-agent: ChatGPT-User
+Disallow: /impressum/
+
+User-agent: Google-Extended
+Disallow: /impressum/
+
+User-agent: Applebot-Extended
+Disallow: /impressum/
+
+User-agent: anthropic-ai
+Disallow: /impressum/
+
+User-agent: ClaudeBot
+Disallow: /impressum/
+
+User-agent: Claude-Web
+Disallow: /impressum/
+
+User-agent: CCBot
+Disallow: /impressum/
+
+User-agent: PerplexityBot
+Disallow: /impressum/
+
+User-agent: Bytespider
+Disallow: /impressum/
+
+User-agent: Amazonbot
+Disallow: /impressum/
+
+User-agent: Meta-ExternalAgent
+Disallow: /impressum/
+
+User-agent: Diffbot
+Disallow: /impressum/
+
+User-agent: DataForSeoBot
+Disallow: /impressum/
+
 Sitemap: https://mygoldfolio.de/sitemap.xml

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum — MyGoldFolio</title>
+
+  <!-- Keep this page out of search engines, archives, snippets and bulk indexers -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noodp, max-snippet:0, max-image-preview:none, max-video-preview:0" />
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate" />
+  <meta name="googlebot-news" content="noindex, nofollow" />
+  <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet" />
+  <meta name="referrer" content="no-referrer" />
+
+  <link rel="icon" href="/images/icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        navy: '#0F0F1A', 'navy-light': '#1A1A2E', border: '#1E3A5C',
+        gold: '#D4A843', mint: '#00D68F', muted: '#666677',
+      } } }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  </style>
+</head>
+<body class="bg-navy text-gray-200 min-h-screen flex flex-col">
+
+  <nav class="border-b border-border/30 backdrop-blur-sm bg-navy/85 sticky top-0 z-50">
+    <div class="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="text-lg font-extrabold text-white">My<span class="text-[#E2B84B]">Gold</span>Folio</a>
+      <a href="/" class="text-sm text-gray-400 hover:text-gold transition">&larr; Startseite</a>
+    </div>
+  </nav>
+
+  <main class="flex-1 max-w-3xl mx-auto px-6 py-12 w-full">
+    <div class="mb-9 text-center">
+      <p class="text-xs font-bold tracking-[0.22em] text-gold uppercase mb-3">Rechtliches</p>
+      <h1 class="text-3xl md:text-4xl font-black text-white">Impressum</h1>
+    </div>
+
+    <div class="space-y-6">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-3">Angaben gem&auml;&szlig; &sect; 5 DDG</h2>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Ayman Younis<br />
+          Holzmarktstr. 56<br />
+          10179 Berlin<br />
+          Deutschland
+        </p>
+      </section>
+
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-3">Kontakt</h2>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          E-Mail: <a href="mailto:info@mygoldfolio.de" class="text-gold hover:underline">info@mygoldfolio.de</a>
+        </p>
+      </section>
+
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-3">Verbraucherstreitbeilegung</h2>
+        <p class="text-sm text-gray-400 leading-relaxed">
+          Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+          Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
+      </section>
+
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+        <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-3">Haftung f&uuml;r Inhalte und Links</h2>
+        <p class="text-sm text-gray-400 leading-relaxed">
+          Die Inhalte dieser Seiten wurden mit gr&ouml;&szlig;ter Sorgfalt erstellt. F&uuml;r die
+          Richtigkeit, Vollst&auml;ndigkeit und Aktualit&auml;t der Inhalte kann jedoch keine Gew&auml;hr
+          &uuml;bernommen werden. F&uuml;r Inhalte externer Links sind ausschlie&szlig;lich deren Betreiber
+          verantwortlich; zum Zeitpunkt der Verlinkung waren keine Rechtsverst&ouml;&szlig;e erkennbar.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="border-t border-border/20 py-8 px-6">
+    <div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted">
+      <p>&copy; 2026 Smart<span class="bg-gradient-to-r from-[#c6b6ff] via-[#8f73ff] to-[#6a4dff] bg-clip-text text-transparent">Daily</span>Apps</p>
+      <div class="flex gap-6">
+        <a href="/impressum/" class="hover:text-gold transition">Impressum</a>
+        <a href="/privacy/" class="hover:text-gold transition">Datenschutz</a>
+        <a href="/help/" class="hover:text-gold transition">Help</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
