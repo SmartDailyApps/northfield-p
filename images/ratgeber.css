@@ -1,0 +1,65 @@
+/* Shared presentation for the German MyGoldFolio Ratgeber. Keep article copy in HTML for SEO and accessibility. */
+:root { color-scheme: dark; }
+html, body { overflow-x: hidden; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.guide-shell { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
+.guide-eyebrow { color: #D4A843; font-size: .75rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+.guide-prose { color: #c8cbd4; font-size: 1.0625rem; line-height: 1.8; }
+.guide-prose h2 { color: #fff; font-size: 1.65rem; font-weight: 850; line-height: 1.25; margin: 3rem 0 1rem; scroll-margin-top: 6rem; }
+.guide-prose h3 { color: #f1f2f5; font-size: 1.15rem; font-weight: 750; line-height: 1.35; margin: 2rem 0 .6rem; scroll-margin-top: 6rem; }
+.guide-prose p { margin: 0 0 1.15rem; }
+.guide-prose a { color: #E2B84B; text-decoration: underline; text-underline-offset: 3px; }
+.guide-prose strong { color: #f4f4f5; }
+.guide-prose ul, .guide-prose ol { margin: 0 0 1.35rem 1.2rem; }
+.guide-prose li { margin: .55rem 0; padding-left: .25rem; }
+.guide-card { background: rgba(26, 26, 46, .65); border: 1px solid rgba(30, 58, 92, .75); border-radius: 1.25rem; }
+.guide-toc a { display: block; color: #aeb3c0; font-size: .875rem; line-height: 1.35; padding: .48rem 0; transition: color .15s ease; }
+.guide-toc a:hover { color: #E2B84B; }
+.guide-table-wrap { overflow-x: auto; border: 1px solid rgba(30, 58, 92, .75); border-radius: 1rem; margin: 1.5rem 0 2rem; }
+.guide-table { border-collapse: collapse; min-width: 42rem; width: 100%; font-size: .9rem; line-height: 1.55; }
+.guide-table th { background: rgba(212, 168, 67, .12); color: #f5dd99; font-weight: 800; text-align: left; }
+.guide-table td, .guide-table th { border-bottom: 1px solid rgba(30, 58, 92, .7); padding: .9rem 1rem; vertical-align: top; }
+.guide-table tr:last-child td { border-bottom: 0; }
+.guide-hero-image { aspect-ratio: 16 / 9; background-position: center; background-size: cover; border: 1px solid rgba(212, 168, 67, .22); border-radius: 1.5rem; box-shadow: 0 24px 70px rgba(0,0,0,.35); }
+.guide-kicker { border-left: 3px solid #D4A843; background: rgba(212, 168, 67, .075); color: #e4e5e8; border-radius: 0 1rem 1rem 0; padding: 1.15rem 1.25rem; margin: 1.75rem 0; }
+.guide-cta { background: radial-gradient(circle at top, rgba(212,168,67,.18), rgba(26,26,46,.7) 70%); border: 1px solid rgba(212,168,67,.3); border-radius: 1.5rem; padding: 1.5rem; margin: 2.5rem 0; }
+.guide-faq details { border: 1px solid rgba(30, 58, 92, .75); border-radius: .85rem; background: rgba(26,26,46,.5); padding: 0 1rem; }
+.guide-faq summary { color: #f4f4f5; cursor: pointer; font-weight: 700; padding: 1rem 0; }
+.guide-faq p { color: #b8bdc8; font-size: .95rem; padding-bottom: 1rem; }
+.guide-article-card { overflow: hidden; transition: transform .18s ease, border-color .18s ease; }
+.guide-article-card:hover { border-color: rgba(212,168,67,.55); transform: translateY(-3px); }
+.guide-article-card img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; }
+.guide-hub-hero { border-bottom: 1px solid rgba(30,58,92,.35); background: radial-gradient(ellipse at top, rgba(212,168,67,.13), transparent 62%); padding: 4.5rem 0 5rem; }
+.guide-hub-hero h1 { color: #fff; font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 900; letter-spacing: -.04em; line-height: 1.08; }
+.guide-hub-hero p:last-child { color: #c8cbd4; font-size: 1.125rem; line-height: 1.65; margin: 1.35rem auto 0; max-width: 42rem; }
+.guide-article-hero { background: #0f0f1a; border-bottom: 1px solid rgba(30,58,92,.35); position: relative; }
+.guide-article-hero > img { aspect-ratio: 16 / 9; display: block; height: auto; object-fit: contain; width: 100%; }
+.guide-article-hero__content { inset: 0; margin-left: auto; max-width: 72rem; padding-bottom: 4rem; padding-top: clamp(3rem, 6vw, 6.5rem); position: absolute; width: 100%; }
+.guide-article-hero__content > * { margin-left: auto; max-width: 48%; }
+.guide-article-hero h1 { color: #fff; font-size: clamp(2.3rem, 5.2vw, 4.55rem); font-weight: 900; letter-spacing: -.045em; line-height: 1.06; }
+.guide-article-hero p { color: #d9dce3; font-size: 1.12rem; line-height: 1.65; margin-top: 1.35rem; }
+.guide-article-hero .guide-article-meta { color: #aeb3c0; font-size: .8rem; margin-top: 1.5rem; }
+.guide-breadcrumb { align-items: center; display: flex; font-size: .78rem; font-weight: 700; gap: .45rem; margin-bottom: 1.35rem; }
+.guide-breadcrumb a { color: #d8bd71; text-decoration: none; }
+.guide-breadcrumb a:hover { color: #ffe27a; text-decoration: underline; text-underline-offset: 3px; }
+.guide-breadcrumb span { color: #8a8f9c; }
+.guide-nav-chip { background: rgba(212,168,67,.10); border: 1px solid rgba(212,168,67,.36); border-radius: 999px; color: #f2cf72; display: inline-flex; font-size: .78rem; font-weight: 800; padding: .36rem .7rem; transition: background .15s ease, border-color .15s ease, color .15s ease; }
+.guide-nav-chip:hover, .guide-nav-chip--active { background: rgba(212,168,67,.2); border-color: rgba(255,226,122,.7); color: #ffe27a; }
+.guide-languages { position: relative; }
+.guide-languages summary { color: #aeb3c0; cursor: pointer; font-size: .75rem; font-weight: 800; list-style: none; }
+.guide-languages summary::-webkit-details-marker { display: none; }
+.guide-languages summary::after { content: '⌄'; color: #D4A843; margin-left: .2rem; }
+.guide-languages > div { background: #16192b; border: 1px solid rgba(30,58,92,.9); border-radius: .75rem; display: grid; gap: .1rem; padding: .5rem; position: absolute; right: 0; top: 1.45rem; width: 5rem; z-index: 60; }
+.guide-languages a { border-radius: .4rem; color: #c8cbd4; font-size: .75rem; font-weight: 700; padding: .35rem .45rem; }
+.guide-languages a:hover, .guide-languages a[aria-current="page"] { background: rgba(212,168,67,.14); color: #FFE27A; }
+.guide-next { border-top: 1px solid rgba(30,58,92,.65); margin-top: 3rem; padding-top: 1.5rem; }
+.guide-next a { font-weight: 800; text-decoration: none; }
+@media (max-width: 768px) {
+  .guide-shell { padding: 0 1rem; }
+  .guide-prose { font-size: 1rem; line-height: 1.75; }
+  .guide-prose h2 { font-size: 1.4rem; margin-top: 2.4rem; }
+  .guide-hub-hero { padding: 3.5rem 0 4rem; }
+  .guide-article-hero__content { background: #0f0f1a; padding-bottom: 2.4rem; padding-top: 2rem; position: static; }
+  .guide-article-hero__content > * { margin-left: 0; max-width: 100%; }
+  .guide-article-hero h1 { font-size: 2.25rem; }
+}
