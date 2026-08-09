@@ -23,6 +23,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
 .guide-hero-image { aspect-ratio: 16 / 9; background-position: center; background-size: cover; border: 1px solid rgba(212, 168, 67, .22); border-radius: 1.5rem; box-shadow: 0 24px 70px rgba(0,0,0,.35); }
 .guide-kicker { border-left: 3px solid #D4A843; background: rgba(212, 168, 67, .075); color: #e4e5e8; border-radius: 0 1rem 1rem 0; padding: 1.15rem 1.25rem; margin: 1.75rem 0; }
 .guide-cta { background: radial-gradient(circle at top, rgba(212,168,67,.18), rgba(26,26,46,.7) 70%); border: 1px solid rgba(212,168,67,.3); border-radius: 1.5rem; padding: 1.5rem; margin: 2.5rem 0; }
+.guide-prose .guide-cta__action { color: #0F0F1A !important; text-decoration: none; }
 .guide-faq details { border: 1px solid rgba(30, 58, 92, .75); border-radius: .85rem; background: rgba(26,26,46,.5); padding: 0 1rem; }
 .guide-faq summary { color: #f4f4f5; cursor: pointer; font-weight: 700; padding: 1rem 0; }
 .guide-faq p { color: #b8bdc8; font-size: .95rem; padding-bottom: 1rem; }
