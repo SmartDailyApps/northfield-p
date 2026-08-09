@@ -18,14 +18,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MyGoldFolio — Suivi de métaux précieux pour Android</title>
-  <meta name="description" content="Suivez vos métaux précieux en privé. Or et argent sont disponibles, platine et palladium arrivent bientôt. Prix live, P&amp;L, scénarios et alertes restent sur l'appareil." />
+  <meta name="description" content="Suivez l'or, l'argent, le platine et le palladium en privé sur Android. Prix de référence en direct, portefeuille, scénarios et alertes restent sur l'appareil." />
   <meta property="og:title" content="MyGoldFolio — Suivi métaux précieux" />
-  <meta property="og:description" content="Suivez vos métaux précieux en privé. Or et argent sont disponibles, platine et palladium arrivent bientôt. Les données restent sur l'appareil." />
+  <meta property="og:description" content="Prix de l'or, de l'argent, du platine et du palladium avec suivi privé du portefeuille sur l'appareil." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/images/mgf-v3-og-fr.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="MyGoldFolio — Suivi métaux précieux" />
-  <meta name="twitter:description" content="Suivez vos métaux précieux en privé. Or et argent sont disponibles, platine et palladium arrivent bientôt. Les données restent sur l'appareil." />
+  <meta name="twitter:description" content="Prix de l'or, de l'argent, du platine et du palladium avec suivi privé du portefeuille sur l'appareil." />
   <meta name="twitter:image" content="/images/mgf-v3-og-fr.png" />
   <link rel="icon" href="/images/icon.png" />
   <link rel="apple-touch-icon" href="/images/icon.png" />
@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
       ]
     },
-    "description": "Suivi personnel d'investissement or pour Android. Suivez vos achats d'or avec prix EUR/gramme en direct, analyse du seuil de rentabilite, compte a rebours fiscal configurable, scenarios intelligents, suivi des ventes par position et alertes prix en arriere-plan. Les donnees restent sur l'appareil.",
+    "description": "Suivi privé de métaux précieux sur Android avec prix de référence en direct pour l'or, l'argent, le platine et le palladium. Le suivi de l'or et de l'argent est disponible dans les limites Free ; Premium débloque le suivi du platine et du palladium, les scénarios et les alertes. Les données restent sur l'appareil.",
     "url": "https://mygoldfolio.de/fr/",
     "applicationSubCategory": "Suivi investissement or",
     "screenshot": "https://mygoldfolio.de/images/mgf-v3-s1-fr.png"
@@ -100,7 +100,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "name": "Quelles devises sont prises en charge ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "14 devises prises en charge : EUR, USD, GBP, INR, AED, SAR, TRY, EGP, BRL, CAD, ARS, CHF, AUD et MXN. Le poids peut etre affiche en grammes, onces troy ou tola."
+          "text": "17 devises : EUR, USD, AED, ARS, AUD, BRL, CAD, CHF, EGP, GBP, INR, MXN, MYR, PLN, QAR, SAR et TRY. Le poids peut être affiché en grammes, onces troy ou tola."
         }
       },
       {
@@ -113,10 +113,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       },
       {
         "@type": "Question",
-        "name": "Quelle est la precision des prix de l'or ?",
+        "name": "Quelle est la précision des prix des métaux précieux ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Les prix proviennent de trois sources independantes avec bascule automatique. Les prix spot refletent generalement les donnees Londres/NY quasi en temps reel pendant les heures de marche."
+          "text": "Les prix de référence informatifs utilisent une bascule automatique entre plusieurs sources lorsque la couverture le permet. Disponibilité et fraîcheur varient selon le métal et le fournisseur ; les prix peuvent être retardés et ne conviennent pas aux décisions de trading."
         }
       }
     ]
@@ -358,8 +358,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" data-aos="fade-up">
         <div class="bg-navy-light/55 border border-border/25 rounded-xl p-5 text-center">
-          <p class="text-gold font-extrabold text-lg mb-1">Multi-metal pret</p>
-          <p class="text-gray-400 text-sm">Or et argent sont disponibles. Platine et palladium sont les prochains jalons.</p>
+          <p class="text-gold font-extrabold text-lg mb-1">Quatre marchés en direct</p>
+          <p class="text-gray-400 text-sm">Prix de l'or, de l'argent, du platine et du palladium. Premium débloque le suivi complet du platine et du palladium.</p>
         </div>
         <div class="bg-navy-light/55 border border-border/25 rounded-xl p-5 text-center">
           <p class="text-gold font-extrabold text-lg mb-1">Tous les types d'or</p>
@@ -381,7 +381,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="border-y border-border/20 bg-navy-light/20 px-6 py-5" data-aos="fade-up">
     <div class="max-w-5xl mx-auto flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-gray-400">
       <span data-release-proof class="inline-flex items-center gap-2 rounded-full border border-gold/25 bg-gold/10 px-3 py-1 text-gold font-bold">
-        <ion-icon name="rocket-outline"></ion-icon><a href="/fr/changelog/" class="hover:text-amber transition">v3.2.0 · Metaux precieux · 7 langues</a>
+        <ion-icon name="rocket-outline"></ion-icon><a href="/fr/changelog/" class="hover:text-amber transition">v3.4.0 · 4 métaux précieux · 7 langues</a>
       </span>
       <span class="text-border hidden sm:inline">·</span>
       <!-- Live price widget (hidden until JS resolves) -->
@@ -395,7 +395,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="text-border hidden sm:inline" id="live-sep" style="display:none!important">·</span>
       <span><span class="text-white font-bold">Alertes intelligentes</span> · prix, seuil, objectifs, fiscal</span>
       <span class="text-border hidden sm:inline">·</span>
-      <span><span class="text-white font-bold">14 devises</span> · g, oz, tola</span>
+      <span><span class="text-white font-bold">17 devises</span> · g, oz, tola</span>
       <span class="text-border hidden sm:inline">·</span>
       <span><span class="text-white font-bold">Achat, vente &amp; scenarios</span> outils</span>
       <span class="text-border hidden sm:inline">·</span>
@@ -433,8 +433,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Base gratuite</span>
           </div>
           <h3 class="text-2xl font-bold text-white mb-2">Votre or en un coup d'oeil</h3>
-          <p class="text-gray-300 font-medium mb-3">Prix en direct, valeur du portefeuille et profit dans une vue claire.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Voyez votre position globale instantanement sans changer d'ecran. Prix du marche, capital investi et rendement sont visibles en meme temps.</p>
+          <p class="text-gray-300 font-medium mb-3">Quatre marchés de métaux en direct dans un tableau de bord clair.</p>
+          <p class="text-gray-400 leading-relaxed text-base">Consultez l'or, l'argent, le platine et le palladium. Les portefeuilles or/argent suivent les limites Free ; Premium ajoute les positions, la valeur et le profit du platine et du palladium.</p>
           <p class="text-gold/90 text-sm font-semibold mt-3">Avantage: spot + performance portefeuille dans un seul tableau de bord.</p>
         </div>
       </div>
@@ -449,7 +449,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Base gratuite</span>
           </div>
           <h3 class="text-2xl font-bold text-white mb-2">Des prix qui comptent</h3>
-          <p class="text-gray-300 font-medium mb-3">Spot, achat, vente et spread dans une vue en direct.</p>
+          <p class="text-gray-300 font-medium mb-3">Détails de marché pour l'or, l'argent, le platine ou le palladium sur un écran en direct.</p>
           <p class="text-gray-400 leading-relaxed text-base">Suivez les chiffres sur lesquels vous tradez vraiment, pas seulement un spot de vitrine. Comparez mouvement marche et realite dealer en quelques secondes.</p>
           <p class="text-gold/90 text-sm font-semibold mt-3">Avantage: contexte de prix complet, pas seulement le spot.</p>
         </div>
@@ -465,7 +465,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Base gratuite</span>
           </div>
           <h3 class="text-2xl font-bold text-white mb-2">Suivez chaque position</h3>
-          <p class="text-gray-300 font-medium mb-3">Suivez valeur, rendement et seuil de rentabilite sur tout votre portefeuille.</p>
+          <p class="text-gray-300 font-medium mb-3">Suivez l'or et l'argent dans les limites Free ; débloquez le suivi complet du platine et du palladium avec Premium.</p>
           <p class="text-gray-400 leading-relaxed text-base">Chaque position reste lisible avec son contexte de performance pour identifier ce qui impacte vraiment le resultat global.</p>
           <p class="text-gold/90 text-sm font-semibold mt-3">Avantage: clarte par position au lieu d'un simple total.</p>
         </div>
@@ -671,7 +671,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div data-premium-teaser class="mb-6 rounded-[1.75rem] border border-gold/20 bg-[linear-gradient(135deg,rgba(212,168,67,0.12),rgba(255,255,255,0.025))] p-5 shadow-xl shadow-gold/5" data-aos="fade-up">
         <p class="text-xs font-black uppercase tracking-[0.2em] text-gold mb-2">Focus Premium</p>
         <h3 class="text-xl md:text-2xl font-black text-white mb-2">Pour les portefeuilles plus grands, les analyses plus profondes et les decisions plus calmes.</h3>
-        <p class="text-sm text-gray-400 mb-4">Commencez gratuitement, puis debloquez Premium dans l’app si vous avez besoin de limites plus hautes et d’outils avances.</p>
+        <p class="text-sm text-gray-400 mb-4">Commencez gratuitement avec le suivi or/argent et l'aperçu platine/palladium du tableau de bord. Premium débloque le suivi complet de quatre métaux et les outils avancés.</p>
         <div class="grid sm:grid-cols-3 gap-3">
             <div class="rounded-2xl border border-gold/15 bg-white/[0.035] p-4">
               <ion-icon name="layers-outline" class="text-gold text-xl"></ion-icon>
@@ -714,7 +714,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="cash-outline" class="text-gold"></ion-icon><span>Prix metaux</span></span></td><td class="px-4 py-3.5 text-center text-mint font-bold">Inclus</td><td class="px-4 py-3.5 text-center text-gold font-bold">Repli + APIs premium</td></tr>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="sync-outline" class="text-gold"></ion-icon><span>Arrière-plan</span></span></td><td class="px-4 py-3.5 text-center text-gray-300"><span class="text-coral font-semibold">1</span> unique</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Quotidien / hebdo / mensuel</td></tr>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="notifications-outline" class="text-gold"></ion-icon><span>Alertes prix</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Jusqu'a <span class="text-coral font-semibold">2</span> alertes</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Alertes illimitées</td></tr>
-              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="wallet-outline" class="text-gold"></ion-icon><span>Positions</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Jusqu'a <span class="text-coral font-semibold">5</span> / metal</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Illimite</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="wallet-outline" class="text-gold"></ion-icon><span>Positions or &amp; argent</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Jusqu'à <span class="text-coral font-semibold">5</span> / métal</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Illimité</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="diamond-outline" class="text-gold"></ion-icon><span>Platine &amp; palladium</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Aperçu du tableau</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Suivi complet + outils</td></tr>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="swap-horizontal-outline" class="text-gold"></ion-icon><span>Achat / vente</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Non inclus</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Vente + simulateurs</td></tr>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="flag-outline" class="text-gold"></ion-icon><span>Événements</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Non inclus</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Hauts + fenêtre vente</td></tr>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="eye-outline" class="text-gold"></ion-icon><span>Vigie P&amp;L</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Non inclus</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Momentum profit</td></tr>
@@ -767,7 +768,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Quelles devises sont prises en charge ?
             <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
           </summary>
-          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">14 devises prises en charge : EUR, USD, GBP, INR, AED, SAR, TRY, EGP, BRL, CAD, ARS, CHF, AUD et MXN. Les donnees portefeuille sont stockees en EUR en interne. L'affichage utilise les derniers taux de reference disponibles fournis par <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-amber transition">ExchangeRate-API</a>, avec mise en cache hors ligne. Le poids peut etre affiche en grammes, onces troy ou tola.</p>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">17 devises prises en charge : EUR, USD, AED, ARS, AUD, BRL, CAD, CHF, EGP, GBP, INR, MXN, MYR, PLN, QAR, SAR et TRY. Les données du portefeuille sont stockées en EUR en interne. L'affichage utilise les derniers taux de référence disponibles fournis par <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-amber transition">ExchangeRate-API</a>, avec mise en cache hors ligne. Le poids peut être affiché en grammes, onces troy ou tola.</p>
         </details>
 
         <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
@@ -788,10 +789,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
           <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
-            Quelle est la precision des prix de l'or ?
+            Quelle est la précision des prix des métaux précieux ?
             <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
           </summary>
-          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Les prix proviennent de trois sources integrees independantes avec bascule automatique en cas d'echec. Les prix spot refletent en general les donnees Londres/NY quasi en temps reel pendant les heures de marche. Un leger delai est possible et ces prix ne sont pas destines aux decisions de trading. Voir notre <a href="https://smartdailyapps.com/fr/disclaimer/" class="text-gold hover:underline">Avertissement investissement</a>.</p>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Les prix de référence informatifs utilisent une bascule automatique entre plusieurs sources lorsque la couverture le permet. Disponibilité et fraîcheur peuvent varier selon le métal et le fournisseur ; les prix peuvent être retardés ou temporairement indisponibles et ne conviennent pas aux décisions de trading. Voir notre <a href="https://smartdailyapps.com/fr/disclaimer/" class="text-gold hover:underline">Avertissement investissement</a>.</p>
         </details>
 
         <div class="text-center mt-8 pt-6 border-t border-border/20">

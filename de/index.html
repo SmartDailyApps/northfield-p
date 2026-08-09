@@ -18,14 +18,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MyGoldFolio — Edelmetall-Tracker für Android</title>
-  <meta name="description" content="Verfolge Edelmetalle privat. Gold und Silber sind jetzt unterstützt, Platin und Palladium folgen. Live-Preise, P&amp;L, Szenarien und Alarme bleiben auf deinem Gerät." />
+  <meta name="description" content="Verfolge Gold, Silber, Platin und Palladium privat auf Android. Live-Referenzpreise, Portfolio-GuV, Szenarien und Alarme bleiben auf deinem Gerät." />
   <meta property="og:title" content="MyGoldFolio — Edelmetall-Tracker" />
-  <meta property="og:description" content="Verfolge Edelmetalle privat. Gold und Silber sind jetzt unterstützt, Platin und Palladium folgen. Portfoliodaten bleiben auf deinem Gerät." />
+  <meta property="og:description" content="Live-Preise für Gold, Silber, Platin und Palladium mit privatem Portfolio-Tracking auf deinem Gerät." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/images/mgf-v3-og-de.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="MyGoldFolio — Edelmetall-Tracker" />
-  <meta name="twitter:description" content="Verfolge Edelmetalle privat. Gold und Silber sind jetzt unterstützt, Platin und Palladium folgen. Portfoliodaten bleiben auf deinem Gerät." />
+  <meta name="twitter:description" content="Live-Preise für Gold, Silber, Platin und Palladium mit privatem Portfolio-Tracking auf deinem Gerät." />
   <meta name="twitter:image" content="/images/mgf-v3-og-de.png" />
   <link rel="icon" href="/images/icon.png" />
   <link rel="apple-touch-icon" href="/images/icon.png" />
@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
       ]
     },
-    "description": "Persoenlicher Android-Gold-Tracker. Verfolge Goldkaeufe mit Live-EUR/Gramm-Preisen, Break-even-Analyse, steuerfreiem Countdown, Szenarien, Verkaufstracking pro Position und Hintergrundalarmen. Portfoliodaten bleiben auf dem Geraet.",
+    "description": "Privater Android-Edelmetall-Tracker mit Live-Referenzpreisen für Gold, Silber, Platin und Palladium. Gold- und Silber-Tracking ist innerhalb der Free-Limits verfügbar; Premium schaltet Platin- und Palladium-Portfolios, Szenarien und Alarme frei. Portfoliodaten bleiben auf dem Gerät.",
     "url": "https://mygoldfolio.de/de/",
     "applicationSubCategory": "Gold-Portfolio-Tracking",
     "screenshot": "https://mygoldfolio.de/images/mgf-v3-s1-de.png"
@@ -100,7 +100,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "name": "Welche Waehrungen werden unterstuetzt?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "14 Waehrungen: EUR, USD, GBP, INR, AED, SAR, TRY, EGP, BRL, CAD, ARS, CHF, AUD und MXN. Gewicht in Gramm, Unzen oder Tola."
+          "text": "17 Währungen: EUR, USD, AED, ARS, AUD, BRL, CAD, CHF, EGP, GBP, INR, MXN, MYR, PLN, QAR, SAR und TRY. Gewicht in Gramm, Feinunzen oder Tola."
         }
       },
       {
@@ -113,10 +113,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       },
       {
         "@type": "Question",
-        "name": "Wie genau sind die Goldpreise?",
+        "name": "Wie genau sind die Edelmetallpreise?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Preise kommen aus drei unabhaengigen Quellen mit automatischem Fallback. Spotpreise spiegeln waehrend der Handelszeiten meist nahezu Echtzeitdaten aus London/NY wider."
+          "text": "Informative Referenzpreise nutzen, soweit verfügbar, einen automatischen Fallback über mehrere Quellen. Verfügbarkeit und Aktualität können je Metall und Anbieter variieren; Preise können verzögert sein und eignen sich nicht für Handelsentscheidungen."
         }
       }
     ]
@@ -358,8 +358,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" data-aos="fade-up">
         <div class="bg-navy-light/55 border border-border/25 rounded-xl p-5 text-center">
-          <p class="text-gold font-extrabold text-lg mb-1">Multi-Metall bereit</p>
-          <p class="text-gray-400 text-sm">Gold und Silber sind jetzt da. Platin und Palladium stehen als Naechstes auf der Roadmap.</p>
+          <p class="text-gold font-extrabold text-lg mb-1">Vier Live-Metallmärkte</p>
+          <p class="text-gray-400 text-sm">Live-Preise für Gold, Silber, Platin und Palladium. Premium schaltet das vollständige Platin- und Palladium-Tracking frei.</p>
         </div>
         <div class="bg-navy-light/55 border border-border/25 rounded-xl p-5 text-center">
           <p class="text-gold font-extrabold text-lg mb-1">Alle Goldarten</p>
@@ -381,7 +381,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="border-y border-border/20 bg-navy-light/20 px-6 py-5" data-aos="fade-up">
     <div class="max-w-5xl mx-auto flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-gray-400">
       <span data-release-proof class="inline-flex items-center gap-2 rounded-full border border-gold/25 bg-gold/10 px-3 py-1 text-gold font-bold">
-        <ion-icon name="rocket-outline"></ion-icon><a href="/de/changelog/" class="hover:text-amber transition">v3.2.0 · Edelmetalle · 7 Sprachen</a>
+        <ion-icon name="rocket-outline"></ion-icon><a href="/de/changelog/" class="hover:text-amber transition">v3.4.0 · 4 Edelmetalle · 7 Sprachen</a>
       </span>
       <span class="text-border hidden sm:inline">·</span>
       <!-- Live price widget (hidden until JS resolves) -->
@@ -395,7 +395,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="text-border hidden sm:inline" id="live-sep" style="display:none!important">·</span>
       <span><span class="text-white font-bold">Smart Alerts</span> · Preis, Break-even, Meilensteine, steuerfrei</span>
       <span class="text-border hidden sm:inline">·</span>
-      <span><span class="text-white font-bold">14 Waehrungen</span> · g, oz, tola</span>
+      <span><span class="text-white font-bold">17 Währungen</span> · g, oz, tola</span>
       <span class="text-border hidden sm:inline">·</span>
       <span><span class="text-white font-bold">Kaufen, Verkaufen &amp; Was-waere-wenn</span> Tools</span>
       <span class="text-border hidden sm:inline">·</span>
@@ -433,8 +433,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Gratis-Basis</span>
           </div>
           <h3 class="text-2xl font-bold text-white mb-2">Dein Gold auf einen Blick</h3>
-          <p class="text-gray-300 font-medium mb-3">Live-Preis, Portfoliowert und Gewinn in einer klaren Ansicht.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Sieh deine Gesamtposition sofort, ohne zwischen Tabs zu wechseln. Marktpreis, Investitionssumme und Rendite sind gleichzeitig sichtbar.</p>
+          <p class="text-gray-300 font-medium mb-3">Vier Live-Metallmärkte in einem klaren Dashboard.</p>
+          <p class="text-gray-400 leading-relaxed text-base">Sieh Preise für Gold, Silber, Platin und Palladium. Gold- und Silber-Portfolios folgen den Free-Limits; Premium ergänzt Platin- und Palladium-Bestände, Wert und Gewinn.</p>
           <p class="text-gold/90 text-sm font-semibold mt-3">Vorteil: Spot + Portfolio-Performance in einem Live-Dashboard.</p>
         </div>
       </div>
@@ -449,7 +449,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Gratis-Basis</span>
           </div>
           <h3 class="text-2xl font-bold text-white mb-2">Preise, die zaehlen</h3>
-          <p class="text-gray-300 font-medium mb-3">Spot, Kauf, Verkauf und Spread in einer Live-Ansicht.</p>
+          <p class="text-gray-300 font-medium mb-3">Marktdetails für Gold, Silber, Platin oder Palladium in einer Live-Ansicht.</p>
           <p class="text-gray-400 leading-relaxed text-base">Verfolge die Werte, zu denen du wirklich handelst, nicht nur einen Spot-Ticker. Marktbewegung und Haendlerrealitaet in Sekunden vergleichen.</p>
           <p class="text-gold/90 text-sm font-semibold mt-3">Vorteil: voller Preiskontext statt Spot-only Anzeige.</p>
         </div>
@@ -465,7 +465,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Gratis-Basis</span>
           </div>
           <h3 class="text-2xl font-bold text-white mb-2">Behalte jede Position im Blick</h3>
-          <p class="text-gray-300 font-medium mb-3">Verfolge Wert, Rendite und Break-even ueber dein gesamtes Portfolio.</p>
+          <p class="text-gray-300 font-medium mb-3">Verfolge Gold und Silber innerhalb der Free-Limits; vollständiges Platin- und Palladium-Tracking gibt es mit Premium.</p>
           <p class="text-gray-400 leading-relaxed text-base">Jede Position bleibt mit Performance-Kontext sichtbar, damit du sofort erkennst, was dein Gesamtergebnis treibt.</p>
           <p class="text-gold/90 text-sm font-semibold mt-3">Vorteil: Positionsklarheit statt Ein-Zahl-Zusammenfassung.</p>
         </div>
@@ -671,7 +671,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div data-premium-teaser class="mb-6 rounded-[1.75rem] border border-gold/20 bg-[linear-gradient(135deg,rgba(212,168,67,0.12),rgba(255,255,255,0.025))] p-5 shadow-xl shadow-gold/5" data-aos="fade-up">
         <p class="text-xs font-black uppercase tracking-[0.2em] text-gold mb-2">Premium-Fokus</p>
         <h3 class="text-xl md:text-2xl font-black text-white mb-2">Fuer groessere Portfolios, tiefere Analyse und ruhigere Entscheidungen.</h3>
-        <p class="text-sm text-gray-400 mb-4">Starte kostenlos und schalte Premium in der App frei, wenn du hoehere Limits und erweiterte Planung brauchst.</p>
+        <p class="text-sm text-gray-400 mb-4">Starte kostenlos mit Gold- und Silber-Tracking plus Platin-/Palladium-Vorschau im Dashboard. Premium schaltet vollständiges Vier-Metall-Tracking und erweiterte Tools frei.</p>
         <div class="grid sm:grid-cols-3 gap-3">
             <div class="rounded-2xl border border-gold/15 bg-white/[0.035] p-4">
               <ion-icon name="layers-outline" class="text-gold text-xl"></ion-icon>
@@ -714,7 +714,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="cash-outline" class="text-gold"></ion-icon><span>Metallpreise</span></span></td><td class="px-4 py-3.5 text-center text-mint font-bold">Inklusive</td><td class="px-4 py-3.5 text-center text-gold font-bold">Fallback + Premium-APIs</td></tr>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="sync-outline" class="text-gold"></ion-icon><span>Hintergrund</span></span></td><td class="px-4 py-3.5 text-center text-gray-300"><span class="text-coral font-semibold">1</span> einmalig</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Täglich / wöchentlich / monatlich</td></tr>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="notifications-outline" class="text-gold"></ion-icon><span>Preisalarme</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Bis zu <span class="text-coral font-semibold">2</span> Alarme</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Unbegrenzte Alarme</td></tr>
-              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="wallet-outline" class="text-gold"></ion-icon><span>Positionen</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Bis zu <span class="text-coral font-semibold">5</span> / Metall</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Unbegrenzt</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="wallet-outline" class="text-gold"></ion-icon><span>Gold- &amp; Silber-Positionen</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Bis zu <span class="text-coral font-semibold">5</span> / Metall</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Unbegrenzt</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="diamond-outline" class="text-gold"></ion-icon><span>Platin &amp; Palladium</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Dashboard-Vorschau</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Volles Tracking + Tools</td></tr>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="swap-horizontal-outline" class="text-gold"></ion-icon><span>Kauf / Verkauf</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Nicht enthalten</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Verkauf + Simulatoren</td></tr>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="flag-outline" class="text-gold"></ion-icon><span>Events</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Nicht enthalten</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Hochs + Verkaufsfenster</td></tr>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="eye-outline" class="text-gold"></ion-icon><span>GuV-Watcher</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Nicht enthalten</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Gewinndynamik</td></tr>
@@ -767,7 +768,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Welche Waehrungen werden unterstuetzt?
             <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
           </summary>
-          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">14 Waehrungen werden unterstuetzt: EUR, USD, GBP, INR, AED, SAR, TRY, EGP, BRL, CAD, ARS, CHF, AUD und MXN. Portfoliodaten werden intern in EUR gespeichert. Die Anzeige nutzt die zuletzt verfuegbaren Referenz-Wechselkurse von <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-amber transition">ExchangeRate-API</a> mit Offline-Caching. Gewicht in Gramm, Unzen oder Tola.</p>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">17 Währungen werden unterstützt: EUR, USD, AED, ARS, AUD, BRL, CAD, CHF, EGP, GBP, INR, MXN, MYR, PLN, QAR, SAR und TRY. Portfoliodaten werden intern in EUR gespeichert. Die Anzeige nutzt die zuletzt verfügbaren Referenz-Wechselkurse von <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-amber transition">ExchangeRate-API</a> mit Offline-Caching. Gewicht in Gramm, Feinunzen oder Tola.</p>
         </details>
 
         <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
@@ -788,10 +789,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
           <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
-            Wie genau sind die Goldpreise?
+            Wie genau sind die Edelmetallpreise?
             <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
           </summary>
-          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Preise kommen aus drei integrierten unabhaengigen Quellen mit automatischem Fallback. Spotpreise spiegeln waehrend der Handelszeiten meist nahezu Echtzeitdaten aus London/NY wider. Preise koennen leicht verzoegert sein und sind nicht fuer Trading-Entscheidungen gedacht. Siehe <a href="https://smartdailyapps.com/de/disclaimer/" class="text-gold hover:underline">Investment-Hinweis</a>.</p>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Informative Referenzpreise nutzen, soweit verfügbar, einen automatischen Fallback über mehrere Quellen. Verfügbarkeit und Aktualität können je Metall und Anbieter variieren; Preise können verzögert oder vorübergehend nicht verfügbar sein und eignen sich nicht für Handelsentscheidungen. Siehe <a href="https://smartdailyapps.com/de/disclaimer/" class="text-gold hover:underline">Investment-Hinweis</a>.</p>
         </details>
 
         <div class="text-center mt-8 pt-6 border-t border-border/20">

@@ -18,14 +18,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MyGoldFolio — Rastreador de metais preciosos para Android</title>
-  <meta name="description" content="Acompanhe metais preciosos com privacidade. Ouro e prata já são compatíveis; platina e paládio chegam em breve. Preços, P&amp;L, cenários e alertas ficam no dispositivo." />
+  <meta name="description" content="Acompanhe ouro, prata, platina e paládio com privacidade no Android. Preços de referência ao vivo, carteira, cenários e alertas ficam no dispositivo." />
   <meta property="og:title" content="MyGoldFolio — Rastreador de metais preciosos" />
-  <meta property="og:description" content="Acompanhe metais preciosos com privacidade. Ouro e prata já são compatíveis; platina e paládio chegam em breve. Os dados ficam no dispositivo." />
+  <meta property="og:description" content="Preços de ouro, prata, platina e paládio com acompanhamento privado da carteira no dispositivo." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/images/mgf-v3-og-en.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="MyGoldFolio — Rastreador de metais preciosos" />
-  <meta name="twitter:description" content="Acompanhe metais preciosos com privacidade. Ouro e prata já são compatíveis; platina e paládio chegam em breve. Os dados ficam no dispositivo." />
+  <meta name="twitter:description" content="Preços de ouro, prata, platina e paládio com acompanhamento privado da carteira no dispositivo." />
   <meta name="twitter:image" content="/images/mgf-v3-og-en.png" />
   <link rel="icon" href="/images/icon.png" />
   <link rel="apple-touch-icon" href="/images/icon.png" />
@@ -66,7 +66,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
       ]
     },
-    "description": "Rastreador pessoal Android para investimento em ouro. Acompanhe barras, moedas, joias e ouro digital com preços EUR/grama ao vivo, análise de equilíbrio, contagem de isenção configurável, cenários what-if, rastreamento de venda por posição e alertas de preço em segundo plano. As posições ficam no dispositivo, com análise anônima opcional.",
+    "description": "Rastreador privado de metais preciosos para Android com preços de referência ao vivo para ouro, prata, platina e paládio. O acompanhamento de ouro e prata está disponível dentro dos limites Free; o Premium desbloqueia platina e paládio, cenários e alertas. Os dados ficam no dispositivo.",
     "url": "https://mygoldfolio.de/",
     "applicationSubCategory": "Investment Tracking",
     "screenshot": "https://mygoldfolio.de/images/mgf-v3-s1-pt.png"
@@ -98,7 +98,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "name": "Quais moedas são suportadas?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "14 moedas: EUR, USD, GBP, INR, AED, SAR, TRY, EGP, BRL, CAD, ARS, CHF, AUD e MXN. O peso pode ser exibido em gramas, onça troy ou tola."
+          "text": "17 moedas: EUR, USD, AED, ARS, AUD, BRL, CAD, CHF, EGP, GBP, INR, MXN, MYR, PLN, QAR, SAR e TRY. O peso pode ser exibido em gramas, onça troy ou tola."
         }
       },
       {
@@ -111,10 +111,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       },
       {
         "@type": "Question",
-        "name": "Qual a precisão dos preços do ouro?",
+        "name": "Qual a precisão dos preços de metais preciosos?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Os preços vêm de três fontes independentes com troca automática se uma falhar. O preço spot normalmente reflete dados quase em tempo real de Londres/Nova York durante o mercado."
+          "text": "Os preços de referência informativos usam troca automática entre várias fontes quando há cobertura. Disponibilidade e atualização variam por metal e provedor; os preços podem atrasar e não são adequados para decisões de trading."
         }
       }
     ]
@@ -356,8 +356,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" data-aos="fade-up">
         <div class="bg-navy-light/55 border border-border/25 rounded-xl p-5 text-center">
-          <p class="text-gold font-extrabold text-lg mb-1">Multi-metal pronto</p>
-          <p class="text-gray-400 text-sm">Ouro e prata já estão disponíveis. Platina e paládio são os próximos passos.</p>
+          <p class="text-gold font-extrabold text-lg mb-1">Quatro mercados ao vivo</p>
+          <p class="text-gray-400 text-sm">Preços de ouro, prata, platina e paládio. O Premium desbloqueia o acompanhamento completo de platina e paládio.</p>
         </div>
         <div class="bg-navy-light/55 border border-border/25 rounded-xl p-5 text-center">
           <p class="text-gold font-extrabold text-lg mb-1">Todos os tipos de ouro</p>
@@ -379,7 +379,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="border-y border-border/20 bg-navy-light/20 px-6 py-5" data-aos="fade-up">
     <div class="max-w-5xl mx-auto flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-gray-400">
       <span data-release-proof class="inline-flex items-center gap-2 rounded-full border border-gold/25 bg-gold/10 px-3 py-1 text-gold font-bold">
-        <ion-icon name="rocket-outline"></ion-icon><a href="/pt/changelog/" class="hover:text-amber transition">v3.2.0 · Metais preciosos · 7 idiomas</a>
+        <ion-icon name="rocket-outline"></ion-icon><a href="/pt/changelog/" class="hover:text-amber transition">v3.4.0 · 4 metais preciosos · 7 idiomas</a>
       </span>
       <span class="text-border hidden sm:inline">·</span>
       <!-- Live price widget (hidden until JS resolves) -->
@@ -393,7 +393,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="text-border hidden sm:inline" id="live-sep" style="display:none!important">·</span>
       <span><span class="text-white font-bold">Alertas inteligentes</span> · preço, equilíbrio, marcos, isenção fiscal</span>
       <span class="text-border hidden sm:inline">·</span>
-      <span><span class="text-white font-bold">14 moedas</span> · g, oz, tola</span>
+      <span><span class="text-white font-bold">17 moedas</span> · g, oz, tola</span>
       <span class="text-border hidden sm:inline">·</span>
       <span><span class="text-white font-bold">Compra, venda e cenários</span> ferramentas</span>
       <span class="text-border hidden sm:inline">·</span>
@@ -437,8 +437,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Base grátis</span>
           </div>
           <h3 class="text-2xl font-bold text-white mb-2">Seu ouro em um olhar</h3>
-          <p class="text-gray-300 font-medium mb-3">Preço ao vivo, valor do portfólio e lucro em uma visão clara.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Veja sua posição total na hora, sem trocar de abas. Preço de mercado, valor investido e retorno no mesmo momento.</p>
+          <p class="text-gray-300 font-medium mb-3">Quatro mercados de metais ao vivo em um Dashboard claro.</p>
+          <p class="text-gray-400 leading-relaxed text-base">Veja ouro, prata, platina e paládio. As carteiras de ouro/prata seguem os limites Free; o Premium adiciona posições, valor e lucro de platina e paládio.</p>
           <p class="text-gold/90 text-sm font-semibold mt-3">Vantagem competitiva: spot e desempenho do portfólio em um único painel ao vivo.</p>
         </div>
       </div>
@@ -459,7 +459,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Base grátis</span>
           </div>
           <h3 class="text-2xl font-bold text-white mb-2">Preços que importam</h3>
-          <p class="text-gray-300 font-medium mb-3">Spot, compra, venda e spread em uma só tela ao vivo.</p>
+          <p class="text-gray-300 font-medium mb-3">Detalhes de mercado de ouro, prata, platina ou paládio em uma tela ao vivo.</p>
           <p class="text-gray-400 leading-relaxed text-base">Acompanhe os números em que você realmente opera, não só um spot de manchete. Compare movimento de mercado com a realidade da revenda em segundos.</p>
           <p class="text-gold/90 text-sm font-semibold mt-3">Vantagem competitiva: contexto completo de preços, não apenas spot.</p>
         </div>
@@ -481,7 +481,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Base grátis</span>
           </div>
           <h3 class="text-2xl font-bold text-white mb-2">Conheça cada posição</h3>
-          <p class="text-gray-300 font-medium mb-3">Acompanhe valor, retorno e equilíbrio em toda a carteira.</p>
+          <p class="text-gray-300 font-medium mb-3">Acompanhe ouro e prata dentro dos limites Free; desbloqueie o acompanhamento completo de platina e paládio com Premium.</p>
           <p class="text-gray-400 leading-relaxed text-base">Cada posição fica visível com contexto de desempenho, para você saber sempre o que gera o resultado total.</p>
           <p class="text-gold/90 text-sm font-semibold mt-3">Vantagem competitiva: clareza por posição em vez de resumo de um número.</p>
         </div>
@@ -716,7 +716,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div data-premium-teaser class="mb-6 rounded-[1.75rem] border border-gold/20 bg-[linear-gradient(135deg,rgba(212,168,67,0.12),rgba(255,255,255,0.025))] p-5 shadow-xl shadow-gold/5" data-aos="fade-up">
         <p class="text-xs font-black uppercase tracking-[0.2em] text-gold mb-2">Foco Premium</p>
         <h3 class="text-xl md:text-2xl font-black text-white mb-2">Para portfólios maiores, análises mais profundas e decisões mais tranquilas.</h3>
-        <p class="text-sm text-gray-400 mb-4">Comece grátis e desbloqueie Premium dentro do app quando precisar de limites maiores e ferramentas avançadas.</p>
+        <p class="text-sm text-gray-400 mb-4">Comece grátis com ouro/prata e a prévia de platina/paládio no Dashboard. O Premium desbloqueia o acompanhamento completo de quatro metais e ferramentas avançadas.</p>
         <div class="grid sm:grid-cols-3 gap-3">
             <div class="rounded-2xl border border-gold/15 bg-white/[0.035] p-4">
               <ion-icon name="layers-outline" class="text-gold text-xl"></ion-icon>
@@ -759,7 +759,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="cash-outline" class="text-gold"></ion-icon><span>Preços de metais</span></span></td><td class="px-4 py-3.5 text-center text-mint font-bold">Incluído</td><td class="px-4 py-3.5 text-center text-gold font-bold">Reserva + APIs premium</td></tr>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="sync-outline" class="text-gold"></ion-icon><span>Monitoramento</span></span></td><td class="px-4 py-3.5 text-center text-gray-300"><span class="text-coral font-semibold">1</span> vez</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Diário / semanal / mensal</td></tr>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="notifications-outline" class="text-gold"></ion-icon><span>Alertas de preço</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Até <span class="text-coral font-semibold">2</span> alertas</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Alertas ilimitados</td></tr>
-              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="wallet-outline" class="text-gold"></ion-icon><span>Posições</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Até <span class="text-coral font-semibold">5</span> / metal</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Ilimitado</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="wallet-outline" class="text-gold"></ion-icon><span>Posições de ouro e prata</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Até <span class="text-coral font-semibold">5</span> / metal</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Ilimitado</td></tr>
+              <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="diamond-outline" class="text-gold"></ion-icon><span>Platina e paládio</span></span></td><td class="px-4 py-3.5 text-center text-gray-300">Prévia no Dashboard</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Acompanhamento + ferramentas</td></tr>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="swap-horizontal-outline" class="text-gold"></ion-icon><span>Compra / venda</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Não incluído</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Venda + simuladores</td></tr>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="flag-outline" class="text-gold"></ion-icon><span>Eventos</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Não incluído</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Máximas + janela venda</td></tr>
               <tr class="hover:bg-white/[0.02] transition"><td class="px-4 py-3.5 text-gray-300"><span class="inline-flex items-center gap-2"><ion-icon name="eye-outline" class="text-gold"></ion-icon><span>Vigia P&amp;L</span></span></td><td class="px-4 py-3.5 text-center text-coral font-semibold">Não incluído</td><td class="px-4 py-3.5 text-center text-gold font-semibold">Impulso de lucro</td></tr>
@@ -812,7 +813,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Quais moedas são suportadas?
             <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
           </summary>
-          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">14 moedas suportadas: EUR, USD, GBP, INR, AED, SAR, TRY, EGP, BRL, CAD, ARS, CHF, AUD e MXN. Os dados do portfólio são armazenados internamente em EUR. A visualização usa as taxas de câmbio de referência mais recentes disponíveis da <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-amber transition">ExchangeRate-API</a>, com cache offline. O peso pode ser mostrado em gramas, onças troy ou tola.</p>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">17 moedas suportadas: EUR, USD, AED, ARS, AUD, BRL, CAD, CHF, EGP, GBP, INR, MXN, MYR, PLN, QAR, SAR e TRY. Os dados do portfólio são armazenados internamente em EUR. A visualização usa as taxas de câmbio de referência mais recentes disponíveis da <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener noreferrer" class="text-gold hover:text-amber transition">ExchangeRate-API</a>, com cache offline. O peso pode ser mostrado em gramas, onças troy ou tola.</p>
         </details>
 
         <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
@@ -833,10 +834,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <details class="bg-navy-light/60 border border-border/20 rounded-xl group">
           <summary class="flex items-center justify-between px-5 py-4 cursor-pointer list-none font-semibold text-sm text-gray-200 hover:text-gold transition select-none">
-            Qual a precisão dos preços do ouro?
+            Qual a precisão dos preços de metais preciosos?
             <ion-icon name="chevron-down-outline" class="text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0" style="font-size:16px;"></ion-icon>
           </summary>
-          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Os preços vêm de três fontes integradas independentes, com troca automática se uma falhar. O spot normalmente reflete dados quase em tempo real de Londres/Nova York durante o horário de mercado. Pode haver pequenos atrasos e não é adequado para decisões de trade. Veja nosso <a href="https://smartdailyapps.com/pt/disclaimer/" class="text-gold hover:underline">Aviso de investimento</a>.</p>
+          <p class="px-5 pb-4 text-sm text-gray-400 leading-relaxed">Os preços de referência informativos usam troca automática entre várias fontes quando há cobertura. Disponibilidade e atualização variam por metal e provedor; os preços podem atrasar ou ficar temporariamente indisponíveis e não são adequados para decisões de trading. Veja nosso <a href="https://smartdailyapps.com/pt/disclaimer/" class="text-gold hover:underline">Aviso de investimento</a>.</p>
         </details>
 
         <div class="text-center mt-8 pt-6 border-t border-border/20">
