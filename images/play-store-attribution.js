@@ -23,11 +23,7 @@
         transport_type: 'beacon',
       };
 
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'play_store_click', eventParameters);
-      } else if (Array.isArray(window.dataLayer)) {
-        window.dataLayer.push({ event: 'play_store_click', ...eventParameters });
-      }
+      window.siteAnalytics?.track('play_store_click', eventParameters);
     });
   });
 })();

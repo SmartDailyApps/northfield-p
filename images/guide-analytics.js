@@ -9,9 +9,12 @@
     transport_type: 'beacon',
   };
 
-  if (typeof window.gtag === 'function') {
-    window.gtag('event', 'guide_view', parameters);
-  } else if (Array.isArray(window.dataLayer)) {
-    window.dataLayer.push({ event: 'guide_view', ...parameters });
-  }
+  let sent = false;
+  const send = () => {
+    if (sent || !window.siteAnalytics) return;
+    sent = window.siteAnalytics.track('guide_view', parameters);
+  };
+
+  send();
+  window.addEventListener('site-analytics-consent-granted', send);
 })();

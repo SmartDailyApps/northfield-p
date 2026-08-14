@@ -1,21 +1,9 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MKR2RFW2');</script>
-<!-- End Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2Y9RHH0QC"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-F2Y9RHH0QC');
-  </script>
-  <meta charset="UTF-8" />
+
+<script src="/images/consent-analytics.js" data-site="product" data-gtm-id="GTM-MKR2RFW2" data-consent-key="mgf_analytics_consent_v1"></script>
+<meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MyGoldFolio — Rastreador de metales preciosos para Android</title>
   <meta name="description" content="Sigue oro, plata, platino y paladio en privado en Android. Precios de referencia en vivo, cartera, escenarios y alertas quedan en tu dispositivo." />
@@ -231,12 +219,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </style>
 </head>
 <body class="bg-navy text-gray-200" style="overflow-x: hidden;">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKR2RFW2"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-  <!-- Nav -->
+<!-- Nav -->
   <nav class="border-b border-border/30 backdrop-blur-sm bg-navy/80 sticky top-0 z-50">
     <div class="max-w-5xl mx-auto px-6 py-4 grid grid-cols-[auto_1fr_auto] items-center gap-4">
       <a href="/es/" class="flex items-center gap-3">
@@ -892,9 +875,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div data-fs-error class="hidden text-xs text-red-400 mb-2"></div>
 
-        <form id="notify-form" class="flex flex-col sm:flex-row gap-3 max-w-sm mx-auto">
+        <form id="notify-form" class="flex flex-col sm:flex-row gap-3 max-w-sm mx-auto" action="https://formspree.io/f/mpqolryl" method="POST">
           <div class="flex-1">
-            <input type="email" name="email" placeholder="your@email.com" required
+            <input type="email" name="email" autocomplete="email" aria-label="Dirección de correo electrónico" placeholder="your@email.com" required
                    data-fs-field
                    class="w-full bg-navy-light border border-border/40 text-gray-200 text-sm px-4 py-2.5 rounded-xl focus:outline-none focus:border-gold/50 placeholder-muted" />
             <span data-fs-error="email" class="text-xs text-red-400 mt-1 block"></span>
@@ -904,6 +887,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Avísame
           </button>
         </form>
+        <p class="mt-4 text-[11px] leading-relaxed text-muted">Al suscribirte, aceptas recibir novedades ocasionales de MyGoldFolio. Puedes darte de baja o solicitar la eliminación en cualquier momento mediante <a href="mailto:info@mygoldfolio.de" class="text-gold hover:underline">info@mygoldfolio.de</a>. Consulta la <a href="/es/privacy/" class="text-gold hover:underline">privacidad</a>.</p>
       </div>
     </div>
   </section>
@@ -1011,7 +995,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }, { passive: true });
     scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
-
   <!-- Formspree Ajax (email capture) -->
   <script>
     window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
