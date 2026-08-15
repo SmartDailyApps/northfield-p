@@ -126,7 +126,10 @@
       if (choice !== grantedValue || typeof eventName !== 'string' || !eventName) {
         return false;
       }
-      window.gtag('event', eventName, parameters);
+      window.dataLayer.push({
+        event: eventName,
+        ...parameters,
+      });
       return true;
     },
     openPreferences() {
@@ -192,6 +195,8 @@
   }
 
   function applyChoice(nextChoice) {
+    const shouldReloadOnWithdrawal = nextChoice === deniedValue && gtmLoaded;
+
     choice = nextChoice;
     persistChoice(nextChoice);
     setConsent('update', nextChoice);
@@ -201,6 +206,10 @@
       window.dispatchEvent(new CustomEvent('site-analytics-consent-granted'));
     } else {
       window.dispatchEvent(new CustomEvent('site-analytics-consent-denied'));
+      if (shouldReloadOnWithdrawal) {
+        window.location.reload();
+        return;
+      }
     }
 
     hidePanel();
