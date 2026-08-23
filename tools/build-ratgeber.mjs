@@ -1,6 +1,6 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { additionalArticles, article, locales } from './ratgeber-content.mjs';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -16,12 +16,12 @@ const allArticles = [article, ...additionalArticles];
 const publishedArticles = allArticles.filter((item) => item.status !== 'draft');
 const outputArticles = includeDrafts ? allArticles : publishedArticles;
 
-function analytics() {
-  return `<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MKR2RFW2');</script>
-<!-- End Google Tag Manager -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F2Y9RHH0QC"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F2Y9RHH0QC');</script>`;
+// Consent-gated measurement head. Must stay byte-identical to the loader contract
+// enforced by scripts/check-measurement-consent.mjs (product): one consent loader,
+// no direct GTM/gtag requests, no GTM noscript iframe.
+export function consentHead() {
+  return `
+<script src="/images/consent-analytics.js" data-site="product" data-gtm-id="GTM-MKR2RFW2" data-consent-key="mgf_analytics_consent_v1"></script>`;
 }
 
 function tailwind() {
@@ -70,7 +70,8 @@ function renderSection(section) {
   const paragraphs = (section.paragraphs || []).map((paragraph) => `<p>${esc(paragraph)}</p>`).join('');
   const bullets = section.bullets ? `<ul>${section.bullets.map((item) => `<li>${esc(item)}</li>`).join('')}</ul>` : '';
   const ordered = section.ordered ? `<ol>${section.ordered.map((item) => `<li>${esc(item)}</li>`).join('')}</ol>` : '';
-  return `<section id="${esc(section.id)}"><h2>${esc(section.title)}</h2>${paragraphs}${bullets}${ordered}${section.table ? renderTable(section.table) : ''}</section>`;
+  const links = section.links ? `<ul>${section.links.map((linkItem) => `<li><a href="${esc(linkItem.href)}" target="_blank" rel="noopener noreferrer">${esc(linkItem.label)}</a></li>`).join('')}</ul>` : '';
+  return `<section id="${esc(section.id)}"><h2>${esc(section.title)}</h2>${paragraphs}${links}${bullets}${ordered}${section.table ? renderTable(section.table) : ''}</section>`;
 }
 
 function playUrl(articleItem) {
@@ -91,7 +92,7 @@ function renderRelated(locale, articleItem) {
   return `<section class="guide-related mt-12"><h2>${esc(locale.relatedLabel)}</h2><div class="grid gap-5">${cards}</div></section>`;
 }
 
-function articlePage(locale, articleItem) {
+export function articlePage(locale, articleItem) {
   const content = articleItem.locales[locale.code];
   const canonical = absoluteUrl(articlePath(articleItem, locale));
   const articleLd = { '@context': 'https://schema.org', '@type': 'Article', headline: content.title, description: content.description, image: absoluteUrl(articleItem.image), datePublished: articleItem.published, dateModified: articleItem.updated, inLanguage: locale.locale, author: { '@type': 'Organization', name: 'MyGoldFolio' }, publisher: { '@type': 'Organization', name: 'MyGoldFolio', logo: { '@type': 'ImageObject', url: absoluteUrl('/images/icon.png') } }, mainEntityOfPage: canonical };
@@ -102,7 +103,7 @@ function articlePage(locale, articleItem) {
   const faq = content.faq.map((item) => `<details><summary>${esc(item.q)}</summary><p>${esc(item.a)}</p></details>`).join('');
   return `<!DOCTYPE html>
 <html lang="${locale.locale}"><head>
-${analytics()}
+${consentHead()}
 <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>${esc(content.seoTitle || content.title)} | MyGoldFolio</title><meta name="description" content="${esc(content.description)}" />
 <meta property="og:title" content="${esc(content.title)}" /><meta property="og:description" content="${esc(content.description)}" /><meta property="og:type" content="article" /><meta property="og:image" content="${absoluteUrl(articleItem.image)}" /><meta property="article:published_time" content="${articleItem.published}" /><meta name="twitter:card" content="summary_large_image" />
@@ -110,10 +111,10 @@ ${analytics()}
 ${hreflang(articleItem)}
 ${tailwind()}
 <script type="application/ld+json">${json(articleLd)}</script><script type="application/ld+json">${json(faqLd)}</script><script type="application/ld+json">${json(breadcrumbLd)}</script>
-</head><body class="bg-navy text-gray-200"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKR2RFW2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+</head><body class="bg-navy text-gray-200">
 ${sharedNav(locale, articleItem)}
 <main data-guide-id="${articleItem.id}" data-guide-locale="${locale.code}" data-guide-category="${esc(articleItem.category[locale.code])}"><header class="guide-article-hero"><img src="${articleItem.image}" alt="${esc(articleItem.imageAlt[locale.code])}" /><div class="guide-shell guide-article-hero__content"><nav class="guide-breadcrumb" aria-label="Breadcrumb"><a href="${locale.code === 'en' ? '/' : `/${locale.code}/`}">${esc(locale.homeLabel)}</a><span aria-hidden="true">/</span><a href="${locale.hubPath}">${esc(locale.hubLabel)}</a></nav><p class="guide-eyebrow mb-4">${esc(articleItem.category[locale.code])} · ${articleItem.readingMinutes} min</p><h1>${esc(content.title)}</h1><p>${esc(content.intro)}</p><p class="guide-article-meta">${articleItem.updated} · ${brandWordmark('font-extrabold tracking-tight text-white')}</p></div></header>
-<div class="guide-shell grid max-w-6xl gap-10 py-14 md:grid-cols-[minmax(0,1fr)_15rem] md:py-20"><article class="guide-prose min-w-0"><div class="guide-kicker"><strong>${esc(content.summary)}</strong></div>${sections}<div class="guide-cta"><p class="mb-3">${brandWordmark()}</p><h2 class="!mt-0 text-2xl">${esc(content.ctaTitle)}</h2><p>${esc(content.ctaText)}</p><a href="${playUrl(articleItem)}" target="_blank" rel="noopener noreferrer" class="guide-cta__action mt-3 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-gold to-amber px-5 py-3 text-sm font-black shadow-xl shadow-gold/25 transition hover:-translate-y-0.5 hover:shadow-gold/35 sm:w-auto" style="color:#0F0F1A !important;text-decoration:none;"><ion-icon name="diamond-outline"></ion-icon>${esc(content.ctaLabel)}</a><p class="mt-4 text-xs text-gray-500">${esc(locale.disclosure)}</p></div>${renderRelated(locale, articleItem)}<section class="guide-faq mt-12" id="faq"><h2>${esc(locale.faqLabel)}</h2><div class="space-y-3">${faq}</div></section><div class="guide-next"><a href="${locale.hubPath}">← ${esc(locale.backLabel)}</a></div></article><aside class="hidden md:block"><div class="guide-card guide-toc sticky top-24 p-5"><p class="mb-3 text-xs font-extrabold uppercase tracking-[.15em] text-gold">${esc(locale.contentsLabel)}</p>${toc}<a href="#faq">${esc(locale.faqLabel)}</a></div></aside></div></main>
+<div class="guide-shell grid max-w-6xl gap-10 py-14 md:grid-cols-[minmax(0,1fr)_15rem] md:py-20"><article class="guide-prose min-w-0"><div class="guide-kicker"><strong>${esc(content.summary)}</strong></div>${sections}<div class="guide-cta"><p class="mb-3">${brandWordmark()}</p><h2 class="!mt-0 text-2xl">${esc(content.ctaTitle)}</h2><p>${esc(content.ctaText)}</p><a href="${playUrl(articleItem)}" target="_blank" rel="noopener noreferrer" class="guide-cta__action mt-3 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-gold to-amber px-5 py-3 text-sm font-black shadow-xl shadow-gold/25 transition hover:-translate-y-0.5 hover:shadow-gold/35 sm:w-auto" style="color:#0F0F1A !important;text-decoration:none;"><ion-icon name="diamond-outline"></ion-icon>${esc(content.ctaLabel)}</a></div>${renderRelated(locale, articleItem)}<section class="guide-faq mt-12" id="faq"><h2>${esc(locale.faqLabel)}</h2><div class="space-y-3">${faq}</div></section><div class="guide-next"><a href="${locale.hubPath}">← ${esc(locale.backLabel)}</a></div></article><aside class="hidden md:block"><div class="guide-card guide-toc sticky top-24 p-5"><p class="mb-3 text-xs font-extrabold uppercase tracking-[.15em] text-gold">${esc(locale.contentsLabel)}</p>${toc}<a href="#faq">${esc(locale.faqLabel)}</a></div></aside></div></main>
 ${sharedFooter(locale)}</body></html>`;
 }
 
@@ -122,19 +123,19 @@ function articleCard(locale, articleItem) {
   return `<a href="${articlePath(articleItem, locale)}" class="guide-card guide-article-card block"><img src="${articleItem.image}" alt="${esc(articleItem.imageAlt[locale.code])}" /><div class="p-6"><p class="guide-eyebrow mb-3">${esc(articleItem.category[locale.code])} · ${articleItem.readingMinutes} min</p><h2 class="text-2xl font-black text-white">${esc(content.title)}</h2><p class="mt-3 leading-relaxed text-gray-400">${esc(content.description)}</p><span class="mt-5 inline-flex items-center gap-2 font-bold text-gold">${esc(locale.readLabel)} <span aria-hidden="true">→</span></span></div></a>`;
 }
 
-function hubPage(locale) {
+export function hubPage(locale) {
   const orderedArticles = [...publishedArticles].sort((a, b) => b.published.localeCompare(a.published));
   const cards = orderedArticles.map((articleItem) => articleCard(locale, articleItem)).join('');
   return `<!DOCTYPE html>
 <html lang="${locale.locale}"><head>
-${analytics()}
+${consentHead()}
 <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>${esc(locale.hubTitle)} | MyGoldFolio</title><meta name="description" content="${esc(locale.hubIntro)}" />
 <meta property="og:title" content="${esc(locale.hubTitle)}" /><meta property="og:description" content="${esc(locale.hubIntro)}" /><meta property="og:type" content="website" /><meta property="og:image" content="${absoluteUrl(orderedArticles[0].image)}" /><meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="/images/icon.png" /><link rel="canonical" href="${absoluteUrl(locale.hubPath)}" />
 ${hreflang()}
 ${tailwind()}
-</head><body class="bg-navy text-gray-200"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKR2RFW2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+</head><body class="bg-navy text-gray-200">
 ${sharedNav(locale)}
 <main><section class="guide-hub-hero"><div class="guide-shell max-w-4xl text-center"><p class="guide-eyebrow mb-4">${esc(locale.eyebrow)}</p><h1>${esc(locale.hubTitle)}</h1><p>${esc(locale.hubIntro)}</p></div></section><section class="guide-shell py-12 md:py-16"><p class="guide-eyebrow mb-2">${esc(locale.latestLabel)}</p><div class="grid max-w-3xl gap-6">${cards}</div></section></main>
 ${sharedFooter(locale)}</body></html>`;
@@ -151,9 +152,16 @@ async function write(path, body) {
   console.log(path);
 }
 
-for (const locale of Object.values(locales)) {
-  await write(locale.hubPath, hubPage(locale));
-  for (const articleItem of outputArticles) {
-    await write(articlePath(articleItem, locale), articlePage(locale, articleItem));
+export { locales, outputArticles, articlePath };
+
+const invokedDirectly = process.argv[1]
+  && import.meta.url === pathToFileURL(resolve(process.argv[1])).href;
+
+if (invokedDirectly) {
+  for (const locale of Object.values(locales)) {
+    await write(locale.hubPath, hubPage(locale));
+    for (const articleItem of outputArticles) {
+      await write(articlePath(articleItem, locale), articlePage(locale, articleItem));
+    }
   }
 }
