@@ -10,13 +10,14 @@
 //   guide hubs    -> newest published guide date
 //   static pages  -> last meaningful git commit date touching the page file
 import { execFileSync } from 'node:child_process';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { additionalArticles, article, locales } from './ratgeber-content.mjs';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const diffMode = process.argv.includes('--diff');
+const writeMode = process.argv.includes('--write');
 const BASE = 'https://mygoldfolio.de';
 
 function gitDate(relPath) {
@@ -113,6 +114,13 @@ if (diffMode) {
   console.log(`# sitemap diff @ ${new Date().toISOString().slice(0, 10)}`);
   console.log(`# computed=${computed.size} current=${existing.size} missing-from-current=${missing} unexpected-in-current=${extra}`);
   console.log(lines.join('\n'));
+  process.exit(0);
+}
+
+if (writeMode) {
+  const sitemapPath = join(repoRoot, 'sitemap.xml');
+  writeFileSync(sitemapPath, xml(computed), 'utf8');
+  console.log(`WROTE ${sitemapPath} (${computed.size} URLs)`);
   process.exit(0);
 }
 

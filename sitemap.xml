@@ -1,263 +1,283 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://mygoldfolio.de/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
-    <loc>https://mygoldfolio.de/help/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://mygoldfolio.de/changelog/</loc>
+    <lastmod>2026-08-14</lastmod>
   </url>
-
   <url>
     <loc>https://mygoldfolio.de/de/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/de/changelog/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/de/feedback/</loc>
+    <lastmod>2026-08-14</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/help/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/de/privacy/</loc>
+    <lastmod>2026-08-14</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/ratgeber/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/ratgeber/edelmetalle-portfolio-tracken/</loc>
     <lastmod>2026-08-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/de/ratgeber/gold-silber-kaeufe-dokumentieren/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/ratgeber/gold-silber-aufgeld-break-even/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://mygoldfolio.de/tr/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mygoldfolio.de/tr/help/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://mygoldfolio.de/fr/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://mygoldfolio.de/de/ratgeber/gold-silber-kaeufe-dokumentieren/</loc>
+    <lastmod>2026-08-15</lastmod>
   </url>
   <url>
-    <loc>https://mygoldfolio.de/fr/help/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://mygoldfolio.de/de/roadmap/</loc>
+    <lastmod>2026-08-22</lastmod>
   </url>
-
   <url>
     <loc>https://mygoldfolio.de/es/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
-    <loc>https://mygoldfolio.de/es/help/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://mygoldfolio.de/it/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://mygoldfolio.de/es/changelog/</loc>
+    <lastmod>2026-08-14</lastmod>
   </url>
   <url>
-    <loc>https://mygoldfolio.de/it/help/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://mygoldfolio.de/pt/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/pt/help/</loc>
-    <lastmod>2026-05-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://mygoldfolio.de/guides/</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/guides/track-precious-metals-portfolio/</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/guides/record-gold-silver-purchases/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/guides/gold-silver-premiums-break-even/</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/fr/guides/</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/fr/guides/suivre-portefeuille-metaux-precieux/</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/fr/guides/enregistrer-achats-or-argent/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/fr/guides/primes-or-argent-seuil-rentabilite/</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/tr/rehber/</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/tr/rehber/degerli-maden-portfoyu-takip/</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/tr/rehber/altin-gumus-alimlarini-kaydetmek/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/tr/rehber/altin-gumus-prim-basa-bas-noktasi/</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://mygoldfolio.de/es/feedback/</loc>
+    <lastmod>2026-08-14</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/guias/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/es/guias/seguimiento-cartera-metales-preciosos/</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/es/guias/registrar-compras-oro-plata/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/guias/primas-oro-plata-punto-equilibrio/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/es/guias/registrar-compras-oro-plata/</loc>
+    <lastmod>2026-08-15</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/es/guias/seguimiento-cartera-metales-preciosos/</loc>
+    <lastmod>2026-08-08</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/es/help/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/es/privacy/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/es/roadmap/</loc>
+    <lastmod>2026-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/feedback/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/</loc>
+    <lastmod>2026-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/changelog/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/feedback/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/guides/</loc>
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/guides/enregistrer-achats-or-argent/</loc>
+    <lastmod>2026-08-15</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/guides/primes-or-argent-seuil-rentabilite/</loc>
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/guides/suivre-portefeuille-metaux-precieux/</loc>
+    <lastmod>2026-08-08</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/help/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/privacy/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/roadmap/</loc>
+    <lastmod>2026-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/guides/</loc>
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/guides/gold-silver-premiums-break-even/</loc>
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/guides/record-gold-silver-purchases/</loc>
+    <lastmod>2026-08-15</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/guides/track-precious-metals-portfolio/</loc>
+    <lastmod>2026-08-08</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/help/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/it/</loc>
+    <lastmod>2026-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/it/changelog/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/it/feedback/</loc>
+    <lastmod>2026-08-14</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/guide/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/guide/monitorare-portafoglio-metalli-preziosi/</loc>
     <lastmod>2026-08-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/it/guide/registrare-acquisti-oro-argento/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/guide/premi-oro-argento-punto-pareggio/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/it/guide/registrare-acquisti-oro-argento/</loc>
+    <lastmod>2026-08-15</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/it/help/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/it/privacy/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/it/roadmap/</loc>
+    <lastmod>2026-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/privacy/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/pt/</loc>
+    <lastmod>2026-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/pt/changelog/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/pt/feedback/</loc>
+    <lastmod>2026-08-14</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/guias/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/guias/acompanhar-carteira-metais-preciosos/</loc>
     <lastmod>2026-08-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mygoldfolio.de/pt/guias/registrar-compras-ouro-prata/</loc>
-    <lastmod>2026-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/guias/agio-ouro-prata-ponto-equilibrio/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/pt/guias/registrar-compras-ouro-prata/</loc>
+    <lastmod>2026-08-15</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/pt/help/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/pt/privacy/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/pt/roadmap/</loc>
+    <lastmod>2026-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/roadmap/</loc>
+    <lastmod>2026-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/</loc>
+    <lastmod>2026-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/changelog/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/feedback/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/help/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/privacy/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/rehber/</loc>
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/rehber/altin-gumus-alimlarini-kaydetmek/</loc>
+    <lastmod>2026-08-15</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/rehber/altin-gumus-prim-basa-bas-noktasi/</loc>
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/rehber/degerli-maden-portfoyu-takip/</loc>
+    <lastmod>2026-08-08</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/roadmap/</loc>
+    <lastmod>2026-08-22</lastmod>
   </url>
 </urlset>
