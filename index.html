@@ -110,27 +110,7 @@
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: '#0F0F1A',
-            'navy-light': '#1A1A2E',
-            card: '#16213E',
-            border: '#1E3A5C',
-            gold: '#D4A843',
-            amber: '#FFE27A',
-            mint: '#00D68F',
-            coral: '#FF4757',
-            muted: '#666677',
-            purple: '#A78BFA',
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="/assets/css/main.min.css" />
   <style>
     html, body { overflow-x: hidden; }
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
@@ -223,7 +203,10 @@
   <nav class="border-b border-border/30 backdrop-blur-sm bg-navy/80 sticky top-0 z-50">
     <div class="max-w-5xl mx-auto px-6 py-4 grid grid-cols-[auto_1fr_auto] items-center gap-4">
       <a href="/" class="flex items-center gap-3">
-        <img src="/images/icon.png" alt="MyGoldFolio icon" class="w-8 h-8 rounded-xl object-cover" />
+        <picture>
+          <source type="image/webp" srcset="/images/gen/icons/icon-64.webp 64w, /images/gen/icons/icon-128.webp 128w" sizes="32px">
+          <img src="/images/icon.png" alt="MyGoldFolio icon" class="w-8 h-8 rounded-xl object-cover" width="32" height="32" loading="eager" decoding="async">
+        </picture>
         <span class="text-lg font-extrabold tracking-tight text-white">My<span class="text-[#E2B84B]">Gold</span>Folio</span>
       </a>
       <div class="hidden md:flex items-center justify-center gap-8 text-sm">
@@ -255,15 +238,22 @@
 
   <!-- Hero -->
   <section class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/mgf-v3-hero-bg-all.png');"></div>
-    <div class="absolute inset-0" style="background: rgba(15,15,26,0.78);"></div>
+    <picture class="absolute inset-0 block w-full h-full z-0">
+      <source type="image/avif" srcset="/images/gen/hero-bg/mgf-v3-hero-bg-all-480.avif 480w, /images/gen/hero-bg/mgf-v3-hero-bg-all-768.avif 768w, /images/gen/hero-bg/mgf-v3-hero-bg-all-1080.avif 1080w, /images/gen/hero-bg/mgf-v3-hero-bg-all-1536.avif 1536w" sizes="100vw">
+      <source type="image/webp" srcset="/images/gen/hero-bg/mgf-v3-hero-bg-all-480.webp 480w, /images/gen/hero-bg/mgf-v3-hero-bg-all-768.webp 768w, /images/gen/hero-bg/mgf-v3-hero-bg-all-1080.webp 1080w, /images/gen/hero-bg/mgf-v3-hero-bg-all-1536.webp 1536w" sizes="100vw">
+      <img src="/images/mgf-v3-hero-bg-all.png" alt="" class="w-full h-full object-cover object-center" width="1536" height="1024" fetchpriority="high" loading="eager" decoding="async">
+    </picture>
+    <div class="absolute inset-0 z-0" style="background: rgba(15,15,26,0.78);"></div>
 
     <div class="relative max-w-5xl mx-auto px-6 pt-6 pb-12 md:pt-12 md:pb-20 flex flex-col md:flex-row items-center gap-10 md:gap-16">
 
       <!-- Text column -->
-      <div class="flex-1 text-center md:text-left">
+      <div class="flex-1 text-center md:text-left z-10 relative">
         <div class="flex items-center gap-3 justify-center md:justify-start mb-5">
-          <img src="/images/icon.png" alt="MyGoldFolio" class="w-14 h-14 rounded-2xl shadow-lg shadow-gold/20" />
+          <picture>
+            <source type="image/webp" srcset="/images/gen/icons/icon-64.webp 64w, /images/gen/icons/icon-128.webp 128w" sizes="56px">
+            <img src="/images/icon.png" alt="MyGoldFolio" class="w-14 h-14 rounded-2xl shadow-lg shadow-gold/20" width="56" height="56" loading="eager" decoding="async">
+          </picture>
           <span class="inline-flex items-center gap-1.5 text-xs bg-gold/15 text-gold border border-gold/20 px-2.5 py-1 rounded-full font-semibold">
             <ion-icon name="sparkles-outline"></ion-icon>&nbsp;Your Smart Metals Folio
           </span>
@@ -319,7 +309,7 @@
 
         <div class="phone-float">
           <div class="phone-frame">
-            <video autoplay muted loop playsinline poster="/images/mgf-v3-s1-en.png"
+            <video autoplay muted loop playsinline poster="/images/gen/screenshots/mgf-v3-s1-en-440.webp"
               style="width:100%;height:100%;object-fit:cover;">
               <source src="/assets/app-video.mp4" type="video/mp4" />
             </video>
@@ -386,7 +376,7 @@
 
   <!-- Divider -->
   <div aria-hidden="true" class="relative h-16 md:h-20 overflow-hidden">
-    <div class="absolute inset-0" style="background-image:url('/images/mgf-v3-divider-wave-all.png');background-repeat:no-repeat;background-size:130% auto;background-position:center 62%;opacity:0.72;"></div>
+    <div class="absolute inset-0" style="background-image:url('/images/mgf-v3-divider-wave-all.svg');background-repeat:no-repeat;background-size:130% auto;background-position:center 62%;opacity:0.72;"></div>
     <div class="absolute inset-0 bg-gradient-to-r from-navy via-transparent to-navy"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-navy via-transparent to-navy"></div>
   </div>
@@ -408,7 +398,11 @@
       <div class="flex flex-col md:flex-row items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
         <div class="flex-shrink-0">
           <div class="phone-frame">
-            <img src="/images/mgf-v3-s1-en.png" alt="Dashboard overview screen" loading="lazy" />
+            <picture>
+              <source type="image/avif" srcset="/images/gen/screenshots/mgf-v3-s1-en-360.avif 360w, /images/gen/screenshots/mgf-v3-s1-en-440.avif 440w, /images/gen/screenshots/mgf-v3-s1-en-660.avif 660w" sizes="(max-width: 640px) 180px, 220px">
+              <source type="image/webp" srcset="/images/gen/screenshots/mgf-v3-s1-en-360.webp 360w, /images/gen/screenshots/mgf-v3-s1-en-440.webp 440w, /images/gen/screenshots/mgf-v3-s1-en-660.webp 660w" sizes="(max-width: 640px) 180px, 220px">
+              <img src="/images/mgf-v3-s1-en.png" alt="Dashboard overview screen" width="220" height="440" loading="lazy" decoding="async">
+            </picture>
           </div>
         </div>
         <div class="flex-1 text-center md:text-left">

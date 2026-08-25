@@ -1,0 +1,47 @@
+{
+  "$comment": "WEB-UX1 FREEZE.md §1/§3 derivative contract. Widths are frozen ladder tiers (DPR-2 strict rule, cap at source width). The screenshots role keeps the owner-reviewable DPR-3 '660w' sharpness tier flagged in FREEZE §1. Formats are emitted in listed order; the last entry is the legacy fallback. Metadata is stripped; reruns must be byte-identical.",
+  "outputRoot": "images/gen",
+  "roles": {
+    "screenshots": {
+      "source": "images/mgf-v3-s?-*.png",
+      "widths": [360, 440, 660],
+      "formats": [
+        { "type": "avif", "quality": 70, "effort": 4 },
+        { "type": "webp", "quality": 80 },
+        { "type": "png", "compressionLevel": 9 }
+      ]
+    },
+    "hero-bg": {
+      "source": "images/mgf-v3-hero-bg-all.png",
+      "widths": [480, 768, 1080, 1536],
+      "formats": [
+        { "type": "avif", "quality": 55, "effort": 4 },
+        { "type": "webp", "quality": 70 },
+        { "type": "jpeg", "quality": 80, "mozjpeg": true }
+      ],
+      "$comment-fidelity": "Gradient artwork: banding check required at Phase 3 before rollout."
+    },
+    "icons": {
+      "source": "images/icon.png",
+      "widths": [64, 128],
+      "formats": [
+        { "type": "webp", "lossless": true },
+        { "type": "png", "compressionLevel": 9 }
+      ]
+    },
+    "articles": {
+      "source": "images/articles/*-hero.png",
+      "widths": [480, 768, 1536],
+      "formats": [
+        { "type": "avif", "quality": 65, "effort": 4 },
+        { "type": "webp", "quality": 75 },
+        { "type": "png", "compressionLevel": 9 }
+      ]
+    }
+  },
+  "$comment-excluded": {
+    "divider-wave": "Not generated: FREEZE §1 adopts the existing 1.75 KB SVG at markup-change time (Phase 3 pilot).",
+    "og-cards": "Not generated: same-dimension OG recompression is a Phase-4 owner decision per plan README open-decisions table.",
+    "old-not-used": "Unreferenced masters are retained in place during WEB-UX1 (Fixed decision 15); never inputs here."
+  }
+}

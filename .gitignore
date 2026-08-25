@@ -3,3 +3,4 @@ AGENTS.md
 *.local
 .env*
 docs/
+node_modules/

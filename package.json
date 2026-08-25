@@ -1,0 +1,24 @@
+{
+  "name": "mygoldfolio-website-tooling",
+  "version": "3.4.1",
+  "private": true,
+  "type": "module",
+  "description": "Dev-only build/validation tooling for the static site. Nothing in here ships to visitors; generated CSS/images are committed and served statically.",
+  "//license-note": "sharp is Apache-2.0 (bundles libvips; see node_modules/sharp/LICENSE). Dev dependency only.",
+  "//node": "Requires Node >= 20 (tested on Node 24, Windows).",
+  "scripts": {
+    "build:css": "node tools/build-css.mjs",
+    "check:css": "node tools/build-css.mjs --check",
+    "build:images": "node tools/build-images.mjs",
+    "dryrun:images": "node tools/build-images.mjs --dry-run",
+    "check:images": "node tools/build-images.mjs --check",
+    "sitemap:xml": "node tools/build-sitemap.mjs",
+    "sitemap:diff": "node tools/build-sitemap.mjs --diff",
+    "validate": "node scripts/validate-site.mjs",
+    "validate:consent": "node scripts/check-measurement-consent.mjs product"
+  },
+  "devDependencies": {
+    "sharp": "0.33.5",
+    "tailwindcss": "3.4.17"
+  }
+}
