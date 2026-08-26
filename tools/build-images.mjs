@@ -93,7 +93,10 @@ async function plan() {
     for (const relSource of sources) {
       const sourceAbs = join(repoRoot, relSource);
       const meta = await sharp(sourceAbs).metadata();
-      const base = relSource.split('/').pop().replace(/\.[^.]+$/, '');
+      // Preserve any sub-path below the glob's fixed prefix (e.g. locale folders),
+      // so 'images/app-screens/en/dashboard.png' -> base 'en/dashboard'.
+      const prefix = spec.source.split('*')[0].replace(/[^/]*$/, '');
+      const base = relSource.startsWith(prefix) ? relSource.slice(prefix.length).replace(/\.[^.]+$/, '') : relSource.split('/').pop().replace(/\.[^.]+$/, '');
       for (const width of spec.widths) {
         if (width > meta.width) continue; // cap-at-source rule (FREEZE ladder rule)
         for (const fmt of spec.formats) {

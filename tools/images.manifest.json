@@ -90,6 +90,30 @@
           "compressionLevel": 9
         }
       ]
+    },
+    "app-screens": {
+      "source": "images/app-screens/*/*.png",
+      "widths": [
+        320,
+        480,
+        640
+      ],
+      "formats": [
+        {
+          "type": "avif",
+          "quality": 70,
+          "effort": 4
+        },
+        {
+          "type": "webp",
+          "quality": 75
+        },
+        {
+          "type": "png",
+          "compressionLevel": 9
+        }
+      ],
+      "$comment": "Frame-free native app screenshots for the WEB-UX2 pinned phone journey. Folder per locale (en first; other locales = factory run later). Alpha preserved. Phone display ~240 CSS px wide -> ladder 320/480/640 covers 1x-2.6x. Cap-at-source: 1280."
     }
   },
   "$comment-excluded": {
