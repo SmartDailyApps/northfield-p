@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr" class="scroll-smooth">
+<html lang="tr" class="scroll-smooth js">
 <head>
 
 <script src="/images/consent-analytics.js" data-site="product" data-gtm-id="GTM-MKR2RFW2" data-consent-key="mgf_analytics_consent_v1"></script>
@@ -95,10 +95,10 @@
   }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="/assets/css/aos.css" />
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <style>
-    html, body { overflow-x: hidden; }
+    html, body { overflow-x: clip; }
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
     .gold-glow { text-shadow: 0 0 40px rgba(212,168,67,0.4); }
 
@@ -156,7 +156,7 @@
     @media (max-width: 640px) {
       #plans { padding-left: .75rem; padding-right: .75rem; }
       #plans .max-w-3xl { max-width: 100%; }
-      .plans-table-wrap { overflow-x: hidden; }
+      .plans-table-wrap { overflow-x: clip; }
       .plans-table { table-layout: fixed; width: 100%; font-size: 10.5px; line-height: 1.25; }
       .plans-table col:nth-child(1) { width: 39%; }
       .plans-table col:nth-child(2) { width: 22%; }
@@ -184,7 +184,7 @@
 
   </style>
 </head>
-<body class="bg-navy text-gray-200" style="overflow-x: hidden;">
+<body class="bg-navy text-gray-200" style="overflow-x: clip;">
 <!-- Nav -->
   <nav class="border-b border-border/30 backdrop-blur-sm bg-navy/80 sticky top-0 z-50">
     <div class="max-w-5xl mx-auto px-6 py-4 grid grid-cols-[auto_1fr_auto] items-center gap-4">
@@ -380,141 +380,211 @@
         <p class="text-gray-400 max-w-3xl mx-auto">Canlı fiyatlardan vergi zamanlamasına ve işlem öncesi simülasyona kadar MyGoldFolio, altın takibini net bir karar akışına dönüştürür.</p>
       </div>
 
-      <!-- Row 1: Dashboard -->
-      <div class="flex flex-col md:flex-row items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><picture>
-              <source type="image/avif" srcset="/images/gen/screenshots/mgf-v3-s1-tr-360.avif 360w, /images/gen/screenshots/mgf-v3-s1-tr-440.avif 440w, /images/gen/screenshots/mgf-v3-s1-tr-660.avif 660w" sizes="(max-width: 640px) 180px, 220px">
-              <source type="image/webp" srcset="/images/gen/screenshots/mgf-v3-s1-tr-360.webp 360w, /images/gen/screenshots/mgf-v3-s1-tr-440.webp 440w, /images/gen/screenshots/mgf-v3-s1-tr-660.webp 660w" sizes="(max-width: 640px) 180px, 220px">
-              <img src="/images/mgf-v3-s1-tr.png" alt="Pano genel görünümü" width="220" height="440" loading="lazy" decoding="async">
-            </picture></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Canlı Genel Bakış</p>
-          <div class="feat-icon bg-amber/10 text-amber mb-5 mx-auto md:mx-0"><ion-icon name="speedometer-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Ücretsiz temel</span>
+            <!-- Pinned Phone Journey -->
+      <div class="journey-container w-full mt-12 gap-8 lg:gap-16">
+        
+        <!-- Sticky Phone Column -->
+        <div class="sticky-phone-wrapper">
+          <div class="luxury-phone-frame mx-auto">
+            <div class="luxury-phone-buttons"></div>
+            <div class="phone-screen-container">
+              <!-- Screens -->
+              <!-- KNOW -->
+              <div class="screen-layer active" id="screen-dashboard">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/dashboard-320.avif 320w, /images/gen/app-screens/en/dashboard-480.avif 480w, /images/gen/app-screens/en/dashboard-640.avif 640w" sizes="(max-width: 768px) 240px, 240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/dashboard-320.webp 320w, /images/gen/app-screens/en/dashboard-480.webp 480w, /images/gen/app-screens/en/dashboard-640.webp 640w" sizes="(max-width: 768px) 240px, 240px">
+                  <img src="/images/gen/app-screens/en/dashboard-320.png" alt="Dashboard Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="screen-layer" id="screen-prices">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/prices-320.avif 320w, /images/gen/app-screens/en/prices-480.avif 480w, /images/gen/app-screens/en/prices-640.avif 640w" sizes="240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/prices-320.webp 320w, /images/gen/app-screens/en/prices-480.webp 480w, /images/gen/app-screens/en/prices-640.webp 640w" sizes="240px">
+                  <img src="/images/gen/app-screens/en/prices-320.png" alt="Prices Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="screen-layer" id="screen-portfolio">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/portfolio-320.avif 320w, /images/gen/app-screens/en/portfolio-480.avif 480w, /images/gen/app-screens/en/portfolio-640.avif 640w" sizes="240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/portfolio-320.webp 320w, /images/gen/app-screens/en/portfolio-480.webp 480w, /images/gen/app-screens/en/portfolio-640.webp 640w" sizes="240px">
+                  <img src="/images/gen/app-screens/en/portfolio-320.png" alt="Portfolio Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <!-- DECIDE -->
+              <div class="screen-layer" id="screen-scenarios">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/scenarios-320.avif 320w, /images/gen/app-screens/en/scenarios-480.avif 480w, /images/gen/app-screens/en/scenarios-640.avif 640w" sizes="240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/scenarios-320.webp 320w, /images/gen/app-screens/en/scenarios-480.webp 480w, /images/gen/app-screens/en/scenarios-640.webp 640w" sizes="240px">
+                  <img src="/images/gen/app-screens/en/scenarios-320.png" alt="Scenarios Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="screen-layer" id="screen-simulator">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/simulator-320.avif 320w, /images/gen/app-screens/en/simulator-480.avif 480w, /images/gen/app-screens/en/simulator-640.avif 640w" sizes="240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/simulator-320.webp 320w, /images/gen/app-screens/en/simulator-480.webp 480w, /images/gen/app-screens/en/simulator-640.webp 640w" sizes="240px">
+                  <img src="/images/gen/app-screens/en/simulator-320.png" alt="Simulator Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="screen-layer" id="screen-alerts">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/alerts-320.avif 320w, /images/gen/app-screens/en/alerts-480.avif 480w, /images/gen/app-screens/en/alerts-640.avif 640w" sizes="240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/alerts-320.webp 320w, /images/gen/app-screens/en/alerts-480.webp 480w, /images/gen/app-screens/en/alerts-640.webp 640w" sizes="240px">
+                  <img src="/images/gen/app-screens/en/alerts-320.png" alt="Alerts Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <!-- PROFIT -->
+              <div class="screen-layer" id="screen-sold">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/sold-320.avif 320w, /images/gen/app-screens/en/sold-480.avif 480w, /images/gen/app-screens/en/sold-640.avif 640w" sizes="240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/sold-320.webp 320w, /images/gen/app-screens/en/sold-480.webp 480w, /images/gen/app-screens/en/sold-640.webp 640w" sizes="240px">
+                  <img src="/images/gen/app-screens/en/sold-320.png" alt="Sold Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="screen-layer" id="screen-taxfree">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/taxfree-320.avif 320w, /images/gen/app-screens/en/taxfree-480.avif 480w, /images/gen/app-screens/en/taxfree-640.avif 640w" sizes="240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/taxfree-320.webp 320w, /images/gen/app-screens/en/taxfree-480.webp 480w, /images/gen/app-screens/en/taxfree-640.webp 640w" sizes="240px">
+                  <img src="/images/gen/app-screens/en/taxfree-320.png" alt="Taxfree Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+            </div>
           </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Altinini tek bakista gor</h3>
-          <p class="text-gray-300 font-medium mb-3">Dört canlı metal piyasası tek ve net Dashboard'da.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Altın, gümüş, platin ve paladyum fiyatlarını gör. Altın/gümüş portföy sonuçları Free limitlerine tabidir; Premium platin/paladyum varlık, değer ve kâr takibini ekler.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Avantaj: spot + portföy performansı tek canlı ekranda.</p>
+        </div>
+
+        <!-- Story Blocks Column -->
+        <div class="flex-1 pb-32 pt-8 lg:pt-0 max-w-2xl mx-auto lg:mx-0 relative">
+          
+          <!-- KNOW Group -->
+          <div class="mb-12 sticky top-[calc(4rem+540px)] md:relative md:top-auto z-10 bg-navy/95 backdrop-blur-md py-4 md:bg-transparent md:py-0 border-y border-border/20 md:border-none">
+            <p class="text-xs font-black tracking-[0.2em] text-gold uppercase mb-1">Bil</p>
+            <p class="text-gray-400 text-sm font-medium">Gerçek pozisyonunu anında anla.</p>
+          </div>
+
+          <div class="story-block mb-32 min-h-[40vh]" data-screen="dashboard">
+            <h3 class="text-3xl font-bold text-white mb-4">Tüm pozisyonun, tek bakışta</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Gerçekten işlem yaptığın rakamları takip et. Her metalin piyasa hareketini satıcı gerçekliğiyle saniyeler içinde karşılaştır.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Portföy değeri canlı</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Kâr/zarar tek bakışta</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">%100 çevrimdışı</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-block mb-32 min-h-[40vh]" data-screen="prices">
+            <h3 class="text-3xl font-bold text-white mb-4">Canlı fiyatlar, dört metal</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Altın, Gümüş, Platin veya Paladyum: tüm piyasa detayı tek bir canlı ekranda.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">XAU · XAG · Platin · Paladyum</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">17 para birimi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-block mb-32 min-h-[40vh]" data-screen="portfolio">
+            <h3 class="text-3xl font-bold text-white mb-4">Her lot, her gram — düzenli</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Her pozisyon metal etiketini ve performans bağlamını korur; toplam sonucu neyin yönlendirdiğini her zaman bilirsin.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Lot bazında kayıtlar</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Saflık takibi</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Yalnızca cihazda</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- DECIDE Group -->
+          <div class="mb-12 sticky top-[calc(4rem+540px)] md:relative md:top-auto z-10 bg-navy/95 backdrop-blur-md py-4 md:bg-transparent md:py-0 border-y border-border/20 md:border-none">
+            <p class="text-xs font-black tracking-[0.2em] text-gold uppercase mb-1">Karar Ver</p>
+            <p class="text-gray-400 text-sm font-medium">Piyasadan önce bir sonraki adımını planla.</p>
+          </div>
+
+          <div class="story-block mb-32 min-h-[40vh]" data-screen="scenarios">
+            <h3 class="text-3xl font-bold text-white mb-4">Almadan önce 'ne olur'</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Sermaye taahhüt etmeden önce farklı fiyat hareketlerinde kâr, zarar ve başabaş noktasını önceden gör.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Anında ne-olur senaryosu</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Başabaş önizlemesi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-block mb-32 min-h-[40vh]" data-screen="simulator">
+            <h3 class="text-3xl font-bold text-white mb-4">Satmadan önce satışı test et</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Bayi primlerinin çıkış gelirini nasıl etkilediğini, dükkâna gitmeden önce tam olarak gör.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">İşlem öncesi simülasyon</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Prim farkındalığı</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-block mb-32 min-h-[40vh]" data-screen="alerts">
+            <h3 class="text-3xl font-bold text-white mb-4">Gerçekten tetiklenen arka plan alarmları</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Anlamlı eşikleri bir kez tanımla; arka plan izleme yalnızca önemli hareketleri öne çıkarsın.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Kesin zamanlama</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Hesap gerekmez</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROFIT Group -->
+          <div class="mb-12 sticky top-[calc(4rem+540px)] md:relative md:top-auto z-10 bg-navy/95 backdrop-blur-md py-4 md:bg-transparent md:py-0 border-y border-border/20 md:border-none">
+            <p class="text-xs font-black tracking-[0.2em] text-gold uppercase mb-1">Kazanç</p>
+            <p class="text-gray-400 text-sm font-medium">Gerçekleşen kazançlarını en üst düzeye çıkar, vergileri optimize et.</p>
+          </div>
+
+          <div class="story-block mb-32 min-h-[40vh]" data-screen="sold">
+            <h3 class="text-3xl font-bold text-white mb-4">Gerçekleşen kazançlar, dürüstçe kayıtlı</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Her satış, gelir ve gerçekleşen sonuçla kaydedilir; böylece bir sonraki adımın ölçülmüş geçmişe dayanır.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Gerçek çıkış takibi</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">FIFO görünümü</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-block min-h-[40vh]" data-screen="taxfree">
+            <h3 class="text-3xl font-bold text-white mb-4">Bir yıl tut — sıfır vergi</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Vergiye tabi ve muaf gram sayısını net geri sayım çubuğuyla takip et. Neyin uygun olduğunu tam olarak anla.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Vergi dönemi takibi</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Lot başına tarihler</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <!-- Row 2: Prices -->
-      <div class="flex flex-col md:flex-row-reverse items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s2-tr.png" alt="Fiyatlar ve makas" loading="lazy" /></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Piyasa Netliği</p>
-          <div class="feat-icon bg-gold/10 text-gold mb-5 mx-auto md:mx-0"><ion-icon name="pulse-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Ücretsiz temel</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Onemli olan fiyatlar</h3>
-          <p class="text-gray-300 font-medium mb-3">Altın, gümüş, platin veya paladyum piyasa detaylarını tek canlı ekranda gör.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Sadece spot etiketi değil, gerçek alım-satım bağlamını takip et. Piyasa hareketiyle bayi gerçeğini saniyelerde karşılaştır.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Avantaj: spot odaklı uygulamalardan daha kapsamlı fiyat görünümü.</p>
-        </div>
-      </div>
-
-      <!-- Row 3: Portfolio -->
-      <div class="flex flex-col md:flex-row items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s3-tr.png" alt="Portföy pozisyonları" loading="lazy" /></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Pozisyon Zekası</p>
-          <div class="feat-icon bg-mint/10 text-mint mb-5 mx-auto md:mx-0"><ion-icon name="albums-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Ücretsiz temel</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Her pozisyonu takip et</h3>
-          <p class="text-gray-300 font-medium mb-3">Altın ve gümüşü Free limitlerinde takip et; platin ve paladyumun tam takibini Premium ile aç.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Her pozisyon performans bağlamıyla görünür, böylece toplam sonuçu neyin sürüklediğini net olarak bilirsin.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Avantaj: tek toplam rakam yerine pozisyon bazli netlik.</p>
-        </div>
-      </div>
-
-      <!-- Row 4: Sold -->
-      <div class="flex flex-col md:flex-row-reverse items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s4-tr.png" alt="Satış geçmişi ve gerçekleşen kar zarar" loading="lazy" /></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Çıkış Analizi</p>
-          <div class="feat-icon bg-coral/10 text-coral mb-5 mx-auto md:mx-0"><ion-icon name="exit-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/[0.06] text-gray-200 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="notifications-outline"></ion-icon>Ücretsiz + Premium</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Her satışı analiz et</h3>
-          <p class="text-gray-300 font-medium mb-3">Çıkışları kaydet, gerçekleşen K/Z'yi izle ve Premium ile daha gelişmiş satış araçlarını aç.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Her satış gelir ve gerçekleşen sonuç ile kaydedilir. Böylece sonraki kararlar ölçülebilir geçmişe dayanır.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Avantaj: bircok takip uygulamasında olmayan gerçekleşen çıkış kaydı.</p>
-        </div>
-      </div>
-
-      <!-- Row 5: Tax-Free -->
-      <div class="flex flex-col md:flex-row items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s5-tr.png" alt="Vergisiz ilerleme" loading="lazy" /></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Zamanlama Avantajı</p>
-          <div class="feat-icon bg-gold/10 text-gold mb-5 mx-auto md:mx-0"><ion-icon name="calendar-clear-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Ücretsiz temel</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Vergisiz ilerlemeni gor</h3>
-          <p class="text-gray-300 font-medium mb-3">Vergili ve vergisiz gramları net geri sayim cubuguyla takip et.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Portföyün ne kadarının vergiden muaf olduğunu ve ne kadarının hâlâ süre beklediğini anında gör.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Avantaj: statik tarihler yerine uygulanabilir vergi zamanlamasi.</p>
-        </div>
-      </div>
-
-      <!-- Row 6: Scenarios -->
-      <div class="flex flex-col md:flex-row-reverse items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s6-tr.png" alt="Senaryo stres testi" loading="lazy" /></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Karar Laboratuvarı</p>
-          <div class="feat-icon bg-purple/10 text-purple mb-5 mx-auto md:mx-0"><ion-icon name="sparkles-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-gold/40 bg-gold/10 text-gold shadow-gold/10 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="diamond-outline"></ion-icon>Premium</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Portföyünu stres test et</h3>
-          <p class="text-gray-300 font-medium mb-3">Farkli fiyat hareketlerinde kari, zarari ve basa basi önceden gör.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Piyasa hareket etmeden önce ne olur analizleri calistir; kararlarini tahmine değil somut sonuçlara dayandir.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Avantaj: harici tablo yerine uygulama ici planlama.</p>
-        </div>
-      </div>
-
-      <!-- Row 7: Simulators -->
-      <div class="flex flex-col md:flex-row items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s7-tr.png" alt="Alis ve satış simülatörleri" loading="lazy" /></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Uygulama Planlama</p>
-          <div class="feat-icon bg-mint/10 text-mint mb-5 mx-auto md:mx-0"><ion-icon name="git-compare-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-gold/40 bg-gold/10 text-gold shadow-gold/10 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="diamond-outline"></ion-icon>Premium</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Her adimi simule et</h3>
-          <p class="text-gray-300 font-medium mb-3">Alim ve satimlari guvenle planla.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Satış geliri ve alim etkisini işlemden önce test et. Sermaye kullanmadan önce basa bas etkisini net gör.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Avantaj: gerçek portföy akışı içinde işlem öncesi simülasyon.</p>
-        </div>
-      </div>
-
-      <!-- Row 8: Alerts -->
-      <div class="flex flex-col md:flex-row-reverse items-center gap-12 py-16" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s8-tr.png" alt="Uyarilar ve arka plan bildirimleri" loading="lazy" /></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Her zaman aktif</p>
-          <div class="feat-icon bg-gold/10 text-gold mb-5 mx-auto md:mx-0"><ion-icon name="notifications-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/[0.06] text-gray-200 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="notifications-outline"></ion-icon>Ücretsiz + Premium</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Uyari kur, bildirimi al</h3>
-          <p class="text-gray-300 font-medium mb-3">Tetikleyicileri ayarla ve anlik fiyat guncellemeleri al.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Anlamli esikleri bir kez tanimla; arka plan izleme sadece stratejin için onemli hareketleri bildirir.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Avantaj: gürültü değil, stratejiye bagli sinyal odaklı alarm.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
 
   <!-- Private By Design -->
   <section class="px-6 py-16 border-t border-border/20">
@@ -874,7 +944,7 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
   <!-- AOS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="/assets/js/aos.js"></script>
   <script>
     AOS.init({ duration: 800, önce: true, offset: 80 });
   </script>
@@ -938,5 +1008,36 @@
 
   <script src="/images/locale-switcher.js"></script>
   <script src="/images/play-store-attribution.js"></script>
+  <!-- Pinned Phone Journey Observer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (isReducedMotion) return;
+
+      const blocks = document.querySelectorAll('.story-block');
+      const screens = document.querySelectorAll('.screen-layer');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
+            entry.target.classList.add('active');
+            const screenId = entry.target.getAttribute('data-screen');
+            screens.forEach(s => {
+              if (s.id === 'screen-' + screenId) {
+                s.classList.add('active');
+              } else {
+                s.classList.remove('active');
+              }
+            });
+          } else {
+             // Optional: remove active class when not visible
+             entry.target.classList.remove('active');
+          }
+        });
+      }, { rootMargin: '-20% 0px -40% 0px', threshold: 0.5 });
+
+      blocks.forEach(b => observer.observe(b));
+    });
+  </script>
 </body>
 </html>

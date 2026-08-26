@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="scroll-smooth">
+<html lang="de" class="scroll-smooth js">
 <head>
 
 <script src="/images/consent-analytics.js" data-site="product" data-gtm-id="GTM-MKR2RFW2" data-consent-key="mgf_analytics_consent_v1"></script>
@@ -95,10 +95,10 @@
   }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="/assets/css/aos.css" />
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <style>
-    html, body { overflow-x: hidden; }
+    html, body { overflow-x: clip; }
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
     .gold-glow { text-shadow: 0 0 40px rgba(212,168,67,0.4); }
 
@@ -156,7 +156,7 @@
     @media (max-width: 640px) {
       #plans { padding-left: .75rem; padding-right: .75rem; }
       #plans .max-w-3xl { max-width: 100%; }
-      .plans-table-wrap { overflow-x: hidden; }
+      .plans-table-wrap { overflow-x: clip; }
       .plans-table { table-layout: fixed; width: 100%; font-size: 10.5px; line-height: 1.25; }
       .plans-table col:nth-child(1) { width: 39%; }
       .plans-table col:nth-child(2) { width: 22%; }
@@ -184,7 +184,7 @@
 
   </style>
 </head>
-<body class="bg-navy text-gray-200" style="overflow-x: hidden;">
+<body class="bg-navy text-gray-200" style="overflow-x: clip;">
 <!-- Nav -->
   <nav class="border-b border-border/30 backdrop-blur-sm bg-navy/80 sticky top-0 z-50">
     <div class="max-w-5xl mx-auto px-6 py-4 grid grid-cols-[auto_1fr_auto] items-center gap-4">
@@ -380,141 +380,211 @@
         <p class="text-gray-400 max-w-3xl mx-auto">Von Live-Preisen bis Steuer-Timing und Vorab-Simulation: MyGoldFolio macht aus Gold-Tracking einen klaren Entscheidungs-Workflow.</p>
       </div>
 
-      <!-- Row 1: Dashboard -->
-      <div class="flex flex-col md:flex-row items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><picture>
-              <source type="image/avif" srcset="/images/gen/screenshots/mgf-v3-s1-de-360.avif 360w, /images/gen/screenshots/mgf-v3-s1-de-440.avif 440w, /images/gen/screenshots/mgf-v3-s1-de-660.avif 660w" sizes="(max-width: 640px) 180px, 220px">
-              <source type="image/webp" srcset="/images/gen/screenshots/mgf-v3-s1-de-360.webp 360w, /images/gen/screenshots/mgf-v3-s1-de-440.webp 440w, /images/gen/screenshots/mgf-v3-s1-de-660.webp 660w" sizes="(max-width: 640px) 180px, 220px">
-              <img src="/images/mgf-v3-s1-de.png" alt="Dashboard Überblick" width="220" height="440" loading="lazy" decoding="async">
-            </picture></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Live-Überblick</p>
-          <div class="feat-icon bg-amber/10 text-amber mb-5 mx-auto md:mx-0"><ion-icon name="speedometer-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Gratis-Basis</span>
+            <!-- Pinned Phone Journey -->
+      <div class="journey-container w-full mt-12 gap-8 lg:gap-16">
+        
+        <!-- Sticky Phone Column -->
+        <div class="sticky-phone-wrapper">
+          <div class="luxury-phone-frame mx-auto">
+            <div class="luxury-phone-buttons"></div>
+            <div class="phone-screen-container">
+              <!-- Screens -->
+              <!-- KNOW -->
+              <div class="screen-layer active" id="screen-dashboard">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/dashboard-320.avif 320w, /images/gen/app-screens/en/dashboard-480.avif 480w, /images/gen/app-screens/en/dashboard-640.avif 640w" sizes="(max-width: 768px) 240px, 240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/dashboard-320.webp 320w, /images/gen/app-screens/en/dashboard-480.webp 480w, /images/gen/app-screens/en/dashboard-640.webp 640w" sizes="(max-width: 768px) 240px, 240px">
+                  <img src="/images/gen/app-screens/en/dashboard-320.png" alt="Dashboard Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="screen-layer" id="screen-prices">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/prices-320.avif 320w, /images/gen/app-screens/en/prices-480.avif 480w, /images/gen/app-screens/en/prices-640.avif 640w" sizes="240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/prices-320.webp 320w, /images/gen/app-screens/en/prices-480.webp 480w, /images/gen/app-screens/en/prices-640.webp 640w" sizes="240px">
+                  <img src="/images/gen/app-screens/en/prices-320.png" alt="Prices Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="screen-layer" id="screen-portfolio">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/portfolio-320.avif 320w, /images/gen/app-screens/en/portfolio-480.avif 480w, /images/gen/app-screens/en/portfolio-640.avif 640w" sizes="240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/portfolio-320.webp 320w, /images/gen/app-screens/en/portfolio-480.webp 480w, /images/gen/app-screens/en/portfolio-640.webp 640w" sizes="240px">
+                  <img src="/images/gen/app-screens/en/portfolio-320.png" alt="Portfolio Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <!-- DECIDE -->
+              <div class="screen-layer" id="screen-scenarios">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/scenarios-320.avif 320w, /images/gen/app-screens/en/scenarios-480.avif 480w, /images/gen/app-screens/en/scenarios-640.avif 640w" sizes="240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/scenarios-320.webp 320w, /images/gen/app-screens/en/scenarios-480.webp 480w, /images/gen/app-screens/en/scenarios-640.webp 640w" sizes="240px">
+                  <img src="/images/gen/app-screens/en/scenarios-320.png" alt="Scenarios Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="screen-layer" id="screen-simulator">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/simulator-320.avif 320w, /images/gen/app-screens/en/simulator-480.avif 480w, /images/gen/app-screens/en/simulator-640.avif 640w" sizes="240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/simulator-320.webp 320w, /images/gen/app-screens/en/simulator-480.webp 480w, /images/gen/app-screens/en/simulator-640.webp 640w" sizes="240px">
+                  <img src="/images/gen/app-screens/en/simulator-320.png" alt="Simulator Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="screen-layer" id="screen-alerts">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/alerts-320.avif 320w, /images/gen/app-screens/en/alerts-480.avif 480w, /images/gen/app-screens/en/alerts-640.avif 640w" sizes="240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/alerts-320.webp 320w, /images/gen/app-screens/en/alerts-480.webp 480w, /images/gen/app-screens/en/alerts-640.webp 640w" sizes="240px">
+                  <img src="/images/gen/app-screens/en/alerts-320.png" alt="Alerts Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <!-- PROFIT -->
+              <div class="screen-layer" id="screen-sold">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/sold-320.avif 320w, /images/gen/app-screens/en/sold-480.avif 480w, /images/gen/app-screens/en/sold-640.avif 640w" sizes="240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/sold-320.webp 320w, /images/gen/app-screens/en/sold-480.webp 480w, /images/gen/app-screens/en/sold-640.webp 640w" sizes="240px">
+                  <img src="/images/gen/app-screens/en/sold-320.png" alt="Sold Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="screen-layer" id="screen-taxfree">
+                <picture>
+                  <source type="image/avif" srcset="/images/gen/app-screens/en/taxfree-320.avif 320w, /images/gen/app-screens/en/taxfree-480.avif 480w, /images/gen/app-screens/en/taxfree-640.avif 640w" sizes="240px">
+                  <source type="image/webp" srcset="/images/gen/app-screens/en/taxfree-320.webp 320w, /images/gen/app-screens/en/taxfree-480.webp 480w, /images/gen/app-screens/en/taxfree-640.webp 640w" sizes="240px">
+                  <img src="/images/gen/app-screens/en/taxfree-320.png" alt="Taxfree Screen" class="w-full h-full object-cover">
+                </picture>
+              </div>
+            </div>
           </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Dein Gold auf einen Blick</h3>
-          <p class="text-gray-300 font-medium mb-3">Vier Live-Metallmärkte in einem klaren Dashboard.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Sieh Preise für Gold, Silber, Platin und Palladium. Gold- und Silber-Portfolios folgen den Free-Limits; Premium ergänzt Platin- und Palladium-Bestände, Wert und Gewinn.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Vorteil: Spot + Portfolio-Performance in einem Live-Dashboard.</p>
+        </div>
+
+        <!-- Story Blocks Column -->
+        <div class="flex-1 pb-32 pt-8 lg:pt-0 max-w-2xl mx-auto lg:mx-0 relative">
+          
+          <!-- KNOW Group -->
+          <div class="mb-12 sticky top-[calc(4rem+540px)] md:relative md:top-auto z-10 bg-navy/95 backdrop-blur-md py-4 md:bg-transparent md:py-0 border-y border-border/20 md:border-none">
+            <p class="text-xs font-black tracking-[0.2em] text-gold uppercase mb-1">Wissen</p>
+            <p class="text-gray-400 text-sm font-medium">Verstehe deine echte Position sofort.</p>
+          </div>
+
+          <div class="story-block mb-32 min-h-[40vh]" data-screen="dashboard">
+            <h3 class="text-3xl font-bold text-white mb-4">Deine ganze Position auf einen Blick</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Verfolge die Zahlen, auf die es beim Handeln wirklich ankommt. Vergleiche die Marktbewegung jedes Metalls in Sekunden mit der Realität beim Händler.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Portfolio-Wert live</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Gewinn/Verlust auf einen Blick</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">100 % offline</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-block mb-32 min-h-[40vh]" data-screen="prices">
+            <h3 class="text-3xl font-bold text-white mb-4">Live-Preise für vier Metalle</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Gold, Silber, Platin oder Palladium – Marktdetails für alle vier in einer Live-Ansicht.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">XAU · XAG · Platin · Palladium</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">17 Währungen</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-block mb-32 min-h-[40vh]" data-screen="portfolio">
+            <h3 class="text-3xl font-bold text-white mb-4">Jedes Lot, jedes Gramm – sortiert</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Jede Position behält ihre Metallbezeichnung und ihren Leistungs-Kontext, damit du immer weißt, was das Gesamtergebnis treibt.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Aufzeichnung auf Lot-Ebene</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Feinheits-Tracking</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Nur auf dem Gerät</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- DECIDE Group -->
+          <div class="mb-12 sticky top-[calc(4rem+540px)] md:relative md:top-auto z-10 bg-navy/95 backdrop-blur-md py-4 md:bg-transparent md:py-0 border-y border-border/20 md:border-none">
+            <p class="text-xs font-black tracking-[0.2em] text-gold uppercase mb-1">Entscheiden</p>
+            <p class="text-gray-400 text-sm font-medium">Plane deinen nächsten Schritt, bevor der Markt es tut.</p>
+          </div>
+
+          <div class="story-block mb-32 min-h-[40vh]" data-screen="scenarios">
+            <h3 class="text-3xl font-bold text-white mb-4">Was-wäre-wenn, bevor du kaufst</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Sieh Gewinne, Verluste und die Break-even-Schwelle bei verschiedenen Preisbewegungen – bevor du Kapital bindest.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Sofortiges Was-wäre-wenn</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Break-even-Vorschau</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-block mb-32 min-h-[40vh]" data-screen="simulator">
+            <h3 class="text-3xl font-bold text-white mb-4">Teste den Verkauf, bevor du verkaufst</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Sieh genau, wie Händler-Aufschläge deine Erlöse beim Verkauf beeinflussen – bevor du zum Händler gehst.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Simulation vor dem Handel</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Aufschlag wird berücksichtigt</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-block mb-32 min-h-[40vh]" data-screen="alerts">
+            <h3 class="text-3xl font-bold text-white mb-4">Hintergrund-Alarme, die wirklich auslösen</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Lege sinnvolle Schwellen einmal fest – die Hintergrund-Überwachung meldet nur die Bewegungen, die zählen.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Exakte Planung</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Kein Konto nötig</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROFIT Group -->
+          <div class="mb-12 sticky top-[calc(4rem+540px)] md:relative md:top-auto z-10 bg-navy/95 backdrop-blur-md py-4 md:bg-transparent md:py-0 border-y border-border/20 md:border-none">
+            <p class="text-xs font-black tracking-[0.2em] text-gold uppercase mb-1">Profitieren</p>
+            <p class="text-gray-400 text-sm font-medium">Maximiere realisierte Gewinne und optimiere Steuern.</p>
+          </div>
+
+          <div class="story-block mb-32 min-h-[40vh]" data-screen="sold">
+            <h3 class="text-3xl font-bold text-white mb-4">Realisierte Gewinne, ehrlich erfasst</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Jeder Verkauf wird mit Erlös und realisiertem Ergebnis protokolliert, damit deine nächste Entscheidung auf messbarer Historie basiert.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Echtes Exit-Tracking</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">FIFO-Ansicht</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-block min-h-[40vh]" data-screen="taxfree">
+            <h3 class="text-3xl font-bold text-white mb-4">Ein Jahr halten – null Steuern</h3>
+            <p class="text-gray-400 leading-relaxed text-lg mb-6">Verfolge steuerpflichtige und steuerfreie Gramm mit einem klaren Countdown. Du weißt genau, was anspruchsberechtigt ist.</p>
+            <div class="flex flex-col gap-3">
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Steuerzeitraum-Tracking</span>
+              </div>
+              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
+                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Daten pro Lot</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <!-- Row 2: Prices -->
-      <div class="flex flex-col md:flex-row-reverse items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s2-de.png" alt="Preise und Spread" loading="lazy" /></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Marktklarheit</p>
-          <div class="feat-icon bg-gold/10 text-gold mb-5 mx-auto md:mx-0"><ion-icon name="pulse-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Gratis-Basis</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Preise, die zählen</h3>
-          <p class="text-gray-300 font-medium mb-3">Marktdetails für Gold, Silber, Platin oder Palladium in einer Live-Ansicht.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Verfolge die Werte, zu denen du wirklich handelst, nicht nur einen Spot-Ticker. Marktbewegung und Händlerrealität in Sekunden vergleichen.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Vorteil: voller Preiskontext statt Spot-only Anzeige.</p>
-        </div>
-      </div>
-
-      <!-- Row 3: Portfolio -->
-      <div class="flex flex-col md:flex-row items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s3-de.png" alt="Portfolio Positionen" loading="lazy" /></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Positions-Intelligenz</p>
-          <div class="feat-icon bg-mint/10 text-mint mb-5 mx-auto md:mx-0"><ion-icon name="albums-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Gratis-Basis</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Behalte jede Position im Blick</h3>
-          <p class="text-gray-300 font-medium mb-3">Verfolge Gold und Silber innerhalb der Free-Limits; vollständiges Platin- und Palladium-Tracking gibt es mit Premium.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Jede Position bleibt mit Performance-Kontext sichtbar, damit du sofort erkennst, was dein Gesamtergebnis treibt.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Vorteil: Positionsklarheit statt Ein-Zahl-Zusammenfassung.</p>
-        </div>
-      </div>
-
-      <!-- Row 4: Sold -->
-      <div class="flex flex-col md:flex-row-reverse items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s4-de.png" alt="Verkaufshistorie und realisiertes PnL" loading="lazy" /></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Exit-Analyse</p>
-          <div class="feat-icon bg-coral/10 text-coral mb-5 mx-auto md:mx-0"><ion-icon name="exit-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/[0.06] text-gray-200 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="notifications-outline"></ion-icon>Gratis + Premium</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Analysiere jeden Verkauf</h3>
-          <p class="text-gray-300 font-medium mb-3">Erfasse Verkäufe, verfolge realisierte GuV und schalte tiefere Verkaufstools mit Premium frei.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Jeder Exit wird mit Erlös und realisiertem Ergebnis protokolliert. So basiert der nächste Schritt auf messbarer Historie.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Vorteil: echte Exit-Historie, die viele Tracker nicht bieten.</p>
-        </div>
-      </div>
-
-      <!-- Row 5: Tax-Free -->
-      <div class="flex flex-col md:flex-row items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s5-de.png" alt="Steuerfreier Fortschritt" loading="lazy" /></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Timing-Vorteil</p>
-          <div class="feat-icon bg-gold/10 text-gold mb-5 mx-auto md:mx-0"><ion-icon name="calendar-clear-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-mint/35 bg-mint/10 text-mint px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="leaf-outline"></ion-icon>Gratis-Basis</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Sieh deinen steuerfreien Fortschritt</h3>
-          <p class="text-gray-300 font-medium mb-3">Verfolge steuerpflichtige und steuerfreie Gramm mit klarer Countdown-Leiste.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Erkenne sofort, welcher Portfolio-Anteil bereits steuerfrei ist und welcher noch in der Haltefrist liegt.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Vorteil: umsetzbares Steuer-Timing statt statischer Haltedaten.</p>
-        </div>
-      </div>
-
-      <!-- Row 6: Scenarios -->
-      <div class="flex flex-col md:flex-row-reverse items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s6-de.png" alt="Szenario Stresstest" loading="lazy" /></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Entscheidungslabor</p>
-          <div class="feat-icon bg-purple/10 text-purple mb-5 mx-auto md:mx-0"><ion-icon name="sparkles-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-gold/40 bg-gold/10 text-gold shadow-gold/10 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="diamond-outline"></ion-icon>Premium</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Stresstest für dein Portfolio</h3>
-          <p class="text-gray-300 font-medium mb-3">Simuliere Gewinne, Verluste und Break-even bei unterschiedlichen Preisbewegungen.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Teste Was-wäre-wenn-Szenarien vor der Marktbewegung und triff Entscheidungen mit konkreten Zahlen statt Bauchgefühl.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Vorteil: integrierte Planung statt externer Tabellen.</p>
-        </div>
-      </div>
-
-      <!-- Row 7: Simulators -->
-      <div class="flex flex-col md:flex-row items-center gap-12 py-16 border-b border-border/20" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s7-de.png" alt="Kauf und Verkauf Simulatoren" loading="lazy" /></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Ausführungsplanung</p>
-          <div class="feat-icon bg-mint/10 text-mint mb-5 mx-auto md:mx-0"><ion-icon name="git-compare-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-gold/40 bg-gold/10 text-gold shadow-gold/10 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="diamond-outline"></ion-icon>Premium</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Simuliere jeden Schritt</h3>
-          <p class="text-gray-300 font-medium mb-3">Plane Käufe und Verkäufe mit Sicherheit.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Teste Verkaufserlös und Kaufauswirkung vor der Ausführung. Sieh Break-even-Effekt und Portfolioeinfluss vor dem Einsatz von Kapital.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Vorteil: Vorab-Simulation direkt im Portfolio-Workflow.</p>
-        </div>
-      </div>
-
-      <!-- Row 8: Alerts -->
-      <div class="flex flex-col md:flex-row-reverse items-center gap-12 py-16" data-aos="fade-up">
-        <div class="flex-shrink-0"><div class="phone-frame"><img src="/images/mgf-v3-s8-de.png" alt="Alarme und Hintergrund Benachrichtigungen" loading="lazy" /></div></div>
-        <div class="flex-1 text-center md:text-left">
-          <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Immer aktiv</p>
-          <div class="feat-icon bg-gold/10 text-gold mb-5 mx-auto md:mx-0"><ion-icon name="notifications-outline"></ion-icon></div>
-          <div class="feature-plan-badge mb-3">
-            <span class="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/[0.06] text-gray-200 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em]"><ion-icon name="notifications-outline"></ion-icon>Gratis + Premium</span>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-2">Alarme setzen, Benachrichtigungen erhalten</h3>
-          <p class="text-gray-300 font-medium mb-3">Konfiguriere Trigger und erhalte sofortige Preis-Updates.</p>
-          <p class="text-gray-400 leading-relaxed text-base">Definiere sinnvolle Schwellen einmal und lass die Hintergrund nur die wirklich relevanten Bewegungen melden.</p>
-          <p class="text-gold/90 text-sm font-semibold mt-3">Vorteil: Signal-basierte Alarme passend zu deiner Strategie.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
 
   <!-- Private By Design -->
   <section class="px-6 py-16 border-t border-border/20">
@@ -874,7 +944,7 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
   <!-- AOS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="/assets/js/aos.js"></script>
   <script>
     AOS.init({ duration: 800, once: true, offset: 80 });
   </script>
@@ -938,5 +1008,36 @@
 
   <script src="/images/locale-switcher.js"></script>
   <script src="/images/play-store-attribution.js"></script>
+  <!-- Pinned Phone Journey Observer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (isReducedMotion) return;
+
+      const blocks = document.querySelectorAll('.story-block');
+      const screens = document.querySelectorAll('.screen-layer');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
+            entry.target.classList.add('active');
+            const screenId = entry.target.getAttribute('data-screen');
+            screens.forEach(s => {
+              if (s.id === 'screen-' + screenId) {
+                s.classList.add('active');
+              } else {
+                s.classList.remove('active');
+              }
+            });
+          } else {
+             // Optional: remove active class when not visible
+             entry.target.classList.remove('active');
+          }
+        });
+      }, { rootMargin: '-20% 0px -40% 0px', threshold: 0.5 });
+
+      blocks.forEach(b => observer.observe(b));
+    });
+  </script>
 </body>
 </html>
