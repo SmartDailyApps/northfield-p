@@ -20,7 +20,7 @@ export const article = {
   imageAlt: {
     en: 'A paper ledger beside Gold and Silver bars', de: 'Ein Erfassungsblatt neben Gold- und Silberbarren', fr: 'Un registre papier à côté de lingots d’or et d’argent', tr: 'Altın ve gümüş külçelerin yanındaki kayıt defteri', es: 'Un registro en papel junto a lingotes de oro y plata', it: 'Un registro cartaceo accanto a lingotti d’oro e d’argento', pt: 'Um registro em papel ao lado de barras de ouro e prata'
   },
-  related: ['record-gold-silver-purchases', 'gold-silver-premiums-break-even'],
+  related: ['record-gold-silver-purchases', 'gold-silver-premiums-break-even', 'dollar-cost-averaging-gold-silver'],
   locales: {
     en: {
       title: 'Track Precious Metals in Your Portfolio: App or Spreadsheet?',
@@ -176,7 +176,7 @@ export const additionalArticles = [{
     it: '/it/guide/registrare-acquisti-oro-argento/',
     pt: '/pt/guias/registrar-compras-ouro-prata/'
   },
-  related: ['portfolio-tracking', 'gold-silver-premiums-break-even'],
+  related: ['portfolio-tracking', 'gold-silver-premiums-break-even', 'dollar-cost-averaging-gold-silver'],
   locales: {
     en: {
       title: 'Track Gold and Silver: 7 details to record for every purchase',
@@ -369,7 +369,7 @@ export const additionalArticles = [{
     it: '/it/guide/premi-oro-argento-punto-pareggio/',
     pt: '/pt/guias/agio-ouro-prata-ponto-equilibrio/'
   },
-  related: ['portfolio-tracking', 'record-gold-silver-purchases'],
+  related: ['portfolio-tracking', 'record-gold-silver-purchases', 'dollar-cost-averaging-gold-silver'],
   locales: {
     en: {
       title: 'Gold and Silver Premiums: Why Spot Price Is Not Your Break-Even',
@@ -558,7 +558,7 @@ export const additionalArticles = [{
 ,
 {
   id: 'dollar-cost-averaging-gold-silver',
-  status: 'draft',
+  status: 'published',
   published: '2026-08-30',
   updated: '2026-08-30',
   readingMinutes: 6,
@@ -584,13 +584,13 @@ export const additionalArticles = [{
     it: '/it/guide/piano-accumulo-oro-argento-dca/',
     pt: '/pt/guias/preco-medio-ouro-prata-dca/'
   },
-  related: ['portfolio-tracking', 'gold-silver-premiums-break-even'],
+  related: ['portfolio-tracking', 'record-gold-silver-purchases', 'gold-silver-premiums-break-even'],
   locales: {
     en: {
       title: 'Dollar-Cost Averaging Gold & Silver: Stacking Discipline Without Market Timing',
       seoTitle: 'Dollar-Cost Averaging Gold & Silver: DCA Guide',
       description: 'Learn how Dollar-Cost Averaging (DCA) works for physical Gold and Silver, how to balance dealer premiums with regular buying, and how to track your blended cost basis.',
-      intro: 'Waiting for the perfect dip keeps many precious-metal savers on the sidelines. Dollar-cost averaging (DCA) replaces that hesitation with a simple routine: invest a fixed amount at regular intervals, regardless of the spot price. This guide explains how DCA works for physical Gold and Silver, where dealer premiums change the math, and how blended cost-basis tracking keeps you honest.',
+      intro: 'Waiting for the perfect dip keeps you on the sidelines. Dollar-cost averaging (DCA) replaces that hesitation with a calm routine: a fixed amount, at fixed intervals — more grams when cheap, fewer when expensive.',
       summary: 'DCA turns volatile prices into a calm accumulation habit: fixed budget, fixed interval — more grams when cheap, fewer when expensive. Batch purchases to tame premiums, record every delivered cost, and let weighted averages, not gut feeling, define your break-even.',
       sections: [
         { id: 'timing', title: 'The trap of market timing', paragraphs: ['Waiting for the perfect entry keeps you out of the market — and the few moments when everything feels safe are usually close to a local top. Gold and Silver routinely move several percent within a week; hesitation and euphoria are expensive companions.'], bullets: ['Waiting feels safe, yet often means buying higher later.', 'Weekly swings of several percent are normal for precious metals.', 'A rule-based routine removes the daily buy-or-wait decision.'] },
@@ -616,7 +616,7 @@ export const additionalArticles = [{
       title: 'Gold und Silber im Sparplan: Vermögen aufbauen ohne Markttiming (DCA)',
       seoTitle: 'Gold & Silber Sparplan: Dollar-Cost-Averaging Guide',
       description: 'Erfahre, wie Dollar-Cost-Averaging (DCA) bei physischem Gold und Silber funktioniert, wie du Aufgelder minimierst und deinen durchschnittlichen Kaufpreis trackst.',
-      intro: 'Das Warten auf den perfekten Einstieg hält viele Edelmetall-Sparer vom Kauf ab. Dollar-Cost-Averaging (DCA) ersetzt dieses Zögern durch eine einfache Routine: ein fester Betrag zu festen Abständen, unabhängig vom Spotpreis. Dieser Guide erklärt, wie DCA bei physischem Gold und Silber funktioniert, wo Händleraufgelder die Rechnung verändern und wie gemittelte Einstandskosten ehrlich bleiben.',
+      intro: 'Das Warten auf den perfekten Einstieg hält dich vom Kaufen ab. Dollar-Cost-Averaging (DCA) macht daraus eine ruhige Routine: fester Betrag, feste Intervalle — mehr Gramm bei niedrigen, weniger bei hohen Preisen.',
       summary: 'DCA verwandelt volatile Preise in eine ruhige Anspar-Gewohnheit: festes Budget, festes Intervall — mehr Gramm bei niedrigen, weniger bei hohen Preisen. Bündele Käufe, um Aufgelder zu senken, erfasse jede Lieferkosten-Palette und lass gewichtete Durchschnitte — kein Bauchgefühl — dein Break-even bestimmen.',
       sections: [
         { id: 'timing', title: 'Die Falle des Markttimings', paragraphs: ['Wer auf den perfekten Einstieg wartet, bleibt draußen — und die Momente, in denen sich alles sicher anfühlt, liegen meist nahe an einem lokalen Hoch. Gold und Silber bewegen sich regelmäßig um mehrere Prozent pro Woche; Zögern und Euphorie sind teure Begleiter.'], bullets: ['Warten fühlt sich sicher an, bedeutet aber oft später höheres Kaufen.', 'Wochenschwankungen von mehreren Prozent sind bei Edelmetallen normal.', 'Eine regelbasierte Routine nimmt die tägliche Kauf-oder-Warten-Entscheidung.'] },
@@ -642,7 +642,7 @@ export const additionalArticles = [{
       title: 'Achat progressif d’or et d’argent : la méthode DCA sans chercher le timing parfait',
       seoTitle: 'DCA Or et Argent : Guide d’Achat Régulier',
       description: 'Découvrez le fonctionnement du DCA pour l’or et l’argent physiques, l’équilibre entre primes et régularité, et le suivi de votre prix de revient moyen.',
-      intro: 'Attendre le point bas parfait maintient beaucoup d’épargnants de métaux précieux à l’écart du marché. Le Dollar-Cost Averaging (DCA) remplace cette hésitation par une routine simple : un montant fixe à intervalles réguliers, quel que soit le cours spot. Ce guide explique comment le DCA fonctionne pour l’or et l’argent physiques, où les primes des négociants changent les calculs, et comment le suivi du prix de revient moyen vous garde honnête.',
+      intro: 'Attendre le point bas parfait vous garde à l’écart du marché. Le DCA remplace cette hésitation par une routine simple : un montant fixe, à intervalles réguliers — plus de grammes quand c’est bas, moins quand c’est haut.',
       summary: 'Le DCA transforme la volatilité en une habitude d’accumulation sereine : budget fixe, intervalle fixe — plus de grammes quand c’est bas, moins quand c’est haut. Regroupez vos achats pour maîtriser les primes, enregistrez chaque coût livré, et laissez des moyennes pondérées — pas votre intuition — définir votre seuil de rentabilité.',
       sections: [
         { id: 'timing', title: 'Le piège du market timing', paragraphs: ['Attendre l’entrée parfaite vous maintient hors du marché — et les moments où tout semble sûr sont souvent proches d’un sommet local. L’or et l’argent bougent régulièrement de plusieurs pourcents par semaine ; hésitation et euphorie sont de chers compagnons.'], bullets: ['Attendre semble sûr, mais signifie souvent acheter plus cher plus tard.', 'Des variations hebdomadaires de plusieurs pourcents sont normales.', 'Une routine fondée sur des règles supprime la décision quotidienne acheter-ou-attendre.'] },
@@ -668,7 +668,7 @@ export const additionalArticles = [{
       title: 'Altın ve Gümüşte Düzenli Birikim: Piyasa Zamanlaması Olmadan DCA Yöntemi',
       seoTitle: 'Altın ve Gümüşte DCA: Düzenli Birikim Rehberi',
       description: 'Fiziksel altın ve gümüşte DCA (maliyet ortalaması) yönteminin nasıl çalıştığını, primleri nasıl dengeleyeceğinizi ve ortalama maliyetinizi nasıl takip edeceğinizi öğrenin.',
-      intro: 'Mükemmel dip noktasını beklemek, birçok kıymetli metal birikimcisini piyasanın dışında tutar. Dolar-maliyet ortalaması (DCA) bu tereddüdü basit bir rutine dönüştürür: spot fiyattan bağımsız olarak düzenli aralıklarla sabit bir tutar yatırın. Bu rehber DCA’nın fiziksel altın ve gümüşte nasıl çalıştığını, satıcı primlerinin matematiği nasıl değiştirdiğini ve ortalama maliyet takibinin sizi nasıl dürüst tuttuğunu açıklar.',
+      intro: 'Mükemmel dip noktasını beklemek seni piyasada tutmaz. DCA bu tereddüdü sakin bir rutine dönüştürür: sabit tutar, sabit aralık — ucuzken daha çok gram, pahalıyken daha az.',
       summary: 'DCA oynak fiyatları sakin bir birikim alışkanlığına dönüştürür: sabit bütçe, sabit aralık — ucuzken daha çok gram, pahalıyken daha az. Primleri dizginlemek için alımları toplu yapın, her teslim maliyetini kaydedin ve break-even’inizi içgüdüye değil ağırlıklı ortalamalara bırakın.',
       sections: [
         { id: 'timing', title: 'Piyasa zamanlaması tuzağı', paragraphs: ['Mükemmel giriş beklemek sizi piyasada tutmaz — her şeyin güvende hissettirdiği anlar genellikle yerel zirvelere yakındır. Altın ve gümüş haftada birkaç yüzde oynar; tereddüt ve coşku pahalı yol arkadaşlarıdır.'], bullets: ['Beklemek güvenli hissettirir ama çoğu zaman daha yüksekten almak demektir.', 'Haftalık birkaç yüzde oynaklık kıymetli metallerde normaldir.', 'Kural tabanlı bir rutin günlük al-yoksa-bekle kararını ortadan kaldırır.'] },
@@ -694,7 +694,7 @@ export const additionalArticles = [{
       title: 'Promedio del coste en oro y plata: acumulación constante sin perseguir el mercado',
       seoTitle: 'DCA en Oro y Plata: Guía de Compra Periódica',
       description: 'Descubre cómo funciona el promedio del coste monetario (DCA) en oro y plata físicos, cómo balancear primas y compras periódicas y cómo controlar tu coste medio.',
-      intro: 'Esperar el desplome perfecto mantiene a muchos ahorradores de metales preciosos fuera del mercado. El promedio del coste en dólares (DCA) sustituye esa vacilación por una rutina simple: invertir una cantidad fija a intervalos regulares, sin importar el precio spot. Esta guía explica cómo funciona el DCA con oro y plata físicos, dónde las primas de los vendedores cambian el cálculo y cómo el seguimiento del coste medio te mantiene honesto.',
+      intro: 'Esperar el desplome perfecto te deja fuera del mercado. El DCA sustituye esa vacilación por una rutina serena: importe fijo, intervalos fijos — más gramos cuando barato, menos cuando caro.',
       summary: 'El DCA convierte precios volátiles en un hábito sereno de acumulación: presupuesto fijo, intervalo fijo — más gramos cuando barato, menos cuando caro. Agrupa compras para domar primas, registra cada coste entregado y deja que las medias ponderadas — no tu intuición — definan tu punto de equilibrio.',
       sections: [
         { id: 'timing', title: 'La trampa de intentar medir el momento', paragraphs: ['Esperar la entrada perfecta te deja fuera del mercado — y los momentos en que todo se siente seguro suelen estar cerca de un máximo local. El oro y la plata se mueven con regularidad varios porcentajes por semana; dudar y euforiarse sale caro.'], bullets: ['Esperar parece seguro, pero suele significar comprar más caro después.', 'Oscilaciones semanales de varios puntos son normales en metales preciosos.', 'Una rutina basada en reglas elimina la decisión diaria de comprar o esperar.'] },
@@ -720,7 +720,7 @@ export const additionalArticles = [{
       title: 'Piano di accumulo in oro e argento: la disciplina del DCA senza stress da mercato',
       seoTitle: 'PAC Oro e Argento: Guida al Dollar-Cost Averaging',
       description: 'Scopri come funziona il Dollar-Cost Averaging (DCA) per oro e argento fisici, come bilanciare i premi di conio con la regolarità e calcolare il prezzo medio di carico.',
-      intro: 'Aspettare il calo perfetto tiene molti risparmiatori di metalli preziosi fuori dal mercato. Il Dollar-Cost Averaging (DCA) sostituisce quell’esitazione con una routine semplice: investire un importo fisso a intervalli regolari, indipendentemente dal prezzo spot. Questa guida spiega come funziona il DCA con oro e argento fisici, dove i premi dei rivenditori cambiano i conti e come il monitoraggio del costo medio ponderato ti tiene onesto.',
+      intro: 'Aspettare il calo perfetto ti tiene fuori dal mercato. Il DCA sostituisce quell’esitazione con una routine serena: importo fisso, intervalli fissi — più grammi quando costa meno, meno quando costa di più.',
       summary: 'Il DCA trasforma prezzi volatili in un’abitudine serena di accumulo: budget fisso, intervallo fisso — più grammi quando costa meno, meno quando costa di più. Raggruppa gli acquisti per domare i premi, registra ogni costo consegnato e lascia che le medie ponderate — non l’intuito — definiscano il tuo break-even.',
       sections: [
         { id: 'timing', title: 'La trappola del market timing', paragraphs: ['Aspettare l’ingresso perfetto ti tiene fuori dal mercato — e i momenti in cui tutto sembra sicuro sono spesso vicini a un massimo locale. Oro e argento si muovono regolarmente di diversi punti percentuali a settimana; esitazione ed euforia costano care.'], bullets: ['Aspettare sembra sicuro, ma spesso significa comprare più caro dopo.', 'Oscillazioni settimanali di diversi punti sono normali sui metalli preziosi.', 'Una routine basata su regole elimina la decisione quotidiana comprare-o-aspettare.'] },
@@ -746,7 +746,7 @@ export const additionalArticles = [{
       title: 'Preço médio em ouro e prata: acumulação constante com DCA sem tentar acertar o mercado',
       seoTitle: 'DCA em Ouro e Prata: Guia de Preço Médio',
       description: 'Entenda como funciona a estratégia de preço médio (DCA) em ouro e prata físicos, como equilibrar ágios de revenda e compras regulares, e como rastrear seu custo médio.',
-      intro: 'Esperar a queda perfeita mantém muitos poupadores de metais preciosos fora do mercado. O Dollar-Cost Averaging (DCA) substitui essa hesitação por uma rotina simples: investir um valor fixo em intervalos regulares, independentemente do preço à vista. Este guia explica como o DCA funciona com ouro e prata físicos, onde os ágios dos revendedores mudam a conta e como o acompanhamento do custo médio ponderado te mantém honesto.',
+      intro: 'Esperar a queda perfeita deixa você fora do mercado. O DCA substitui essa hesitação por uma rotina tranquila: valor fixo, intervalos fixos — mais gramas quando barato, menos quando caro.',
       summary: 'O DCA transforma preços voláteis num hábito tranquilo de acumulação: orçamento fixo, intervalo fixo — mais gramas quando barato, menos quando caro. Agrupe compras para domar ágios, registre cada custo entregue e deixe médias ponderadas — não o instinto — definirem seu ponto de equilíbrio.',
       sections: [
         { id: 'timing', title: 'A armadilha de acertar o momento', paragraphs: ['Esperar a entrada perfeita deixa você fora do mercado — e os momentos em que tudo parece seguro costumam estar perto de um topo local. Ouro e prata movem-se regularmente vários pontos percentuais por semana; hesitação e euforia são companheiras caras.'], bullets: ['Esperar parece seguro, mas muitas vezes significa comprar mais caro depois.', 'Oscilações semanais de vários pontos são normais em metais preciosos.', 'Uma rotina baseada em regras elimina a decisão diária de comprar ou esperar.'] },

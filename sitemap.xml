@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/changelog/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/</loc>
@@ -14,23 +14,23 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/changelog/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/feedback/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/help/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/privacy/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/ratgeber/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-30</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/ratgeber/edelmetalle-portfolio-tracken/</loc>
@@ -45,8 +45,12 @@
     <lastmod>2026-08-15</lastmod>
   </url>
   <url>
+    <loc>https://mygoldfolio.de/de/ratgeber/gold-silber-sparplan-dca/</loc>
+    <lastmod>2026-08-30</lastmod>
+  </url>
+  <url>
     <loc>https://mygoldfolio.de/de/roadmap/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/</loc>
@@ -54,19 +58,23 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/changelog/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/feedback/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/guias/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-30</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/guias/primas-oro-plata-punto-equilibrio/</loc>
     <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/es/guias/promedio-coste-dolar-oro-plata/</loc>
+    <lastmod>2026-08-30</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/guias/registrar-compras-oro-plata/</loc>
@@ -78,19 +86,19 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/help/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/privacy/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/roadmap/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/feedback/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/</loc>
@@ -98,15 +106,19 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/changelog/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/feedback/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/guides/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-30</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/guides/achat-progressif-or-argent-dca/</loc>
+    <lastmod>2026-08-30</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/guides/enregistrer-achats-or-argent/</loc>
@@ -122,19 +134,23 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/help/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/privacy/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/roadmap/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/guides/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-30</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/guides/dollar-cost-averaging-gold-silver/</loc>
+    <lastmod>2026-08-30</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/guides/gold-silver-premiums-break-even/</loc>
@@ -150,7 +166,7 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/help/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/</loc>
@@ -158,19 +174,23 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/changelog/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/feedback/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/guide/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-30</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/guide/monitorare-portafoglio-metalli-preziosi/</loc>
     <lastmod>2026-08-08</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/it/guide/piano-accumulo-oro-argento-dca/</loc>
+    <lastmod>2026-08-30</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/guide/premi-oro-argento-punto-pareggio/</loc>
@@ -182,19 +202,19 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/help/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/privacy/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/roadmap/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/privacy/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/</loc>
@@ -202,15 +222,15 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/changelog/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/feedback/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/guias/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-30</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/guias/acompanhar-carteira-metais-preciosos/</loc>
@@ -221,24 +241,28 @@
     <lastmod>2026-08-23</lastmod>
   </url>
   <url>
+    <loc>https://mygoldfolio.de/pt/guias/preco-medio-ouro-prata-dca/</loc>
+    <lastmod>2026-08-30</lastmod>
+  </url>
+  <url>
     <loc>https://mygoldfolio.de/pt/guias/registrar-compras-ouro-prata/</loc>
     <lastmod>2026-08-15</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/help/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/privacy/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/roadmap/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/roadmap/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/</loc>
@@ -246,27 +270,31 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/changelog/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/feedback/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/help/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/privacy/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/rehber/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-30</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/rehber/altin-gumus-alimlarini-kaydetmek/</loc>
     <lastmod>2026-08-15</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/rehber/altin-gumus-duzenli-birikim-dca/</loc>
+    <lastmod>2026-08-30</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/rehber/altin-gumus-prim-basa-bas-noktasi/</loc>
@@ -278,6 +306,6 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/roadmap/</loc>
-    <lastmod>2026-08-22</lastmod>
+    <lastmod>2026-08-25</lastmod>
   </url>
 </urlset>

@@ -35,6 +35,7 @@ function validateArticleCompleteness(articles) {
       const missing = REQUIRED_LOCALE_FIELDS.filter((field) => loc[field] === undefined || loc[field] === null || loc[field] === '' || (Array.isArray(loc[field]) && loc[field].length === 0));
       if (missing.length) problems.push(`${item.id} [${code}]: missing/empty ${missing.join(', ')}`);
       if (!item.category?.[code]) problems.push(`${item.id} [${code}]: missing category`);
+      if (typeof loc.intro === 'string' && loc.intro.length > 300) problems.push(`${item.id} [${code}]: intro too long for hero (${loc.intro.length} chars, max 300)`);
       if (!item.imageAlt?.[code]) problems.push(`${item.id} [${code}]: missing imageAlt`);
       if (!item.paths?.[code] && item !== article) problems.push(`${item.id} [${code}]: missing paths entry`);
     }
@@ -46,6 +47,37 @@ function validateArticleCompleteness(articles) {
   }
 }
 validateArticleCompleteness(allArticles);
+
+// Related-article graph rules (WEB-UX1 Phase 7, Fixed decision 3): every related id must
+// exist; relations between two PUBLISHED articles must be reciprocal; published→draft is
+// an allowed pending relation (drafts never render in production builds).
+function validateRelatedGraph(articles) {
+  const problems = [];
+  const byId = new Map(articles.map((a) => [a.id, a]));
+  for (const item of articles) {
+    for (const id of item.related || []) {
+      const target = byId.get(id);
+      if (!target) { problems.push(`${item.id}: related target "${id}" does not exist`); continue; }
+      const itemPublished = item.status !== 'draft';
+      const targetPublished = target.status !== 'draft';
+      if (itemPublished && targetPublished && !(target.related || []).includes(item.id)) {
+        problems.push(`${item.id} -> ${id}: one-way relation (missing reciprocal link)`);
+      }
+      if (!itemPublished && targetPublished) {
+        // draft -> published: fine
+      }
+      if (itemPublished && !targetPublished) {
+        problems.push(`${item.id} -> ${id}: published article links to a draft (forbidden in production graph)`);
+      }
+    }
+  }
+  if (problems.length) {
+    console.error(`RELATED-GRAPH FAIL — ${problems.length} problem(s):`);
+    for (const problem of problems) console.error(`  - ${problem}`);
+    process.exit(2);
+  }
+}
+validateRelatedGraph(allArticles);
 
 // Consent-gated measurement head. Must stay byte-identical to the loader contract
 // enforced by scripts/check-measurement-consent.mjs (product): one consent loader,
@@ -85,7 +117,7 @@ function hreflang(currentArticle) {
 }
 
 function sharedNav(locale, currentArticle) {
-  return `<nav class="sticky top-0 z-50 border-b border-border/40 bg-navy/90 backdrop-blur"><div class="guide-shell flex min-h-[68px] items-center justify-between gap-4"><a href="${locale.code === 'en' ? '/' : `/${locale.code}/`}" class="flex items-center gap-3"><img src="/images/icon.png" alt="MyGoldFolio" class="h-8 w-8 rounded-xl" />${brandWordmark()}</a><div class="flex items-center gap-4 text-sm"><details class="guide-languages"><summary aria-label="Language">${esc(locale.label)}</summary><div>${languageLinks(locale.code, currentArticle)}</div></details><a href="${locale.hubPath}" class="guide-nav-chip${currentArticle ? '' : ' guide-nav-chip--active'}">${esc(locale.hubLabel)}</a><a href="${locale.code === 'en' ? '/#download' : `/${locale.code}/#download`}" class="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-gold px-4 py-2 text-xs font-bold text-navy shadow-lg shadow-gold/20 transition hover:bg-amber sm:text-sm"><ion-icon name="logo-google-playstore" style="font-size:14px;"></ion-icon><span>${esc(locale.appLabel)}</span></a></div></div></nav>`;
+  return `<nav class="sticky top-0 z-50 border-b border-border/40 bg-navy/90 backdrop-blur"><div class="guide-shell guide-nav flex min-h-[68px] items-center justify-between gap-4"><a href="${locale.code === 'en' ? '/' : `/${locale.code}/`}" class="flex items-center gap-3"><img src="/images/icon.png" alt="MyGoldFolio" class="h-8 w-8 rounded-xl" />${brandWordmark()}</a><div class="flex items-center gap-4 text-sm"><details class="guide-languages"><summary aria-label="Language">${esc(locale.label)}</summary><div>${languageLinks(locale.code, currentArticle)}</div></details><a href="${locale.hubPath}" class="guide-nav-chip${currentArticle ? '' : ' guide-nav-chip--active'}">${esc(locale.hubLabel)}</a><a href="${locale.code === 'en' ? '/#download' : `/${locale.code}/#download`}" class="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-gold px-4 py-2 text-xs font-bold text-navy shadow-lg shadow-gold/20 transition hover:bg-amber sm:text-sm"><ion-icon name="logo-google-playstore" style="font-size:14px;"></ion-icon><span>${esc(locale.appLabel)}</span></a></div></div></nav>`;
 }
 
 function sharedFooter(locale) {
@@ -117,9 +149,22 @@ function renderRelated(locale, articleItem) {
 
   const cards = related.map((relatedArticle) => {
     const content = relatedArticle.locales[locale.code];
-    return `<a href="${articlePath(relatedArticle, locale)}" class="guide-card guide-article-card block"><img src="${relatedArticle.image}" alt="${esc(relatedArticle.imageAlt[locale.code])}" /><div class="p-5"><p class="guide-eyebrow mb-2">${esc(relatedArticle.category[locale.code])} · ${relatedArticle.readingMinutes} min</p><h3 class="text-xl font-black text-white">${esc(content.title)}</h3><p class="mt-2 leading-relaxed text-gray-400">${esc(content.description)}</p><span class="mt-4 inline-flex items-center gap-2 font-bold text-gold">${esc(locale.readLabel)} <span aria-hidden="true">→</span></span></div></a>`;
+    return `<a href="${articlePath(relatedArticle, locale)}" class="guide-card guide-article-card block">${cardImg(relatedArticle, locale)}<div class="p-5"><p class="guide-eyebrow mb-2">${esc(relatedArticle.category[locale.code])} · ${relatedArticle.readingMinutes} min</p><h3 class="text-xl font-black text-white">${esc(content.title)}</h3><p class="mt-2 leading-relaxed text-gray-400">${esc(content.description)}</p><span class="mt-4 inline-flex items-center gap-2 font-bold text-gold">${esc(locale.readLabel)} <span aria-hidden="true">→</span></span></div></a>`;
   }).join('');
   return `<section class="guide-related mt-12"><h2>${esc(locale.relatedLabel)}</h2><div class="grid gap-5">${cards}</div></section>`;
+}
+
+// Responsive hero/card image markup per FREEZE §1/§6 (WEB-UX1 Phase 7).
+// Derivative paths derive from the master's basename: images/gen/articles/<base>-<w>.<ext>.
+function heroPicture(articleItem, locale) {
+  const base = articleItem.image.replace(/\.[^.]+$/, '').split('/').pop();
+  const srcset = (ext) => [480, 768, 1536].map((w) => `/images/gen/articles/${base}-${w}.${ext} ${w}w`).join(', ');
+  return `<picture><source type="image/avif" srcset="${srcset('avif')}" sizes="100vw"><source type="image/webp" srcset="${srcset('webp')}" sizes="100vw"><img src="${articleItem.image}" alt="${esc(articleItem.imageAlt[locale.code])}" width="1536" height="1024" fetchpriority="high" loading="eager" decoding="async" /></picture>`;
+}
+function cardImg(articleItem, locale) {
+  const base = articleItem.image.replace(/\.[^.]+$/, '').split('/').pop();
+  const srcset = (ext) => [480, 768].map((w) => `/images/gen/articles/${base}-${w}.${ext} ${w}w`).join(', ');
+  return `<picture><source type="image/avif" srcset="${srcset('avif')}" sizes="(max-width: 768px) 100vw, 768px"><source type="image/webp" srcset="${srcset('webp')}" sizes="(max-width: 768px) 100vw, 768px"><img src="${articleItem.image}" alt="${esc(articleItem.imageAlt[locale.code])}" width="768" height="512" loading="lazy" decoding="async" /></picture>`;
 }
 
 export function articlePage(locale, articleItem) {
@@ -143,14 +188,14 @@ ${tailwind()}
 <script type="application/ld+json">${json(articleLd)}</script><script type="application/ld+json">${json(faqLd)}</script><script type="application/ld+json">${json(breadcrumbLd)}</script>
 </head><body class="bg-navy text-gray-200">
 ${sharedNav(locale, articleItem)}
-<main data-guide-id="${articleItem.id}" data-guide-locale="${locale.code}" data-guide-category="${esc(articleItem.category[locale.code])}"><header class="guide-article-hero"><img src="${articleItem.image}" alt="${esc(articleItem.imageAlt[locale.code])}" /><div class="guide-shell guide-article-hero__content"><nav class="guide-breadcrumb" aria-label="Breadcrumb"><a href="${locale.code === 'en' ? '/' : `/${locale.code}/`}">${esc(locale.homeLabel)}</a><span aria-hidden="true">/</span><a href="${locale.hubPath}">${esc(locale.hubLabel)}</a></nav><p class="guide-eyebrow mb-4">${esc(articleItem.category[locale.code])} · ${articleItem.readingMinutes} min</p><h1>${esc(content.title)}</h1><p>${esc(content.intro)}</p><p class="guide-article-meta">${articleItem.updated} · ${brandWordmark('font-extrabold tracking-tight text-white')}</p></div></header>
+<main data-guide-id="${articleItem.id}" data-guide-locale="${locale.code}" data-guide-category="${esc(articleItem.category[locale.code])}"><header class="guide-article-hero">${heroPicture(articleItem, locale)}<div class="guide-shell guide-article-hero__content"><nav class="guide-breadcrumb" aria-label="Breadcrumb"><a href="${locale.code === 'en' ? '/' : `/${locale.code}/`}">${esc(locale.homeLabel)}</a><span aria-hidden="true">/</span><a href="${locale.hubPath}">${esc(locale.hubLabel)}</a></nav><p class="guide-eyebrow mb-4">${esc(articleItem.category[locale.code])} · ${articleItem.readingMinutes} min</p><h1>${esc(content.title)}</h1><p>${esc(content.intro)}</p><p class="guide-article-meta">${articleItem.updated} · ${brandWordmark('font-extrabold tracking-tight text-white')}</p></div></header>
 <div class="guide-shell grid max-w-6xl gap-10 py-14 md:grid-cols-[minmax(0,1fr)_15rem] md:py-20"><article class="guide-prose min-w-0"><div class="guide-kicker"><strong>${esc(content.summary)}</strong></div>${sections}<div class="guide-cta"><p class="mb-3">${brandWordmark()}</p><h2 class="!mt-0 text-2xl">${esc(content.ctaTitle)}</h2><p>${esc(content.ctaText)}</p><a href="${playUrl(articleItem)}" target="_blank" rel="noopener noreferrer" class="guide-cta__action mt-3 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-gold to-amber px-5 py-3 text-sm font-black shadow-xl shadow-gold/25 transition hover:-translate-y-0.5 hover:shadow-gold/35 sm:w-auto" style="color:#0F0F1A !important;text-decoration:none;"><ion-icon name="diamond-outline"></ion-icon>${esc(content.ctaLabel)}</a></div>${renderRelated(locale, articleItem)}<section class="guide-faq mt-12" id="faq"><h2>${esc(locale.faqLabel)}</h2><div class="space-y-3">${faq}</div></section><div class="guide-next"><a href="${locale.hubPath}">← ${esc(locale.backLabel)}</a></div></article><aside class="hidden md:block"><div class="guide-card guide-toc sticky top-24 p-5"><p class="mb-3 text-xs font-extrabold uppercase tracking-[.15em] text-gold">${esc(locale.contentsLabel)}</p>${toc}<a href="#faq">${esc(locale.faqLabel)}</a></div></aside></div></main>
 ${sharedFooter(locale)}</body></html>`;
 }
 
 function articleCard(locale, articleItem) {
   const content = articleItem.locales[locale.code];
-  return `<a href="${articlePath(articleItem, locale)}" class="guide-card guide-article-card block"><img src="${articleItem.image}" alt="${esc(articleItem.imageAlt[locale.code])}" /><div class="p-6"><p class="guide-eyebrow mb-3">${esc(articleItem.category[locale.code])} · ${articleItem.readingMinutes} min</p><h2 class="text-2xl font-black text-white">${esc(content.title)}</h2><p class="mt-3 leading-relaxed text-gray-400">${esc(content.description)}</p><span class="mt-5 inline-flex items-center gap-2 font-bold text-gold">${esc(locale.readLabel)} <span aria-hidden="true">→</span></span></div></a>`;
+  return `<a href="${articlePath(articleItem, locale)}" class="guide-card guide-article-card block">${cardImg(articleItem, locale)}<div class="p-6"><p class="guide-eyebrow mb-3">${esc(articleItem.category[locale.code])} · ${articleItem.readingMinutes} min</p><h2 class="text-2xl font-black text-white">${esc(content.title)}</h2><p class="mt-3 leading-relaxed text-gray-400">${esc(content.description)}</p><span class="mt-5 inline-flex items-center gap-2 font-bold text-gold">${esc(locale.readLabel)} <span aria-hidden="true">→</span></span></div></a>`;
 }
 
 export function hubPage(locale) {

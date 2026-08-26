@@ -34,7 +34,8 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
 .guide-hub-hero h1 { color: #fff; font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 900; letter-spacing: -.04em; line-height: 1.08; }
 .guide-hub-hero p:last-child { color: #c8cbd4; font-size: 1.125rem; line-height: 1.65; margin: 1.35rem auto 0; max-width: 42rem; }
 .guide-article-hero { background: #0f0f1a; border-bottom: 1px solid rgba(30,58,92,.35); position: relative; }
-.guide-article-hero > img { aspect-ratio: 16 / 9; display: block; height: auto; object-fit: contain; width: 100%; }
+.guide-article-hero > picture { display: block; }
+.guide-article-hero > picture img { aspect-ratio: 16 / 9; display: block; height: auto; object-fit: cover; width: 100%; }
 .guide-article-hero__content { inset: 0; margin-left: auto; max-width: 72rem; padding-bottom: 4rem; padding-top: clamp(3rem, 6vw, 6.5rem); position: absolute; width: 100%; }
 .guide-article-hero__content > * { margin-left: auto; max-width: 48%; }
 .guide-article-hero h1 { color: #fff; font-size: clamp(2.3rem, 5.2vw, 4.55rem); font-weight: 900; letter-spacing: -.045em; line-height: 1.06; }
@@ -63,4 +64,23 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
   .guide-article-hero__content { background: #0f0f1a; padding-bottom: 2.4rem; padding-top: 2rem; position: static; }
   .guide-article-hero__content > * { margin-left: 0; max-width: 100%; }
   .guide-article-hero h1 { font-size: 2.25rem; }
+}
+
+
+/* WEB-UX1 Phase 7 (rev 2): desktop hero = side-by-side (artwork left, content on solid navy).
+   No text-over-image on any viewport; works for any title length and any artwork. */
+@media (min-width: 768px) {
+  .guide-article-hero { align-items: stretch; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+  .guide-article-hero > picture { height: 100%; }
+  .guide-article-hero > picture img { aspect-ratio: auto; height: 100%; }
+  .guide-article-hero__content { inset: auto; max-width: none; padding: clamp(2.6rem, 4.5vw, 4.6rem) clamp(1.6rem, 3.4vw, 3.4rem); position: static; width: auto; }
+  .guide-article-hero__content > * { margin-left: 0; max-width: 34rem; }
+  .guide-article-hero h1 { font-size: clamp(1.9rem, 2.9vw, 2.9rem); line-height: 1.12; }
+  .guide-article-hero p { font-size: 1.05rem; margin-top: 1.2rem; }
+}
+
+/* WEB-UX1 Phase 7 (rev 2): mobile nav wrap — language selector must never overlap the wordmark. */
+@media (max-width: 480px) {
+  .guide-nav { flex-wrap: wrap; padding-bottom: .65rem; padding-top: .65rem; row-gap: .55rem; }
+  .guide-nav > div { gap: .8rem; margin-left: auto; }
 }

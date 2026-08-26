@@ -1,4 +1,4 @@
-// WEB-UX1 Phase 2 — manifest-driven responsive-image derivatives (FREEZE.md §1/§3).
+// WEB-UX1 Phase 2 (rev 4, final) — manifest-driven responsive-image derivatives (FREEZE §1/§3).
 //
 //   node tools/build-images.mjs                    generate all derivatives
 //   node tools/build-images.mjs --dry-run          list planned outputs, write nothing
@@ -8,9 +8,9 @@
 //
 // Exit codes: 0 pass · 1 mismatch/stale · 2 config error.
 // Deterministic: sorted inputs, fixed encode options, metadata stripped,
-// sequential generation. No network access.
-import { createHash } from 'node:crypto';
-import { existsSync, readFileSync, readdirSync, statSync, mkdirSync } from 'node:fs';
+// sequential generation. No network access. No watermarks/overlays —
+// branding belongs in the source artwork (owner decision 2026-08-26).
+import { existsSync, readFileSync, readdirSync, statSync, mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
@@ -100,8 +100,6 @@ async function plan() {
           jobs.push({
             role,
             source: relSource,
-            sourceWidth: meta.width,
-            sourceHeight: meta.height,
             width,
             format: fmt.type,
             outRel: `${outputRoot}/${role}/${base}-${width}${formatExtMap[fmt.type]}`,
@@ -110,7 +108,7 @@ async function plan() {
       }
     }
   }
-  return { manifest, outputRoot, jobs };
+  return { jobs };
 }
 
 async function main() {
@@ -125,6 +123,7 @@ async function main() {
   if (checkMode) {
     let missing = 0;
     let stale = 0;
+    const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
     for (const job of jobs) {
       const abs = join(repoRoot, job.outRel);
       if (!existsSync(abs)) {
@@ -133,7 +132,8 @@ async function main() {
         continue;
       }
       const onDisk = readFileSync(abs);
-      const fresh = await encode(join(repoRoot, job.source), job.width, specFormatFor(job, jobs));
+      const fmt = manifest.roles[job.role].formats.find((f) => f.type === job.format);
+      const fresh = await encode(join(repoRoot, job.source), job.width, fmt);
       if (!onDisk.equals(fresh)) {
         stale += 1;
         if (!jsonMode) console.log(`STALE   ${job.outRel}`);
@@ -151,15 +151,14 @@ async function main() {
   mkdirSync(join(repoRoot, 'images', 'gen'), { recursive: true });
   let written = 0;
   let bytes = 0;
+  const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
   for (const job of jobs) {
-    const fresh = await encode(join(repoRoot, job.source), job.width, specFormatFor(job, jobs));
+    const fmt = manifest.roles[job.role].formats.find((f) => f.type === job.format);
+    const fresh = await encode(join(repoRoot, job.source), job.width, fmt);
     const abs = join(repoRoot, job.outRel);
     mkdirSync(dirname(abs), { recursive: true });
     const current = existsSync(abs) ? readFileSync(abs) : null;
-    if (!current || !current.equals(fresh)) {
-      const { writeFileSync } = await import('node:fs');
-      writeFileSync(abs, fresh);
-    }
+    if (!current || !current.equals(fresh)) writeFileSync(abs, fresh);
     written += 1;
     bytes += fresh.length;
   }
@@ -167,12 +166,6 @@ async function main() {
   if (jsonMode) console.log(JSON.stringify(summary));
   else console.log(`built ${written} derivatives, ${bytes} bytes total under images/gen/ (unchanged files left untouched)`);
   process.exit(0);
-
-  function specFormatFor(job, allJobs) {
-    // Recover the exact format options for this job by re-reading the manifest role.
-    const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
-    return manifest.roles[job.role].formats.find((f) => f.type === job.format);
-  }
 }
 
 main().catch((err) => fail(2, err && err.stack ? err.stack : String(err)));
