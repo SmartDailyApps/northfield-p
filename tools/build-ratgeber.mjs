@@ -16,6 +16,37 @@ const allArticles = [article, ...additionalArticles];
 const publishedArticles = allArticles.filter((item) => item.status !== 'draft');
 const outputArticles = includeDrafts ? allArticles : publishedArticles;
 
+// Localization completeness hard-fail (WEB-UX1 Phase 6): a build with missing per-locale
+// fields must fail loudly naming article, locale, and fields — never render half-localized pages.
+// Legacy fallbacks honored: `status` absent = published; base article paths come from
+// locale.articlePath; seoTitle falls back to title at render time (line: <title>).
+const REQUIRED_LOCALE_FIELDS = ['title', 'description', 'intro', 'summary', 'sections', 'faq', 'ctaTitle', 'ctaText', 'ctaLabel'];
+const REQUIRED_TOP_FIELDS = ['id', 'published', 'updated', 'readingMinutes', 'image'];
+function validateArticleCompleteness(articles) {
+  const problems = [];
+  for (const item of articles) {
+    for (const field of REQUIRED_TOP_FIELDS) {
+      if (item[field] === undefined || item[field] === null || item[field] === '') problems.push(`${item.id || '(no id)'}: missing top-level "${field}"`);
+    }
+    if (item.status !== undefined && item.status !== 'draft' && item.status !== 'published') problems.push(`${item.id}: invalid status "${item.status}"`);
+    for (const code of Object.keys(locales)) {
+      const loc = item.locales?.[code];
+      if (!loc) { problems.push(`${item.id}: missing whole locale "${code}"`); continue; }
+      const missing = REQUIRED_LOCALE_FIELDS.filter((field) => loc[field] === undefined || loc[field] === null || loc[field] === '' || (Array.isArray(loc[field]) && loc[field].length === 0));
+      if (missing.length) problems.push(`${item.id} [${code}]: missing/empty ${missing.join(', ')}`);
+      if (!item.category?.[code]) problems.push(`${item.id} [${code}]: missing category`);
+      if (!item.imageAlt?.[code]) problems.push(`${item.id} [${code}]: missing imageAlt`);
+      if (!item.paths?.[code] && item !== article) problems.push(`${item.id} [${code}]: missing paths entry`);
+    }
+  }
+  if (problems.length) {
+    console.error(`COMPLETENESS FAIL — ${problems.length} problem(s):`);
+    for (const problem of problems) console.error(`  - ${problem}`);
+    process.exit(2);
+  }
+}
+validateArticleCompleteness(allArticles);
+
 // Consent-gated measurement head. Must stay byte-identical to the loader contract
 // enforced by scripts/check-measurement-consent.mjs (product): one consent loader,
 // no direct GTM/gtag requests, no GTM noscript iframe.
@@ -123,7 +154,7 @@ function articleCard(locale, articleItem) {
 }
 
 export function hubPage(locale) {
-  const orderedArticles = [...publishedArticles].sort((a, b) => b.published.localeCompare(a.published));
+  const orderedArticles = [...(includeDrafts ? allArticles : publishedArticles)].sort((a, b) => b.published.localeCompare(a.published));
   const cards = orderedArticles.map((articleItem) => articleCard(locale, articleItem)).join('');
   return `<!DOCTYPE html>
 <html lang="${locale.locale}"><head>
