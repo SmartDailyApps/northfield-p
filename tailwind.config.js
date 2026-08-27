@@ -7,8 +7,9 @@ export default {
   content: [
     './index.html',
     './404.html',
-    './{changelog,feedback,help,impressum,privacy,roadmap,guides}/**/*.html',
+    './{changelog,feedback,help,impressum,privacy,roadmap,guides,market}/**/*.html',
     './{de,es,fr,it,pt,tr}/**/*.html',
+    './tools/**/*.mjs',
     './tools/*.mjs',
   ],
   safelist: [
@@ -22,6 +23,15 @@ export default {
     'bg-navy',
     'bg-navy-light',
     'bg-mint',
+    // Metal theme classes
+    'border-gold/30',
+    'border-slate-400/30',
+    'border-teal-400/30',
+    'border-indigo-400/30',
+    'ring-gold/50',
+    'ring-slate-400/50',
+    'ring-teal-400/50',
+    'ring-indigo-400/50',
     'bg-amber',
     'border-gold/20',
     'border-gold/35',

@@ -14,6 +14,7 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { additionalArticles, article, locales } from './ratgeber-content.mjs';
+import { locales as marketLocales, metals as marketMetals, marketPath } from './market-content.mjs';
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const diffMode = process.argv.includes('--diff');
@@ -67,6 +68,22 @@ function routes() {
       if (isSharedDefault) continue;
       if (!existsSync(join(repoRoot, path.replace(/^\//, ''), 'index.html'))) continue;
       add(path, art.updated ?? art.published);
+    }
+  }
+
+
+  const mktDate = gitDate('tools/market-content.mjs') || new Date().toISOString().split('T')[0];
+  for (const code of Object.keys(marketLocales)) {
+    const loc = marketLocales[code];
+    // Add the hub page itself
+    if (existsSync(join(repoRoot, loc.marketPath.replace(/^\//, ''), 'index.html'))) {
+      add(loc.marketPath, mktDate);
+    }
+    // Add individual metal pages
+    for (const metal of marketMetals) {
+      if (existsSync(join(repoRoot, marketPath(metal, loc).replace(/^\//, ''), 'index.html'))) {
+        add(marketPath(metal, loc), mktDate);
+      }
     }
   }
 

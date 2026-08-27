@@ -114,11 +114,11 @@ function hreflang(currentArticle) {
 }
 
 function sharedNav(locale, currentArticle) {
-  return `<nav class="sticky top-0 z-50 border-b border-border/40 bg-navy/90 backdrop-blur"><div class="guide-shell guide-nav flex min-h-[68px] items-center justify-between gap-4"><a href="${locale.code === 'en' ? '/' : `/${locale.code}/`}" class="flex items-center gap-3"><img src="/images/icon.png" alt="MyGoldFolio" class="h-8 w-8 rounded-xl" />${brandWordmark()}</a><div class="flex items-center gap-4 text-sm"><details class="guide-languages"><summary aria-label="Language">${esc(locale.label)}</summary><div>${languageLinks(locale.code, currentArticle)}</div></details><a href="${locale.hubPath}" class="guide-nav-chip${currentArticle ? '' : ' guide-nav-chip--active'}">${esc(locale.hubLabel)}</a><a href="${locale.code === 'en' ? '/#download' : `/${locale.code}/#download`}" class="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-gold px-4 py-2 text-xs font-bold text-navy shadow-lg shadow-gold/20 transition hover:bg-amber sm:text-sm"><ion-icon name="logo-google-playstore" style="font-size:14px;"></ion-icon><span>${esc(locale.appLabel)}</span></a></div></div></nav>`;
+  return `<nav class="sticky top-0 z-50 border-b border-border/40 bg-navy/90 backdrop-blur"><div class="guide-shell guide-nav flex min-h-[68px] items-center justify-between gap-4"><a href="${locale.code === 'en' ? '/' : `/${locale.code}/`}" class="flex items-center gap-3"><img src="/images/icon.png" alt="MyGoldFolio" class="h-8 w-8 rounded-xl flex-shrink-0" />${brandWordmark()}</a><div class="flex items-center gap-4 text-sm"><a href="${locale.hubPath}" class="guide-nav-chip${currentArticle ? '' : ' guide-nav-chip--active'}">${esc(locale.hubLabel)}</a><a href="${locale.code === 'en' ? '/#download' : `/${locale.code}/#download`}" class="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-gold px-4 py-2 text-xs font-bold text-navy shadow-lg shadow-gold/20 transition hover:bg-amber sm:text-sm"><ion-icon name="logo-google-playstore" style="font-size:14px;"></ion-icon><span>${esc(locale.appLabel)}</span></a></div></div></nav>`;
 }
 
 function sharedFooter(locale) {
-  return `<footer class="border-t border-border/30 px-6 py-8 text-center text-xs text-muted"><p>© 2026 SmartDailyApps. All rights reserved.</p><div class="mt-3 flex flex-wrap justify-center gap-4"><a href="${locale.code === 'en' ? '/' : `/${locale.code}/`}" class="hover:text-gold">${esc(locale.homeLabel)}</a><a href="${locale.hubPath}" class="hover:text-gold">${esc(locale.hubLabel)}</a><a href="${locale.code === 'en' ? '/help/' : `/${locale.code}/help/`}" class="hover:text-gold">${esc(locale.helpLabel)}</a><a href="${locale.code === 'en' ? '/privacy/' : `/${locale.code}/privacy/`}" class="hover:text-gold">${esc(locale.privacyLabel)}</a></div></footer><script src="/images/play-store-attribution.js"></script><script src="/images/guide-analytics.js"></script>`;
+  return `<footer class="border-t border-border/30 px-6 py-8 text-center text-xs text-muted"><p>© 2026 SmartDailyApps. All rights reserved.</p><div class="mt-3 flex flex-wrap justify-center gap-4"><a href="${locale.code === 'en' ? '/' : `/${locale.code}/`}" class="hover:text-gold">${esc(locale.homeLabel)}</a><a href="${locale.code === 'en' ? '/market/' : `/${locale.code}/market/`}" class="hover:text-gold">${esc(locale.marketLabel || 'Live Market')}</a><a href="${locale.hubPath}" class="hover:text-gold">${esc(locale.hubLabel)}</a><a href="${locale.code === 'en' ? '/help/' : `/${locale.code}/help/`}" class="hover:text-gold">${esc(locale.helpLabel)}</a><a href="${locale.code === 'en' ? '/privacy/' : `/${locale.code}/privacy/`}" class="hover:text-gold">${esc(locale.privacyLabel)}</a></div></footer><script src="/images/play-store-attribution.js"></script><script src="/images/guide-analytics.js"></script><script src="/images/locale-switcher.js"></script>`;
 }
 
 function renderTable(table) {
@@ -224,7 +224,7 @@ async function write(path, body) {
   console.log(path);
 }
 
-export { locales, outputArticles, articlePath };
+export { locales, outputArticles, articlePath, sharedNav, sharedFooter, tailwind, absoluteUrl, esc, brandWordmark, playUrl };
 
 const invokedDirectly = process.argv[1]
   && import.meta.url === pathToFileURL(resolve(process.argv[1])).href;

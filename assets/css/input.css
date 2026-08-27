@@ -130,6 +130,59 @@
     padding: 5px;
   }
 }
+@media (max-width: 640px) {
+  .guide-nav-chip {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Hero Section Animations and Styles (Moved from index.html)
+   ========================================================================== */
+
+/* Phone mockup */
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+.phone-float { animation: float 4s ease-in-out infinite; position: relative; z-index: 1; }
+.phone-frame {
+  width: 220px; height: 440px; border-radius: 16px;
+  border: 6px solid #2a2a40;
+  box-shadow: 0 0 60px rgba(212,168,67,0.2), 0 24px 60px rgba(0,0,0,0.6);
+  overflow: hidden; position: relative; background: #0F0F1A; flex-shrink: 0;
+}
+.phone-frame img, .phone-frame video { width:100%; height:100%; object-fit:cover; }
+
+/* Radial glow behind hero phone */
+.phone-glow {
+  position: absolute; width: 340px; height: 340px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(212,168,67,0.22) 0%, transparent 70%);
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  pointer-events: none; z-index: 0;
+}
+
+/* Floating particles */
+@keyframes drift {
+  0%   { transform: translateY(0) translateX(0) scale(1); opacity: 0.6; }
+  100% { transform: translateY(-100px) translateX(30px) scale(0); opacity: 0; }
+}
+.particle {
+  position: absolute; width: 4px; height: 4px;
+  background: rgba(212,168,67,0.6); border-radius: 50%;
+  animation: drift linear infinite; pointer-events: none;
+}
+
+/* CTA pulse ring */
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(212,168,67,0.5); }
+  70%  { box-shadow: 0 0 0 10px rgba(212,168,67,0); }
+  100% { box-shadow: 0 0 0 0 rgba(212,168,67,0); }
+}
+.cta-pulse { animation: pulse-ring 2s ease-out infinite; }
+
+/* Scale hero phone on small screens */
+@media (max-width: 640px) {
+  .phone-float .phone-frame { width: 180px; height: 360px; border-radius: 14px; }
+}
+
 @media (min-width: 768px) {
   .luxury-phone-frame {
     width: auto;

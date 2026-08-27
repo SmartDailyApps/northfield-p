@@ -2,31 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mygoldfolio.de/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/changelog/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/changelog/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/feedback/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/help/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/de/market/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/de/market/gold/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/de/market/palladium/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/de/market/platinum/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/de/market/silver/</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/privacy/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/ratgeber/</loc>
@@ -50,19 +70,19 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/roadmap/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/changelog/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/feedback/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/guias/</loc>
@@ -86,31 +106,51 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/help/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/es/market/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/es/market/gold/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/es/market/palladium/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/es/market/platinum/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/es/market/silver/</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/privacy/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/roadmap/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/feedback/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/changelog/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/feedback/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/guides/</loc>
@@ -134,15 +174,35 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/help/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/market/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/market/gold/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/market/palladium/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/market/platinum/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/fr/market/silver/</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/privacy/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/roadmap/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/guides/</loc>
@@ -166,19 +226,19 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/help/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/changelog/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/feedback/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/guide/</loc>
@@ -202,31 +262,71 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/help/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/it/market/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/it/market/gold/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/it/market/palladium/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/it/market/platinum/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/it/market/silver/</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/privacy/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/roadmap/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/market/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/market/gold/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/market/palladium/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/market/platinum/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/market/silver/</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/privacy/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/changelog/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/feedback/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/guias/</loc>
@@ -250,39 +350,79 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/help/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/pt/market/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/pt/market/gold/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/pt/market/palladium/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/pt/market/platinum/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/pt/market/silver/</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/privacy/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/roadmap/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/roadmap/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/changelog/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/feedback/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/help/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/market/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/market/gold/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/market/palladium/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/market/platinum/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/tr/market/silver/</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/privacy/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/rehber/</loc>
@@ -306,6 +446,6 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/roadmap/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
 </urlset>
