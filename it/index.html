@@ -379,230 +379,475 @@
       </div>
 
             <!-- Pinned Phone Journey -->
-      <div class="journey-container w-full mt-12 gap-8 lg:gap-16">
+    <div class="max-w-5xl mx-auto px-6 py-12 md:py-20">
+      <!-- Stage: SAPERE -->
+      <div class="journey-stage stage-know" data-stage="know">
         
-        <!-- Sticky Phone Column -->
+        <!-- Mobile Stage Banner (Header at the top of each stage) -->
+        <div class="mobile-stage-banner md:hidden mb-4 text-center">
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-gold/30 bg-gold/10 text-gold px-3 py-0.5 text-xs font-black uppercase tracking-wider mb-1">
+            Sapere
+          </span>
+          <h2 class="text-base font-bold text-white mt-1">Comprendi la tua vera posizione all'istante.</h2>
+        </div>
+
+        <!-- Sticky Phone / Showcase Column -->
         <div class="sticky-phone-wrapper">
           <div class="luxury-phone-frame mx-auto">
             <div class="luxury-phone-buttons"></div>
             <div class="phone-screen-container">
-              <!-- Screens -->
-              <!-- KNOW -->
-              <div class="screen-layer active" id="screen-dashboard">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/dashboard-320.avif 320w, /images/gen/app-screens/en/dashboard-480.avif 480w, /images/gen/app-screens/en/dashboard-640.avif 640w" sizes="(max-width: 768px) 240px, 240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/dashboard-320.webp 320w, /images/gen/app-screens/en/dashboard-480.webp 480w, /images/gen/app-screens/en/dashboard-640.webp 640w" sizes="(max-width: 768px) 240px, 240px">
-                  <img src="/images/gen/app-screens/en/dashboard-320.png" alt="Dashboard Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
-              <div class="screen-layer" id="screen-prices">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/prices-320.avif 320w, /images/gen/app-screens/en/prices-480.avif 480w, /images/gen/app-screens/en/prices-640.avif 640w" sizes="240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/prices-320.webp 320w, /images/gen/app-screens/en/prices-480.webp 480w, /images/gen/app-screens/en/prices-640.webp 640w" sizes="240px">
-                  <img src="/images/gen/app-screens/en/prices-320.png" alt="Prices Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
-              <div class="screen-layer" id="screen-portfolio">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/portfolio-320.avif 320w, /images/gen/app-screens/en/portfolio-480.avif 480w, /images/gen/app-screens/en/portfolio-640.avif 640w" sizes="240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/portfolio-320.webp 320w, /images/gen/app-screens/en/portfolio-480.webp 480w, /images/gen/app-screens/en/portfolio-640.webp 640w" sizes="240px">
-                  <img src="/images/gen/app-screens/en/portfolio-320.png" alt="Portfolio Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
-              <!-- DECIDE -->
-              <div class="screen-layer" id="screen-scenarios">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/scenarios-320.avif 320w, /images/gen/app-screens/en/scenarios-480.avif 480w, /images/gen/app-screens/en/scenarios-640.avif 640w" sizes="240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/scenarios-320.webp 320w, /images/gen/app-screens/en/scenarios-480.webp 480w, /images/gen/app-screens/en/scenarios-640.webp 640w" sizes="240px">
-                  <img src="/images/gen/app-screens/en/scenarios-320.png" alt="Scenarios Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
-              <div class="screen-layer" id="screen-simulator">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/simulator-320.avif 320w, /images/gen/app-screens/en/simulator-480.avif 480w, /images/gen/app-screens/en/simulator-640.avif 640w" sizes="240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/simulator-320.webp 320w, /images/gen/app-screens/en/simulator-480.webp 480w, /images/gen/app-screens/en/simulator-640.webp 640w" sizes="240px">
-                  <img src="/images/gen/app-screens/en/simulator-320.png" alt="Simulator Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
-              <div class="screen-layer" id="screen-alerts">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/alerts-320.avif 320w, /images/gen/app-screens/en/alerts-480.avif 480w, /images/gen/app-screens/en/alerts-640.avif 640w" sizes="240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/alerts-320.webp 320w, /images/gen/app-screens/en/alerts-480.webp 480w, /images/gen/app-screens/en/alerts-640.webp 640w" sizes="240px">
-                  <img src="/images/gen/app-screens/en/alerts-320.png" alt="Alerts Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
-              <!-- PROFIT -->
-              <div class="screen-layer" id="screen-sold">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/sold-320.avif 320w, /images/gen/app-screens/en/sold-480.avif 480w, /images/gen/app-screens/en/sold-640.avif 640w" sizes="240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/sold-320.webp 320w, /images/gen/app-screens/en/sold-480.webp 480w, /images/gen/app-screens/en/sold-640.webp 640w" sizes="240px">
-                  <img src="/images/gen/app-screens/en/sold-320.png" alt="Sold Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
-              <div class="screen-layer" id="screen-taxfree">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/taxfree-320.avif 320w, /images/gen/app-screens/en/taxfree-480.avif 480w, /images/gen/app-screens/en/taxfree-640.avif 640w" sizes="240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/taxfree-320.webp 320w, /images/gen/app-screens/en/taxfree-480.webp 480w, /images/gen/app-screens/en/taxfree-640.webp 640w" sizes="240px">
-                  <img src="/images/gen/app-screens/en/taxfree-320.png" alt="Taxfree Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
+              <picture id="screen-dashboard" class="screen-layer active">
+                <source srcset="../images/gen/app-screens/it/dashboard-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/it/dashboard-480.webp" type="image/webp">
+                <img src="../images/app-screens/it/dashboard.png" alt="Dashboard Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
+              <picture id="screen-prices" class="screen-layer">
+                <source srcset="../images/gen/app-screens/it/prices-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/it/prices-480.webp" type="image/webp">
+                <img src="../images/app-screens/it/prices.png" alt="Prices Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
+              <picture id="screen-portfolio" class="screen-layer">
+                <source srcset="../images/gen/app-screens/it/portfolio-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/it/portfolio-480.webp" type="image/webp">
+                <img src="../images/app-screens/it/portfolio.png" alt="Portfolio Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
             </div>
+          </div>
+          <!-- Clickable Mobile Dots Dock (Sits right beneath phone) -->
+          <div class="mobile-dots-dock md:hidden flex items-center justify-center gap-2 py-2 mt-2">
+          <button class="step-dot active" data-dot="dashboard" aria-label="Dashboard Screen"></button>
+          <button class="step-dot" data-dot="prices" aria-label="Prices Screen"></button>
+          <button class="step-dot" data-dot="portfolio" aria-label="Portfolio Screen"></button>
           </div>
         </div>
 
         <!-- Story Blocks Column -->
-        <div class="flex-1 pb-32 pt-8 lg:pt-0 max-w-2xl mx-auto lg:mx-0 relative">
+        <div class="flex-1 max-w-xl mx-auto lg:mx-0 relative">
           
-          <!-- KNOW Group -->
-          <div class="mb-12 sticky top-[calc(4rem+540px)] md:relative md:top-auto z-10 bg-navy/95 backdrop-blur-md py-4 md:bg-transparent md:py-0 border-y border-border/20 md:border-none">
-            <p class="text-xs font-black tracking-[0.2em] text-gold uppercase mb-1">Conoscere</p>
-            <p class="text-gray-400 text-sm font-medium">Capisci subito la tua posizione reale.</p>
-          </div>
-
-          <div class="story-block mb-32 min-h-[40vh]" data-screen="dashboard">
-            <h3 class="text-3xl font-bold text-white mb-4">Tutta la tua posizione, a colpo d'occhio</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Monitora i numeri su cui operi davvero. Confronta in pochi secondi il movimento di mercato di ogni metallo con la realtà dei rivenditori.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Valore portafoglio in tempo reale</span>
-              </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Guadagno/perdita a colpo d'occhio</span>
-              </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">100% offline</span>
-              </div>
+          <!-- Desktop-Only Sticky Pillar Header (Approved & Unchanged) -->
+          <div class="sticky-pillar-header hidden md:flex items-center justify-between gap-4">
+            <div>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-gold/30 bg-gold/10 text-gold px-3 py-0.5 text-xs font-black uppercase tracking-wider mb-1">
+                Sapere
+              </span>
+              <p class="text-gray-300 text-xs md:text-sm font-medium">Comprendi la tua vera posizione all'istante.</p>
+            </div>
+            <div class="pillar-progress-dots flex-shrink-0">
+          <button class="step-dot active" data-dot="dashboard" aria-label="Dashboard Screen"></button>
+          <button class="step-dot" data-dot="prices" aria-label="Prices Screen"></button>
+          <button class="step-dot" data-dot="portfolio" aria-label="Portfolio Screen"></button>
             </div>
           </div>
 
-          <div class="story-block mb-32 min-h-[40vh]" data-screen="prices">
-            <h3 class="text-3xl font-bold text-white mb-4">Prezzi live, quattro metalli</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Oro, Argento, Platino o Palladio: il dettaglio di mercato in un'unica schermata live.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">XAU · XAG · Platino · Palladio</span>
+          <!-- Feature Block: dashboard -->
+          <div class="story-block active mb-20 md:mb-36 transition-all duration-300" data-screen="dashboard">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">L'intera posizione a colpo d'occhio</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Monitora i numeri con cui fai trading nel mondo reale. Confronta i movimenti di mercato di ogni metallo con la realtà dei commercianti in pochi secondi.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Valore portfolio live
               </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">17 valute</span>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Guadagni/perdite immediati
               </div>
-            </div>
-          </div>
-
-          <div class="story-block mb-32 min-h-[40vh]" data-screen="portfolio">
-            <h3 class="text-3xl font-bold text-white mb-4">Ogni lotto, ogni grammo — organizzato</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Ogni posizione mantiene l'etichetta del metallo e il contesto di performance, così sai sempre cosa guida il risultato complessivo.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Registri a livello di lotto</span>
-              </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Tracciamento della purezza</span>
-              </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Solo sul dispositivo</span>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                100% offline
               </div>
             </div>
           </div>
-
-          <!-- DECIDE Group -->
-          <div class="mb-12 sticky top-[calc(4rem+540px)] md:relative md:top-auto z-10 bg-navy/95 backdrop-blur-md py-4 md:bg-transparent md:py-0 border-y border-border/20 md:border-none">
-            <p class="text-xs font-black tracking-[0.2em] text-gold uppercase mb-1">Decidere</p>
-            <p class="text-gray-400 text-sm font-medium">Pianifica la tua prossima mossa prima del mercato.</p>
-          </div>
-
-          <div class="story-block mb-32 min-h-[40vh]" data-screen="scenarios">
-            <h3 class="text-3xl font-bold text-white mb-4">What-if, prima di comprare</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Anticipa guadagni, perdite e punto di pareggio con diversi scenari di prezzo prima di impegnare capitale.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">What-if istantaneo</span>
+          <!-- Feature Block: prices -->
+          <div class="story-block mb-20 md:mb-36 transition-all duration-300" data-screen="prices">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">Prezzi live per quattro metalli</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Dettagli di mercato su Oro, Argento, Platino e Palladio in un'unica schermata in tempo reale.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                XAU · XAG · Platino · Palladio
               </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Anteprima del punto di pareggio</span>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                17 valute
               </div>
             </div>
           </div>
-
-          <div class="story-block mb-32 min-h-[40vh]" data-screen="simulator">
-            <h3 class="text-3xl font-bold text-white mb-4">Prova la vendita prima di vendere</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Vedi esattamente come i premi dei rivenditori incidono sui ricavi di uscita prima di entrare in un negozio.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Simulazione pre-operazione</span>
+          <!-- Feature Block: portfolio -->
+          <div class="story-block pb-16 md:pb-[35vh] transition-all duration-300" data-screen="portfolio">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">Ogni lotto, ogni grammo: organizzato</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Ogni posizione conserva la propria etichetta e contesto di rendimento, così sai sempre cosa determina il risultato totale.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Registri per lotto
               </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Consapevole dei premi</span>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Tracciamento purezza
               </div>
-            </div>
-          </div>
-
-          <div class="story-block mb-32 min-h-[40vh]" data-screen="alerts">
-            <h3 class="text-3xl font-bold text-white mb-4">Allarmi in background che partono davvero</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Definisci una volta sola soglie significative e lascia che il monitoraggio in background evidenzi solo i movimenti importanti.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Pianificazione esatta</span>
-              </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Senza account</span>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Solo sul dispositivo
               </div>
             </div>
           </div>
-
-          <!-- PROFIT Group -->
-          <div class="mb-12 sticky top-[calc(4rem+540px)] md:relative md:top-auto z-10 bg-navy/95 backdrop-blur-md py-4 md:bg-transparent md:py-0 border-y border-border/20 md:border-none">
-            <p class="text-xs font-black tracking-[0.2em] text-gold uppercase mb-1">Profitto</p>
-            <p class="text-gray-400 text-sm font-medium">Massimizza i guadagni realizzati e ottimizza le tasse.</p>
-          </div>
-
-          <div class="story-block mb-32 min-h-[40vh]" data-screen="sold">
-            <h3 class="text-3xl font-bold text-white mb-4">Guadagni realizzati, registrati onestamente</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Ogni vendita viene registrata con ricavi e risultato realizzato, così la prossima mossa si basa su uno storico misurato.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Tracciamento reale delle uscite</span>
-              </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Vista FIFO</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="story-block min-h-[40vh]" data-screen="taxfree">
-            <h3 class="text-3xl font-bold text-white mb-4">Un anno di detenzione — tasse zero</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Monitora i grammi tassabili e quelli esenti con una chiara barra del conto alla rovescia. Capisci esattamente cosa è idoneo.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Tracciamento del periodo fiscale</span>
-              </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Date per lotto</span>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
 
-  <!-- Private By Design -->
+      <!-- Stage: PROFITTI E TASSE -->
+      <div class="journey-stage stage-profit" data-stage="profit">
+        
+        <!-- Mobile Stage Banner (Header at the top of each stage) -->
+        <div class="mobile-stage-banner md:hidden mb-4 text-center">
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 px-3 py-0.5 text-xs font-black uppercase tracking-wider mb-1">
+            Profitti e Tasse
+          </span>
+          <h2 class="text-base font-bold text-white mt-1">Massimizza i profitti realizzati e ottimizza le tasse.</h2>
+        </div>
+
+        <!-- Sticky Phone / Showcase Column -->
+        <div class="sticky-phone-wrapper">
+          <div class="luxury-phone-frame mx-auto">
+            <div class="luxury-phone-buttons"></div>
+            <div class="phone-screen-container">
+              <picture id="screen-sold" class="screen-layer active">
+                <source srcset="../images/gen/app-screens/it/sold-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/it/sold-480.webp" type="image/webp">
+                <img src="../images/app-screens/it/sold.png" alt="Sold Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
+              <picture id="screen-taxfree" class="screen-layer">
+                <source srcset="../images/gen/app-screens/it/taxfree-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/it/taxfree-480.webp" type="image/webp">
+                <img src="../images/app-screens/it/taxfree.png" alt="Tax-free Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
+            </div>
+          </div>
+          <!-- Clickable Mobile Dots Dock (Sits right beneath phone) -->
+          <div class="mobile-dots-dock md:hidden flex items-center justify-center gap-2 py-2 mt-2">
+          <button class="step-dot active" data-dot="sold" aria-label="Sold Screen"></button>
+          <button class="step-dot" data-dot="taxfree" aria-label="Tax-free Screen"></button>
+          </div>
+        </div>
+
+        <!-- Story Blocks Column -->
+        <div class="flex-1 max-w-xl mx-auto lg:mx-0 relative">
+          
+          <!-- Desktop-Only Sticky Pillar Header (Approved & Unchanged) -->
+          <div class="sticky-pillar-header hidden md:flex items-center justify-between gap-4">
+            <div>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 px-3 py-0.5 text-xs font-black uppercase tracking-wider mb-1">
+                Profitti e Tasse
+              </span>
+              <p class="text-gray-300 text-xs md:text-sm font-medium">Massimizza i profitti realizzati e ottimizza le tasse.</p>
+            </div>
+            <div class="pillar-progress-dots flex-shrink-0">
+          <button class="step-dot active" data-dot="sold" aria-label="Sold Screen"></button>
+          <button class="step-dot" data-dot="taxfree" aria-label="Tax-free Screen"></button>
+            </div>
+          </div>
+
+          <!-- Feature Block: sold -->
+          <div class="story-block active mb-20 md:mb-36 transition-all duration-300" data-screen="sold">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">Profitti realizzati, registrati con trasparenza</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Ogni vendita è salvata con ricavi ed esito effettivo, così la tua prossima mossa si basa su dati storici certi.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Tracciamento uscite reali
+              </div>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Vista FIFO
+              </div>
+            </div>
+          </div>
+          <!-- Feature Block: taxfree -->
+          <div class="story-block pb-16 md:pb-[35vh] transition-all duration-300" data-screen="taxfree">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">Conserva un anno, zero tasse</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Monitora i grammi imponibili rispetto a quelli esenti con una chiara barra di conteggio. Scopri la data esatta di esenzione per ogni lotto.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Conto alla rovescia fiscale
+              </div>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Date per lotto
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage: DECIDERE -->
+      <div class="journey-stage stage-decide" data-stage="decide">
+        
+        <!-- Mobile Stage Banner (Header at the top of each stage) -->
+        <div class="mobile-stage-banner md:hidden mb-4 text-center">
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 px-3 py-0.5 text-xs font-black uppercase tracking-wider mb-1">
+            Decidere
+          </span>
+          <h2 class="text-base font-bold text-white mt-1">Pianifica la tua prossima mossa prima del mercato.</h2>
+        </div>
+
+        <!-- Sticky Phone / Showcase Column -->
+        <div class="sticky-phone-wrapper">
+          <!-- S25 Ultra Phone for Pure Scenarios Screen -->
+          <div class="luxury-phone-frame mx-auto" id="stage3-phone">
+            <div class="luxury-phone-buttons"></div>
+            <div class="phone-screen-container">
+              <picture id="screen-scenarios" class="screen-layer active">
+                <source srcset="../images/gen/app-screens/it/scenarios-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/it/scenarios-480.webp" type="image/webp">
+                <img src="../images/app-screens/it/scenarios.png" alt="Scenarios Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
+            </div>
+          </div>
+
+          <!-- Keynote Feature Slate for Store Artworks (Simulators & Alerts) -->
+          <div class="keynote-slate-frame" id="stage3-slate">
+            <div class="phone-screen-container">
+              <picture id="screen-simulator" class="screen-layer">
+                <source srcset="../images/gen/app-screens/it/simulator-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/it/simulator-480.webp" type="image/webp">
+                <img src="../images/app-screens/it/simulator.png" alt="Simulator Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
+              <picture id="screen-alerts" class="screen-layer">
+                <source srcset="../images/gen/app-screens/it/alerts-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/it/alerts-480.webp" type="image/webp">
+                <img src="../images/app-screens/it/alerts.png" alt="Alerts Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
+            </div>
+          </div>
+          <!-- Clickable Mobile Dots Dock (Sits right beneath phone) -->
+          <div class="mobile-dots-dock md:hidden flex items-center justify-center gap-2 py-2 mt-2">
+          <button class="step-dot active" data-dot="scenarios" aria-label="Scenarios Screen"></button>
+          <button class="step-dot" data-dot="simulator" aria-label="Simulator Screen"></button>
+          <button class="step-dot" data-dot="alerts" aria-label="Alerts Screen"></button>
+          </div>
+        </div>
+
+        <!-- Story Blocks Column -->
+        <div class="flex-1 max-w-xl mx-auto lg:mx-0 relative">
+          
+          <!-- Desktop-Only Sticky Pillar Header (Approved & Unchanged) -->
+          <div class="sticky-pillar-header hidden md:flex items-center justify-between gap-4">
+            <div>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 px-3 py-0.5 text-xs font-black uppercase tracking-wider mb-1">
+                Decidere
+              </span>
+              <p class="text-gray-300 text-xs md:text-sm font-medium">Pianifica la tua prossima mossa prima del mercato.</p>
+            </div>
+            <div class="pillar-progress-dots flex-shrink-0">
+          <button class="step-dot active" data-dot="scenarios" aria-label="Scenarios Screen"></button>
+          <button class="step-dot" data-dot="simulator" aria-label="Simulator Screen"></button>
+          <button class="step-dot" data-dot="alerts" aria-label="Alerts Screen"></button>
+            </div>
+          </div>
+
+          <!-- Feature Block: scenarios -->
+          <div class="story-block active mb-20 md:mb-36 transition-all duration-300" data-screen="scenarios">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">Simula gli scenari prima di acquistare</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Visualizza in anteprima guadagni, perdite e punto di pareggio al variare dei prezzi prima di impegnare capitale.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Scenari istantanei
+              </div>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Anteprima punto di pareggio
+              </div>
+            </div>
+          </div>
+          <!-- Feature Block: simulator -->
+          <div class="story-block mb-20 md:mb-36 transition-all duration-300" data-screen="simulator">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">Verifica la vendita prima di vendere</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Scopri esattamente come i premi dei rivenditori influenzano i tuoi ricavi netti prima di entrare in un negozio.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Simulazione pre-vendita
+              </div>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Calcolo spread e premi
+              </div>
+            </div>
+          </div>
+          <!-- Feature Block: alerts -->
+          <div class="story-block pb-16 md:pb-[35vh] transition-all duration-300" data-screen="alerts">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">Notifiche in background affidabili</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Imposta soglie significative una sola volta: il monitoraggio ti avviserà solo quando c'è una reale variazione rilevante.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Pianificazione esatta
+              </div>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Nessun account richiesto
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  <!-- Pinned Phone Journey Engine -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (isReducedMotion) return;
+
+      const stages = document.querySelectorAll('.journey-stage');
+      let ticking = false;
+
+      function updateJourney() {
+        const isMobile = window.innerWidth < 768;
+        const targetY = isMobile ? window.innerHeight * 0.68 : window.innerHeight * 0.45;
+
+        stages.forEach(stage => {
+          const blocks = stage.querySelectorAll('.story-block');
+          const screens = stage.querySelectorAll('.screen-layer');
+          const dots = stage.querySelectorAll('.step-dot');
+          const isDecide = stage.getAttribute('data-stage') === 'decide';
+          const phone = isDecide ? stage.querySelector('#stage3-phone') : null;
+          const slate = isDecide ? stage.querySelector('#stage3-slate') : null;
+
+          // Find single story block closest to reading center
+          let activeBlock = null;
+          let minDistance = Infinity;
+
+          blocks.forEach(b => {
+            const rect = b.getBoundingClientRect();
+            const center = rect.top + rect.height * 0.35;
+            const dist = Math.abs(center - targetY);
+            if (dist < minDistance) {
+              minDistance = dist;
+              activeBlock = b;
+            }
+          });
+
+          // 1. Activate exact active screen and active dot monotonically
+          if (activeBlock) {
+            const activeId = activeBlock.getAttribute('data-screen');
+
+            blocks.forEach(b => b.classList.toggle('active', b === activeBlock));
+            screens.forEach(s => s.classList.toggle('active', s.id === 'screen-' + activeId));
+            dots.forEach(d => d.classList.toggle('active', d.getAttribute('data-dot') === activeId));
+
+            // Stage 3 Slate vs Phone
+            if (isDecide && phone && slate) {
+              if (activeId === 'scenarios') {
+                phone.classList.remove('inactive-frame');
+                slate.classList.remove('active-frame');
+              } else {
+                phone.classList.add('inactive-frame');
+                slate.classList.add('active-frame');
+              }
+            }
+          }
+
+          // 2. Continuous Element Occlusion (Desktop only: hide elements crossing sticky header)
+          if (!isMobile) {
+            const header = stage.querySelector('.sticky-pillar-header');
+            if (header) {
+              const headerBottom = header.getBoundingClientRect().bottom;
+              blocks.forEach(b => {
+                const isActive = b.classList.contains('active');
+                const elements = b.querySelectorAll('h3, p, .advantage-chip');
+                elements.forEach(el => {
+                  const rect = el.getBoundingClientRect();
+                  if (rect.top < headerBottom) {
+                    el.style.opacity = '0';
+                    el.style.visibility = 'hidden';
+                    el.style.pointerEvents = 'none';
+                  } else {
+                    el.style.visibility = 'visible';
+                    el.style.opacity = isActive ? '1' : '0.28';
+                    el.style.pointerEvents = '';
+                  }
+                });
+              });
+            }
+          } else {
+            // Mobile: elements are naturally styled with CSS transitions
+            blocks.forEach(b => {
+              const elements = b.querySelectorAll('h3, p, .advantage-chip');
+              elements.forEach(el => {
+                el.style.opacity = '';
+                el.style.visibility = '';
+                el.style.pointerEvents = '';
+              });
+            });
+          }
+        });
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateJourney);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      window.addEventListener('resize', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateJourney);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      // Click-to-scroll for step dots
+      document.querySelectorAll('.step-dot').forEach(dot => {
+        dot.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetScreen = dot.getAttribute('data-dot');
+          const stage = dot.closest('.journey-stage');
+          if (stage) {
+            const targetBlock = stage.querySelector(`.story-block[data-screen="${targetScreen}"]`);
+            if (targetBlock) {
+              targetBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          }
+        });
+      });
+
+      updateJourney();
+    });
+  </script>
+
+    <!-- Private By Design -->
   <section class="px-6 py-16 border-t border-border/20">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-8" data-aos="fade-up">
         <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Privacy</p>
         <h2 class="text-2xl md:text-3xl font-black text-white">Privacy by design</h2>
       </div>
-      <div class="grid md:grid-cols-3 gap-4" data-aos="fade-up">
-        <div class="bg-navy-light/50 border border-border/20 rounded-xl p-5 text-center">
-          <p class="text-white font-bold mb-1">Archiviazione solo locale</p>
-          <p class="text-sm text-gray-400">Posizioni e registri portafoglio restano sul tuo dispositivo.</p>
+      <div class="grid md:grid-cols-3 gap-5" data-aos="fade-up">
+        <div class="bg-navy-light/50 border border-border/20 rounded-2xl p-6 text-center hover-card group">
+          <div class="w-12 h-12 rounded-2xl bg-gold/10 border border-gold/25 flex items-center justify-center mx-auto mb-4 text-gold shadow-lg shadow-gold/10 group-hover:scale-110 transition-transform duration-300">
+          <ion-icon name="shield-checkmark-outline" style="font-size:24px;"></ion-icon>
         </div>
-        <div class="bg-navy-light/50 border border-border/20 rounded-xl p-5 text-center">
-          <p class="text-white font-bold mb-1">Blocco biometrico / PIN</p>
-          <p class="text-sm text-gray-400">Aggiungi un secondo livello di protezione prima dell’accesso.</p>
+          <p class="text-white font-bold mb-1.5">Archiviazione solo locale</p>
+          <p class="text-sm text-gray-400 leading-relaxed">Posizioni e registri portafoglio restano sul tuo dispositivo.</p>
         </div>
-        <div class="bg-navy-light/50 border border-border/20 rounded-xl p-5 text-center">
-          <p class="text-white font-bold mb-1">Backup e ripristino</p>
-          <p class="text-sm text-gray-400">Esporta i tuoi dati e ripristinali quando vuoi.</p>
+        <div class="bg-navy-light/50 border border-border/20 rounded-2xl p-6 text-center hover-card group">
+          <div class="w-12 h-12 rounded-2xl bg-gold/10 border border-gold/25 flex items-center justify-center mx-auto mb-4 text-gold shadow-lg shadow-gold/10 group-hover:scale-110 transition-transform duration-300">
+          <ion-icon name="finger-print-outline" style="font-size:24px;"></ion-icon>
+        </div>
+          <p class="text-white font-bold mb-1.5">Blocco biometrico / PIN</p>
+          <p class="text-sm text-gray-400 leading-relaxed">Aggiungi un secondo livello di protezione prima dell’accesso.</p>
+        </div>
+        <div class="bg-navy-light/50 border border-border/20 rounded-2xl p-6 text-center hover-card group">
+          <div class="w-12 h-12 rounded-2xl bg-gold/10 border border-gold/25 flex items-center justify-center mx-auto mb-4 text-gold shadow-lg shadow-gold/10 group-hover:scale-110 transition-transform duration-300">
+          <ion-icon name="cloud-download-outline" style="font-size:24px;"></ion-icon>
+        </div>
+          <p class="text-white font-bold mb-1.5">Backup e ripristino</p>
+          <p class="text-sm text-gray-400 leading-relaxed">Esporta i tuoi dati e ripristinali quando vuoi.</p>
         </div>
       </div>
     </div>
@@ -1006,33 +1251,30 @@
 
   <script src="/images/locale-switcher.js"></script>
   <script src="/images/play-store-attribution.js"></script>
-  <!-- Pinned Phone Journey Observer -->
+          <!-- Pinned Phone Journey Observer -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (isReducedMotion) return;
 
       const blocks = document.querySelectorAll('.story-block');
-      const screens = document.querySelectorAll('.screen-layer');
-
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.4) {
             entry.target.classList.add('active');
             const screenId = entry.target.getAttribute('data-screen');
-            screens.forEach(s => {
-              if (s.id === 'screen-' + screenId) {
-                s.classList.add('active');
-              } else {
-                s.classList.remove('active');
-              }
-            });
-          } else {
-             // Optional: remove active class when not visible
-             entry.target.classList.remove('active');
+            const stage = entry.target.closest('.journey-stage');
+            if (stage) {
+              const screens = stage.querySelectorAll('.screen-layer');
+              screens.forEach(s => s.classList.toggle('active', s.id === 'screen-' + screenId));
+              const dots = stage.querySelectorAll('.step-dot');
+              dots.forEach(d => d.classList.toggle('active', d.getAttribute('data-dot') === screenId));
+            }
+          } else if (!entry.isIntersecting) {
+            entry.target.classList.remove('active');
           }
         });
-      }, { rootMargin: '-20% 0px -40% 0px', threshold: 0.5 });
+      }, { rootMargin: '-10% 0px -25% 0px', threshold: [0, 0.4, 0.8] });
 
       blocks.forEach(b => observer.observe(b));
     });

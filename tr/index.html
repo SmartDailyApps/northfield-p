@@ -381,230 +381,475 @@
       </div>
 
             <!-- Pinned Phone Journey -->
-      <div class="journey-container w-full mt-12 gap-8 lg:gap-16">
+    <div class="max-w-5xl mx-auto px-6 py-12 md:py-20">
+      <!-- Stage: BILGI -->
+      <div class="journey-stage stage-know" data-stage="know">
         
-        <!-- Sticky Phone Column -->
+        <!-- Mobile Stage Banner (Header at the top of each stage) -->
+        <div class="mobile-stage-banner md:hidden mb-4 text-center">
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-gold/30 bg-gold/10 text-gold px-3 py-0.5 text-xs font-black uppercase tracking-wider mb-1">
+            Bilgi
+          </span>
+          <h2 class="text-base font-bold text-white mt-1">Gerçek pozisyonunuzu anında kavrayın.</h2>
+        </div>
+
+        <!-- Sticky Phone / Showcase Column -->
         <div class="sticky-phone-wrapper">
           <div class="luxury-phone-frame mx-auto">
             <div class="luxury-phone-buttons"></div>
             <div class="phone-screen-container">
-              <!-- Screens -->
-              <!-- KNOW -->
-              <div class="screen-layer active" id="screen-dashboard">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/dashboard-320.avif 320w, /images/gen/app-screens/en/dashboard-480.avif 480w, /images/gen/app-screens/en/dashboard-640.avif 640w" sizes="(max-width: 768px) 240px, 240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/dashboard-320.webp 320w, /images/gen/app-screens/en/dashboard-480.webp 480w, /images/gen/app-screens/en/dashboard-640.webp 640w" sizes="(max-width: 768px) 240px, 240px">
-                  <img src="/images/gen/app-screens/en/dashboard-320.png" alt="Dashboard Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
-              <div class="screen-layer" id="screen-prices">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/prices-320.avif 320w, /images/gen/app-screens/en/prices-480.avif 480w, /images/gen/app-screens/en/prices-640.avif 640w" sizes="240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/prices-320.webp 320w, /images/gen/app-screens/en/prices-480.webp 480w, /images/gen/app-screens/en/prices-640.webp 640w" sizes="240px">
-                  <img src="/images/gen/app-screens/en/prices-320.png" alt="Prices Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
-              <div class="screen-layer" id="screen-portfolio">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/portfolio-320.avif 320w, /images/gen/app-screens/en/portfolio-480.avif 480w, /images/gen/app-screens/en/portfolio-640.avif 640w" sizes="240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/portfolio-320.webp 320w, /images/gen/app-screens/en/portfolio-480.webp 480w, /images/gen/app-screens/en/portfolio-640.webp 640w" sizes="240px">
-                  <img src="/images/gen/app-screens/en/portfolio-320.png" alt="Portfolio Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
-              <!-- DECIDE -->
-              <div class="screen-layer" id="screen-scenarios">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/scenarios-320.avif 320w, /images/gen/app-screens/en/scenarios-480.avif 480w, /images/gen/app-screens/en/scenarios-640.avif 640w" sizes="240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/scenarios-320.webp 320w, /images/gen/app-screens/en/scenarios-480.webp 480w, /images/gen/app-screens/en/scenarios-640.webp 640w" sizes="240px">
-                  <img src="/images/gen/app-screens/en/scenarios-320.png" alt="Scenarios Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
-              <div class="screen-layer" id="screen-simulator">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/simulator-320.avif 320w, /images/gen/app-screens/en/simulator-480.avif 480w, /images/gen/app-screens/en/simulator-640.avif 640w" sizes="240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/simulator-320.webp 320w, /images/gen/app-screens/en/simulator-480.webp 480w, /images/gen/app-screens/en/simulator-640.webp 640w" sizes="240px">
-                  <img src="/images/gen/app-screens/en/simulator-320.png" alt="Simulator Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
-              <div class="screen-layer" id="screen-alerts">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/alerts-320.avif 320w, /images/gen/app-screens/en/alerts-480.avif 480w, /images/gen/app-screens/en/alerts-640.avif 640w" sizes="240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/alerts-320.webp 320w, /images/gen/app-screens/en/alerts-480.webp 480w, /images/gen/app-screens/en/alerts-640.webp 640w" sizes="240px">
-                  <img src="/images/gen/app-screens/en/alerts-320.png" alt="Alerts Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
-              <!-- PROFIT -->
-              <div class="screen-layer" id="screen-sold">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/sold-320.avif 320w, /images/gen/app-screens/en/sold-480.avif 480w, /images/gen/app-screens/en/sold-640.avif 640w" sizes="240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/sold-320.webp 320w, /images/gen/app-screens/en/sold-480.webp 480w, /images/gen/app-screens/en/sold-640.webp 640w" sizes="240px">
-                  <img src="/images/gen/app-screens/en/sold-320.png" alt="Sold Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
-              <div class="screen-layer" id="screen-taxfree">
-                <picture>
-                  <source type="image/avif" srcset="/images/gen/app-screens/en/taxfree-320.avif 320w, /images/gen/app-screens/en/taxfree-480.avif 480w, /images/gen/app-screens/en/taxfree-640.avif 640w" sizes="240px">
-                  <source type="image/webp" srcset="/images/gen/app-screens/en/taxfree-320.webp 320w, /images/gen/app-screens/en/taxfree-480.webp 480w, /images/gen/app-screens/en/taxfree-640.webp 640w" sizes="240px">
-                  <img src="/images/gen/app-screens/en/taxfree-320.png" alt="Taxfree Screen" class="w-full h-full object-cover">
-                </picture>
-              </div>
+              <picture id="screen-dashboard" class="screen-layer active">
+                <source srcset="../images/gen/app-screens/tr/dashboard-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/tr/dashboard-480.webp" type="image/webp">
+                <img src="../images/app-screens/tr/dashboard.png" alt="Dashboard Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
+              <picture id="screen-prices" class="screen-layer">
+                <source srcset="../images/gen/app-screens/tr/prices-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/tr/prices-480.webp" type="image/webp">
+                <img src="../images/app-screens/tr/prices.png" alt="Prices Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
+              <picture id="screen-portfolio" class="screen-layer">
+                <source srcset="../images/gen/app-screens/tr/portfolio-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/tr/portfolio-480.webp" type="image/webp">
+                <img src="../images/app-screens/tr/portfolio.png" alt="Portfolio Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
             </div>
+          </div>
+          <!-- Clickable Mobile Dots Dock (Sits right beneath phone) -->
+          <div class="mobile-dots-dock md:hidden flex items-center justify-center gap-2 py-2 mt-2">
+          <button class="step-dot active" data-dot="dashboard" aria-label="Dashboard Screen"></button>
+          <button class="step-dot" data-dot="prices" aria-label="Prices Screen"></button>
+          <button class="step-dot" data-dot="portfolio" aria-label="Portfolio Screen"></button>
           </div>
         </div>
 
         <!-- Story Blocks Column -->
-        <div class="flex-1 pb-32 pt-8 lg:pt-0 max-w-2xl mx-auto lg:mx-0 relative">
+        <div class="flex-1 max-w-xl mx-auto lg:mx-0 relative">
           
-          <!-- KNOW Group -->
-          <div class="mb-12 sticky top-[calc(4rem+540px)] md:relative md:top-auto z-10 bg-navy/95 backdrop-blur-md py-4 md:bg-transparent md:py-0 border-y border-border/20 md:border-none">
-            <p class="text-xs font-black tracking-[0.2em] text-gold uppercase mb-1">Bil</p>
-            <p class="text-gray-400 text-sm font-medium">Gerçek pozisyonunu anında anla.</p>
-          </div>
-
-          <div class="story-block mb-32 min-h-[40vh]" data-screen="dashboard">
-            <h3 class="text-3xl font-bold text-white mb-4">Tüm pozisyonun, tek bakışta</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Gerçekten işlem yaptığın rakamları takip et. Her metalin piyasa hareketini satıcı gerçekliğiyle saniyeler içinde karşılaştır.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Portföy değeri canlı</span>
-              </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Kâr/zarar tek bakışta</span>
-              </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">%100 çevrimdışı</span>
-              </div>
+          <!-- Desktop-Only Sticky Pillar Header (Approved & Unchanged) -->
+          <div class="sticky-pillar-header hidden md:flex items-center justify-between gap-4">
+            <div>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-gold/30 bg-gold/10 text-gold px-3 py-0.5 text-xs font-black uppercase tracking-wider mb-1">
+                Bilgi
+              </span>
+              <p class="text-gray-300 text-xs md:text-sm font-medium">Gerçek pozisyonunuzu anında kavrayın.</p>
+            </div>
+            <div class="pillar-progress-dots flex-shrink-0">
+          <button class="step-dot active" data-dot="dashboard" aria-label="Dashboard Screen"></button>
+          <button class="step-dot" data-dot="prices" aria-label="Prices Screen"></button>
+          <button class="step-dot" data-dot="portfolio" aria-label="Portfolio Screen"></button>
             </div>
           </div>
 
-          <div class="story-block mb-32 min-h-[40vh]" data-screen="prices">
-            <h3 class="text-3xl font-bold text-white mb-4">Canlı fiyatlar, dört metal</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Altın, Gümüş, Platin veya Paladyum: tüm piyasa detayı tek bir canlı ekranda.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">XAU · XAG · Platin · Paladyum</span>
+          <!-- Feature Block: dashboard -->
+          <div class="story-block active mb-20 md:mb-36 transition-all duration-300" data-screen="dashboard">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">Tüm pozisyonunuz bir bakışta</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Piyasada işlem yaptığınız gerçek rakamları takip edin. Her metalin piyasa hareketini saniyeler içinde kuyumcu gerçekliğiyle karşılaştırın.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Canlı portföy değeri
               </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">17 para birimi</span>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Anında kâr/zarar
               </div>
-            </div>
-          </div>
-
-          <div class="story-block mb-32 min-h-[40vh]" data-screen="portfolio">
-            <h3 class="text-3xl font-bold text-white mb-4">Her lot, her gram — düzenli</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Her pozisyon metal etiketini ve performans bağlamını korur; toplam sonucu neyin yönlendirdiğini her zaman bilirsin.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Lot bazında kayıtlar</span>
-              </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Saflık takibi</span>
-              </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Yalnızca cihazda</span>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                %100 çevrimdışı
               </div>
             </div>
           </div>
-
-          <!-- DECIDE Group -->
-          <div class="mb-12 sticky top-[calc(4rem+540px)] md:relative md:top-auto z-10 bg-navy/95 backdrop-blur-md py-4 md:bg-transparent md:py-0 border-y border-border/20 md:border-none">
-            <p class="text-xs font-black tracking-[0.2em] text-gold uppercase mb-1">Karar Ver</p>
-            <p class="text-gray-400 text-sm font-medium">Piyasadan önce bir sonraki adımını planla.</p>
-          </div>
-
-          <div class="story-block mb-32 min-h-[40vh]" data-screen="scenarios">
-            <h3 class="text-3xl font-bold text-white mb-4">Almadan önce 'ne olur'</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Sermaye taahhüt etmeden önce farklı fiyat hareketlerinde kâr, zarar ve başabaş noktasını önceden gör.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Anında ne-olur senaryosu</span>
+          <!-- Feature Block: prices -->
+          <div class="story-block mb-20 md:mb-36 transition-all duration-300" data-screen="prices">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">Canlı fiyatlar, dört metal</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Altın, Gümüş, Platin ve Paladyum piyasa ayrıntıları tek bir canlı ekranda.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                XAU · XAG · Platin · Paladyum
               </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Başabaş önizlemesi</span>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                17 para birimi
               </div>
             </div>
           </div>
-
-          <div class="story-block mb-32 min-h-[40vh]" data-screen="simulator">
-            <h3 class="text-3xl font-bold text-white mb-4">Satmadan önce satışı test et</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Bayi primlerinin çıkış gelirini nasıl etkilediğini, dükkâna gitmeden önce tam olarak gör.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">İşlem öncesi simülasyon</span>
+          <!-- Feature Block: portfolio -->
+          <div class="story-block pb-16 md:pb-[35vh] transition-all duration-300" data-screen="portfolio">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">Her lot, her gram — düzenli</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Her pozisyon kendi metal etiketini ve performans bağlamını korur, böylece toplam sonucu neyin belirlediğini her zaman bilirsiniz.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Lot düzeyinde kayıt
               </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Prim farkındalığı</span>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Saflık takibi
               </div>
-            </div>
-          </div>
-
-          <div class="story-block mb-32 min-h-[40vh]" data-screen="alerts">
-            <h3 class="text-3xl font-bold text-white mb-4">Gerçekten tetiklenen arka plan alarmları</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Anlamlı eşikleri bir kez tanımla; arka plan izleme yalnızca önemli hareketleri öne çıkarsın.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Kesin zamanlama</span>
-              </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Hesap gerekmez</span>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Yalnızca cihazda
               </div>
             </div>
           </div>
-
-          <!-- PROFIT Group -->
-          <div class="mb-12 sticky top-[calc(4rem+540px)] md:relative md:top-auto z-10 bg-navy/95 backdrop-blur-md py-4 md:bg-transparent md:py-0 border-y border-border/20 md:border-none">
-            <p class="text-xs font-black tracking-[0.2em] text-gold uppercase mb-1">Kazanç</p>
-            <p class="text-gray-400 text-sm font-medium">Gerçekleşen kazançlarını en üst düzeye çıkar, vergileri optimize et.</p>
-          </div>
-
-          <div class="story-block mb-32 min-h-[40vh]" data-screen="sold">
-            <h3 class="text-3xl font-bold text-white mb-4">Gerçekleşen kazançlar, dürüstçe kayıtlı</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Her satış, gelir ve gerçekleşen sonuçla kaydedilir; böylece bir sonraki adımın ölçülmüş geçmişe dayanır.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Gerçek çıkış takibi</span>
-              </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">FIFO görünümü</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="story-block min-h-[40vh]" data-screen="taxfree">
-            <h3 class="text-3xl font-bold text-white mb-4">Bir yıl tut — sıfır vergi</h3>
-            <p class="text-gray-400 leading-relaxed text-lg mb-6">Vergiye tabi ve muaf gram sayısını net geri sayım çubuğuyla takip et. Neyin uygun olduğunu tam olarak anla.</p>
-            <div class="flex flex-col gap-3">
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Vergi dönemi takibi</span>
-              </div>
-              <div class="advantage-chip flex items-center gap-3 bg-navy-light/40 border border-border/20 rounded-xl px-4 py-3 text-gray-200">
-                <ion-icon name="checkmark-circle" class="text-gold text-lg"></ion-icon> <span class="font-semibold text-sm">Lot başına tarihler</span>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
 
-  <!-- Private By Design -->
+      <!-- Stage: KÂR VE VERGI -->
+      <div class="journey-stage stage-profit" data-stage="profit">
+        
+        <!-- Mobile Stage Banner (Header at the top of each stage) -->
+        <div class="mobile-stage-banner md:hidden mb-4 text-center">
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 px-3 py-0.5 text-xs font-black uppercase tracking-wider mb-1">
+            Kâr ve Vergi
+          </span>
+          <h2 class="text-base font-bold text-white mt-1">Gerçekleşen kârları maksimize edin ve vergileri optimize edin.</h2>
+        </div>
+
+        <!-- Sticky Phone / Showcase Column -->
+        <div class="sticky-phone-wrapper">
+          <div class="luxury-phone-frame mx-auto">
+            <div class="luxury-phone-buttons"></div>
+            <div class="phone-screen-container">
+              <picture id="screen-sold" class="screen-layer active">
+                <source srcset="../images/gen/app-screens/tr/sold-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/tr/sold-480.webp" type="image/webp">
+                <img src="../images/app-screens/tr/sold.png" alt="Sold Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
+              <picture id="screen-taxfree" class="screen-layer">
+                <source srcset="../images/gen/app-screens/tr/taxfree-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/tr/taxfree-480.webp" type="image/webp">
+                <img src="../images/app-screens/tr/taxfree.png" alt="Tax-free Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
+            </div>
+          </div>
+          <!-- Clickable Mobile Dots Dock (Sits right beneath phone) -->
+          <div class="mobile-dots-dock md:hidden flex items-center justify-center gap-2 py-2 mt-2">
+          <button class="step-dot active" data-dot="sold" aria-label="Sold Screen"></button>
+          <button class="step-dot" data-dot="taxfree" aria-label="Tax-free Screen"></button>
+          </div>
+        </div>
+
+        <!-- Story Blocks Column -->
+        <div class="flex-1 max-w-xl mx-auto lg:mx-0 relative">
+          
+          <!-- Desktop-Only Sticky Pillar Header (Approved & Unchanged) -->
+          <div class="sticky-pillar-header hidden md:flex items-center justify-between gap-4">
+            <div>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 px-3 py-0.5 text-xs font-black uppercase tracking-wider mb-1">
+                Kâr ve Vergi
+              </span>
+              <p class="text-gray-300 text-xs md:text-sm font-medium">Gerçekleşen kârları maksimize edin ve vergileri optimize edin.</p>
+            </div>
+            <div class="pillar-progress-dots flex-shrink-0">
+          <button class="step-dot active" data-dot="sold" aria-label="Sold Screen"></button>
+          <button class="step-dot" data-dot="taxfree" aria-label="Tax-free Screen"></button>
+            </div>
+          </div>
+
+          <!-- Feature Block: sold -->
+          <div class="story-block active mb-20 md:mb-36 transition-all duration-300" data-screen="sold">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">Gerçekleşen kârlar, dürüstçe kayıtlı</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Her satış, elde edilen gelir ve nihai sonuçla kaydedilir; böylece kararlarınızı ölçülü geçmişe dayandırırsınız.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Gerçek çıkış takibi
+              </div>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                FIFO görünümü
+              </div>
+            </div>
+          </div>
+          <!-- Feature Block: taxfree -->
+          <div class="story-block pb-16 md:pb-[35vh] transition-all duration-300" data-screen="taxfree">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">Bir yıl elde tutun — sıfır vergi ödeyin</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Vergiye tabi ve vergiden muaf gramları net bir geri sayım çubuğuyla takip edin. Lotların ne zaman muafiyet kazandığını tam olarak bilin.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                1 yıllık vergi geri sayımı
+              </div>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Lot bazında tarihler
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage: KARAR VER -->
+      <div class="journey-stage stage-decide" data-stage="decide">
+        
+        <!-- Mobile Stage Banner (Header at the top of each stage) -->
+        <div class="mobile-stage-banner md:hidden mb-4 text-center">
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 px-3 py-0.5 text-xs font-black uppercase tracking-wider mb-1">
+            Karar Ver
+          </span>
+          <h2 class="text-base font-bold text-white mt-1">Bir sonraki adımınızı piyasadan önce planlayın.</h2>
+        </div>
+
+        <!-- Sticky Phone / Showcase Column -->
+        <div class="sticky-phone-wrapper">
+          <!-- S25 Ultra Phone for Pure Scenarios Screen -->
+          <div class="luxury-phone-frame mx-auto" id="stage3-phone">
+            <div class="luxury-phone-buttons"></div>
+            <div class="phone-screen-container">
+              <picture id="screen-scenarios" class="screen-layer active">
+                <source srcset="../images/gen/app-screens/tr/scenarios-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/tr/scenarios-480.webp" type="image/webp">
+                <img src="../images/app-screens/tr/scenarios.png" alt="Scenarios Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
+            </div>
+          </div>
+
+          <!-- Keynote Feature Slate for Store Artworks (Simulators & Alerts) -->
+          <div class="keynote-slate-frame" id="stage3-slate">
+            <div class="phone-screen-container">
+              <picture id="screen-simulator" class="screen-layer">
+                <source srcset="../images/gen/app-screens/tr/simulator-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/tr/simulator-480.webp" type="image/webp">
+                <img src="../images/app-screens/tr/simulator.png" alt="Simulator Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
+              <picture id="screen-alerts" class="screen-layer">
+                <source srcset="../images/gen/app-screens/tr/alerts-480.avif" type="image/avif">
+                <source srcset="../images/gen/app-screens/tr/alerts-480.webp" type="image/webp">
+                <img src="../images/app-screens/tr/alerts.png" alt="Alerts Screen" class="w-full h-full object-cover object-top" loading="lazy" decoding="async">
+              </picture>
+            </div>
+          </div>
+          <!-- Clickable Mobile Dots Dock (Sits right beneath phone) -->
+          <div class="mobile-dots-dock md:hidden flex items-center justify-center gap-2 py-2 mt-2">
+          <button class="step-dot active" data-dot="scenarios" aria-label="Scenarios Screen"></button>
+          <button class="step-dot" data-dot="simulator" aria-label="Simulator Screen"></button>
+          <button class="step-dot" data-dot="alerts" aria-label="Alerts Screen"></button>
+          </div>
+        </div>
+
+        <!-- Story Blocks Column -->
+        <div class="flex-1 max-w-xl mx-auto lg:mx-0 relative">
+          
+          <!-- Desktop-Only Sticky Pillar Header (Approved & Unchanged) -->
+          <div class="sticky-pillar-header hidden md:flex items-center justify-between gap-4">
+            <div>
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 px-3 py-0.5 text-xs font-black uppercase tracking-wider mb-1">
+                Karar Ver
+              </span>
+              <p class="text-gray-300 text-xs md:text-sm font-medium">Bir sonraki adımınızı piyasadan önce planlayın.</p>
+            </div>
+            <div class="pillar-progress-dots flex-shrink-0">
+          <button class="step-dot active" data-dot="scenarios" aria-label="Scenarios Screen"></button>
+          <button class="step-dot" data-dot="simulator" aria-label="Simulator Screen"></button>
+          <button class="step-dot" data-dot="alerts" aria-label="Alerts Screen"></button>
+            </div>
+          </div>
+
+          <!-- Feature Block: scenarios -->
+          <div class="story-block active mb-20 md:mb-36 transition-all duration-300" data-screen="scenarios">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">Satın almadan önce test edin</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Sermaye bağlamadan önce farklı fiyat hareketlerinde kâr, zarar ve başabaş noktası önizlemesi yapın.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Anında senaryo analizi
+              </div>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Başabaş önizlemesi
+              </div>
+            </div>
+          </div>
+          <!-- Feature Block: simulator -->
+          <div class="story-block mb-20 md:mb-36 transition-all duration-300" data-screen="simulator">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">Satmadan önce satışı test edin</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Kuyumcu ve bayi komisyonlarının net gelirinizi nasıl etkilediğini dükkâna adım atmadan önce görün.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                İşlem öncesi simülasyon
+              </div>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Komisyon/makas hesabı
+              </div>
+            </div>
+          </div>
+          <!-- Feature Block: alerts -->
+          <div class="story-block pb-16 md:pb-[35vh] transition-all duration-300" data-screen="alerts">
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight">Gerçekten çalan arka plan alarmları</h3>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 font-normal">Anlamlı eşikleri bir kez tanımlayın; arka plan izleme yalnızca gerçekten önemli hareketleri bildirsin.</p>
+            <div class="flex flex-wrap gap-2.5">
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Hassas zamanlama
+              </div>
+              <div class="advantage-chip inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-light/60 border border-white/10 text-xs text-gray-300 font-medium">
+                <svg class="w-3.5 h-3.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                Hesap gerekmez
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  <!-- Pinned Phone Journey Engine -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (isReducedMotion) return;
+
+      const stages = document.querySelectorAll('.journey-stage');
+      let ticking = false;
+
+      function updateJourney() {
+        const isMobile = window.innerWidth < 768;
+        const targetY = isMobile ? window.innerHeight * 0.68 : window.innerHeight * 0.45;
+
+        stages.forEach(stage => {
+          const blocks = stage.querySelectorAll('.story-block');
+          const screens = stage.querySelectorAll('.screen-layer');
+          const dots = stage.querySelectorAll('.step-dot');
+          const isDecide = stage.getAttribute('data-stage') === 'decide';
+          const phone = isDecide ? stage.querySelector('#stage3-phone') : null;
+          const slate = isDecide ? stage.querySelector('#stage3-slate') : null;
+
+          // Find single story block closest to reading center
+          let activeBlock = null;
+          let minDistance = Infinity;
+
+          blocks.forEach(b => {
+            const rect = b.getBoundingClientRect();
+            const center = rect.top + rect.height * 0.35;
+            const dist = Math.abs(center - targetY);
+            if (dist < minDistance) {
+              minDistance = dist;
+              activeBlock = b;
+            }
+          });
+
+          // 1. Activate exact active screen and active dot monotonically
+          if (activeBlock) {
+            const activeId = activeBlock.getAttribute('data-screen');
+
+            blocks.forEach(b => b.classList.toggle('active', b === activeBlock));
+            screens.forEach(s => s.classList.toggle('active', s.id === 'screen-' + activeId));
+            dots.forEach(d => d.classList.toggle('active', d.getAttribute('data-dot') === activeId));
+
+            // Stage 3 Slate vs Phone
+            if (isDecide && phone && slate) {
+              if (activeId === 'scenarios') {
+                phone.classList.remove('inactive-frame');
+                slate.classList.remove('active-frame');
+              } else {
+                phone.classList.add('inactive-frame');
+                slate.classList.add('active-frame');
+              }
+            }
+          }
+
+          // 2. Continuous Element Occlusion (Desktop only: hide elements crossing sticky header)
+          if (!isMobile) {
+            const header = stage.querySelector('.sticky-pillar-header');
+            if (header) {
+              const headerBottom = header.getBoundingClientRect().bottom;
+              blocks.forEach(b => {
+                const isActive = b.classList.contains('active');
+                const elements = b.querySelectorAll('h3, p, .advantage-chip');
+                elements.forEach(el => {
+                  const rect = el.getBoundingClientRect();
+                  if (rect.top < headerBottom) {
+                    el.style.opacity = '0';
+                    el.style.visibility = 'hidden';
+                    el.style.pointerEvents = 'none';
+                  } else {
+                    el.style.visibility = 'visible';
+                    el.style.opacity = isActive ? '1' : '0.28';
+                    el.style.pointerEvents = '';
+                  }
+                });
+              });
+            }
+          } else {
+            // Mobile: elements are naturally styled with CSS transitions
+            blocks.forEach(b => {
+              const elements = b.querySelectorAll('h3, p, .advantage-chip');
+              elements.forEach(el => {
+                el.style.opacity = '';
+                el.style.visibility = '';
+                el.style.pointerEvents = '';
+              });
+            });
+          }
+        });
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateJourney);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      window.addEventListener('resize', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateJourney);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      // Click-to-scroll for step dots
+      document.querySelectorAll('.step-dot').forEach(dot => {
+        dot.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetScreen = dot.getAttribute('data-dot');
+          const stage = dot.closest('.journey-stage');
+          if (stage) {
+            const targetBlock = stage.querySelector(`.story-block[data-screen="${targetScreen}"]`);
+            if (targetBlock) {
+              targetBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          }
+        });
+      });
+
+      updateJourney();
+    });
+  </script>
+
+    <!-- Private By Design -->
   <section class="px-6 py-16 border-t border-border/20">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-8" data-aos="fade-up">
         <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Gizlilik</p>
         <h2 class="text-2xl md:text-3xl font-black text-white">Tasarım gereği özel</h2>
       </div>
-      <div class="grid md:grid-cols-3 gap-4" data-aos="fade-up">
-        <div class="bg-navy-light/50 border border-border/20 rounded-xl p-5 text-center">
-          <p class="text-white font-bold mb-1">Sadece cihazda depolama</p>
-          <p class="text-sm text-gray-400">Varlıklar ve portföy kayıtları cihazınızda kalır.</p>
+      <div class="grid md:grid-cols-3 gap-5" data-aos="fade-up">
+        <div class="bg-navy-light/50 border border-border/20 rounded-2xl p-6 text-center hover-card group">
+          <div class="w-12 h-12 rounded-2xl bg-gold/10 border border-gold/25 flex items-center justify-center mx-auto mb-4 text-gold shadow-lg shadow-gold/10 group-hover:scale-110 transition-transform duration-300">
+          <ion-icon name="shield-checkmark-outline" style="font-size:24px;"></ion-icon>
         </div>
-        <div class="bg-navy-light/50 border border-border/20 rounded-xl p-5 text-center">
-          <p class="text-white font-bold mb-1">Biyometrik / PIN kilidi</p>
-          <p class="text-sm text-gray-400">Uygulama erisiminden önce ikinci bir koruma katmani ekleyin.</p>
+          <p class="text-white font-bold mb-1.5">Sadece cihazda depolama</p>
+          <p class="text-sm text-gray-400 leading-relaxed">Varlıklar ve portföy kayıtları cihazınızda kalır.</p>
         </div>
-        <div class="bg-navy-light/50 border border-border/20 rounded-xl p-5 text-center">
-          <p class="text-white font-bold mb-1">Yedekleme &amp; geri yukleme</p>
-          <p class="text-sm text-gray-400">Verilerinizi disa aktarip istediğiniz zaman geri yukleyin.</p>
+        <div class="bg-navy-light/50 border border-border/20 rounded-2xl p-6 text-center hover-card group">
+          <div class="w-12 h-12 rounded-2xl bg-gold/10 border border-gold/25 flex items-center justify-center mx-auto mb-4 text-gold shadow-lg shadow-gold/10 group-hover:scale-110 transition-transform duration-300">
+          <ion-icon name="finger-print-outline" style="font-size:24px;"></ion-icon>
+        </div>
+          <p class="text-white font-bold mb-1.5">Biyometrik / PIN kilidi</p>
+          <p class="text-sm text-gray-400 leading-relaxed">Uygulama erisiminden önce ikinci bir koruma katmani ekleyin.</p>
+        </div>
+        <div class="bg-navy-light/50 border border-border/20 rounded-2xl p-6 text-center hover-card group">
+          <div class="w-12 h-12 rounded-2xl bg-gold/10 border border-gold/25 flex items-center justify-center mx-auto mb-4 text-gold shadow-lg shadow-gold/10 group-hover:scale-110 transition-transform duration-300">
+          <ion-icon name="cloud-download-outline" style="font-size:24px;"></ion-icon>
+        </div>
+          <p class="text-white font-bold mb-1.5">Yedekleme &amp; geri yukleme</p>
+          <p class="text-sm text-gray-400 leading-relaxed">Verilerinizi disa aktarip istediğiniz zaman geri yukleyin.</p>
         </div>
       </div>
     </div>
@@ -946,7 +1191,7 @@
   <!-- AOS -->
   <script src="/assets/js/aos.js"></script>
   <script>
-    AOS.init({ duration: 800, önce: true, offset: 80 });
+    AOS.init({ duration: 800, once: true, offset: 80 });
   </script>
 
   <!-- Mobile: skip video autoplay to save bandwidth -->
@@ -1008,33 +1253,30 @@
 
   <script src="/images/locale-switcher.js"></script>
   <script src="/images/play-store-attribution.js"></script>
-  <!-- Pinned Phone Journey Observer -->
+          <!-- Pinned Phone Journey Observer -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (isReducedMotion) return;
 
       const blocks = document.querySelectorAll('.story-block');
-      const screens = document.querySelectorAll('.screen-layer');
-
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.4) {
             entry.target.classList.add('active');
             const screenId = entry.target.getAttribute('data-screen');
-            screens.forEach(s => {
-              if (s.id === 'screen-' + screenId) {
-                s.classList.add('active');
-              } else {
-                s.classList.remove('active');
-              }
-            });
-          } else {
-             // Optional: remove active class when not visible
-             entry.target.classList.remove('active');
+            const stage = entry.target.closest('.journey-stage');
+            if (stage) {
+              const screens = stage.querySelectorAll('.screen-layer');
+              screens.forEach(s => s.classList.toggle('active', s.id === 'screen-' + screenId));
+              const dots = stage.querySelectorAll('.step-dot');
+              dots.forEach(d => d.classList.toggle('active', d.getAttribute('data-dot') === screenId));
+            }
+          } else if (!entry.isIntersecting) {
+            entry.target.classList.remove('active');
           }
         });
-      }, { rootMargin: '-20% 0px -40% 0px', threshold: 0.5 });
+      }, { rootMargin: '-10% 0px -25% 0px', threshold: [0, 0.4, 0.8] });
 
       blocks.forEach(b => observer.observe(b));
     });

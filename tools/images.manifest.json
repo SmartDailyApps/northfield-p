@@ -94,26 +94,27 @@
     "app-screens": {
       "source": "images/app-screens/*/*.png",
       "widths": [
-        320,
         480,
-        640
+        720,
+        960,
+        1280
       ],
       "formats": [
         {
           "type": "avif",
-          "quality": 70,
-          "effort": 4
+          "quality": 88,
+          "effort": 2
         },
         {
           "type": "webp",
-          "quality": 75
+          "quality": 90
         },
         {
           "type": "png",
           "compressionLevel": 9
         }
       ],
-      "$comment": "Frame-free native app screenshots for the WEB-UX2 pinned phone journey. Folder per locale (en first; other locales = factory run later). Alpha preserved. Phone display ~240 CSS px wide -> ladder 320/480/640 covers 1x-2.6x. Cap-at-source: 1280."
+      "$comment": "Frame-free native app screenshots for the WEB-UX2 pinned phone journey. Folder per locale (en first; other locales = factory run later). Alpha preserved. Ladder 480/720/960/1280 covers full fidelity up to native 1280x2856 resolution."
     }
   },
   "$comment-excluded": {

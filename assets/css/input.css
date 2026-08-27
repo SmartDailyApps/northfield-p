@@ -2,112 +2,394 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Pinned Phone Journey */
+/* ==========================================================================
+   WEB-UX2: Titanium 3D Pinned Journey & Keynote Staging
+   ========================================================================== */
+
 .journey-container {
   display: flex;
   flex-direction: column;
 }
+
+.journey-stage {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
 @media (min-width: 768px) {
-  .journey-container {
+  .journey-stage {
     flex-direction: row;
     align-items: flex-start;
+    gap: 3.5rem;
+    margin-bottom: 8rem;
   }
-}
-.sticky-phone-wrapper {
-  position: sticky;
-  top: 4rem; /* For mobile */
-  z-index: 20;
-  display: flex;
-  justify-content: center;
-  padding: 1rem 0;
-  background: linear-gradient(to bottom, rgba(10,14,31,0.95) 0%, rgba(10,14,31,0.7) 100%);
-  backdrop-filter: blur(8px);
-}
-@media (min-width: 768px) {
-  .sticky-phone-wrapper {
-    top: 15vh;
-    padding: 0;
-    width: 340px;
-    background: none;
-    backdrop-filter: none;
-    flex-shrink: 0;
+  .journey-stage.stage-profit {
+    flex-direction: row-reverse;
   }
 }
 
-/* Extend existing .phone-frame */
+/* Sticky Phone Container per Stage */
+.sticky-phone-wrapper {
+  position: sticky;
+  top: 76px; /* Mobile: Generous top clearance below website header */
+  z-index: 25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0 0.4rem 0;
+  background: #0f0f1a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  perspective: 1200px;
+}
+@media (min-width: 768px) {
+  .sticky-phone-wrapper {
+    position: sticky;
+    top: max(80px, calc(50vh - 290px));
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0;
+    width: 290px;
+    background: none;
+    border-bottom: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    flex-shrink: 0;
+  }
+  /* Ambient Stage Halos */
+  .stage-know .sticky-phone-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 480px; height: 480px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,168,67,0.15) 0%, transparent 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -1;
+  }
+  .stage-profit .sticky-phone-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 480px; height: 480px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(52,211,153,0.15) 0%, transparent 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -1;
+  }
+  .stage-decide .sticky-phone-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 480px; height: 480px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(168,85,247,0.18) 0%, transparent 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+@media (min-width: 1024px) {
+  .sticky-phone-wrapper {
+    width: 330px;
+    top: max(80px, calc(50vh - 300px));
+  }
+}
+@media (min-width: 1280px) {
+  .sticky-phone-wrapper {
+    width: 360px;
+    top: max(80px, calc(50vh - 310px));
+  }
+}
+
+/* S25 Ultra Titanium Phone Frame & 3D Staging */
 .luxury-phone-frame {
   position: relative;
-  width: 240px;
-  height: 520px;
-  border-radius: 36px;
-  background: #000;
-  padding: 8px;
-  box-shadow: 
-    inset 0 0 0 2px #444, 
-    inset 0 0 0 6px #111,
-    0 25px 50px -12px rgba(212,168,67,0.15),
-    0 0 0 1px rgba(255,255,255,0.05);
+  width: auto;
+  height: min(370px, 45vh);
+  max-height: 390px;
+  aspect-ratio: 305 / 665;
+  border-radius: 18px;
+  background: #09090b;
+  padding: 4px;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease, box-shadow 0.5s ease;
+  transform-style: preserve-3d;
+  z-index: 10;
 }
-.luxury-phone-frame::before { /* Notch/Dynamic Island */
-  content: '';
+@media (min-width: 640px) {
+  .luxury-phone-frame {
+    height: min(430px, 52vh);
+    border-radius: 20px;
+    padding: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .luxury-phone-frame {
+    width: auto;
+    height: min(560px, calc(100vh - 120px));
+    max-height: 72vh;
+    aspect-ratio: 305 / 665;
+    border-radius: 22px;
+    padding: 5.5px;
+  }
+  /* KNOW: Phone on Left -> Tilts +5.5deg towards Right text */
+  .stage-know .luxury-phone-frame {
+    transform: rotateY(5.5deg) rotateX(2deg);
+    box-shadow: 
+      inset 0 0 0 1.5px #71717a, 
+      inset 0 0 0 4px #18181b,
+      inset 2px 0 2px rgba(255,255,255,0.2),
+      0 28px 56px -10px rgba(212,168,67,0.32),
+      0 0 40px rgba(212,168,67,0.18);
+  }
+  /* PROFIT: Phone on Right -> Tilts -5.5deg towards Left text */
+  .stage-profit .luxury-phone-frame {
+    transform: rotateY(-5.5deg) rotateX(2deg);
+    box-shadow: 
+      inset 0 0 0 1.5px #71717a, 
+      inset 0 0 0 4px #18181b,
+      inset -2px 0 2px rgba(255,255,255,0.2),
+      0 28px 56px -10px rgba(52,211,153,0.32),
+      0 0 40px rgba(52,211,153,0.18);
+  }
+  /* DECIDE: Phone on Left -> Tilts +5.5deg towards Right text */
+  .stage-decide .luxury-phone-frame {
+    transform: rotateY(5.5deg) rotateX(2deg);
+    box-shadow: 
+      inset 0 0 0 1.5px #71717a, 
+      inset 0 0 0 4px #18181b,
+      inset 2px 0 2px rgba(255,255,255,0.2),
+      0 28px 56px -10px rgba(168,85,247,0.3),
+      0 0 40px rgba(168,85,247,0.18);
+  }
+
+  /* Inspect on Hover: Level out to 0deg flat with subtle scale */
+  .luxury-phone-frame:hover {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.025) !important;
+    box-shadow: 
+      inset 0 0 0 1.5px #a1a1aa, 
+      inset 0 0 0 4px #18181b,
+      0 32px 64px -8px rgba(212,168,67,0.45),
+      0 0 50px rgba(212,168,67,0.28) !important;
+  }
+}
+@media (min-width: 1280px) and (min-height: 800px) {
+  .luxury-phone-frame {
+    height: min(620px, calc(100vh - 120px));
+    max-height: 75vh;
+    border-radius: 24px;
+    padding: 6.5px;
+  }
+}
+
+/* Keynote Feature Slate Frame (Stage 3 Store Artworks) */
+.keynote-slate-frame {
   position: absolute;
-  top: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70px;
-  height: 20px;
-  background: #000;
-  border-radius: 12px;
-  z-index: 30;
-  box-shadow: inset 0 -1px 2px rgba(255,255,255,0.1);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: #09090b;
+  padding: 4px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+  transform-style: preserve-3d;
+  z-index: 12;
+  transform: rotateY(5.5deg) rotateX(2deg);
+  box-shadow: 
+    inset 0 0 0 1.5px #a855f7, 
+    inset 0 0 0 4px #18181b,
+    inset 2px 0 2px rgba(255,255,255,0.2),
+    0 28px 56px -10px rgba(168,85,247,0.35),
+    0 0 40px rgba(168,85,247,0.2);
 }
-.luxury-phone-frame::after { /* Glass reflection */
+.keynote-slate-frame.active-frame {
+  opacity: 1;
+  pointer-events: auto;
+}
+.luxury-phone-frame.inactive-frame {
+  opacity: 0;
+  pointer-events: none;
+}
+@media (min-width: 640px) {
+  .keynote-slate-frame {
+    border-radius: 18px;
+    padding: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .keynote-slate-frame {
+    border-radius: 22px;
+    padding: 5.5px;
+  }
+  .keynote-slate-frame:hover {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.025) !important;
+    box-shadow: 
+      inset 0 0 0 1.5px #c084fc, 
+      inset 0 0 0 4px #18181b,
+      0 32px 64px -8px rgba(168,85,247,0.5),
+      0 0 50px rgba(168,85,247,0.3) !important;
+  }
+}
+@media (min-width: 1280px) and (min-height: 800px) {
+  .keynote-slate-frame {
+    border-radius: 24px;
+    padding: 6.5px;
+  }
+}
+
+/* Keynote Slate Inner Glass Glare */
+.keynote-slate-frame::after {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(105deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 40%);
+  background: linear-gradient(115deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0) 35%);
   pointer-events: none;
   z-index: 25;
-  border-radius: 28px;
+  border-radius: 14px;
 }
+@media (min-width: 768px) {
+  .keynote-slate-frame::after {
+    border-radius: 18px;
+  }
+}
+
+/* S25 Ultra Infinity-O Hole Punch Camera */
+.luxury-phone-frame::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background: #000;
+  border-radius: 50%;
+  z-index: 30;
+  box-shadow: inset 0 0 2px #222, 0 0 1px rgba(255,255,255,0.25);
+}
+@media (min-width: 768px) {
+  .luxury-phone-frame::before {
+    top: 12px;
+    width: 10px;
+    height: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .luxury-phone-frame::before {
+    top: 14px;
+    width: 11px;
+    height: 11px;
+  }
+}
+
+/* Glass Reflection */
+.luxury-phone-frame::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(115deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0) 35%);
+  pointer-events: none;
+  z-index: 25;
+  border-radius: 16px;
+}
+@media (min-width: 768px) {
+  .luxury-phone-frame::after {
+    border-radius: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .luxury-phone-frame::after {
+    border-radius: 22px;
+  }
+}
+
+/* S25 Ultra Right-Side Hardware Buttons */
 .luxury-phone-buttons {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   pointer-events: none;
 }
-.luxury-phone-buttons::before { /* Side button left */
+/* Volume Rocker (Right) */
+.luxury-phone-buttons::before {
   content: '';
   position: absolute;
-  left: -2px; top: 120px;
-  width: 2px; height: 30px;
-  background: #555;
-  border-radius: 2px 0 0 2px;
-}
-.luxury-phone-buttons::after { /* Power button right */
-  content: '';
-  position: absolute;
-  right: -2px; top: 140px;
-  width: 2px; height: 40px;
-  background: #555;
+  right: -2px; top: 110px;
+  width: 2px; height: 42px;
+  background: #71717a;
   border-radius: 0 2px 2px 0;
 }
+/* Power Button (Right) */
+.luxury-phone-buttons::after {
+  content: '';
+  position: absolute;
+  right: -2px; top: 165px;
+  width: 2px; height: 26px;
+  background: #71717a;
+  border-radius: 0 2px 2px 0;
+}
+@media (min-width: 768px) {
+  .luxury-phone-buttons::before {
+    top: 135px;
+    height: 52px;
+  }
+  .luxury-phone-buttons::after {
+    top: 205px;
+    height: 34px;
+  }
+}
+@media (min-width: 1024px) {
+  .luxury-phone-buttons::before {
+    top: 150px;
+    height: 58px;
+  }
+  .luxury-phone-buttons::after {
+    top: 228px;
+    height: 38px;
+  }
+}
 
+/* Screen Layers */
 .phone-screen-container {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 28px;
+  border-radius: 16px;
   overflow: hidden;
   background: #111;
+}
+@media (min-width: 768px) {
+  .phone-screen-container {
+    border-radius: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .phone-screen-container {
+    border-radius: 22px;
+  }
+}
+.phone-screen-container img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 .screen-layer {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   opacity: 0;
   transform: scale(0.98);
-  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: opacity, transform;
 }
 .screen-layer.active {
@@ -116,25 +398,141 @@
   z-index: 10;
 }
 
+/* Sticky Pillar Header with Progress Anchor (Desktop) */
+@media (min-width: 768px) {
+  .sticky-pillar-header {
+    position: sticky;
+    top: max(80px, calc(50vh - 290px));
+    z-index: 30;
+    padding: 0 0 1.25rem 0;
+    margin-bottom: 3.5rem;
+    background: #0f0f1a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+@media (min-width: 1024px) {
+  .sticky-pillar-header {
+    top: max(80px, calc(50vh - 300px));
+  }
+}
+@media (min-width: 1280px) {
+  .sticky-pillar-header {
+    top: max(80px, calc(50vh - 310px));
+  }
+}
+
+/* Step Progress Indicator Dots */
+.pillar-progress-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.step-dot {
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+.step-dot:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+.stage-know .step-dot.active {
+  width: 38px;
+  background: #d4a843;
+  box-shadow: 0 0 10px rgba(212, 168, 67, 0.5);
+}
+.stage-profit .step-dot.active {
+  width: 38px;
+  background: #34d399;
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.5);
+}
+.stage-decide .step-dot.active {
+  width: 38px;
+  background: #a855f7;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+/* Story Stream & Block Typography */
+.story-block {
+  opacity: 0.28;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  will-change: opacity, transform;
+}
+.story-block.active {
+  opacity: 1;
+}
+
 /* Advantage Chips */
 .advantage-chip {
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
   will-change: opacity, transform;
 }
 .story-block.active .advantage-chip {
   opacity: 1;
   transform: translateY(0);
+  border-color: rgba(212,168,67,0.35);
+  box-shadow: 0 4px 16px -4px rgba(212,168,67,0.12);
 }
-.story-block.active .advantage-chip:nth-child(1) { transition-delay: 0.1s; }
-.story-block.active .advantage-chip:nth-child(2) { transition-delay: 0.2s; }
-.story-block.active .advantage-chip:nth-child(3) { transition-delay: 0.3s; }
-.story-block.active .advantage-chip:nth-child(4) { transition-delay: 0.4s; }
+.stage-decide .story-block.active .advantage-chip {
+  border-color: rgba(168,85,247,0.35);
+  box-shadow: 0 4px 16px -4px rgba(168,85,247,0.12);
+}
+.stage-profit .story-block.active .advantage-chip {
+  border-color: rgba(52,211,153,0.35);
+  box-shadow: 0 4px 16px -4px rgba(52,211,153,0.12);
+}
+.story-block.active .advantage-chip:nth-child(1) { transition-delay: 0.08s; }
+.story-block.active .advantage-chip:nth-child(2) { transition-delay: 0.16s; }
+.story-block.active .advantage-chip:nth-child(3) { transition-delay: 0.24s; }
+.story-block.active .advantage-chip:nth-child(4) { transition-delay: 0.32s; }
 
-/* No-JS fallback: without JS, no .active class is ever added, so chips and
-   non-first screens would stay invisible. The <html> element gets .js via an
-   inline script in <head>; these rules only apply when JS is absent. */
+/* ==========================================================================
+   WEB-UX2 Phase 02: Hero Liveliness & Section Reveal Motion
+   ========================================================================== */
+
+/* Hero Glow Breath Pulse */
+@keyframes heroGlowPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.22; }
+  50% { transform: translate(-50%, -50%) scale(1.15); opacity: 0.32; }
+}
+.phone-glow {
+  animation: heroGlowPulse 5s ease-in-out infinite;
+}
+
+/* Hero Phone Floating Motion */
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.phone-float {
+  animation: heroFloat 4.5s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Phone Frame Titanium Chamfer */
+.phone-frame {
+  border-radius: 20px !important;
+  border: 5px solid #18181b !important;
+  box-shadow: inset 0 0 0 1px #71717a, 0 0 50px rgba(212,168,67,0.25), 0 24px 60px rgba(0,0,0,0.7) !important;
+}
+
+/* Hover-Card Elevation */
+.hover-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease !important;
+  will-change: transform;
+}
+.hover-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 16px 32px -8px rgba(212,168,67,0.18), 0 0 0 1px rgba(212,168,67,0.35) !important;
+  border-color: rgba(212,168,67,0.5) !important;
+}
+
+/* No-JS fallback */
 html:not(.js) .screen-layer {
   opacity: 1;
   transform: none;
@@ -144,77 +542,36 @@ html:not(.js) .advantage-chip {
   transform: none;
 }
 
-/* Progressive enhancement: CSS scroll-driven animations where supported.
-   Each story block exposes a named view-timeline; the matching phone screen
-   layer binds to it, so the cross-fade tracks scrolling natively (no JS
-   required where this is supported). The IntersectionObserver remains the
-   universal fallback and keeps driving the same .active class elsewhere. */
-@supports (animation-timeline: view()) {
-  .journey-container {
-    timeline-scope:
-      --tl-dashboard, --tl-prices, --tl-portfolio, --tl-scenarios,
-      --tl-simulator, --tl-alerts, --tl-sold, --tl-taxfree;
-  }
-  .story-block[data-screen="dashboard"]  { view-timeline-name: --tl-dashboard; }
-  .story-block[data-screen="prices"]     { view-timeline-name: --tl-prices; }
-  .story-block[data-screen="portfolio"]  { view-timeline-name: --tl-portfolio; }
-  .story-block[data-screen="scenarios"]  { view-timeline-name: --tl-scenarios; }
-  .story-block[data-screen="simulator"]  { view-timeline-name: --tl-simulator; }
-  .story-block[data-screen="alerts"]     { view-timeline-name: --tl-alerts; }
-  .story-block[data-screen="sold"]       { view-timeline-name: --tl-sold; }
-  .story-block[data-screen="taxfree"]    { view-timeline-name: --tl-taxfree; }
-
-  @media (prefers-reduced-motion: no-preference) {
-    #screen-dashboard, #screen-prices, #screen-portfolio, #screen-scenarios,
-    #screen-simulator, #screen-alerts, #screen-sold, #screen-taxfree {
-      animation: screen-crossfade linear both;
-      animation-range: cover 20% cover 80%;
-    }
-    #screen-dashboard  { animation-timeline: --tl-dashboard; }
-    #screen-prices     { animation-timeline: --tl-prices; }
-    #screen-portfolio  { animation-timeline: --tl-portfolio; }
-    #screen-scenarios  { animation-timeline: --tl-scenarios; }
-    #screen-simulator  { animation-timeline: --tl-simulator; }
-    #screen-alerts     { animation-timeline: --tl-alerts; }
-    #screen-sold       { animation-timeline: --tl-sold; }
-    #screen-taxfree    { animation-timeline: --tl-taxfree; }
-  }
-}
-@keyframes screen-crossfade {
-  0%   { opacity: 0; transform: scale(0.98); }
-  12%, 88% { opacity: 1; transform: scale(1); }
-  100% { opacity: 0; transform: scale(0.98); }
-}
-
-/* Reduced motion: fully static rendering per the Phase 01 contract — the phone
-   stays visible showing screen 1 statically and every block renders with all
-   text and chips visible (stacked list). No scroll-swap. */
+/* Reduced motion: fully static rendering */
 @media (prefers-reduced-motion: reduce) {
-  .sticky-phone-wrapper {
+  .sticky-phone-wrapper,
+  .sticky-pillar-header {
     position: relative;
     top: auto;
   }
-  .journey-container {
-    flex-direction: column;
+  .journey-stage {
+    flex-direction: column !important;
+    margin-bottom: 3rem;
   }
   .sticky-phone-wrapper {
     margin-bottom: 2rem;
   }
-  .luxury-phone-frame {
-    transform: none;
-    transition: none;
+  .luxury-phone-frame,
+  .keynote-slate-frame,
+  .phone-float,
+  .phone-glow,
+  .particle,
+  .cta-pulse,
+  .hover-card {
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
   }
   .screen-layer,
   .advantage-chip {
     transition: none !important;
+    animation: none !important;
     opacity: 1 !important;
     transform: none !important;
   }
-  /* Only screen 1 (dashboard) stays visible in the static phone; later layers
-     are stacked absolutely, so hide them to avoid a pile of overlapping shots. */
-  html.js .screen-layer:not(#screen-dashboard),
-  html:not(.js) .screen-layer:not(:first-child) {
-    display: none;
-  }
 }
-
