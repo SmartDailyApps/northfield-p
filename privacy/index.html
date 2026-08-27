@@ -5,14 +5,14 @@
 <script src="/images/consent-analytics.js" data-site="product" data-gtm-id="GTM-MKR2RFW2" data-consent-key="mgf_analytics_consent_v1"></script>
 <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy — MyGoldFolio</title>
+  <title>Privacy | MyGoldFolio</title>
   <meta name="description" content="MyGoldFolio privacy model: on-device portfolio data with optional anonymous analytics only by consent." />
-  <meta property="og:title" content="Privacy — MyGoldFolio" />
+  <meta property="og:title" content="Privacy | MyGoldFolio" />
   <meta property="og:description" content="How MyGoldFolio handles data, analytics, and exports." />
   <meta property="og:image" content="/images/mgf-v3-og-en.png" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Privacy — MyGoldFolio" />
+  <meta name="twitter:title" content="Privacy | MyGoldFolio" />
   <meta name="twitter:description" content="How MyGoldFolio handles data, analytics, and exports." />
   <meta name="twitter:image" content="/images/mgf-v3-og-en.png" />
   <link rel="icon" href="/images/icon.png" />
@@ -26,6 +26,7 @@
   <link rel="alternate" hreflang="pt-BR" href="https://mygoldfolio.de/pt/privacy/" />
   <link rel="alternate" hreflang="x-default" href="https://mygoldfolio.de/privacy/" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/aos.css" />
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <style>
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
@@ -47,7 +48,7 @@
     </div>
 
     <div class="grid md:grid-cols-2 gap-4 mb-8">
-      <div class="rounded-xl border border-mint/35 bg-mint/10 p-5">
+      <div class="rounded-xl border border-mint/35 bg-mint/10 p-5 hover-card" data-aos="fade-up">
         <p class="text-xs font-bold tracking-wide uppercase text-mint mb-2">What Is Never Collected</p>
         <ul class="text-sm text-gray-300 space-y-2">
           <li>Holdings and portfolio values</li>
@@ -55,7 +56,7 @@
           <li>Personal profile or account identity</li>
         </ul>
       </div>
-      <div class="rounded-xl border border-gold/30 bg-gold/10 p-5">
+      <div class="rounded-xl border border-gold/30 bg-gold/10 p-5 hover-card" data-aos="fade-up">
         <p class="text-xs font-bold tracking-wide uppercase text-gold mb-2">What Is Optional</p>
         <ul class="text-sm text-gray-300 space-y-2">
           <li>Anonymous usage analytics</li>
@@ -66,42 +67,42 @@
     </div>
 
     <div class="space-y-6">
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">On-Device Storage</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Portfolio data is stored locally on your device. MyGoldFolio does not upload holdings or financial records to SmartDailyApps servers.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Exports & Backups</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Backup and export files are created only when you request them. Data leaves your device only when you explicitly share or save those files externally.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Price Data Requests</h2>
         <p class="text-sm text-gray-400 leading-relaxed">To show live precious-metal reference prices, the app queries third-party price APIs. Premium users may optionally save their own provider API keys in Android secure storage; a key is sent only to its provider when that source is used. Price requests do not include your holdings details, and provider keys are excluded from portfolio backups.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Optional Website Analytics &amp; Google Play Links</h2>
         <p class="text-sm text-gray-400 leading-relaxed">If you accept optional website analytics, Google Tag Manager loads Google Analytics 4. We use page path, language, guide metadata, and Google Play call-to-action placement to understand website use. We do not send portfolio data, payment details, or form contents to analytics. Google may process technical request and coarse location/device information under its terms. Rejecting analytics does not limit the website.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Feedback &amp; Update Subscriptions</h2>
         <p class="text-sm text-gray-400 leading-relaxed">When you send feedback or subscribe for occasional product updates, Formspree processes the form data you choose to enter and delivers it to SmartDailyApps. We use feedback only to handle your request and subscriber email addresses only for occasional MyGoldFolio updates. Do not submit sensitive financial information. We retain the data only as long as needed for these purposes or legal obligations. Contact <a href="mailto:info@mygoldfolio.de" class="text-gold hover:underline">info@mygoldfolio.de</a> anytime to unsubscribe or request deletion.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Website Delivery Services</h2>
         <p class="text-sm text-gray-400 leading-relaxed">The current site loads presentation resources from Google Fonts, Tailwind CDN, and unpkg, and requests a public reference price from GoldPrice.org on the home page. These providers receive ordinary technical request data such as IP address, browser information, and time of request. Social, Google Play, and external reference links contact their providers only when you open them.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Website Consent Control</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Optional analytics is off until you accept it on this website. Your choice is stored locally in this browser. Use “Analytics settings” in the footer of any page to accept, reject, or withdraw consent. App privacy settings are separate.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Contact</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Questions about privacy? Contact <a href="mailto:info@mygoldfolio.de" class="text-gold hover:underline">info@mygoldfolio.de</a>.</p>
       </section>
@@ -118,6 +119,12 @@
       </div>
     </div>
   </footer>
+  
+  <!-- AOS -->
+  <script src="/assets/js/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-back' });
+  </script>
   <script src="/images/locale-switcher.js"></script>
 </body>
 </html>

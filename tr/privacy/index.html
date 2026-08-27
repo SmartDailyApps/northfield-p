@@ -5,14 +5,14 @@
 <script src="/images/consent-analytics.js" data-site="product" data-gtm-id="GTM-MKR2RFW2" data-consent-key="mgf_analytics_consent_v1"></script>
 <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gizlilik — MyGoldFolio</title>
+  <title>Gizlilik | MyGoldFolio</title>
   <meta name="description" content="MyGoldFolio gizlilik modeli: portfoy verileri cihazda, anonim analiz ise yalnizca onayla istege bagli." />
-  <meta property="og:title" content="Gizlilik — MyGoldFolio" />
+  <meta property="og:title" content="Gizlilik | MyGoldFolio" />
   <meta property="og:description" content="MyGoldFolio verileri, analizleri ve disa aktarmayi nasil yonetir." />
   <meta property="og:image" content="/images/mgf-v3-og-tr.png" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Gizlilik — MyGoldFolio" />
+  <meta name="twitter:title" content="Gizlilik | MyGoldFolio" />
   <meta name="twitter:description" content="MyGoldFolio verileri, analizleri ve disa aktarmayi nasil yonetir." />
   <meta name="twitter:image" content="/images/mgf-v3-og-tr.png" />
   <link rel="icon" href="/images/icon.png" />
@@ -26,6 +26,7 @@
   <link rel="alternate" hreflang="pt-BR" href="https://mygoldfolio.de/pt/privacy/" />
   <link rel="alternate" hreflang="x-default" href="https://mygoldfolio.de/privacy/" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/aos.css" />
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <style>
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
@@ -47,7 +48,7 @@
     </div>
 
     <div class="grid md:grid-cols-2 gap-4 mb-8">
-      <div class="rounded-xl border border-mint/35 bg-mint/10 p-5">
+      <div class="rounded-xl border border-mint/35 bg-mint/10 p-5 hover-card" data-aos="fade-up">
         <p class="text-xs font-bold tracking-wide uppercase text-mint mb-2">Asla toplanmayanlar</p>
         <ul class="text-sm text-gray-300 space-y-2">
           <li>Varliklar ve portfoy degerleri</li>
@@ -55,7 +56,7 @@
           <li>Kisisel profil veya hesap kimligi</li>
         </ul>
       </div>
-      <div class="rounded-xl border border-gold/30 bg-gold/10 p-5">
+      <div class="rounded-xl border border-gold/30 bg-gold/10 p-5 hover-card" data-aos="fade-up">
         <p class="text-xs font-bold tracking-wide uppercase text-gold mb-2">Istege bagli olanlar</p>
         <ul class="text-sm text-gray-300 space-y-2">
           <li>Anonim kullanim analizi</li>
@@ -66,42 +67,42 @@
     </div>
 
     <div class="space-y-6">
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Cihazda saklama</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Portfoy verileri cihazinda yerel olarak saklanir. MyGoldFolio varlik veya finansal kayitlari SmartDailyApps sunucularina yuklemez.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Disa aktarma ve yedekleme</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Yedek ve disa aktarma dosyalari yalnizca sen istediginde olusturulur. Veriler cihazindan sadece bu dosyalari acikca paylastiginda veya disariya kaydettiginde cikar.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Fiyat verisi istekleri</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Canlı değerli metal referans fiyatlarını göstermek için uygulama üçüncü taraf fiyat API'lerine sorgu gönderir. Premium kullanıcılar kendi sağlayıcı API anahtarlarını Android güvenli depolamasında saklayabilir; anahtar yalnızca ilgili kaynak kullanıldığında sağlayıcısına gönderilir. Fiyat istekleri varlık ayrıntılarını içermez ve anahtarlar portföy yedeklerine dahil edilmez.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">İsteğe bağlı web sitesi analizi ve Google Play bağlantıları</h2>
         <p class="text-sm text-gray-400 leading-relaxed">İsteğe bağlı web sitesi analizini kabul ederseniz Google Tag Manager, Google Analytics 4’ü yükler. Site kullanımını anlamak için sayfa yolu, dil, rehber meta verileri ve Google Play çağrı bağlantısının konumu kullanılır. Portföy verileri, ödeme bilgileri veya form içerikleri Analytics’e gönderilmez. Google, kendi koşulları kapsamında teknik istek verilerini ve yaklaşık konum/cihaz bilgilerini işleyebilir. Analizi reddetmek siteyi kısıtlamaz.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Geri bildirim &amp; güncelleme aboneliği</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Geri bildirim gönderdiğinizde veya ara sıra ürün güncellemelerine abone olduğunuzda Formspree, girmeyi seçtiğiniz verileri işler ve SmartDailyApps’e iletir. Geri bildirimi yalnızca talebinizi ele almak, abone e-posta adresini ise yalnızca ara sıra MyGoldFolio güncellemeleri göndermek için kullanırız. Hassas finansal bilgi göndermeyin. Verileri yalnızca bu amaçlar veya yasal yükümlülükler için gerektiği sürece saklarız. Abonelikten çıkmak veya silme istemek için <a href="mailto:info@mygoldfolio.de" class="text-gold hover:underline">info@mygoldfolio.de</a> adresine yazabilirsiniz.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Web sitesi sunum hizmetleri</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Mevcut site, Google Fonts, Tailwind CDN ve unpkg’den görsel kaynaklar yükler; ana sayfada GoldPrice.org’dan herkese açık bir referans fiyat ister. Bu sağlayıcılar IP adresi, tarayıcı bilgisi ve istek zamanı gibi olağan teknik istek verilerini alır. Sosyal ağlar, Google Play ve harici kaynaklar yalnızca ilgili bağlantıyı açtığınızda devreye girer.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Web sitesi onay kontrolü</h2>
         <p class="text-sm text-gray-400 leading-relaxed">İsteğe bağlı analiz, bu web sitesinde kabul edene kadar kapalı kalır. Seçiminiz bu tarayıcıda yerel olarak saklanır. Her sayfanın alt bilgisindeki “Analiz ayarları” bağlantısından kabul edebilir, reddedebilir veya onayınızı geri çekebilirsiniz. Uygulamanın gizlilik ayarları ayrıdır.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Iletisim</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Gizlilikle ilgili sorular mi var? Iletisim <a href="mailto:info@mygoldfolio.de" class="text-gold hover:underline">info@mygoldfolio.de</a>.</p>
       </section>
@@ -118,6 +119,12 @@
       </div>
     </div>
   </footer>
+  
+  <!-- AOS -->
+  <script src="/assets/js/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-back' });
+  </script>
   <script src="/images/locale-switcher.js"></script>
 </body>
 </html>

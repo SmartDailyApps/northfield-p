@@ -5,14 +5,14 @@
 <script src="/images/consent-analytics.js" data-site="product" data-gtm-id="GTM-MKR2RFW2" data-consent-key="mgf_analytics_consent_v1"></script>
 <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Feedback — MyGoldFolio</title>
+  <title>Feedback | MyGoldFolio</title>
   <meta name="description" content="Melde einen Fehler, fordere eine Funktion an, teile Feedback und verfolge die MyGoldFolio-Roadmap." />
-  <meta property="og:title" content="Feedback — MyGoldFolio" />
+  <meta property="og:title" content="Feedback | MyGoldFolio" />
   <meta property="og:description" content="Sag uns, was wir in MyGoldFolio verbessern sollen." />
   <meta property="og:image" content="/images/mgf-v3-og-de.png" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Feedback — MyGoldFolio" />
+  <meta name="twitter:title" content="Feedback | MyGoldFolio" />
   <meta name="twitter:description" content="Sag uns, was wir in MyGoldFolio verbessern sollen." />
   <meta name="twitter:image" content="/images/mgf-v3-og-de.png" />
   <link rel="icon" href="/images/icon.png" />
@@ -26,6 +26,7 @@
   <link rel="alternate" hreflang="pt-BR" href="https://mygoldfolio.de/pt/feedback/" />
   <link rel="alternate" hreflang="x-default" href="https://mygoldfolio.de/feedback/" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/aos.css" />
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <style>
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
@@ -65,7 +66,7 @@
         <p class="text-xs font-bold tracking-[0.22em] text-gold uppercase mb-3">Feedback-Zentrum</p>
         <div class="grid lg:grid-cols-[1.05fr_.95fr] gap-8 items-end">
           <div>
-            <h1 class="text-3xl md:text-5xl font-black text-white mb-4">Hilf mit, MyGoldFolio zu verbessern</h1>
+            <h1 class="text-3xl md:text-5xl font-black text-white mb-4">Hilf mit, My<span class="text-gold">Gold</span>Folio zu verbessern</h1>
             <p class="text-base text-gray-300 max-w-2xl">Sende Fehlerberichte, Funktionsideen oder allgemeines Feedback ohne Konto.</p>
           </div>
           <div class="feedback-panel rounded-2xl p-5">
@@ -237,6 +238,12 @@
         }
       });
     })();
+  </script>
+  
+  <!-- AOS -->
+  <script src="/assets/js/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-back' });
   </script>
   <script src="/images/locale-switcher.js"></script>
   <script src="/images/play-store-attribution.js"></script>

@@ -1,4 +1,4 @@
-// Tailwind static-CSS reproduction contract — WEB-UX1 FREEZE.md §4.
+// Tailwind static-CSS reproduction contract | WEB-UX1 FREEZE.md §4.
 // Theme must stay byte-compatible with the inline `tailwind.config` currently
 // embedded in the public HTML (homepage variant is canonical; see
 // handoff Evidence/Tooling/css-config-conflict.txt for the guide-generator

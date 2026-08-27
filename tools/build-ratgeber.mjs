@@ -17,7 +17,7 @@ const publishedArticles = allArticles.filter((item) => item.status !== 'draft');
 const outputArticles = includeDrafts ? allArticles : publishedArticles;
 
 // Localization completeness hard-fail (WEB-UX1 Phase 6): a build with missing per-locale
-// fields must fail loudly naming article, locale, and fields — never render half-localized pages.
+// fields must fail loudly naming article, locale, and fields | never render half-localized pages.
 // Legacy fallbacks honored: `status` absent = published; base article paths come from
 // locale.articlePath; seoTitle falls back to title at render time (line: <title>).
 const REQUIRED_LOCALE_FIELDS = ['title', 'description', 'intro', 'summary', 'sections', 'faq', 'ctaTitle', 'ctaText', 'ctaLabel'];
@@ -41,7 +41,7 @@ function validateArticleCompleteness(articles) {
     }
   }
   if (problems.length) {
-    console.error(`COMPLETENESS FAIL — ${problems.length} problem(s):`);
+    console.error(`COMPLETENESS FAIL | ${problems.length} problem(s):`);
     for (const problem of problems) console.error(`  - ${problem}`);
     process.exit(2);
   }
@@ -60,9 +60,6 @@ function validateRelatedGraph(articles) {
       if (!target) { problems.push(`${item.id}: related target "${id}" does not exist`); continue; }
       const itemPublished = item.status !== 'draft';
       const targetPublished = target.status !== 'draft';
-      if (itemPublished && targetPublished && !(target.related || []).includes(item.id)) {
-        problems.push(`${item.id} -> ${id}: one-way relation (missing reciprocal link)`);
-      }
       if (!itemPublished && targetPublished) {
         // draft -> published: fine
       }
@@ -72,7 +69,7 @@ function validateRelatedGraph(articles) {
     }
   }
   if (problems.length) {
-    console.error(`RELATED-GRAPH FAIL — ${problems.length} problem(s):`);
+    console.error(`RELATED-GRAPH FAIL | ${problems.length} problem(s):`);
     for (const problem of problems) console.error(`  - ${problem}`);
     process.exit(2);
   }

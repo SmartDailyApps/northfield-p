@@ -1,4 +1,4 @@
-// WEB-UX1 Phase 2 — sitemap generator (evidence/diff tool; NOT wired into publishing).
+// WEB-UX1 Phase 2 | sitemap generator (evidence/diff tool; NOT wired into publishing).
 //
 //   node tools/build-sitemap.mjs            print computed sitemap XML to stdout
 //   node tools/build-sitemap.mjs --diff     compare computed vs current sitemap.xml

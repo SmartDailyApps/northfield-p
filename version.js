@@ -1,7 +1,7 @@
 // Single source of truth for the MyGoldFolio app version shown on the website.
 // Update only this file when releasing a new version.
 // All pages include this script and use data-mgf-version / data-mgf-version-bare
-// attributes as placeholders — this script populates them at load time.
+// attributes as placeholders | this script populates them at load time.
 (function () {
   var VERSION = '3.4.1';
   document.querySelectorAll('[data-mgf-version]').forEach(function (el) {

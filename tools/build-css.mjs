@@ -1,4 +1,4 @@
-// WEB-UX1 Phase 2 — deterministic static-CSS build/check (FREEZE.md §4).
+// WEB-UX1 Phase 2 | deterministic static-CSS build/check (FREEZE.md §4).
 //
 //   node tools/build-css.mjs            build assets/css/main.min.css
 //   node tools/build-css.mjs --check    rebuild to temp; verify committed output is current
@@ -70,7 +70,7 @@ try {
 
   if (!existsSync(outputPath)) {
     if (jsonMode) console.log(JSON.stringify({ ok: false, status: 'MISSING', expectedSha256: sha256(fresh), bytes: fresh.length }));
-    else console.error('STALE: assets/css/main.min.css MISSING — run "npm run build:css" and commit the output.');
+    else console.error('STALE: assets/css/main.min.css MISSING | run "npm run build:css" and commit the output.');
     rmSync(tmpOut, { force: true });
     process.exit(1);
   }
@@ -85,7 +85,7 @@ try {
     process.exit(0);
   }
   if (jsonMode) console.log(JSON.stringify({ ok: false, status: 'STALE', onDiskSha256: sha256(current), expectedSha256: sha256(fresh), onDiskBytes: current.length, expectedBytes: fresh.length }));
-  else console.error('STALE: assets/css/main.min.css differs from a fresh build — run "npm run build:css" and commit the output.');
+  else console.error('STALE: assets/css/main.min.css differs from a fresh build | run "npm run build:css" and commit the output.');
   process.exit(1);
 } catch (err) {
   fail(2, err && err.stack ? err.stack : String(err));

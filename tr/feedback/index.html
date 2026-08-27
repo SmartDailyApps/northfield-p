@@ -5,14 +5,14 @@
 <script src="/images/consent-analytics.js" data-site="product" data-gtm-id="GTM-MKR2RFW2" data-consent-key="mgf_analytics_consent_v1"></script>
 <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Geri bildirim — MyGoldFolio</title>
+  <title>Geri bildirim | MyGoldFolio</title>
   <meta name="description" content="Hata bildir, ozellik iste, geri bildirim paylas ve MyGoldFolio yol haritasini takip et." />
-  <meta property="og:title" content="Geri bildirim — MyGoldFolio" />
+  <meta property="og:title" content="Geri bildirim | MyGoldFolio" />
   <meta property="og:description" content="MyGoldFolio'da neyi gelistirmemiz gerektigini bize soyle." />
   <meta property="og:image" content="/images/mgf-v3-og-tr.png" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Geri bildirim — MyGoldFolio" />
+  <meta name="twitter:title" content="Geri bildirim | MyGoldFolio" />
   <meta name="twitter:description" content="MyGoldFolio'da neyi gelistirmemiz gerektigini bize soyle." />
   <meta name="twitter:image" content="/images/mgf-v3-og-tr.png" />
   <link rel="icon" href="/images/icon.png" />
@@ -26,6 +26,7 @@
   <link rel="alternate" hreflang="pt-BR" href="https://mygoldfolio.de/pt/feedback/" />
   <link rel="alternate" hreflang="x-default" href="https://mygoldfolio.de/feedback/" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/aos.css" />
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <style>
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
@@ -65,7 +66,7 @@
         <p class="text-xs font-bold tracking-[0.22em] text-gold uppercase mb-3">Geri bildirim merkezi</p>
         <div class="grid lg:grid-cols-[1.05fr_.95fr] gap-8 items-end">
           <div>
-            <h1 class="text-3xl md:text-5xl font-black text-white mb-4">MyGoldFolio yönünü sen de şekillendir</h1>
+            <h1 class="text-3xl md:text-5xl font-black text-white mb-4">My<span class="text-gold">Gold</span>Folio yönünü sen de şekillendir</h1>
             <p class="text-base text-gray-300 max-w-2xl">Hesap oluşturmadan hata, özellik fikri veya genel geri bildirim gönder.</p>
           </div>
           <div class="feedback-panel rounded-2xl p-5">
@@ -237,6 +238,12 @@
         }
       });
     })();
+  </script>
+  
+  <!-- AOS -->
+  <script src="/assets/js/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-back' });
   </script>
   <script src="/images/locale-switcher.js"></script>
   <script src="/images/play-store-attribution.js"></script>

@@ -5,14 +5,14 @@
 <script src="/images/consent-analytics.js" data-site="product" data-gtm-id="GTM-MKR2RFW2" data-consent-key="mgf_analytics_consent_v1"></script>
 <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Confidentialite — MyGoldFolio</title>
+  <title>Confidentialite | MyGoldFolio</title>
   <meta name="description" content="Modele de confidentialite MyGoldFolio : donnees de portefeuille sur l'appareil, analyses anonymes optionnelles uniquement avec consentement." />
-  <meta property="og:title" content="Confidentialite — MyGoldFolio" />
+  <meta property="og:title" content="Confidentialite | MyGoldFolio" />
   <meta property="og:description" content="Comment MyGoldFolio gere les donnees, analyses et exports." />
   <meta property="og:image" content="/images/mgf-v3-og-fr.png" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Confidentialite — MyGoldFolio" />
+  <meta name="twitter:title" content="Confidentialite | MyGoldFolio" />
   <meta name="twitter:description" content="Comment MyGoldFolio gere les donnees, analyses et exports." />
   <meta name="twitter:image" content="/images/mgf-v3-og-fr.png" />
   <link rel="icon" href="/images/icon.png" />
@@ -26,6 +26,7 @@
   <link rel="alternate" hreflang="pt-BR" href="https://mygoldfolio.de/pt/privacy/" />
   <link rel="alternate" hreflang="x-default" href="https://mygoldfolio.de/privacy/" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/aos.css" />
   <link rel="stylesheet" href="/assets/css/main.min.css" />
   <style>
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
@@ -47,7 +48,7 @@
     </div>
 
     <div class="grid md:grid-cols-2 gap-4 mb-8">
-      <div class="rounded-xl border border-mint/35 bg-mint/10 p-5">
+      <div class="rounded-xl border border-mint/35 bg-mint/10 p-5 hover-card" data-aos="fade-up">
         <p class="text-xs font-bold tracking-wide uppercase text-mint mb-2">Ce qui n'est jamais collecte</p>
         <ul class="text-sm text-gray-300 space-y-2">
           <li>Positions et valeurs du portefeuille</li>
@@ -55,7 +56,7 @@
           <li>Profil personnel ou identite de compte</li>
         </ul>
       </div>
-      <div class="rounded-xl border border-gold/30 bg-gold/10 p-5">
+      <div class="rounded-xl border border-gold/30 bg-gold/10 p-5 hover-card" data-aos="fade-up">
         <p class="text-xs font-bold tracking-wide uppercase text-gold mb-2">Ce qui est optionnel</p>
         <ul class="text-sm text-gray-300 space-y-2">
           <li>Analyses d'usage anonymes</li>
@@ -66,42 +67,42 @@
     </div>
 
     <div class="space-y-6">
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Stockage sur l'appareil</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Les donnees de portefeuille sont stockees localement sur votre appareil. MyGoldFolio n'envoie pas les positions ni les donnees financieres vers les serveurs SmartDailyApps.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Exports et sauvegardes</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Les fichiers de sauvegarde et d'export sont crees uniquement a votre demande. Les donnees quittent votre appareil seulement lorsque vous partagez ou enregistrez explicitement ces fichiers en externe.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Requetes de donnees de prix</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Pour afficher les prix de référence des métaux précieux en direct, l'application interroge des API de prix tierces. Les utilisateurs Premium peuvent enregistrer leurs propres clés API dans le stockage sécurisé d'Android ; une clé est envoyée uniquement à son fournisseur lorsque cette source est utilisée. Les requêtes n'incluent pas les positions et les clés sont exclues des sauvegardes.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Analyse facultative du site et liens Google Play</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Si vous acceptez l’analyse facultative du site, Google Tag Manager charge Google Analytics 4. Nous utilisons le chemin de page, la langue, les métadonnées du guide et l’emplacement des appels à l’action Google Play pour comprendre l’usage du site. Nous n’envoyons à Analytics ni données de portefeuille, ni données de paiement, ni contenu de formulaire. Google peut traiter des données techniques de requête ainsi que des informations générales sur la localisation et l’appareil selon ses propres conditions. Le refus ne limite pas le site.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Feedback &amp; inscription aux actualités</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Lorsque vous envoyez un feedback ou vous inscrivez à des actualités occasionnelles, Formspree traite les données que vous choisissez de saisir et les transmet à SmartDailyApps. Nous utilisons le feedback uniquement pour traiter votre demande et l’adresse e-mail d’abonnement uniquement pour des actualités MyGoldFolio occasionnelles. N’envoyez pas d’informations financières sensibles. Les données sont conservées seulement pendant la durée nécessaire à ces finalités ou aux obligations légales. Écrivez à <a href="mailto:info@mygoldfolio.de" class="text-gold hover:underline">info@mygoldfolio.de</a> pour vous désinscrire ou demander leur suppression.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Services de diffusion du site</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Le site actuel charge des ressources de présentation depuis Google Fonts, Tailwind CDN et unpkg, et demande sur la page d’accueil un prix de référence public à GoldPrice.org. Ces fournisseurs reçoivent les données techniques habituelles de la requête, telles que l’adresse IP, le navigateur et l’heure. Les réseaux sociaux, Google Play et les références externes ne sont contactés que lorsque vous ouvrez leurs liens.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Gestion du consentement du site</h2>
         <p class="text-sm text-gray-400 leading-relaxed">L’analyse facultative reste désactivée jusqu’à votre accord sur ce site. Votre choix est enregistré localement dans ce navigateur. Le lien « Paramètres d’analyse » dans le pied de page permet d’accepter, de refuser ou de retirer le consentement. Les paramètres de confidentialité de l’application sont distincts.</p>
       </section>
 
-      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5">
+      <section class="rounded-xl border border-border/30 bg-navy-light/50 p-5 hover-card" data-aos="fade-up">
         <h2 class="text-sm font-bold text-gold uppercase tracking-wide mb-2">Contact</h2>
         <p class="text-sm text-gray-400 leading-relaxed">Questions sur la confidentialite ? Contactez <a href="mailto:info@mygoldfolio.de" class="text-gold hover:underline">info@mygoldfolio.de</a>.</p>
       </section>
@@ -118,6 +119,12 @@
       </div>
     </div>
   </footer>
+  
+  <!-- AOS -->
+  <script src="/assets/js/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-back' });
+  </script>
   <script src="/images/locale-switcher.js"></script>
 </body>
 </html>

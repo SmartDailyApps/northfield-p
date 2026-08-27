@@ -1,4 +1,4 @@
-// WEB-UX1 Phase 2 (rev 4, final) — manifest-driven responsive-image derivatives (FREEZE §1/§3).
+// WEB-UX1 Phase 2 (rev 4, final) | manifest-driven responsive-image derivatives (FREEZE §1/§3).
 //
 //   node tools/build-images.mjs                    generate all derivatives
 //   node tools/build-images.mjs --dry-run          list planned outputs, write nothing
@@ -8,7 +8,7 @@
 //
 // Exit codes: 0 pass · 1 mismatch/stale · 2 config error.
 // Deterministic: sorted inputs, fixed encode options, metadata stripped,
-// sequential generation. No network access. No watermarks/overlays —
+// sequential generation. No network access. No watermarks/overlays |
 // branding belongs in the source artwork (owner decision 2026-08-26).
 import { existsSync, readFileSync, readdirSync, statSync, mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
@@ -146,7 +146,7 @@ async function main() {
     if (jsonMode) console.log(JSON.stringify(summary));
     else {
       console.log(`check: expected=${summary.expected} missing=${missing} stale=${stale}`);
-      if (summary.ok) console.log('CURRENT — disk matches a fresh deterministic regeneration.');
+      if (summary.ok) console.log('CURRENT | disk matches a fresh deterministic regeneration.');
     }
     process.exit(summary.ok ? 0 : 1);
   }

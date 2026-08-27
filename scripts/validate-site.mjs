@@ -1,4 +1,4 @@
-// WEB-UX1 Phase 2 — modular read-only site validator.
+// WEB-UX1 Phase 2 | modular read-only site validator.
 //
 //   node scripts/validate-site.mjs                     report-only default (consent+links STRICT)
 //   node scripts/validate-site.mjs --strict-all        every check hard-fails
@@ -75,7 +75,7 @@ function checkConsent(pages, add) {
     const p = join(ROOT, tool);
     if (!existsSync(p)) continue;
     const src = readFileSync(p, 'utf8');
-    if (/googletagmanager\.com\/(gtm\.js|ns\.html)|gtag\(/.test(src)) add(tool, 'generator emits direct GTM/gtag — violates Phase 0 contract');
+    if (/googletagmanager\.com\/(gtm\.js|ns\.html)|gtag\(/.test(src)) add(tool, 'generator emits direct GTM/gtag | violates Phase 0 contract');
   }
 }
 
@@ -179,7 +179,7 @@ function checkSeoHead(pages, add, warn) {
       }
     }
     if (/highPrice":\s*"5\.99/.test(head) || /"price":\s*"5\.99"/.test(head)) {
-      warn(rel, 'stale SoftwareApplication pricing (AggregateOffer highPrice 5.99) — Phase 5 repair item');
+      warn(rel, 'stale SoftwareApplication pricing (AggregateOffer highPrice 5.99) | Phase 5 repair item');
     }
   }
 }
@@ -202,7 +202,7 @@ function checkSitemap(pages, add, warn) {
   if (!existsSync(smPath)) return add('sitemap.xml', 'missing');
   const diff = runNode(['tools/build-sitemap.mjs', '--diff']);
   const headline = diff.status.split('\n').find((l) => l.startsWith('# computed=')) ?? diff.status.split('\n')[0];
-  warn('sitemap.xml', `${headline.trim().replace(/^#\s*/, '')} — Phase 5 repair item (full diff: node tools/build-sitemap.mjs --diff)`);
+  warn('sitemap.xml', `${headline.trim().replace(/^#\s*/, '')} | Phase 5 repair item (full diff: node tools/build-sitemap.mjs --diff)`);
 }
 
 function checkImageMarkup(pages, add, warn) {
@@ -216,7 +216,7 @@ function checkImageMarkup(pages, add, warn) {
       if (!/\bwidth="/.test(tag) || !/\bheight="/.test(tag)) noDims += 1;
     }
   }
-  warn('site-wide', `img tags without explicit width/height: ${noDims}/${total} — responsive markup lands in Phases 3–5 (report-only)`);
+  warn('site-wide', `img tags without explicit width/height: ${noDims}/${total} | responsive markup lands in Phases 3–5 (report-only)`);
 }
 
 function checkRuntimeOrigins(pages, add, warn) {
@@ -239,7 +239,7 @@ function checkRuntimeOrigins(pages, add, warn) {
   for (const [origin] of [...seen.entries()].sort()) {
     if (origin === 'mygoldfolio.de') continue; // self-origin absolute URLs are not external
     if (!(origin in allowlist)) {
-      const msg = `unknown external runtime origin "${origin}" (${seen.get(origin)} refs) — add to allowlist with rationale or remove`;
+      const msg = `unknown external runtime origin "${origin}" (${seen.get(origin)} refs) | add to allowlist with rationale or remove`;
       (strictOrigins ? add : warn)('site-wide', msg);
     }
   }
@@ -256,7 +256,7 @@ function runNode(cmdArgs, cwd = REPO) {
 
 function checkCssCurrent(pages, add, warn) {
   const r = runNode(['tools/build-css.mjs', '--check']);
-  if (r.code !== 0) warn('css', 'assets/css/main.min.css is STALE or MISSING vs tailwind.config.js/input.css (run npm run build:css) — becomes strict at Phase 3 rollout');
+  if (r.code !== 0) warn('css', 'assets/css/main.min.css is STALE or MISSING vs tailwind.config.js/input.css (run npm run build:css) | becomes strict at Phase 3 rollout');
   else warn('css', 'assets/css/main.min.css CURRENT');
 }
 
