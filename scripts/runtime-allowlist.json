@@ -1,9 +1,8 @@
 {
-  "$comment": "WEB-UX1 runtime-origin allowlist (FREEZE §5). Until rollout phases land, every origin here is report-only context; after each disposition executes, the origin must be REMOVED from this file so validate-site --strict-origins fails if it reappears. formspree.io is a retained documented processor.",
+  "$comment": "WEB-UX1 runtime-origin allowlist (FREEZE §5). Self-hosted AOS 2.3.4, Ionicons 7.1.0, and Formspree Ajax 1.1.5 are served from /assets; formspree.io remains a retained documented form processor.",
   "origins": {
     "fonts.googleapis.com": "SELF-HOST Inter/Outfit woff2 (Phase 3/5)",
     "fonts.gstatic.com": "SELF-HOST font binaries (Phase 3/5)",
-    "unpkg.com": "PIN/SELF-HOST/REPLACE aos@2.3.4, ionicons@7.1.0, @formspree/ajax@1 (Phase 3/5)",
     "formspree.io": "RETAIN: documented form processor (feedback + subscription); disclosure stays aligned via WEB-LEG1",
     "play.google.com": "RETAIN: official Google Play badge image (img src); standard-store-badge practice; revisit self-hosting in Phase 5 only if it measurably hurts CWV"
   }

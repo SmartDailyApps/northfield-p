@@ -6,18 +6,17 @@
 <title>Gráfico del precio del oro en vivo | MyGoldFolio</title><meta name="description" content="Sigue el precio del oro en vivo y visualiza gráficos históricos. Usa MyGoldFolio para gestionar tus inversiones en oro físico sin conexión." />
 <meta property="og:title" content="Gráfico del precio del oro en vivo | MyGoldFolio" /><meta property="og:description" content="Sigue el precio del oro en vivo y visualiza gráficos históricos. Usa MyGoldFolio para gestionar tus inversiones en oro físico sin conexión." /><meta property="og:type" content="article" /><meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="/images/icon.png" /><link rel="canonical" href="https://mygoldfolio.de/es/market/gold/" />
-<link rel="alternate" hreflang="en-US" href="https://mygoldfolio.de/market/gold/" />
-<link rel="alternate" hreflang="de-DE" href="https://mygoldfolio.de/de/market/gold/" />
-<link rel="alternate" hreflang="fr-FR" href="https://mygoldfolio.de/fr/market/gold/" />
-<link rel="alternate" hreflang="tr-TR" href="https://mygoldfolio.de/tr/market/gold/" />
-<link rel="alternate" hreflang="es-ES" href="https://mygoldfolio.de/es/market/gold/" />
-<link rel="alternate" hreflang="it-IT" href="https://mygoldfolio.de/it/market/gold/" />
+<link rel="alternate" hreflang="en" href="https://mygoldfolio.de/market/gold/" />
+<link rel="alternate" hreflang="de" href="https://mygoldfolio.de/de/market/gold/" />
+<link rel="alternate" hreflang="fr" href="https://mygoldfolio.de/fr/market/gold/" />
+<link rel="alternate" hreflang="tr" href="https://mygoldfolio.de/tr/market/gold/" />
+<link rel="alternate" hreflang="es" href="https://mygoldfolio.de/es/market/gold/" />
+<link rel="alternate" hreflang="it" href="https://mygoldfolio.de/it/market/gold/" />
 <link rel="alternate" hreflang="pt-BR" href="https://mygoldfolio.de/pt/market/gold/" />
-<link rel="alternate" hreflang="x-default" href="https://mygoldfolio.de/market/gold/" />
 <link rel="alternate" hreflang="x-default" href="https://mygoldfolio.de/market/gold/" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/assets/css/main.min.css" />
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script><script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="/assets/js/ionicons/ionicons.esm.js"></script><script nomodule src="/assets/js/ionicons/ionicons.js"></script>
 <link rel="stylesheet" href="/images/ratgeber.css" />
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Gráfico del precio del oro en vivo","description":"Sigue el precio del oro en vivo y visualiza gráficos históricos. Usa MyGoldFolio para gestionar tus inversiones en oro físico sin conexión.","inLanguage":"es-ES","author":{"@type":"Organization","name":"MyGoldFolio"},"publisher":{"@type":"Organization","name":"MyGoldFolio","logo":{"@type":"ImageObject","url":"https://mygoldfolio.de/images/icon.png"}},"mainEntityOfPage":"https://mygoldfolio.de/es/market/gold/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://mygoldfolio.de/es/"},{"@type":"ListItem","position":2,"name":"Mercado en vivo","item":"https://mygoldfolio.de/es/market/"},{"@type":"ListItem","position":3,"name":"Gráfico del precio del oro en vivo","item":"https://mygoldfolio.de/es/market/gold/"}]}</script>
 <style>
@@ -27,10 +26,45 @@
 }
 .tv-placeholder-icon { font-size: 3rem; color: #D4A843; margin-bottom: 1rem; opacity: 0.5; }
 .tv-placeholder-text { font-size: 0.875rem; color: #9ca3af; max-width: 400px; }
+.market-section-divider {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2.75rem 1.5rem 2.25rem;
+}
+.market-section-divider__line {
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(226, 184, 75, 0.78) 18%, rgba(226, 184, 75, 0.78) 82%, transparent);
+  box-shadow: 0 0 18px rgba(226, 184, 75, 0.2);
+}
+.market-app-panel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(226, 184, 75, 0.22);
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, rgba(15, 15, 26, 0.98), rgba(18, 18, 29, 0.98));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 0 28px rgba(226, 184, 75, 0.06);
+}
+.market-context-section { margin-bottom: 5.5rem; }
+.market-context-panel {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 3px solid rgba(148, 163, 184, 0.62);
+  border-radius: 0.9rem;
+  background: rgba(23, 27, 36, 0.72);
+  padding: 1.35rem 1.35rem 1.5rem;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.16);
+}
+.market-context-panel__eyebrow { font-size: 0.625rem; letter-spacing: 0.16em; opacity: 0.8; }
+.market-context-panel__title { margin-bottom: 1rem; font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.25; }
+.market-context-panel__copy { font-size: 0.8125rem; line-height: 1.75; }
+@media (min-width: 768px) {
+  .market-context-panel { padding: 1.75rem 2rem 1.9rem; }
+}
 </style>
 </head><body class="bg-navy text-gray-200">
 <nav class="sticky top-0 z-50 border-b border-border/40 bg-navy/90 backdrop-blur"><div class="guide-shell guide-nav flex min-h-[68px] items-center justify-between gap-4"><a href="/es/" class="flex items-center gap-3"><img src="/images/icon.png" alt="MyGoldFolio" class="h-8 w-8 rounded-xl flex-shrink-0" /><span class="text-lg font-extrabold tracking-tight text-white">My<span class="text-[#E2B84B]">Gold</span>Folio</span></a><div class="flex items-center gap-4 text-sm"><a href="/es/market/" class="guide-nav-chip guide-nav-chip--active flex items-center gap-1.5 cta-pulse"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-gold"></span></span>Mercado en vivo</a><a href="/es/#download" class="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-gold px-4 py-2 text-xs font-bold text-navy shadow-lg shadow-gold/20 transition hover:bg-amber sm:text-sm"><ion-icon name="logo-google-playstore" style="font-size:14px;"></ion-icon><span>Obtener app</span></a></div></div></nav>
-<main data-market-id="gold" data-market-locale="es">
+<main data-market-id="gold" data-market-locale="es" data-tv-locale="es" data-tv-default-ccy="EUR" data-tv-default-unit="g" data-tv-usd-ozt="XAUUSD" data-tv-usd-g="XAUUSDG" data-tv-eur-ozt="XAUEUR" data-tv-eur-g="XAUEURG">
   <section class="guide-hub-hero">
     <div class="guide-shell max-w-4xl text-center">
       <nav class="guide-breadcrumb justify-center mb-6" aria-label="Breadcrumb">
@@ -54,30 +88,162 @@
           <div id="tv-placeholder" class="tv-placeholder h-full">
             <ion-icon name="bar-chart-outline" class="tv-placeholder-icon"></ion-icon>
             <p class="tv-placeholder-text">Activa las cookies funcionales para ver el gráfico interactivo de TradingView.</p>
-            <button data-consent-accept="functional" class="mt-4 rounded-full bg-navy/50 border border-white/10 px-4 py-2 text-xs font-bold hover:bg-navy transition cursor-pointer">Accept Cookies</button>
+            <button data-consent-accept="functional" class="mt-4 rounded-full bg-navy/50 border border-white/10 px-4 py-2 text-xs font-bold hover:bg-navy transition cursor-pointer">Aceptar cookies</button>
           </div>
           <!-- Widget container -->
           <div class="tradingview-widget-container" style="height:100%;width:100%">
             <div id="tradingview_chart" class="tradingview-widget-container__widget" style="height:100%;width:100%"></div>
           </div>
+          <div id="tv-fallback" class="tv-placeholder h-full" style="display:none;">
+            <ion-icon name="cloud-offline-outline" class="tv-placeholder-icon"></ion-icon>
+            <p class="tv-placeholder-text">Gráfico no disponible temporalmente. Inténtalo de nuevo más tarde.</p>
+            <a href="/es/#download" class="mt-4 rounded-full border border-gold/40 px-4 py-2 text-xs font-bold text-gold hover:bg-gold/10 transition">Obtener app</a>
+          </div>
         </div>
       </div>
+      <p class="text-center text-xs text-gray-500 mt-4">Gráfico de referencia en vivo. Cambia la moneda o la unidad en la barra de herramientas.</p>
     </div>
   </div>
 
-  <div class="relative overflow-hidden w-full mt-4 border-t border-white/5 bg-gradient-to-b from-navy via-[#12121d] to-navy">
+  <div class="guide-shell market-section-divider" role="separator" aria-hidden="true">
+    <div class="market-section-divider__line"></div>
+  </div>
+
+  <div id="market-app-section" class="guide-shell max-w-5xl mx-auto market-app-panel">
     <div class="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay"></div>
     
     <!-- Hero (Set It. Forget It.) -->
     <div class="relative z-10 pt-10 md:pt-16 pb-8 md:pb-12">
-      
+      <!-- Localized app hero -->
+  <section class="relative overflow-hidden">
+    <picture class="absolute inset-0 block w-full h-full z-0">
+      <source type="image/avif" srcset="/images/gen/hero-bg/mgf-v3-hero-bg-all-480.avif 480w, /images/gen/hero-bg/mgf-v3-hero-bg-all-768.avif 768w, /images/gen/hero-bg/mgf-v3-hero-bg-all-1080.avif 1080w, /images/gen/hero-bg/mgf-v3-hero-bg-all-1536.avif 1536w" sizes="100vw">
+      <source type="image/webp" srcset="/images/gen/hero-bg/mgf-v3-hero-bg-all-480.webp 480w, /images/gen/hero-bg/mgf-v3-hero-bg-all-768.webp 768w, /images/gen/hero-bg/mgf-v3-hero-bg-all-1080.webp 1080w, /images/gen/hero-bg/mgf-v3-hero-bg-all-1536.webp 1536w" sizes="100vw">
+      <img src="/images/mgf-v3-hero-bg-all.png" alt="" class="w-full h-full object-cover object-center" width="1536" height="1024" fetchpriority="high" loading="eager" decoding="async">
+    </picture>
+    <div class="absolute inset-0 z-0" style="background: rgba(15,15,26,0.78);"></div>
+
+    <div class="relative max-w-5xl mx-auto px-6 pt-6 pb-12 md:pt-12 md:pb-20 flex flex-col md:flex-row items-center gap-10 md:gap-16">
+
+      <!-- Text column -->
+      <div class="flex-1 text-center md:text-left z-10 relative">
+        <div class="flex items-center gap-3 justify-center md:justify-start mb-5">
+          <picture>
+            <source type="image/webp" srcset="/images/gen/icons/icon-64.webp 64w, /images/gen/icons/icon-128.webp 128w" sizes="56px">
+            <img src="/images/icon.png" alt="MyGoldFolio" class="w-14 h-14 rounded-2xl shadow-lg shadow-gold/20" width="56" height="56" loading="eager" decoding="async">
+          </picture>
+          <span class="inline-flex items-center gap-1.5 text-xs bg-gold/15 text-gold border border-gold/20 px-2.5 py-1 rounded-full font-semibold">
+            <ion-icon name="sparkles-outline"></ion-icon>&nbsp;Tu folio inteligente de metales
+          </span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-black text-white leading-tight mb-2 gold-glow">
+          Configúralo. Olvídate.
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-gray-300 mb-4">App privada y offline-first para seguir metales preciosos.</p>
+        <p class="text-gray-300 text-lg max-w-lg mb-8 mx-auto md:mx-0">
+          Configura tu portafolio una vez. Recibe alertas cuando el precio se mueva, cuando alcances el break-even y cuando tus posiciones sean exentas. Funciona en segundo plano: tu teléfono vigila por ti.
+        </p>
+
+        <!-- Hero badges -->
+        <div class="flex flex-wrap justify-center md:justify-start gap-3 mb-10">
+          <span class="text-xs bg-navy/60 border border-border/40 text-gray-300 px-3 py-1.5 rounded-full flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-mint rounded-full"></span>100% offline y privado
+          </span>
+          <span class="text-xs bg-navy/60 border border-border/40 text-gray-300 px-3 py-1.5 rounded-full flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-gold rounded-full"></span>Punto de equilibrio y cuenta fiscal
+          </span>
+          <span class="text-xs bg-navy/60 border border-border/40 text-gray-300 px-3 py-1.5 rounded-full flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-gold rounded-full"></span>Monitoreo fondo
+          </span>
+        </div>
+        <!-- CTAs -->
+        <div class="flex flex-wrap justify-center md:justify-start gap-4">
+          <a href="/es/#download" class="cta-pulse inline-flex items-center gap-2 bg-gold text-navy font-bold px-7 py-3.5 rounded-xl hover:bg-amber transition text-sm">
+            <ion-icon name="logo-google-playstore"></ion-icon>Instalar gratis
+          </a>
+          <a href="/es/#plans" class="inline-flex items-center gap-2 border border-gold/50 text-gold font-bold px-7 py-3.5 rounded-xl hover:bg-gold/10 transition text-sm">
+            <ion-icon name="diamond-outline"></ion-icon>Ver Premium
+          </a>
+        </div>
+        <p class="mt-4 text-xs text-gray-400 flex flex-wrap justify-center md:justify-start gap-x-3 gap-y-1" data-aos="fade-up" data-aos-delay="400">
+          <span>Sin cuenta. Sin anuncios. Los datos del portafolio quedan en tu dispositivo.</span>
+        </p>
+      </div>
+
+      <!-- Phone mockup column -->
+      <div class="flex flex-col items-center relative" style="min-width:220px;">
+        <!-- Radial glow -->
+        <div class="phone-glow"></div>
+
+        <!-- Particles -->
+        <span class="particle" style="left:20px; top:60px; animation-duration:3.5s; animation-delay:0s;"></span>
+        <span class="particle" style="left:200px; top:30px; animation-duration:4.2s; animation-delay:0.6s;"></span>
+        <span class="particle" style="left:240px; top:150px; animation-duration:3s; animation-delay:1.1s;"></span>
+        <span class="particle" style="left:10px; top:200px; animation-duration:4.8s; animation-delay:0.3s;"></span>
+        <span class="particle" style="left:180px; top:360px; animation-duration:3.8s; animation-delay:0.9s;"></span>
+        <span class="particle" style="left:50px; top:390px; animation-duration:5s; animation-delay:1.5s;"></span>
+        <span class="particle" style="left:130px; top:10px; animation-duration:3.2s; animation-delay:0.4s;"></span>
+        <span class="particle" style="left:220px; top:280px; animation-duration:4.5s; animation-delay:1.8s;"></span>
+
+        <div class="phone-float">
+          <div class="phone-frame">
+            <video autoplay muted loop playsinline poster="/images/gen/screenshots/mgf-v3-s1-es-440.webp"
+              style="width:100%;height:100%;object-fit:cover;">
+              <source src="/assets/app-video.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
     </div>
     
     <!-- Features Grid -->
     <div class="relative z-10 pb-16 md:pb-24 -mt-8 md:-mt-12">
-      
+      <!-- Localized app features --><section id="built-for-gold" class="px-6 py-8 border-b-0">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10" data-aos="fade-up">
+        <p class="text-xs font-bold tracking-[0.2em] text-gold uppercase mb-3">Por qué MyGoldFolio</p>
+        <h2 class="text-2xl md:text-3xl font-black text-white mb-3">Creado para seguir metales preciosos</h2>
+        <p class="text-gray-400 text-sm max-w-2xl mx-auto">Sigue los metales compatibles en una app privada y planifica tu siguiente movimiento con escenarios claros y alertas inteligentes.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="/es/market/" class="bg-navy-light/55 border border-border/25 rounded-xl p-5 text-center hover-card block group cursor-pointer" data-aos="zoom-in-up" data-aos-delay="0">
+          <p class="text-gold font-extrabold text-lg mb-1 group-hover:text-amber transition flex justify-center items-center gap-1.5"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-gold"></span></span>Cuatro mercados en vivo</p>
+          <p class="text-gray-400 text-sm">Precios de oro, plata, platino y paladio. Premium desbloquea el seguimiento completo de platino y paladio.</p>
+        </a>
+        <div class="bg-navy-light/55 border border-border/25 rounded-xl p-5 text-center hover-card" data-aos="zoom-in-up" data-aos-delay="100">
+          <p class="text-gold font-extrabold text-lg mb-1">Todos los tipos de oro</p>
+          <p class="text-gray-400 text-sm">Lingotes, monedas, joyas y oro online: todo en una sola vista del portafolio.</p>
+        </div>
+        <div class="bg-navy-light/55 border border-border/25 rounded-xl p-5 text-center hover-card" data-aos="zoom-in-up" data-aos-delay="200">
+          <p class="text-gold font-extrabold text-lg mb-1">Seguimiento y simulación</p>
+          <p class="text-gray-400 text-sm">Mira tu situación actual y prueba escenarios de precio al instante.</p>
+        </div>
+        <div class="bg-navy-light/55 border border-border/25 rounded-xl p-5 text-center hover-card" data-aos="zoom-in-up" data-aos-delay="300">
+          <p class="text-gold font-extrabold text-lg mb-1">Define y supervisa</p>
+          <p class="text-gray-400 text-sm">Usa alertas, control de equilibrio y cuenta fiscal sin seguimiento manual.</p>
+        </div>
+      </div>
+    </div>
+  </section>
     </div>
   </div>
+
+  <div class="guide-shell market-section-divider" role="separator" aria-hidden="true">
+    <div class="market-section-divider__line"></div>
+  </div>
+  <section class="guide-shell market-context-section max-w-4xl mx-auto" aria-labelledby="market-context-title">
+    <div class="market-context-panel">
+      <p class="guide-eyebrow market-context-panel__eyebrow mb-2">Contexto del mercado</p>
+      <h2 id="market-context-title" class="market-context-panel__title font-extrabold text-white">Contexto del mercado del oro</h2>
+      <div class="market-context-panel__copy space-y-3 text-gray-400">
+        <p>El oro se negocia en todo el mundo y suele compararse por peso fino. El gráfico de referencia en vivo ayuda a ver la dirección del mercado, mientras tus registros muestran cuánto costaron realmente tus lingotes, monedas o joyas.</p>
+        <p>Una referencia spot no es una cotización de compra o venta de un comerciante. Las primas, fabricación, envío, custodia y margen del distribuidor pueden alejar bastante tu punto de equilibrio del gráfico, sobre todo en unidades pequeñas.</p>
+        <p>La fiscalidad del oro físico depende del país, producto, plazo de tenencia y circunstancias personales. Conserva juntos facturas y ventas y confirma cualquier declaración con la autoridad local o un asesor cualificado.</p>
+      </div>
+    </div>
+  </section>
 </main>
 <footer class="border-t border-border/30 px-6 py-8 text-center text-xs text-muted"><p>© 2026 SmartDailyApps. All rights reserved.</p><div class="mt-3 flex flex-wrap justify-center gap-4"><a href="/es/" class="hover:text-gold">Inicio</a><a href="/es/market/" class="hover:text-gold">Mercado en vivo</a><a href="/es/guias/" class="hover:text-gold">Guías</a><a href="/es/help/" class="hover:text-gold">Ayuda</a><a href="/es/privacy/" class="hover:text-gold">Privacidad</a></div></footer><script src="/images/play-store-attribution.js"></script><script src="/images/guide-analytics.js"></script><script src="/images/locale-switcher.js"></script>
 <script src="/assets/js/aos.js"></script>
@@ -96,13 +262,14 @@
       widgetLoaded = true;
       placeholder.style.display = "none";
       
-      const urlParams = new URLSearchParams(window.location.search);
-      const fiat = urlParams.get('currency') || 'USD';
-      let tvSymbol = "OANDA:XAUUSD";
-      if (fiat !== 'USD') {
-        // Just a naive replacement for the symbol if it's OANDA:XAUUSD -> OANDA:XAUEUR
-        tvSymbol = tvSymbol.replace('USD', fiat.toUpperCase());
-      }
+      var d = document.querySelector('main[data-market-id]').dataset;
+      var params = new URLSearchParams(window.location.search);
+      var ccy = (params.get('currency') || '').toUpperCase();
+      if (ccy !== 'USD' && ccy !== 'EUR') ccy = d.tvDefaultCcy;
+      var unit = (params.get('unit') || '').toLowerCase();
+      if (unit !== 'g' && unit !== 'ozt') unit = d.tvDefaultUnit;
+      var pick = function (c, u) { return d['tv' + (c === 'EUR' ? 'Eur' : 'Usd') + (u === 'g' ? 'G' : 'Ozt')] || ''; };
+      var tvSymbol = pick(ccy, unit) || pick(ccy, 'ozt') || d.tvUsdOzt;
 
       const script = document.createElement("script");
       script.type = "text/javascript";
@@ -129,16 +296,15 @@
       
       const widgetDiv = document.querySelector(".tradingview-widget-container__widget");
       widgetDiv.appendChild(script);
+      setTimeout(function () {
+        var f = document.getElementById('tv-fallback');
+        if (f && widgetDiv && !widgetDiv.querySelector('iframe')) f.style.display = 'flex';
+      }, 8000);
     }
     
     // Check consent before loading
     function checkConsentAndLoad() {
-      // Use existing consent check logic (window.CookieConsent)
-      // Actually, since MyGoldFolio uses cookie-consent, we should check it properly.
-      // Or we can just check if CookieConsent object exists and function returns true.
-      // Sometimes it's a specific cookie, like 'cookie-consent' = 'accepted'
-      const match = document.cookie.match(new RegExp('(^| )cookie-consent=([^;]+)'));
-      const hasConsent = match && match[2] === 'accepted';
+      var hasConsent = window.siteAnalytics && window.siteAnalytics.isGranted && window.siteAnalytics.isGranted();
       
       if (hasConsent) {
         // Observe viewport to lazy load
@@ -158,19 +324,13 @@
       }
     }
 
-    // Existing CookieConsent system triggers an event or reload.
-    // Let's hook into the global accept function if possible, or just poll initially.
+    // Load if analytics consent already granted; react to the governed grant.
     checkConsentAndLoad();
-    
-    // We should also listen for the event that might be dispatched
-    document.addEventListener("cookieConsentUpdated", checkConsentAndLoad);
-    document.addEventListener("click", function(e) {
+    window.addEventListener('site-analytics-consent-granted', checkConsentAndLoad);
+    document.addEventListener("click", function (e) {
       if (e.target.closest('[data-consent-accept]')) {
-         document.cookie = "cookie-consent=accepted; path=/; max-age=31536000";
-         if (window.CookieConsent && typeof window.CookieConsent.accept === 'function') {
-           window.CookieConsent.accept('functional');
-         }
-         setTimeout(checkConsentAndLoad, 100);
+        e.preventDefault();
+        if (window.siteAnalytics && window.siteAnalytics.openPreferences) window.siteAnalytics.openPreferences();
       }
     });
   });

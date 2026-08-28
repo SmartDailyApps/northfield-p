@@ -2,7 +2,7 @@ import { mkdir, writeFile } from 'fs/promises';
 import { readFileSync } from 'fs';
 import { dirname, resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
-import { locales, metals, marketPath } from './market-content.mjs';
+import { locales, metals, marketPath, marketChartConfig, marketCommentary, tvSymbolsFor } from './market-content.mjs';
 import { consentHead, tailwind, absoluteUrl, esc, brandWordmark, playUrl, sharedFooter } from './build-ratgeber.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -24,7 +24,7 @@ function languageLinks(currentCode, currentMetal) {
 function hreflang(currentMetal) {
   const links = Object.values(locales).map((locale) => {
     const path = currentMetal ? marketPath(currentMetal, locale) : locale.marketPath;
-    return `<link rel="alternate" hreflang="${locale.locale}" href="${absoluteUrl(path)}" />`;
+    return `<link rel="alternate" hreflang="${locale.hreflang || locale.code}" href="${absoluteUrl(path)}" />`;
   });
   const defaultPath = currentMetal ? marketPath(currentMetal, locales.en) : locales.en.marketPath;
   links.push(`<link rel="alternate" hreflang="x-default" href="${absoluteUrl(defaultPath)}" />`);
@@ -45,26 +45,27 @@ function marketPage(locale, metal) {
   const breadcrumbLd = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: locale.homeLabel, item: absoluteUrl(locale.code === 'en' ? '/' : `/${locale.code}/`) }, { '@type': 'ListItem', position: 2, name: locale.marketLabel, item: absoluteUrl(locale.marketPath) }, { '@type': 'ListItem', position: 3, name: content.title, item: canonical }] };
   const articleLd = { '@context': 'https://schema.org', '@type': 'Article', headline: content.title, description: content.description, inLanguage: locale.locale, author: { '@type': 'Organization', name: 'MyGoldFolio' }, publisher: { '@type': 'Organization', name: 'MyGoldFolio', logo: { '@type': 'ImageObject', url: absoluteUrl('/images/icon.png') } }, mainEntityOfPage: canonical };
 
-  // Extract localized features and stats from home page
+  // Extract the localized app section from the matching locale homepage.
+  // The visible comment around the built-for block differs by locale, so use
+  // the stable section id instead of an English-only comment boundary.
   const homePath = pathToOutput(locale.code === 'en' ? '/' : `/${locale.code}/`);
   let sharedFeaturesHtml = '';
   let sharedHeroHtml = '';
-  try {
-    const homeHtml = readFileSync(homePath, 'utf8');
-    const featMatch = homeHtml.match(/<!-- Built For Precious Metals -->([\s\S]*?)(?=<!-- Stats strip -->)/);
-    if (featMatch) {
-      sharedFeaturesHtml = '<!-- Built For Precious Metals -->' + featMatch[1];
-    }
-    const heroMatch = homeHtml.match(/<!-- Hero -->([\s\S]*?)(?=<!-- Built For Precious Metals -->)/);
-    if (heroMatch) {
-      sharedHeroHtml = '<!-- Hero CTA -->' + heroMatch[1]
-        .replace(/href="#download"/g, `href="${locale.code === 'en' ? '/' : `/${locale.code}/`}#download"`)
-        .replace(/href="#plans"/g, `href="${locale.code === 'en' ? '/' : `/${locale.code}/`}#plans"`)
-        .replace(/href="#features"/g, `href="${locale.code === 'en' ? '/' : `/${locale.code}/`}#features"`);
-    }
-  } catch (e) {
-    console.error('Could not load home html for ' + locale.code);
+  const homeHtml = readFileSync(homePath, 'utf8');
+  const builtMatch = homeHtml.match(/<section id="built-for-gold"[\s\S]*?<\/section>/);
+  const heroMatch = homeHtml.match(/<!-- Hero -->[\s\S]*?<\/section>/);
+  if (!builtMatch || !heroMatch) {
+    throw new Error(`Could not extract localized app section from ${homePath}`);
   }
+  sharedFeaturesHtml = '<!-- Localized app features -->' + builtMatch[0];
+  sharedHeroHtml = '<!-- Localized app hero -->' + heroMatch[0].replace('<!-- Hero -->', '')
+    .replace(/href="#download"/g, `href="${locale.code === 'en' ? '/' : `/${locale.code}/`}#download"`)
+    .replace(/href="#plans"/g, `href="${locale.code === 'en' ? '/' : `/${locale.code}/`}#plans"`)
+    .replace(/href="#features"/g, `href="${locale.code === 'en' ? '/' : `/${locale.code}/`}#features"`);
+
+  const chart = marketChartConfig[locale.code] || marketChartConfig.en;
+  const syms = tvSymbolsFor(metal);
+  const commentary = marketCommentary[metal.id]?.[locale.code];
 
   return `<!DOCTYPE html>
 <html lang="${locale.locale}"><head>
@@ -74,7 +75,6 @@ ${consentHead()}
 <meta property="og:title" content="${esc(content.seoTitle)}" /><meta property="og:description" content="${esc(content.description)}" /><meta property="og:type" content="article" /><meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="/images/icon.png" /><link rel="canonical" href="${canonical}" />
 ${hreflang(metal)}
-<link rel="alternate" hreflang="x-default" href="${absoluteUrl(marketPath(metal, locales.en))}" />
 ${tailwind()}
 <script type="application/ld+json">${JSON.stringify(articleLd)}</script><script type="application/ld+json">${JSON.stringify(breadcrumbLd)}</script>
 <style>
@@ -84,10 +84,45 @@ ${tailwind()}
 }
 .tv-placeholder-icon { font-size: 3rem; color: #D4A843; margin-bottom: 1rem; opacity: 0.5; }
 .tv-placeholder-text { font-size: 0.875rem; color: #9ca3af; max-width: 400px; }
+.market-section-divider {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2.75rem 1.5rem 2.25rem;
+}
+.market-section-divider__line {
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(226, 184, 75, 0.78) 18%, rgba(226, 184, 75, 0.78) 82%, transparent);
+  box-shadow: 0 0 18px rgba(226, 184, 75, 0.2);
+}
+.market-app-panel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(226, 184, 75, 0.22);
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, rgba(15, 15, 26, 0.98), rgba(18, 18, 29, 0.98));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24), 0 0 28px rgba(226, 184, 75, 0.06);
+}
+.market-context-section { margin-bottom: 5.5rem; }
+.market-context-panel {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 3px solid rgba(148, 163, 184, 0.62);
+  border-radius: 0.9rem;
+  background: rgba(23, 27, 36, 0.72);
+  padding: 1.35rem 1.35rem 1.5rem;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.16);
+}
+.market-context-panel__eyebrow { font-size: 0.625rem; letter-spacing: 0.16em; opacity: 0.8; }
+.market-context-panel__title { margin-bottom: 1rem; font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.25; }
+.market-context-panel__copy { font-size: 0.8125rem; line-height: 1.75; }
+@media (min-width: 768px) {
+  .market-context-panel { padding: 1.75rem 2rem 1.9rem; }
+}
 </style>
 </head><body class="bg-navy text-gray-200">
 ${marketNav(locale, metal)}
-<main data-market-id="${metal.id}" data-market-locale="${locale.code}">
+<main data-market-id="${metal.id}" data-market-locale="${locale.code}" data-tv-locale="${chart.tvLocale}" data-tv-default-ccy="${chart.currency}" data-tv-default-unit="${chart.unit}" data-tv-usd-ozt="${syms['USD:ozt']}" data-tv-usd-g="${syms['USD:g']}" data-tv-eur-ozt="${syms['EUR:ozt']}" data-tv-eur-g="${syms['EUR:g']}">
   <section class="guide-hub-hero">
     <div class="guide-shell max-w-4xl text-center">
       <nav class="guide-breadcrumb justify-center mb-6" aria-label="Breadcrumb">
@@ -111,18 +146,28 @@ ${marketNav(locale, metal)}
           <div id="tv-placeholder" class="tv-placeholder h-full">
             <ion-icon name="bar-chart-outline" class="tv-placeholder-icon"></ion-icon>
             <p class="tv-placeholder-text">${esc(locale.consentPrompt)}</p>
-            <button data-consent-accept="functional" class="mt-4 rounded-full bg-navy/50 border border-white/10 px-4 py-2 text-xs font-bold hover:bg-navy transition cursor-pointer">Accept Cookies</button>
+            <button data-consent-accept="functional" class="mt-4 rounded-full bg-navy/50 border border-white/10 px-4 py-2 text-xs font-bold hover:bg-navy transition cursor-pointer">${esc(chart.consentButton)}</button>
           </div>
           <!-- Widget container -->
           <div class="tradingview-widget-container" style="height:100%;width:100%">
             <div id="tradingview_chart" class="tradingview-widget-container__widget" style="height:100%;width:100%"></div>
           </div>
+          <div id="tv-fallback" class="tv-placeholder h-full" style="display:none;">
+            <ion-icon name="cloud-offline-outline" class="tv-placeholder-icon"></ion-icon>
+            <p class="tv-placeholder-text">${esc(chart.unavailable)}</p>
+            <a href="${locale.code === 'en' ? '/#download' : `/${locale.code}/#download`}" class="mt-4 rounded-full border border-gold/40 px-4 py-2 text-xs font-bold text-gold hover:bg-gold/10 transition">${esc(locale.appLabel)}</a>
+          </div>
         </div>
       </div>
+      <p class="text-center text-xs text-gray-500 mt-4">${esc(chart.note)}</p>
     </div>
   </div>
 
-  <div class="relative overflow-hidden w-full mt-4 border-t border-white/5 bg-gradient-to-b from-navy via-[#12121d] to-navy">
+  <div class="guide-shell market-section-divider" role="separator" aria-hidden="true">
+    <div class="market-section-divider__line"></div>
+  </div>
+
+  <div id="market-app-section" class="guide-shell max-w-5xl mx-auto market-app-panel">
     <div class="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] pointer-events-none mix-blend-overlay"></div>
     
     <!-- Hero (Set It. Forget It.) -->
@@ -135,6 +180,21 @@ ${marketNav(locale, metal)}
       ${sharedFeaturesHtml.replace('border-b border-border/20', 'border-b-0').replace('py-16', 'py-8')}
     </div>
   </div>
+
+  ${commentary ? `<div class="guide-shell market-section-divider" role="separator" aria-hidden="true">
+    <div class="market-section-divider__line"></div>
+  </div>
+  <section class="guide-shell market-context-section max-w-4xl mx-auto" aria-labelledby="market-context-title">
+    <div class="market-context-panel">
+      <p class="guide-eyebrow market-context-panel__eyebrow mb-2">${esc(locale.marketOverviewLabel)}</p>
+      <h2 id="market-context-title" class="market-context-panel__title font-extrabold text-white">${esc(commentary.title)}</h2>
+      <div class="market-context-panel__copy space-y-3 text-gray-400">
+        <p>${esc(commentary.overview)}</p>
+        <p>${esc(commentary.spread)}</p>
+        <p>${esc(commentary.tax)}</p>
+      </div>
+    </div>
+  </section>` : ''}
 </main>
 ${sharedFooter(locale)}
 <script src="/assets/js/aos.js"></script>
@@ -153,13 +213,14 @@ ${sharedFooter(locale)}
       widgetLoaded = true;
       placeholder.style.display = "none";
       
-      const urlParams = new URLSearchParams(window.location.search);
-      const fiat = urlParams.get('currency') || 'USD';
-      let tvSymbol = "${metal.tvSymbol}";
-      if (fiat !== 'USD') {
-        // Just a naive replacement for the symbol if it's OANDA:XAUUSD -> OANDA:XAUEUR
-        tvSymbol = tvSymbol.replace('USD', fiat.toUpperCase());
-      }
+      var d = document.querySelector('main[data-market-id]').dataset;
+      var params = new URLSearchParams(window.location.search);
+      var ccy = (params.get('currency') || '').toUpperCase();
+      if (ccy !== 'USD' && ccy !== 'EUR') ccy = d.tvDefaultCcy;
+      var unit = (params.get('unit') || '').toLowerCase();
+      if (unit !== 'g' && unit !== 'ozt') unit = d.tvDefaultUnit;
+      var pick = function (c, u) { return d['tv' + (c === 'EUR' ? 'Eur' : 'Usd') + (u === 'g' ? 'G' : 'Ozt')] || ''; };
+      var tvSymbol = pick(ccy, unit) || pick(ccy, 'ozt') || d.tvUsdOzt;
 
       const script = document.createElement("script");
       script.type = "text/javascript";
@@ -172,7 +233,7 @@ ${sharedFooter(locale)}
         "timezone": "Etc/UTC",
         "theme": "dark",
         "style": "2",
-        "locale": "${locale.code}",
+        "locale": "${chart.tvLocale}",
         "enable_publishing": false,
         "backgroundColor": "#0f0f1a",
         "gridColor": "rgba(255, 255, 255, 0.06)",
@@ -186,16 +247,15 @@ ${sharedFooter(locale)}
       
       const widgetDiv = document.querySelector(".tradingview-widget-container__widget");
       widgetDiv.appendChild(script);
+      setTimeout(function () {
+        var f = document.getElementById('tv-fallback');
+        if (f && widgetDiv && !widgetDiv.querySelector('iframe')) f.style.display = 'flex';
+      }, 8000);
     }
     
     // Check consent before loading
     function checkConsentAndLoad() {
-      // Use existing consent check logic (window.CookieConsent)
-      // Actually, since MyGoldFolio uses cookie-consent, we should check it properly.
-      // Or we can just check if CookieConsent object exists and function returns true.
-      // Sometimes it's a specific cookie, like 'cookie-consent' = 'accepted'
-      const match = document.cookie.match(new RegExp('(^| )cookie-consent=([^;]+)'));
-      const hasConsent = match && match[2] === 'accepted';
+      var hasConsent = window.siteAnalytics && window.siteAnalytics.isGranted && window.siteAnalytics.isGranted();
       
       if (hasConsent) {
         // Observe viewport to lazy load
@@ -215,19 +275,13 @@ ${sharedFooter(locale)}
       }
     }
 
-    // Existing CookieConsent system triggers an event or reload.
-    // Let's hook into the global accept function if possible, or just poll initially.
+    // Load if analytics consent already granted; react to the governed grant.
     checkConsentAndLoad();
-    
-    // We should also listen for the event that might be dispatched
-    document.addEventListener("cookieConsentUpdated", checkConsentAndLoad);
-    document.addEventListener("click", function(e) {
+    window.addEventListener('site-analytics-consent-granted', checkConsentAndLoad);
+    document.addEventListener("click", function (e) {
       if (e.target.closest('[data-consent-accept]')) {
-         document.cookie = "cookie-consent=accepted; path=/; max-age=31536000";
-         if (window.CookieConsent && typeof window.CookieConsent.accept === 'function') {
-           window.CookieConsent.accept('functional');
-         }
-         setTimeout(checkConsentAndLoad, 100);
+        e.preventDefault();
+        if (window.siteAnalytics && window.siteAnalytics.openPreferences) window.siteAnalytics.openPreferences();
       }
     });
   });

@@ -87,7 +87,7 @@ export function consentHead() {
 function tailwind() {
   return `<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/assets/css/main.min.css" />
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script><script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="/assets/js/ionicons/ionicons.esm.js"></script><script nomodule src="/assets/js/ionicons/ionicons.js"></script>
 <link rel="stylesheet" href="/images/ratgeber.css" />`;
 }
 
@@ -107,10 +107,14 @@ function languageLinks(currentCode, currentArticle) {
 }
 
 function hreflang(currentArticle) {
-  return Object.values(locales).map((locale) => {
+  const links = Object.values(locales).map((locale) => {
     const path = currentArticle ? articlePath(currentArticle, locale) : locale.hubPath;
-    return `<link rel="alternate" hreflang="${locale.locale}" href="${absoluteUrl(path)}" />`;
-  }).join('\n');
+    const code = locale.hreflang || (locale.code === 'pt' ? 'pt-BR' : locale.code);
+    return `<link rel="alternate" hreflang="${code}" href="${absoluteUrl(path)}" />`;
+  });
+  const defaultPath = currentArticle ? articlePath(currentArticle, locales.en) : locales.en.hubPath;
+  links.push(`<link rel="alternate" hreflang="x-default" href="${absoluteUrl(defaultPath)}" />`);
+  return links.join('\n');
 }
 
 function sharedNav(locale, currentArticle) {

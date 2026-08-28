@@ -86,7 +86,7 @@ if (site === 'product') {
     if (count(source, 'id="notify-form"') !== 1 || count(source, "formId: 'mpqolryl'") !== 1) {
       failures.push(`${home}: expected exactly one configured update-subscription form`);
     }
-    if (count(source, 'https://unpkg.com/@formspree/ajax@1') !== 1) {
+    if (count(source, '/assets/js/formspree-ajax-1.1.5.js') !== 1) {
       failures.push(`${home}: expected exactly one Formspree subscription runtime`);
     }
     if (count(source, 'action="https://formspree.io/f/mpqolryl"') !== 1 || !source.includes('autocomplete="email"')) {
