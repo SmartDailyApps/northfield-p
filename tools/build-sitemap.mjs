@@ -49,16 +49,21 @@ function routes() {
     for (const code of localeCodes) add(`/${code}/${seg}/`, gitDate(`${code}/${seg}/index.html`));
   }
 
-  // Guides: hubs + articles from the canonical content objects
+  // Guides: hubs (including paginated pages) + articles from the canonical content objects
   const published = [article, ...additionalArticles].filter((a) => a.status !== 'draft');
   const dates = published.map((a) => a.updated ?? a.published);
   const newestGuideDate = dates.length ? dates.reduce((acc, d) => (d > acc ? d : acc)) : null;
+  const totalPages = Math.max(1, Math.ceil(published.length / 4));
 
   for (const code of localeCodes) {
     const loc = locales[code];
     if (!loc?.hubPath) continue;
-    if (!existsSync(join(repoRoot, loc.hubPath.replace(/^\//, ''), 'index.html'))) continue;
-    add(loc.hubPath, newestGuideDate);
+    for (let p = 1; p <= totalPages; p += 1) {
+      const pagePath = p === 1 ? loc.hubPath : `${loc.hubPath}page/${p}/`;
+      if (existsSync(join(repoRoot, pagePath.replace(/^\//, ''), 'index.html'))) {
+        add(pagePath, newestGuideDate);
+      }
+    }
     for (const art of published) {
       const path = art.paths?.[code] ?? loc.articlePath;
       if (!path) continue;

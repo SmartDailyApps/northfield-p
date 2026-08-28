@@ -134,9 +134,15 @@ function expectedLocaleRoutes() {
     }
   }
   const published = [article, ...additionalArticles].filter((a) => a.status !== 'draft');
+  const totalPages = Math.max(1, Math.ceil(published.length / 4));
   for (const code of Object.keys(locales)) {
     const loc = locales[code];
-    if (loc?.hubPath) routes.push(`${loc.hubPath.replace(/^\//, '')}index.html`);
+    if (loc?.hubPath) {
+      for (let p = 1; p <= totalPages; p += 1) {
+        const pagePath = p === 1 ? loc.hubPath : `${loc.hubPath}page/${p}/`;
+        routes.push(`${pagePath.replace(/^\//, '')}index.html`);
+      }
+    }
     for (const art of published) {
       const path = art.paths?.[code] ?? (art === article ? loc.articlePath : null);
       if (path) routes.push(`${path.replace(/^\//, '')}index.html`);

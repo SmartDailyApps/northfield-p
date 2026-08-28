@@ -91,28 +91,35 @@ function tailwind() {
 <link rel="stylesheet" href="/images/ratgeber.css" />`;
 }
 
+const ARTICLES_PER_PAGE = 4;
+
 function articlePath(articleItem, locale) {
   return articleItem.paths?.[locale.code] || locale.articlePath;
+}
+
+function hubPagePath(locale, pageNum = 1) {
+  if (pageNum <= 1) return locale.hubPath;
+  return `${locale.hubPath}page/${pageNum}/`;
 }
 
 function brandWordmark(className = 'text-lg font-extrabold tracking-tight text-white') {
   return `<span class="${className}">My<span class="text-[#E2B84B]">Gold</span>Folio</span>`;
 }
 
-function languageLinks(currentCode, currentArticle) {
+function languageLinks(currentCode, currentArticle, pageNum = 1) {
   return Object.values(locales).map((locale) => {
-    const path = currentArticle ? articlePath(currentArticle, locale) : locale.hubPath;
+    const path = currentArticle ? articlePath(currentArticle, locale) : hubPagePath(locale, pageNum);
     return `<a href="${path}"${locale.code === currentCode ? ' aria-current="page"' : ''}>${locale.label}</a>`;
   }).join('');
 }
 
-function hreflang(currentArticle) {
+function hreflang(currentArticle, pageNum = 1) {
   const links = Object.values(locales).map((locale) => {
-    const path = currentArticle ? articlePath(currentArticle, locale) : locale.hubPath;
+    const path = currentArticle ? articlePath(currentArticle, locale) : hubPagePath(locale, pageNum);
     const code = locale.hreflang || (locale.code === 'pt' ? 'pt-BR' : locale.code);
     return `<link rel="alternate" hreflang="${code}" href="${absoluteUrl(path)}" />`;
   });
-  const defaultPath = currentArticle ? articlePath(currentArticle, locales.en) : locales.en.hubPath;
+  const defaultPath = currentArticle ? articlePath(currentArticle, locales.en) : hubPagePath(locales.en, pageNum);
   links.push(`<link rel="alternate" hreflang="x-default" href="${absoluteUrl(defaultPath)}" />`);
   return links.join('\n');
 }
@@ -194,26 +201,76 @@ ${sharedNav(locale, articleItem)}
 ${sharedFooter(locale)}</body></html>`;
 }
 
-function articleCard(locale, articleItem) {
+function articleCard(locale, articleItem, isFeatured = false) {
   const content = articleItem.locales[locale.code];
-  return `<a href="${articlePath(articleItem, locale)}" class="guide-card guide-article-card block">${cardImg(articleItem, locale)}<div class="p-6"><p class="guide-eyebrow mb-3">${esc(articleItem.category[locale.code])} · ${articleItem.readingMinutes} min</p><h2 class="text-2xl font-black text-white">${esc(content.title)}</h2><p class="mt-3 leading-relaxed text-gray-400">${esc(content.description)}</p><span class="mt-5 inline-flex items-center gap-2 font-bold text-gold">${esc(locale.readLabel)} <span aria-hidden="true">→</span></span></div></a>`;
+  const badge = isFeatured
+    ? `<span class="guide-featured-badge">${esc(locale.featuredBadge || 'Aktueller Guide')}</span>`
+    : '';
+  return `<div class="guide-card-wrap">${badge}<a href="${articlePath(articleItem, locale)}" class="guide-card guide-article-card block">${cardImg(articleItem, locale)}<div class="p-6"><p class="guide-eyebrow mb-3">${esc(articleItem.category[locale.code])} · ${articleItem.readingMinutes} min</p><h2 class="text-2xl font-black text-white">${esc(content.title)}</h2><p class="mt-3 leading-relaxed text-gray-400">${esc(content.description)}</p><span class="mt-5 inline-flex items-center gap-2 font-bold text-gold">${esc(locale.readLabel)} <span aria-hidden="true">→</span></span></div></a></div>`;
 }
 
-export function hubPage(locale) {
-  const orderedArticles = [...(includeDrafts ? allArticles : publishedArticles)].sort((a, b) => b.published.localeCompare(a.published));
-  const cards = orderedArticles.map((articleItem) => articleCard(locale, articleItem)).join('');
+function renderPagination(locale, currentPage, totalPages) {
+  if (totalPages <= 1) return '';
+
+  const items = [];
+
+  // Previous button
+  if (currentPage > 1) {
+    const prevPath = hubPagePath(locale, currentPage - 1);
+    items.push(`<a href="${prevPath}" class="guide-pagination-item guide-pagination-item--link" aria-label="${esc(locale.paginationPrev || 'Previous')}">← ${esc(locale.paginationPrev || 'Previous')}</a>`);
+  } else {
+    items.push(`<span class="guide-pagination-item guide-pagination-item--disabled" aria-disabled="true">← ${esc(locale.paginationPrev || 'Previous')}</span>`);
+  }
+
+  // Page numbers 1..totalPages
+  for (let p = 1; p <= totalPages; p += 1) {
+    if (p === currentPage) {
+      items.push(`<span class="guide-pagination-item guide-pagination-item--active" aria-current="page">${p}</span>`);
+    } else {
+      const pagePath = hubPagePath(locale, p);
+      const pageAria = (locale.pageOf || 'Page {current} of {total}').replace('{current}', p).replace('{total}', totalPages);
+      items.push(`<a href="${pagePath}" class="guide-pagination-item guide-pagination-item--link" aria-label="${esc(pageAria)}">${p}</a>`);
+    }
+  }
+
+  // Next button
+  if (currentPage < totalPages) {
+    const nextPath = hubPagePath(locale, currentPage + 1);
+    items.push(`<a href="${nextPath}" class="guide-pagination-item guide-pagination-item--link" aria-label="${esc(locale.paginationNext || 'Next')}">${esc(locale.paginationNext || 'Next')} →</a>`);
+  } else {
+    items.push(`<span class="guide-pagination-item guide-pagination-item--disabled" aria-disabled="true">${esc(locale.paginationNext || 'Next')} →</span>`);
+  }
+
+  return `<nav class="guide-pagination" aria-label="Pagination">${items.join('')}</nav>`;
+}
+
+export function hubPage(locale, currentPage = 1, totalPages = 1, pageArticles = [], totalArticleCount = 0) {
+  const cards = pageArticles.map((articleItem, index) => articleCard(locale, articleItem, currentPage === 1 && index === 0)).join('');
+  const canonical = absoluteUrl(hubPagePath(locale, currentPage));
+  const pageSuffix = currentPage > 1 ? ` - ${(locale.pageOf || 'Page {current} of {total}').replace('{current}', currentPage).replace('{total}', totalPages)}` : '';
+  const pageTitle = `${esc(locale.hubTitle)}${pageSuffix} | MyGoldFolio`;
+
+  const paginationHeadLinks = [
+    currentPage > 1 ? `<link rel="prev" href="${absoluteUrl(hubPagePath(locale, currentPage - 1))}" />` : '',
+    currentPage < totalPages ? `<link rel="next" href="${absoluteUrl(hubPagePath(locale, currentPage + 1))}" />` : ''
+  ].filter(Boolean).join('\n');
+
+  const pageCountLabel = totalPages > 1
+    ? ` · ${(locale.pageOf || 'Page {current} of {total}').replace('{current}', currentPage).replace('{total}', totalPages)}`
+    : '';
+
   return `<!DOCTYPE html>
 <html lang="${locale.locale}"><head>
 ${consentHead()}
 <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>${esc(locale.hubTitle)} | MyGoldFolio</title><meta name="description" content="${esc(locale.hubIntro)}" />
-<meta property="og:title" content="${esc(locale.hubTitle)}" /><meta property="og:description" content="${esc(locale.hubIntro)}" /><meta property="og:type" content="website" /><meta property="og:image" content="${absoluteUrl(orderedArticles[0].image)}" /><meta name="twitter:card" content="summary_large_image" />
-<link rel="icon" href="/images/icon.png" /><link rel="canonical" href="${absoluteUrl(locale.hubPath)}" />
-${hreflang()}
+<title>${pageTitle}</title><meta name="description" content="${esc(locale.hubIntro)}" />
+<meta property="og:title" content="${esc(locale.hubTitle)}" /><meta property="og:description" content="${esc(locale.hubIntro)}" /><meta property="og:type" content="website" /><meta property="og:image" content="${absoluteUrl(pageArticles[0]?.image || '/images/articles/edelmetalle-portfolio-tracken-hero.png')}" /><meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/images/icon.png" /><link rel="canonical" href="${canonical}" />
+${paginationHeadLinks ? paginationHeadLinks + '\n' : ''}${hreflang(null, currentPage)}
 ${tailwind()}
 </head><body class="bg-navy text-gray-200">
 ${sharedNav(locale)}
-<main><section class="guide-hub-hero"><div class="guide-shell max-w-4xl text-center"><p class="guide-eyebrow mb-4">${esc(locale.eyebrow)}</p><h1>${esc(locale.hubTitle)}</h1><p>${esc(locale.hubIntro)}</p></div></section><section class="guide-shell py-12 md:py-16"><p class="guide-eyebrow mb-2">${esc(locale.latestLabel)}</p><div class="grid max-w-3xl gap-6">${cards}</div></section></main>
+<main><section class="guide-hub-hero"><div class="guide-shell max-w-4xl text-center"><p class="guide-eyebrow mb-4">${esc(locale.eyebrow)}</p><h1>${esc(locale.hubTitle)}</h1><p>${esc(locale.hubIntro)}</p></div></section><div class="guide-shell guide-section-divider" role="separator" aria-hidden="true"><div class="guide-section-divider__line"></div></div><section class="guide-shell pb-6"><div class="mb-10 flex flex-wrap items-end justify-between gap-4"><div><div class="mb-2.5 inline-flex items-center gap-2 rounded-full border border-gold/35 bg-gold/10 px-3 py-1 text-xs font-extrabold uppercase tracking-widest text-gold"><span class="inline-block h-1.5 w-1.5 rounded-full bg-gold animate-pulse"></span>${esc(locale.hubSectionEyebrow || 'Wissen & Praxis')}</div><h2 class="text-2xl font-black text-white sm:text-3xl">${esc(locale.hubSectionTitle || 'Alle Ratgeber & Artikel')}</h2></div><div class="text-xs font-bold text-gray-400">${totalArticleCount} ${esc(locale.articlesCount || 'Artikel')}${pageCountLabel}</div></div><div class="grid max-w-3xl gap-6">${cards}</div>${renderPagination(locale, currentPage, totalPages)}</section><div class="guide-shell guide-section-divider" role="separator" aria-hidden="true"><div class="guide-section-divider__line"></div></div></main>
 ${sharedFooter(locale)}</body></html>`;
 }
 
@@ -228,14 +285,23 @@ async function write(path, body) {
   console.log(path);
 }
 
-export { locales, outputArticles, articlePath, sharedNav, sharedFooter, tailwind, absoluteUrl, esc, brandWordmark, playUrl };
+export { locales, outputArticles, articlePath, hubPagePath, sharedNav, sharedFooter, tailwind, absoluteUrl, esc, brandWordmark, playUrl, ARTICLES_PER_PAGE };
 
 const invokedDirectly = process.argv[1]
   && import.meta.url === pathToFileURL(resolve(process.argv[1])).href;
 
 if (invokedDirectly) {
+  const orderedArticles = [...(includeDrafts ? allArticles : publishedArticles)].sort((a, b) => b.published.localeCompare(a.published));
+  const totalCount = orderedArticles.length;
+  const totalPages = Math.max(1, Math.ceil(totalCount / ARTICLES_PER_PAGE));
+
   for (const locale of Object.values(locales)) {
-    await write(locale.hubPath, hubPage(locale));
+    for (let p = 1; p <= totalPages; p += 1) {
+      const start = (p - 1) * ARTICLES_PER_PAGE;
+      const pageArticles = orderedArticles.slice(start, start + ARTICLES_PER_PAGE);
+      const path = hubPagePath(locale, p);
+      await write(path, hubPage(locale, p, totalPages, pageArticles, totalCount));
+    }
     for (const articleItem of outputArticles) {
       await write(articlePath(articleItem, locale), articlePage(locale, articleItem));
     }
