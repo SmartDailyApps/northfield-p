@@ -986,5 +986,1516 @@ export const additionalArticles = [{
     }
   }
 }
+,
+{
+  "id": "four-precious-metals-portfolio-allocation",
+  "status": "published",
+  "published": "2026-09-20",
+  "updated": "2026-09-20",
+  "readingMinutes": 7,
+  "category": {
+    "en": "Portfolio Strategy",
+    "de": "Strategie",
+    "fr": "Stratégie & Allocation",
+    "tr": "Strateji & Portföy",
+    "es": "Estrategia de Cartera",
+    "it": "Strategia e Portafoglio",
+    "pt": "Estratégia de Carteira"
+  },
+  "image": "/images/articles/four-precious-metals-portfolio-allocation-hero.png",
+  "imageAlt": {
+    "en": "Four physical bullion bars of gold, silver, platinum, and palladium displayed side by side on dark slate",
+    "de": "Vier physische Barren aus Gold, Silber, Platin und Palladium nebeneinander auf dunklem Schiefer",
+    "fr": "Quatre lingots physiques d’or, d’argent, de platine et de palladium côte à côte sur de l’ardoise sombre",
+    "tr": "Koyu arduvaz üzerinde yan yana sergilenen dört fiziksel altın, gümüş, platin ve paladyum külçesi",
+    "es": "Cuatro lingotes físicos de oro, plata, platino y paladio mostrados uno al lado del otro sobre pizarra oscura",
+    "it": "Quattro lingotti fisici di oro, argento, platino e palladio affiancati su ardesia scura",
+    "pt": "Quatro barras físicas de ouro, prata, platina e paládio exibidas lado a lado sobre ardósia escura"
+  },
+  "paths": {
+    "en": "/guides/four-precious-metals-portfolio-allocation/",
+    "de": "/de/ratgeber/vier-edelmetalle-portfolio-allokation/",
+    "fr": "/fr/guides/quatre-metaux-precieux-allocation-portefeuille/",
+    "tr": "/tr/rehber/dort-degerli-maden-portfoy-dagilimi/",
+    "es": "/es/guias/cuatro-metales-preciosos-distribucion-cartera/",
+    "it": "/it/guide/quattro-metalli-preziosi-allocazione-portafoglio/",
+    "pt": "/pt/guias/quatro-metais-preciosos-alocacao-carteira/"
+  },
+  "related": [
+    "gold-silver-premiums-break-even",
+    "gold-silver-tax-free-holding-period"
+  ],
+  "locales": {
+    "en": {
+      "title": "Gold, Silver, Platinum, Palladium: How to Balance the 4 Precious Metals in Your Portfolio",
+      "seoTitle": "4 Precious Metals Portfolio: Gold, Silver, Platinum & Palladium",
+      "description": "Beyond gold and silver: learn the distinct roles of platinum and palladium, historical valuation ratios, tax rules, and balanced allocation models.",
+      "intro": "Gold and silver form the foundation of physical wealth preservation. But when platinum trades at historic discounts and palladium drives high-tech industry, expanding into all four precious metals creates a resilient, all-weather bullion portfolio.",
+      "summary": "A complete precious metals portfolio is more than gold and silver. Understanding the monetary strength of gold, the dual nature of silver, the deep-value rarity of platinum, and the industrial power of palladium allows you to balance defense with contrarian growth.",
+      "sections": [
+        {
+          "id": "beyond-duo",
+          "title": "Beyond the Classic Duo: The Big Four Bullion Metals",
+          "paragraphs": [
+            "Most private investors begin and end their precious metals journey with gold and silver. Gold provides unmatched monetary insurance against currency devaluation, while silver offers an accessible entry point with explosive industrial upside.",
+            "Yet the periodic table contains four noble investment metals: Gold (Au), Silver (Ag), Platinum (Pt), and Palladium (Pd). Known collectively as the platinum group metals (PGMs) alongside ruthenium, rhodium, and osmium, platinum and palladium are far rarer than gold and exhibit vastly different economic cycles.",
+            "Adding platinum and palladium transforms a traditional hedge into a multidimensional hard-asset strategy that captures industrial innovation without abandoning monetary defense."
+          ],
+          "bullets": [
+            "Gold (Au, 79): Pure monetary asset with near-zero industrial destruction.",
+            "Silver (Ag, 47): Monetary-industrial hybrid driven by solar, electronics, and medical tech.",
+            "Platinum (Pt, 78): Deep-value precious metal critical for emissions reduction and hydrogen fuel cells.",
+            "Palladium (Pd, 46): High-tech catalyst metal with extreme geopolitical concentration."
+          ]
+        },
+        {
+          "id": "metal-personalities",
+          "title": "The Economic Personalities of the 4 Metals",
+          "paragraphs": [
+            "Each of the four metals serves a unique economic function. Treating them as interchangeable commodities is a fundamental mistake.",
+            "Gold is driven by central bank purchases, real interest rates, and geopolitical tension. Silver follows gold’s monetary direction but is heavily amplified by industrial manufacturing. Platinum and palladium, by contrast, are tightly bound to automotive manufacturing, green energy technologies, and strict chemical catalysis."
+          ],
+          "table": {
+            "head": [
+              "Metal",
+              "Primary Role",
+              "Key Demand Drivers",
+              "Industrial Share",
+              "Mining Rarity vs Gold"
+            ],
+            "rows": [
+              [
+                "Gold (Au)",
+                "Monetary store of value",
+                "Central banks, wealth preservation, jewelry",
+                "~10%",
+                "Baseline (1x)"
+              ],
+              [
+                "Silver (Ag)",
+                "Monetary-industrial hybrid",
+                "Solar PV panels, electronics, silver stacking",
+                "~55%",
+                "~8x more abundant"
+              ],
+              [
+                "Platinum (Pt)",
+                "Deep value & clean tech",
+                "Auto catalysts, PEM hydrogen cells, luxury jewelry",
+                "~65%",
+                "~15x to 20x rarer"
+              ],
+              [
+                "Palladium (Pd)",
+                "High-tech industrial catalyst",
+                "Gasoline auto catalysts, semiconductors, aerospace",
+                "~85%",
+                "~15x rarer"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "valuation-ratios",
+          "title": "The Historic Valuation Disconnect: Ratios to Watch",
+          "paragraphs": [
+            "Ratios provide historical perspective that nominal dollar or euro spot prices cannot convey.",
+            "For most of modern history, Platinum traded at a substantial premium to Gold. In the 2000s, Platinum regularly cost over double the price of Gold. Today, that relationship has completely inverted: Gold trades at roughly 2.5x to 2.8x the price of Platinum—a historically extreme valuation gap that contrarian bullion stackers monitor closely.",
+            "Meanwhile, Platinum and Palladium experienced their own dramatic cycle. Palladium soared to over $3,000 per ounce during supply panics in 2021/2022, while Platinum remained near $900. After years of wild divergence, both metals have converged near price parity, opening strategic rebalancing opportunities."
+          ],
+          "bullets": [
+            "Gold-to-Platinum Ratio: Historically averaged below 1.0; today sits near historic highs (>2.5), signaling deep relative value for platinum.",
+            "Platinum-to-Palladium Ratio: Has normalized back toward 1.0 parity after extreme decade-long swings.",
+            "Supply Deficits: Over 70% of platinum is mined in South Africa under deep, energy-intensive conditions, while over 80% of palladium originates from Russia and South Africa combined."
+          ]
+        },
+        {
+          "id": "friction-factors",
+          "title": "Real-World Friction: Premiums, VAT, and Liquidity",
+          "paragraphs": [
+            "Investing in platinum and palladium requires understanding market friction before making your first purchase.",
+            "In the European Union and the United Kingdom, physical investment gold enjoys statutory VAT exemption. Physical silver, platinum, and palladium, however, are treated as industrial raw materials and are generally subject to standard VAT or differential taxation unless purchased within bonded duty-free vaults (Zollfreilager).",
+            "Furthermore, because the physical retail market for platinum and palladium coins and bars is smaller than gold, dealers charge wider buy/sell spreads. Your break-even on a 1 oz platinum bar is typically higher than on a 1 oz gold Britannia or Maple Leaf."
+          ],
+          "ordered": [
+            "Factor in VAT or seek bonded duty-free storage when buying physical white metals.",
+            "Stick to globally recognized refinery bars (Valcambi, PAMP, Argor-Heraeus) or sovereign coins (Platinum Philharmonic, Eagle, Maple Leaf) to ensure liquid resale.",
+            "Track your exact delivered acquisition cost so your real break-even is never obscured by the spot price."
+          ]
+        },
+        {
+          "id": "allocation-models",
+          "title": "Three Balanced Allocation Blueprints",
+          "paragraphs": [
+            "There is no universal formula for all investors. Your distribution across the four metals should reflect your investment horizon and tolerance for volatility."
+          ],
+          "table": {
+            "head": [
+              "Strategy",
+              "Gold (Au)",
+              "Silver (Ag)",
+              "Platinum (Pt)",
+              "Palladium (Pd)",
+              "Strategic Intent"
+            ],
+            "rows": [
+              [
+                "Conservative Anchor",
+                "80%",
+                "15%",
+                "5%",
+                "0%",
+                "Maximum wealth defense with minimal industrial volatility."
+              ],
+              [
+                "Balanced Bullion Stack",
+                "65%",
+                "25%",
+                "7%",
+                "3%",
+                "Robust monetary core with balanced green-tech and value upside."
+              ],
+              [
+                "Contrarian Asymmetric",
+                "50%",
+                "30%",
+                "15%",
+                "5%",
+                "High upside potential targeting the historic gold/platinum valuation gap."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "tracking-app",
+          "title": "How MyGoldFolio Manages the 4-Metal Portfolio",
+          "paragraphs": [
+            "Managing four metals with different spot prices, dealer spreads, and purchase currencies quickly overwhelms manual spreadsheets.",
+            "MyGoldFolio is engineered from the ground up for multi-metal tracking. You can activate Gold, Silver, Platinum, and Palladium individually in Settings, monitor independent live spot prices, and view your exact portfolio allocation by fine weight (grams or troy ounces) and fiat value.",
+            "Because dealer spreads differ between metals, MyGoldFolio allows dedicated dealer margin settings per metal. Even better, your 365-day holding period countdown (§ 23 EStG) tracks your physical platinum and palladium bars alongside your gold, ensuring complete tax clarity 100% privately on your Android device."
+          ],
+          "bullets": [
+            "Individual metal toggles in Settings to tailor your portfolio view.",
+            "Live independent spot prices for Gold, Silver, Platinum, and Palladium.",
+            "Dynamic asset allocation ring showing weight and currency distribution.",
+            "Metal-specific dealer spread profiles for realistic break-even valuations.",
+            "Holding period countdown for tax-matured lots on all four metals."
+          ]
+        },
+        {
+          "id": "four-rules",
+          "title": "Four Golden Rules for 4-Metal Stacking",
+          "ordered": [
+            "Never sacrifice your gold anchor: Gold should remain the majority core of any physical bullion portfolio.",
+            "Acknowledge the volatility: Platinum and palladium experience wider price swings than gold; size positions accordingly.",
+            "Document every lot with purity and invoice references to protect your holding period tax status.",
+            "Review your allocation periodically against long-term ratio targets rather than emotional short-term headlines."
+          ]
+        },
+        {
+          "id": "sources",
+          "title": "Sources & Methodology",
+          "paragraphs": [
+            "Macroeconomic data and mining statistics reference the World Platinum Investment Council (WPIC), London Platinum and Palladium Market (LPPM), and the London Bullion Market Association (LBMA). Tax regulations reference German Income Tax Act (§ 23 EStG) and European VAT directives. MyGoldFolio provides administrative portfolio tracking tools and does not offer financial, investment, or tax advice."
+          ],
+          "links": [
+            {
+              "label": "World Platinum Investment Council | WPIC",
+              "href": "https://platinuminvestment.com/"
+            },
+            {
+              "label": "LBMA & LPPM | Precious Metal Prices",
+              "href": "https://www.lbma.org.uk/"
+            },
+            {
+              "label": "USGS | Platinum-Group Metals Statistics",
+              "href": "https://www.usgs.gov/centers/national-minerals-information-center/platinum-group-metals-statistics-and-information"
+            }
+          ]
+        }
+      ],
+      "ctaTitle": "Track all 4 precious metals in one private view",
+      "ctaText": "MyGoldFolio monitors Gold, Silver, Platinum, and Palladium with independent spot feeds, custom dealer spreads, and private holding-period countdowns on your Android phone.",
+      "ctaLabel": "View free on Google Play",
+      "faq": [
+        {
+          "q": "Is platinum rarer than gold?",
+          "a": "Yes. Global annual platinum mine production is approximately 190 metric tons, compared to over 3,000 metric tons for gold. All the platinum ever mined would fit into a cube roughly 8 meters on each side."
+        },
+        {
+          "q": "Does the 1-year tax-free holding rule apply to physical Platinum and Palladium?",
+          "a": "In jurisdictions like Germany (§ 23 EStG), the 12-month private sales exemption applies to all physical precious metal bars and coins held privately, including platinum and palladium. Keep your purchase receipts to prove the holding period."
+        },
+        {
+          "q": "Why do platinum and palladium have wider dealer spreads than gold?",
+          "a": "The physical retail bullion market for platinum and palladium is significantly smaller than for gold. Dealers manage higher inventory carrying costs and lower trading turnover, leading to wider bid/ask margins."
+        },
+        {
+          "q": "How does MyGoldFolio track all four precious metals?",
+          "a": "MyGoldFolio allows you to toggle Gold, Silver, Platinum, and Palladium on or off in Settings → General. Each metal has its own live spot price, custom dealer spread profile, and allocation breakdown on your dashboard."
+        }
+      ]
+    },
+    "de": {
+      "title": "Gold, Silber, Platin und Palladium: So diversifizierst du dein 4-Metalle-Portfolio",
+      "seoTitle": "4 Edelmetalle im Portfolio: Gold, Silber, Platin & Palladium",
+      "description": "Mehr als Gold und Silber: Erfahre alles über Platin und Palladium, historische Bewertungsverhältnisse, Mehrwertsteuer und ausgewogene Allokationsmodelle.",
+      "intro": "Gold und Silber bilden das Fundament der Vermögenssicherung. Doch wenn Platin historisch günstig notiert und Palladium die Hightech-Industrie antreibt, verwandelt eine 4-Metalle-Strategie deinen klassischen Bestand in ein krisenfestes Allwetter-Portfolio.",
+      "summary": "Ein ganzheitliches Edelmetall-Portfolio umfasst mehr als die beiden Klassiker. Wer die monetäre Stärke von Gold, die Hebelwirkung von Silber, die Unterbewertung von Platin und die Industriekraft von Palladium versteht, schützt Vermögen und nutzt antizyklische Chancen.",
+      "sections": [
+        {
+          "id": "beyond-duo",
+          "title": "Jenseits des Duos: Die vier großen Anlagemetalle",
+          "paragraphs": [
+            "Die meisten Edelmetallanleger beschränken sich auf Gold und Silber. Gold ist der bewährte Anker gegen Geldentwertung, während Silber als bezahlbarer Einstieg mit industrieller Dynamik punktet.",
+            "Doch das Periodensystem kennt vier monetäre Edelmetalle: Gold (Au), Silber (Ag), Platin (Pt) und Palladium (Pd). Platin und Palladium gehören zu den Platingruppenmetallen (PGM). Sie sind im Erdreich ungleich seltener als Gold und folgen völlig eigenständigen Konjunkturzyklen.",
+            "Die Beimischung von Platin und Palladium erweitert dein Portfolio um Sachwerte, die direkt an die industrielle Zukunft gekoppelt sind – ohne die monetäre Sicherheit von Gold aufzugeben."
+          ],
+          "bullets": [
+            "Gold (Au, 79): Reines Währungsmetall, kaum industrieller Verbrauch, ultimativer Krisenanker.",
+            "Silber (Ag, 47): Doppelrolle aus Wertaufbewahrung und industrieller Schlüsselkomponente (Photovoltaik, Elektronik).",
+            "Platin (Pt, 78): Antizyklischer Substanzwert, Katalysatoren und PEM-Brennstoffzellen der Wasserstoffwirtschaft.",
+            "Palladium (Pd, 46): Spezialisiertes Katalysator- und Elektronikmetall mit extremer geopolitischer Angebotskonzentration."
+          ]
+        },
+        {
+          "id": "metal-personalities",
+          "title": "Die ökonomischen Profile der 4 Edelmetalle",
+          "paragraphs": [
+            "Jedes der vier Metalle erfüllt im Portfolio einen anderen Zweck. Sie als austauschbare Rohstoffe zu betrachten, greift zu kurz.",
+            "Gold wird primär von Notenbanken, Realzinsen und geopolitischen Spannungen bewegt. Silber spiegelt die Goldentwicklung mit erhöhtem Hebel wider. Platin und Palladium hingegen hängen stark an der Automobilbranche, Chemie und grünen Zukunftstechnologien."
+          ],
+          "table": {
+            "head": [
+              "Metall",
+              "Primäre Funktion",
+              "Wichtigste Nachfragetreiber",
+              "Industrieanteil",
+              "Förderseltenheit vs. Gold"
+            ],
+            "rows": [
+              [
+                "Gold (Au)",
+                "Monetärer Wertspeicher",
+                "Zentralbanken, Vermögensschutz, Schmuck",
+                "~10 %",
+                "Referenz (1x)"
+              ],
+              [
+                "Silber (Ag)",
+                "Monetär-industrieller Hybrid",
+                "Solarbranche, Halbleiter, Barren/Münzen",
+                "~55 %",
+                "~8x häufiger"
+              ],
+              [
+                "Platin (Pt)",
+                "Substanzwert & Clean-Tech",
+                "Auto-Katalysatoren, Wasserstoff, Schmuck",
+                "~65 %",
+                "~15x bis 20x seltener"
+              ],
+              [
+                "Palladium (Pd)",
+                "Industrieller Katalysator",
+                "Benzin-Katalysatoren, Elektronik, Luftfahrt",
+                "~85 %",
+                "~15x seltener"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "valuation-ratios",
+          "title": "Das historische Bewertungsungleichgewicht: Wichtige Kennzahlen",
+          "paragraphs": [
+            "Preisverhältnisse (Ratios) ordnen Kurse historisch ein, wo reine Euro- oder Dollarpreise wenig Orientierung bieten.",
+            "Über Jahrzehnte hinweg war Platin spürbar teurer als Gold. In den 2000er-Jahren kostete Platin regelmäßig mehr als das Doppelte einer Unze Gold. Heute ist dieses Verhältnis komplett auf den Kopf gestellt: Gold notiert beim 2,5- bis 2,8-Fachen des Platinpreises – ein historisch extremer Abstand, den Value-Investoren aufmerksam beobachten.",
+            "Zwischen Platin und Palladium gab es ebenfalls wilde Ausschläge: Palladium stieg 2021/2022 auf über 3.000 $ je Unze, während Platin bei 900 $ verharrte. Inzwischen notieren beide Schwestermetalle wieder nahezu gleichauf bei rund 1.000 $."
+          ],
+          "bullets": [
+            "Gold-Platin-Ratio: Historisch meist unter 1,0; heute auf Rekordniveau (>2,5), was eine relative Unterbewertung von Platin signalisiert.",
+            "Platin-Palladium-Ratio: Nach extremen Abweichungen zurück zur Parität (1,0).",
+            "Geografische Konzentration: Über 70 % des weltweiten Platins stammt aus Südafrika; bei Palladium entfallen über 80 % auf Russland und Südafrika."
+          ]
+        },
+        {
+          "id": "friction-factors",
+          "title": "Praxisfaktoren: Mehrwertsteuer, Aufgelder und Liquidität",
+          "paragraphs": [
+            "Der Kauf von Platin und Palladium verlangt ein klares Verständnis der Marktreibung.",
+            "In Deutschland und der EU ist Anlagegold nach § 25c UStG komplett von der Mehrwertsteuer befreit. Silber, Platin und Palladium unterliegen hingegen der regulären Mehrwertsteuer (19 %) oder der Differenzbesteuerung, sofern sie nicht im zollfreien Wertlager (Zollfreilager) erworben werden.",
+            "Zudem ist der Markt für Platin- und Palladiummünzen kleiner als der Goldmarkt. Händler verlangen daher spürbar breitere Spreads zwischen An- und Verkaufspreisen. Dein Break-even liegt prozentual weiter über dem Spotpreis als bei einer Krügerrand-Goldmünze."
+          ],
+          "ordered": [
+            "Berücksichtige die Mehrwertsteuer oder prüfe zollfreie Lageroptionen.",
+            "Setze auf etablierte Standardprodukte (Philharmoniker, Maple Leaf oder LBMA-zertifizierte Barren) für einen reibungslosen Wiederverkauf.",
+            "Erfasse deine tatsächlichen Anschaffungskosten lückenlos, um den wahren Break-even zu kennen."
+          ]
+        },
+        {
+          "id": "allocation-models",
+          "title": "Drei Allokationsmodelle für die Praxis",
+          "paragraphs": [
+            "Es gibt keine feste Einheitsgröße. Die Aufteilung deines Edelmetall-Budgets hängt von deinem Zeithorizont und deiner Risikobereitschaft ab."
+          ],
+          "table": {
+            "head": [
+              "Strategie",
+              "Gold (Au)",
+              "Silber (Ag)",
+              "Platin (Pt)",
+              "Palladium (Pd)",
+              "Zielsetzung"
+            ],
+            "rows": [
+              [
+                "Konservativer Kern",
+                "80 %",
+                "15 %",
+                "5 %",
+                "0 %",
+                "Maximaler Vermögensschutz bei minimaler Volatilität."
+              ],
+              [
+                "Ausgewogener Stack",
+                "65 %",
+                "25 %",
+                "7 %",
+                "3 %",
+                "Stabiler monetärer Kern mit industrieller Zukunftschance."
+              ],
+              [
+                "Antizyklische Chance",
+                "50 %",
+                "30 %",
+                "15 %",
+                "5 %",
+                "Fokus auf Schließung der historischen Gold-Platin-Bewertungslücke."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "tracking-app",
+          "title": "So unterstützt MyGoldFolio dein 4-Metalle-Portfolio",
+          "paragraphs": [
+            "Vier Metalle mit unterschiedlichen Spotkursen, individuellen Händleraufgeldern und Kaufdaten manuell in Tabellen zu führen, führt schnell zu Fehlern.",
+            "MyGoldFolio wurde von Grund auf als Multi-Metall-Tracker konzipiert. In den Einstellungen kannst du Gold, Silber, Platin und Palladium einzeln aktivieren, Realtime-Spotkurse verfolgen und dein Portfolio nach Feingewicht (Gramm/Unzen) und Eurowert aufteilen.",
+            "Weil jedes Metall andere Händlerspannen aufweist, erlaubt MyGoldFolio separate Margin-Profile je Metall. Auch die 1-Jahres-Haltefrist (§ 23 EStG) zählt für Platin und Palladium exakt wie für Gold – 100 % offline und privat auf deinem Smartphone."
+          ],
+          "bullets": [
+            "Individuelle Metall-Auswahl in den Einstellungen für volle Flexibilität.",
+            "Unabhängige Live-Spotpreise für Gold, Silber, Platin und Palladium.",
+            "Dynamisches Allokationsdiagramm nach Gewicht und Vermögensanteil.",
+            "Metallspezifische Margin-Profile für ehrliche Break-even-Berechnungen.",
+            "Automatischer Haltefrist-Countdown für steuerfreie Verkäufe nach 365 Tagen."
+          ]
+        },
+        {
+          "id": "four-rules",
+          "title": "Vier Grundregeln für das 4-Metalle-Portfolio",
+          "ordered": [
+            "Gold bleibt das Fundament: Der Löwenanteil des Portfolios gehört stets in Gold.",
+            "Schwankungen einkalkulieren: Platin und Palladium reagieren sensibler auf Konjunkturdaten als Gold.",
+            "Belege und Kaufdaten archivieren, um die 1-Jahres-Steuerfreiheit lückenlos nachzuweisen.",
+            "Allokation antizyklisch anpassen, statt kurzfristigen Hypes hinterherzujagen."
+          ]
+        },
+        {
+          "id": "sources",
+          "title": "Quellen und Methodik",
+          "paragraphs": [
+            "Die Marktdaten und Fördermengen basieren auf Veröffentlichungen des World Platinum Investment Council (WPIC), der London Platinum and Palladium Market (LPPM) und der LBMA. Steuerliche Hinweise beziehen sich auf das deutsche Einkommensteuergesetz (§ 23 EStG). MyGoldFolio ist eine reine Erfassungs- und Auswertungs-App; keine Anlage-, Rechts- oder Steuerberatung."
+          ],
+          "links": [
+            {
+              "label": "World Platinum Investment Council | WPIC",
+              "href": "https://platinuminvestment.com/"
+            },
+            {
+              "label": "LBMA & LPPM | Marktpreise",
+              "href": "https://www.lbma.org.uk/"
+            },
+            {
+              "label": "USGS | PGM Mineral Commodity Summaries",
+              "href": "https://www.usgs.gov/centers/national-minerals-information-center/platinum-group-metals-statistics-and-information"
+            }
+          ]
+        }
+      ],
+      "ctaTitle": "Alle 4 Edelmetalle in einer privaten App tracken",
+      "ctaText": "MyGoldFolio überwacht Gold, Silber, Platin und Palladium mit eigenen Spotkursen, Händlermargen und Haltefrist-Zählern auf deinem Android-Gerät.",
+      "ctaLabel": "Kostenlos bei Google Play ansehen",
+      "faq": [
+        {
+          "q": "Ist Platin seltener als Gold?",
+          "a": "Ja, deutlich. Die weltweite Jahresförderung von Platin liegt bei ca. 190 Tonnen, während bei Gold über 3.000 Tonnen gefördert werden. Alles bisher geförderte Platin würde in einen Würfel mit rund 8 Metern Kantenlänge passen."
+        },
+        {
+          "q": "Gilt die 1-Jahres-Haltefrist auch für physisches Platin und Palladium?",
+          "a": "Ja. Nach § 23 EStG sind Gewinne aus dem Verkauf physischer Barren und Münzen im Privatvermögen nach einer Haltedauer von über 12 Monaten (365 Tagen) in Deutschland 100 % steuerfrei."
+        },
+        {
+          "q": "Warum sind die Händleraufgelder bei Platin und Palladium höher?",
+          "a": "Weil der private Markt für Platin und Palladium kleiner und weniger liquide ist als für Gold. Händler tragen höhere Lager- und Absicherungskosten, was sich in breiteren Spreads niederschlägt."
+        },
+        {
+          "q": "Wie aktiviere ich Platin und Palladium in MyGoldFolio?",
+          "a": "Öffne in MyGoldFolio Einstellungen → Allgemein → Metalle. Dort kannst du Gold, Silber, Platin und Palladium per Schalter ein- oder ausblenden. Das Dashboard passt sich sofort an."
+        }
+      ]
+    },
+    "fr": {
+      "title": "Or, argent, platine et palladium : comment équilibrer les 4 métaux précieux dans votre portefeuille",
+      "seoTitle": "4 métaux précieux en portefeuille : or, argent, platine, palladium",
+      "description": "Au-delà de l’or et de l’argent : comprenez les atouts du platine et du palladium, les ratios historiques, la fiscalité et les stratégies d’allocation.",
+      "intro": "L’or et l’argent constituent le socle de la préservation patrimoniale. Mais face à la décote historique du platine et au rôle clé du palladium dans la haute technologie, intégrer les quatre métaux précieux permet de bâtir un portefeuille tout-terrain résilient.",
+      "summary": "Un portefeuille de métaux précieux ne se résume pas à l’or et l’argent. En combinant la stabilité monétaire de l’or, le dynamisme de l’argent, la rareté du platine et la force industrielle du palladium, vous préservez votre capital tout en saisissant des opportunités contrariennes.",
+      "sections": [
+        {
+          "id": "beyond-duo",
+          "title": "Au-delà du duo classique : les 4 grands métaux d’investissement",
+          "paragraphs": [
+            "La majorité des épargnants commencent et terminent leur parcours avec l’or et l’argent. L’or offre un rempart éprouvé contre l’érosion monétaire, tandis que l’argent apporte une impulsion industrielle majeure.",
+            "Pourtant, le tableau périodique compte quatre métaux précieux nobles : l’or (Au), l’argent (Ag), le platine (Pt) et le palladium (Pd). Les métaux du groupe du platine (MGP) sont considérablement plus rares dans l’écorce terrestre que l’or et obéissent à des cycles industriels distincts.",
+            "Intégrer le platine et le palladium transforme une réserve de valeur passive en une allocation complète sur les actifs tangibles de l’économie de demain."
+          ],
+          "bullets": [
+            "Or (Au, 79) : Valeur refuge monétaire pure, presque aucun usage destructif.",
+            "Argent (Ag, 47) : Hybride monétaire-industriel dopé par les panneaux solaires et l’électronique.",
+            "Platine (Pt, 78) : Actif de valeur contrarien, catalyseurs et piles à hydrogène (PEM).",
+            "Palladium (Pd, 46) : Métal catalytique haute performance à très forte concentration minière."
+          ]
+        },
+        {
+          "id": "metal-personalities",
+          "title": "Les profils économiques des 4 métaux précieux",
+          "paragraphs": [
+            "Chacun des quatre métaux remplit un rôle économique propre. Les traiter comme des matières premières identiques constitue une erreur d’appréciation.",
+            "L’or répond aux achats des banques centrales et aux tensions géopolitiques. L’argent amplifie les mouvements de l’or tout en dépendant de l’industrie. Le platine et le palladium dépendent de l’automobile, de la dépollution et de la transition énergétique."
+          ],
+          "table": {
+            "head": [
+              "Métal",
+              "Rôle principal",
+              "Moteurs de demande",
+              "Part industrielle",
+              "Rareté minière vs or"
+            ],
+            "rows": [
+              [
+                "Or (Au)",
+                "Réserve monétaire de valeur",
+                "Banques centrales, épargne, bijouterie",
+                "~10 %",
+                "Référence (1x)"
+              ],
+              [
+                "Argent (Ag)",
+                "Hybride monétaire et industriel",
+                "Photovoltaïque, composants, pièces/lingots",
+                "~55 %",
+                "~8x plus abondant"
+              ],
+              [
+                "Platine (Pt)",
+                "Valeur contrarienne & Clean-Tech",
+                "Catalyseurs auto, hydrogène vert, joaillerie",
+                "~65 %",
+                "~15x à 20x plus rare"
+              ],
+              [
+                "Palladium (Pd)",
+                "Catalyseur industriel de pointe",
+                "Catalyseurs essence, électronique, aérospatiale",
+                "~85 %",
+                "~15x plus rare"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "valuation-ratios",
+          "title": "La déconnexion historique des cours : les ratios à surveiller",
+          "paragraphs": [
+            "Les ratios historiques permettent de contextualiser la valeur relative des métaux indépendamment de l’inflation en devises.",
+            "Pendant des décennies, le platine valait nettement plus cher que l’or. Dans les années 2000, une once de platine s’échangeait à plus du double de l’or. Aujourd’hui, la situation s’est totalement inversée : l’or vaut environ 2,5 à 2,8 fois le platine, un écart historique scruté par les investisseurs de valeur.",
+            "Entre le platine et le palladium, la volatilité a été spectaculaire : le palladium a franchi 3 000 $ l’once en 2021/2022 avant de revenir vers 1 000 $, retrouvant la parité avec le platine."
+          ],
+          "bullets": [
+            "Ratio Or / Platine : Historiquement sous 1,0 ; actuellement à un niveau record (>2,5), signalant la décote relative du platine.",
+            "Ratio Platine / Palladium : De retour vers la parité (1,0) après des années d’écarts extrêmes.",
+            "Risque d’approvisionnement : Plus de 70 % du platine provient d’Afrique du Sud ; plus de 80 % du palladium provient de Russie et d’Afrique du Sud."
+          ]
+        },
+        {
+          "id": "friction-factors",
+          "title": "Les réalités du marché : TVA, primes et liquidité",
+          "paragraphs": [
+            "Acheter du platine et du palladium exige de prendre en compte les frottements fiscaux et commerciaux.",
+            "Dans l’Union européenne, l’or d’investissement est totalement exonéré de TVA. En revanche, l’argent, le platine et le palladium sont soumis à la TVA standard ou au régime de marge, sauf conservation en ports francs ou coffres sous douane.",
+            "Par ailleurs, le marché physique de détail du platine et du palladium étant plus restreint, les négociants appliquent des spreads achat/vente plus larges. Votre seuil de rentabilité nécessite une progression du cours plus importante que pour une pièce d’or."
+          ],
+          "ordered": [
+            "Intégrez l’impact de la fiscalité locale ou explorez les solutions de garde en zone franche.",
+            "Privilégiez les lingots certifiés LBMA ou les pièces d’investissement reconnues (Philharmonique, Maple Leaf) pour garantir la revente.",
+            "Enregistrez le coût total livré pour connaître votre vrai point mort."
+          ]
+        },
+        {
+          "id": "allocation-models",
+          "title": "Trois modèles d’allocation stratégique",
+          "paragraphs": [
+            "Il n’existe pas de formule unique. La répartition de votre budget métaux dépend de votre horizon de placement et de votre tolérance au risque."
+          ],
+          "table": {
+            "head": [
+              "Stratégie",
+              "Or (Au)",
+              "Argent (Ag)",
+              "Platine (Pt)",
+              "Palladium (Pd)",
+              "Objectif patrimonial"
+            ],
+            "rows": [
+              [
+                "Défense patrimoniale",
+                "80 %",
+                "15 %",
+                "5 %",
+                "0 %",
+                "Protection maximale du capital avec un minimum de volatilité."
+              ],
+              [
+                "Stack équilibré",
+                "65 %",
+                "25 %",
+                "7 %",
+                "3 %",
+                "Socle monétaire robuste avec exposition ciblée aux technologies vertes."
+              ],
+              [
+                "Opportunité contrarienne",
+                "50 %",
+                "30 %",
+                "15 %",
+                "5 %",
+                "Pari asymétrique sur le rattrapage historique du platine face à l’or."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "tracking-app",
+          "title": "Comment MyGoldFolio simplifie la gestion multi-métaux",
+          "paragraphs": [
+            "Suivre quatre métaux avec des cours spot en direct, des primes négociants distinctes et des dates d’achat échelonnées devient vite ingérable sur tableur.",
+            "MyGoldFolio intègre nativement la gestion des 4 métaux. Dans les réglages, vous activez l’or, l’argent, le platine et le palladium, suivez leurs cours spot indépendants et visualisez la répartition de votre portefeuille par poids fin et valeur globale.",
+            "L’application permet également de configurer des marges de revente spécifiques par métal pour afficher un seuil de rentabilité réaliste, tout en suivant l’ancienneté de vos lots physiques dans le respect de votre vie privée, 100 % hors ligne."
+          ],
+          "bullets": [
+            "Activation modulaire de chaque métal dans les paramètres de l’application.",
+            "Flux de cours spot indépendants pour l’or, l’argent, le platine et le palladium.",
+            "Graphique d’allocation d’actifs dynamique par poids et devise d’affichage.",
+            "Profils de marges négociants dédiés par métal pour un seuil de rentabilité exact.",
+            "Suivi des dates d’acquisition pour optimiser les abattements de durée de détention."
+          ]
+        },
+        {
+          "id": "four-rules",
+          "title": "Quatre règles pour une diversification réussie",
+          "ordered": [
+            "Gardez l’or comme socle : l’or doit demeurer la composante majoritaire de tout portefeuille physique.",
+            "Acceptez la volatilité : le platine et le palladium connaissent des variations plus amples que l’or.",
+            "Conservez scrupuleusement vos factures d’achat nominatives pour justifier de la durée de détention.",
+            "Ajustez vos positions selon les ratios historiques plutôt qu’au gré des émotions du marché."
+          ]
+        },
+        {
+          "id": "sources",
+          "title": "Sources et mentions méthodologiques",
+          "paragraphs": [
+            "Données et statistiques minières issues du World Platinum Investment Council (WPIC), du London Platinum and Palladium Market (LPPM) et de la LBMA. MyGoldFolio est un outil de suivi personnel et ne constitue en aucun cas un conseil en investissement ou fiscal."
+          ],
+          "links": [
+            {
+              "label": "World Platinum Investment Council | WPIC",
+              "href": "https://platinuminvestment.com/"
+            },
+            {
+              "label": "LBMA & LPPM | Cours officiels",
+              "href": "https://www.lbma.org.uk/"
+            },
+            {
+              "label": "USGS | Statistiques métaux du groupe platine",
+              "href": "https://www.usgs.gov/centers/national-minerals-information-center/platinum-group-metals-statistics-and-information"
+            }
+          ]
+        }
+      ],
+      "ctaTitle": "Gérez vos 4 métaux précieux en toute confidentialité",
+      "ctaText": "MyGoldFolio suit l’or, l’argent, le platine et le palladium avec cours spot séparés, marges personnalisées et répartition visuelle sur votre Android.",
+      "ctaLabel": "Voir sur Google Play",
+      "faq": [
+        {
+          "q": "Le platine est-il plus rare que l’or ?",
+          "a": "Oui. La production minière mondiale annuelle de platine s’élève à environ 190 tonnes, contre plus de 3 000 tonnes pour l’or. La totalité du platine extrait au cours de l’histoire tiendrait dans un cube d’environ 8 mètres de côté."
+        },
+        {
+          "q": "La durée de détention s’applique-t-elle au platine et au palladium ?",
+          "a": "Dans les régimes fiscaux prévoyant des abattements pour durée de détention sur les biens meubles (comme en France sous le régime TPVM ou en Allemagne sous le § 23 EStG), les lingots et pièces de platine et de palladium en bénéficient au même titre que l’or."
+        },
+        {
+          "q": "Pourquoi les spreads des négociants sont-ils plus élevés sur le platine et le palladium ?",
+          "a": "Le marché physique pour ces métaux est plus confidentiel que celui de l’or. Les négociants supportent des coûts de stockage et de couverture plus élevés sur des volumes moindres, ce qui élargit l’écart entre prix d’achat et de rachat."
+        },
+        {
+          "q": "Comment activer le platine et le palladium dans MyGoldFolio ?",
+          "a": "Ouvrez MyGoldFolio, accédez à Paramètres → Général → Sélection des métaux. Activez simplement le platine et le palladium pour afficher leurs cours et les intégrer à vos calculs."
+        }
+      ]
+    },
+    "tr": {
+      "title": "Altın, Gümüş, Platin ve Paladyum: 4 Değerli Maden Portföyü Nasıl Dengelenir?",
+      "seoTitle": "4 Değerli Maden Portföyü: Altın, Gümüş, Platin ve Paladyum",
+      "description": "Altın ve gümüşün ötesine geçin: Platin ve paladyumun portföydeki rolünü, tarihi fiyat oranlarını, vergileri ve dengeli varlık dağılımını öğrenin.",
+      "intro": "Altın ve gümüş varlık korumanın temelidir. Ancak platinin altına kıyasla tarihi iskonto gördüğü ve paladyumun ileri teknolojiyi beslediği bir ortamda, dört değerli madeni birleştirmek her piyasa koşuluna dayanıklı dengeli bir portföy oluşturur.",
+      "summary": "Eksiksiz bir değerli maden portföyü altın ve gümüşten fazlasını barındırır. Altının parasal gücünü, gümüşün endüstriyel potansiyelini, platinin nadirliğini ve paladyumun katalizör gücünü birleştiren yatırımcılar riskleri dağıtarak fırsatları yakalar.",
+      "sections": [
+        {
+          "id": "beyond-duo",
+          "title": "Klasik İkilinin Ötesi: 4 Büyük Kıymetli Maden",
+          "paragraphs": [
+            "Çoğu birikimci değerli maden yolculuğuna yalnızca altın ve gümüşle başlar. Altın para birimlerindeki değer kaybına karşı nihai sigorta sağlarken, gümüş yüksek endüstriyel getiri potansiyeli sunar.",
+            "Ancak periyodik tabloda yatırım değeri taşıyan dört ana soylu maden bulunur: Altın (Au), Gümüş (Ag), Platin (Pt) ve Paladyum (Pd). Platin grubu metaller (PGM) yerkabuğunda altından çok daha nadirdir ve apayrı ekonomik döngülere sahiptir.",
+            "Portföye platin ve paladyum eklemek, geleneksel altın birikimini sanayinin geleceğine bağlayan çok boyutlu bir varlık stratejisine dönüştürür."
+          ],
+          "bullets": [
+            "Altın (Au, 79): Tüketilmeyen saf parasal değer saklama aracı.",
+            "Gümüş (Ag, 47): Güneş panelleri ve elektronikle güçlenen parasal-sanayi melezi.",
+            "Platin (Pt, 78): Hidrojen yakıt hücreleri ve egzoz filtrelerinde kritik, derin iskonto görmüş nadir varlık.",
+            "Paladyum (Pd, 46): Yüksek teknoloji katalizörü ve arzı son derece kısıtlı endüstriyel güç."
+          ]
+        },
+        {
+          "id": "metal-personalities",
+          "title": "4 Madenin Ekonomik Karakteri",
+          "paragraphs": [
+            "Dört madenin her biri küresel ekonomide farklı bir işleve hizmet eder. Hepsini aynı sepete koymak stratejik bir yanılgıdır.",
+            "Altın merkez bankası alımları, reel faizler ve jeopolitik risklerle yön bulur. Gümüş altını takip ederken sanayi talebiyle hareketlenir. Platin ve paladyum ise otomotiv üretimi, kimya sanayisi ve yeşil enerji dönüşümüyle doğrudan bağlantılıdır."
+          ],
+          "table": {
+            "head": [
+              "Maden",
+              "Temel Rol",
+              "Talep Kaynakları",
+              "Sanayi Payı",
+              "Altına Kıyasla Nadirlik"
+            ],
+            "rows": [
+              [
+                "Altın (Au)",
+                "Parasal değer koruma",
+                "Merkez bankaları, bireysel birikim, mücevher",
+                "~%10",
+                "Temel referans (1x)"
+              ],
+              [
+                "Gümüş (Ag)",
+                "Parasal ve sanayi melezi",
+                "Güneş panelleri, elektronik, külçe/sikke",
+                "~%55",
+                "~8 kat daha bol"
+              ],
+              [
+                "Platin (Pt)",
+                "Değerli maden & yeşil teknoloji",
+                "Oto katalizörleri, hidrojen yakıtı, takı",
+                "~%65",
+                "~15-20 kat daha nadir"
+              ],
+              [
+                "Paladyum (Pd)",
+                "Yüksek teknoloji katalizörü",
+                "Benzinli araç filtreleri, havacılık, çip",
+                "~%85",
+                "~15 kat daha nadir"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "valuation-ratios",
+          "title": "Tarihi Fiyat Oranları ve Ayrışmalar",
+          "paragraphs": [
+            "Fiyat oranları (rasyolar), döviz bazlı dalgalanmaların ötesinde madenlerin göreceli değerini anlamayı sağlar.",
+            "Tarih boyunca platin genellikle altından daha pahalıydı. 2000’li yıllarda bir ons platin, altının iki katından fazlaya alıcı buluyordu. Günümüzde ise bu durum tersine döndü: Altın platinin yaklaşık 2,5 ila 2,8 katı fiyattan işlem görüyor ve bu durum değer odaklı birikimcilerin dikkatini çekiyor.",
+            "Platin ile paladyum arasında da sert dalgalanmalar yaşandı: Paladyum 2021/2022’de 3.000 $ seviyesine fırlarken platin 900 $ bandında kaldı. Son dönemde iki maden 1.000 $ seviyesinde yeniden başa baş geldi."
+          ],
+          "bullets": [
+            "Altın/Platin Oranı: Tarihsel ortalaması 1,0 altındayken bugün 2,5 üzerinde seyrederek platin için göreceli fırsat bölgesine işaret ediyor.",
+            "Platin/Paladyum Oranı: Yıllar süren ayrışmanın ardından yeniden 1,0 eşitliğine döndü.",
+            "Arz Riski: Platin üretiminin %70’ten fazlası Güney Afrika’ya; paladyum üretiminin %80’i ise Rusya ve Güney Afrika’ya bağımlıdır."
+          ]
+        },
+        {
+          "id": "friction-factors",
+          "title": "Piyasa Gerçekleri: Alım-Satım Farkı ve Vergiler",
+          "paragraphs": [
+            "Platin ve paladyuma adım atmadan önce piyasa sürtünmelerini bilmek şarttır.",
+            "Birçok ülkede yatırım altını vergiden muaf tutulurken, platin ve paladyum endüstriyel hammadde sınıfında olduğundan KDV’ye tabi olabilir.",
+            "Ayrıca platin ve paladyum külçelerinin perakende işlem hacmi altına göre daha dar olduğu için rafineri ve kuyumcular daha geniş alım-satım makası (spread) uygular. Bu durum başa baş noktanızın spot fiyattan daha yukarıda oluşmasına yol açar."
+          ],
+          "ordered": [
+            "Vergi mevzuatını ve serbest bölge olanaklarını göz önünde bulundurun.",
+            "Likidite için küresel geçerliliği olan sertifikalı rafineri külçelerini tercih edin.",
+            "Gerçek başa baş seviyenizi bilmek için teslimat dahil net maliyeti kaydedin."
+          ]
+        },
+        {
+          "id": "allocation-models",
+          "title": "3 Farklı Portföy Dağılım Modeli",
+          "paragraphs": [
+            "Tek bir doğru formül yoktur. Dağılımınız birikim vadenize ve fiyat dalgalanmalarına karşı dayanıklılığınıza göre şekillenmelidir."
+          ],
+          "table": {
+            "head": [
+              "Strateji",
+              "Altın (Au)",
+              "Gümüş (Ag)",
+              "Platin (Pt)",
+              "Paladyum (Pd)",
+              "Stratejik Hedef"
+            ],
+            "rows": [
+              [
+                "Muhafazakar Çapa",
+                "%80",
+                "%15",
+                "%5",
+                "%0",
+                "Minimum dalgalanma ile maksimum servet koruma."
+              ],
+              [
+                "Dengeli Birikim",
+                "%65",
+                "%25",
+                "%7",
+                "%3",
+                "Güçlü parasal çekirdek ve yeşil teknoloji getirisi."
+              ],
+              [
+                "Fırsat Odaklı",
+                "%50",
+                "%30",
+                "%15",
+                "%5",
+                "Tarihi altın/platin makasının kapanmasına yönelik getiri hedefi."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "tracking-app",
+          "title": "MyGoldFolio 4 Değerli Madeni Nasıl Yönetir?",
+          "paragraphs": [
+            "Farklı kurları, alım tarihlerini ve hammadde spreadlerini geleneksel tablolarda takip etmek hızla karmaşıklaşır.",
+            "MyGoldFolio baştan sona çoklu maden yapısına uygun tasarlanmıştır. Ayarlar menüsünden Altın, Gümüş, Platin ve Paladyumu bağımsız olarak açıp kapatabilir, canlı spot fiyatları izleyebilir ve portföyünüzün gramaj ve para birimi bazlı dağılım grafiğini görebilirsiniz.",
+            "Her madenin kâr-zarar eşiği farklı olduğu için madene özel makas ayarları girebilir, yasal elde tutma sürelerini internete ihtiyaç duymadan tamamen cihazınızda takip edebilirsiniz."
+          ],
+          "bullets": [
+            "Ayarlar bölümünde her maden için bağımsız açma/kapatma anahtarı.",
+            "Altın, Gümüş, Platin ve Paladyum için ayrı canlı piyasa fiyatları.",
+            "Ağırlık ve toplam tutara göre dinamik varlık dağılım halkası.",
+            "Gerçekçi başa baş noktası için madene özel alım-satım makasları.",
+            "Tüm madenler için alış tarihine göre elde tutma süresi takibi."
+          ]
+        },
+        {
+          "id": "four-rules",
+          "title": "4 Maden Stratejisi İçin 4 Temel Kural",
+          "ordered": [
+            "Altın omurgadır: Portföyünüzün en büyük kısmı daima altında kalmalıdır.",
+            "Dalgalanmayı kabullenin: Platin ve paladyum altına göre daha sert fiyat hareketleri sergiler.",
+            "Her alımı gramaj ve fatura numarasıyla düzenli kaydedin.",
+            "Günlük fiyat hareketlerine değil, uzun vadeli oranlara odaklanın."
+          ]
+        },
+        {
+          "id": "sources",
+          "title": "Kaynaklar ve Yasal Bilgilendirme",
+          "paragraphs": [
+            "Veriler World Platinum Investment Council (WPIC), London Platinum and Palladium Market (LPPM) ve LBMA bültenlerinden derlenmiştir. MyGoldFolio bir portföy takip aracıdır; yatırım veya vergi tavsiyesi içermez."
+          ],
+          "links": [
+            {
+              "label": "World Platinum Investment Council | WPIC",
+              "href": "https://platinuminvestment.com/"
+            },
+            {
+              "label": "LBMA & LPPM | Piyasa Fiyatları",
+              "href": "https://www.lbma.org.uk/"
+            },
+            {
+              "label": "USGS | Değerli Maden İstatistikleri",
+              "href": "https://www.usgs.gov/centers/national-minerals-information-center/platinum-group-metals-statistics-and-information"
+            }
+          ]
+        }
+      ],
+      "ctaTitle": "4 değerli madeni tek ekranda takip edin",
+      "ctaText": "MyGoldFolio; altın, gümüş, platin ve paladyumu canlı kurlar, özel makas oranları ve güvenli dağılım grafikleriyle Android cihazınızda tutar.",
+      "ctaLabel": "Google Play’de Ücretsiz İncele",
+      "faq": [
+        {
+          "q": "Platin altından daha mı nadirdir?",
+          "a": "Evet. Dünyada yıllık platin madenciliği yaklaşık 190 ton civarındayken, altın üretimi 3.000 tonu aşar. Tarih boyunca çıkarılan tüm platin yaklaşık 8 metrelik bir küpün içine sığabilir."
+        },
+        {
+          "q": "Fiziki platin ve paladyumda da elde tutma süresi avantajı var mıdır?",
+          "a": "Almanya gibi elde tutma süresine göre vergi muafiyeti tanıyan ülkelerde (§ 23 EStG), 1 yıldan uzun süre tutulan tüm fiziki platin ve paladyum satışları vergiden muaftır."
+        },
+        {
+          "q": "Platin ve paladyumda alım-satım makası neden daha geniştir?",
+          "a": "Perakende piyasa hacmi altına göre daha düşüktür. Kuyumcu ve rafinerilerin stok ve koruma maliyetleri arttığı için alış ile satış arasındaki marj daha geniş tutulur."
+        },
+        {
+          "q": "MyGoldFolio’da platin ve paladyumu nasıl aktif ederim?",
+          "a": "MyGoldFolio uygulamasında Ayarlar → Genel → Maden Seçimi bölümüne gidin. Buradan Platin ve Paladyum anahtarlarını açarak ana panelinize ekleyebilirsiniz."
+        }
+      ]
+    },
+    "es": {
+      "title": "Oro, plata, platino y paladio: cómo equilibrar los 4 metales preciosos en tu cartera",
+      "seoTitle": "Cartera de 4 metales preciosos: oro, plata, platino y paladio",
+      "description": "Más allá del oro y la plata: comprende el papel del platino y paladio, los ratios de valoración históricos, impuestos y modelos de asignación.",
+      "intro": "El oro y la plata son la base de la protección patrimonial. Pero con el platino en mínimos históricos frente al oro y el paladio impulsando la alta tecnología, diversificar en los cuatro metales preciosos crea una cartera equilibrada y resistente a cualquier ciclo.",
+      "summary": "Una cartera integral de metales preciosos abarca más que los dos activos tradicionales. Al combinar la solidez monetaria del oro, el potencial de la plata, la rareza del platino y el impulso industrial del paladio, proteges tu patrimonio mientras aprovechas oportunidades asimétricas.",
+      "sections": [
+        {
+          "id": "beyond-duo",
+          "title": "Más allá del dúo clásico: los cuatro metales de inversión",
+          "paragraphs": [
+            "La mayoría de inversores centran su estrategia exclusivamente en el oro y la plata. El oro actúa como seguro monetario frente a la devaluación, mientras que la plata ofrece un punto de entrada accesible con fuerte componente industrial.",
+            "Sin embargo, la tabla periódica cuenta con cuatro metales nobles de inversión: oro (Au), plata (Ag), platino (Pt) y paladio (Pd). Los metales del grupo del platino son mucho más escasos que el oro y responden a dinámicas de oferta y demanda muy diferenciadas.",
+            "Incorporar platino y paladio transforma una reserva de valor tradicional en una estrategia diversificada en activos tangibles clave para la economía del futuro."
+          ],
+          "bullets": [
+            "Oro (Au, 79): Activo monetario por excelencia, sin apenas consumo industrial destructivo.",
+            "Plata (Ag, 47): Híbrido monetario-industrial impulsado por la energía solar y los componentes electrónicos.",
+            "Platino (Pt, 78): Activo de valor en mínimos relativos, clave en pilas de combustible de hidrógeno y descarbonización.",
+            "Paladio (Pd, 46): Catalizador industrial de alta tecnología con suministro concentrado geográficamente."
+          ]
+        },
+        {
+          "id": "metal-personalities",
+          "title": "Perfiles económicos de los 4 metales preciosos",
+          "paragraphs": [
+            "Cada metal cumple una función económica distinta en la cartera patrimonial. Tratarlos como materias primas intercambiables conduce a errores de asignación.",
+            "El oro depende de los bancos centrales, los tipos de interés reales y el riesgo geopolítico. La plata sigue al oro con mayor volatilidad. El platino y el paladio dependen principalmente del sector automotriz, la química y las tecnologías sostenibles."
+          ],
+          "table": {
+            "head": [
+              "Metal",
+              "Función clave",
+              "Motores de demanda",
+              "Demanda industrial",
+              "Rareza minera vs oro"
+            ],
+            "rows": [
+              [
+                "Oro (Au)",
+                "Refugio monetario de valor",
+                "Bancos centrales, ahorro privado, joyería",
+                "~10 %",
+                "Referencia (1x)"
+              ],
+              [
+                "Plata (Ag)",
+                "Híbrido monetario e industrial",
+                "Paneles solares, electrónica, lingotes/monedas",
+                "~55 %",
+                "~8x más abundante"
+              ],
+              [
+                "Platino (Pt)",
+                "Valor contracíclico & Clean-Tech",
+                "Catalizadores, tecnología del hidrógeno, joyas",
+                "~65 %",
+                "~15x a 20x más escaso"
+              ],
+              [
+                "Paladio (Pd)",
+                "Catalizador de alta tecnología",
+                "Vehículos de gasolina, microelectrónica, aeroespacial",
+                "~85 %",
+                "~15x más escaso"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "valuation-ratios",
+          "title": "La desconexión histórica de precios: ratios a seguir",
+          "paragraphs": [
+            "Los ratios de precios ofrecen perspectiva histórica independientemente de las variaciones del euro o del dólar.",
+            "Durante gran parte de la historia moderna, el platino cotizaba con una prima sustancial sobre el oro. En la década de 2000, una onza de platino superaba con creces el doble del precio del oro. Hoy la situación se ha invertido: el oro cotiza entre 2,5 y 2,8 veces el valor del platino, una disparidad histórica que atrae a inversores orientados al valor.",
+            "Entre el platino y el paladio también se han producido oscilaciones extremas: el paladio superó los 3.000 $ en 2021/2022 antes de estabilizarse en torno a los 1.000 $, devolviendo la paridad entre ambos."
+          ],
+          "bullets": [
+            "Ratio Oro / Platino: Históricamente por debajo de 1,0; hoy en máximos históricos (>2,5), indicando un fuerte descuento relativo del platino.",
+            "Ratio Platino / Paladio: Regreso a la paridad (1,0) tras años de divergencia.",
+            "Concentración del suministro: Más del 70 % del platino procede de Sudáfrica; más del 80 % del paladio proviene conjuntamente de Rusia y Sudáfrica."
+          ]
+        },
+        {
+          "id": "friction-factors",
+          "title": "Fricciones del mercado físico: IVA, primas y liquidez",
+          "paragraphs": [
+            "Antes de adquirir platino y paladio físicos, es indispensable comprender las particularidades comerciales.",
+            "En la Unión Europea, el oro de inversión disfruta de exención total de IVA. Sin embargo, la plata, el platino y el paladio están sujetos al régimen general de IVA o al régimen especial de bienes usados, salvo que se custodien en depósitos francos aduaneros.",
+            "Asimismo, el mercado minorista de monedas y lingotes de platino y paladio tiene menor volumen que el del oro. Los distribuidores aplican diferenciales de compra y venta más amplios, situando el punto de equilibrio a mayor distancia del precio spot."
+          ],
+          "ordered": [
+            "Ten en cuenta el impacto del IVA local o evalúa opciones de custodia franca.",
+            "Elige barras certificadas LBMA o monedas soberanas reconocidas (Filarmónica, Maple Leaf) para asegurar la liquidez en la reventa.",
+            "Registra el coste total de entrega para calcular tu punto de equilibrio real."
+          ]
+        },
+        {
+          "id": "allocation-models",
+          "title": "Tres modelos prácticos de asignación patrimonial",
+          "paragraphs": [
+            "No hay una proporción universal. La distribución de tu presupuesto debe alinearse con tu horizonte de inversión y tu tolerancia a la volatilidad."
+          ],
+          "table": {
+            "head": [
+              "Estrategia",
+              "Oro (Au)",
+              "Plata (Ag)",
+              "Platino (Pt)",
+              "Paladio (Pd)",
+              "Enfoque estratégico"
+            ],
+            "rows": [
+              [
+                "Ancla conservadora",
+                "80 %",
+                "15 %",
+                "5 %",
+                "0 %",
+                "Máxima preservación monetaria con mínima volatilidad."
+              ],
+              [
+                "Cartera equilibrada",
+                "65 %",
+                "25 %",
+                "7 %",
+                "3 %",
+                "Núcleo monetario firme con exposición equilibrada a tecnología limpia."
+              ],
+              [
+                "Oportunidad contracíclica",
+                "50 %",
+                "30 %",
+                "15 %",
+                "5 %",
+                "Mayor potencial alcista apostando por el cierre de la brecha oro/platino."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "tracking-app",
+          "title": "Cómo MyGoldFolio organiza tu cartera de 4 metales",
+          "paragraphs": [
+            "Controlar cuatro metales con diferentes precios spot, márgenes de distribución y fechas de compra resulta inviable mediante hojas de cálculo.",
+            "MyGoldFolio se diseñó específicamente para carteras multimetal. Desde los ajustes puedes activar oro, plata, platino y paladio de forma independiente, monitorizar sus cotizaciones en tiempo real y visualizar la distribución exacta de tu patrimonio por peso fino y valor total.",
+            "Dado que cada metal presenta diferenciales de venta distintos, la aplicación permite configurar márgenes específicos por metal para reflejar el punto de equilibrio real, al tiempo que computa la antigüedad de tus lotes físicos con total privacidad en tu Android."
+          ],
+          "bullets": [
+            "Selector individual de metales en ajustes para personalizar tu panel.",
+            "Precios spot independientes en tiempo real para oro, plata, platino y paladio.",
+            "Gráfico dinámico de asignación patrimonial por peso y valor monetario.",
+            "Perfiles de márgenes comerciales específicos para calcular el punto de equilibrio exacto.",
+            "Control temporal de antigüedad de lotes para optimizar la tributación por tenencia."
+          ]
+        },
+        {
+          "id": "four-rules",
+          "title": "Cuatro reglas de oro para la inversión en 4 metales",
+          "ordered": [
+            "El oro es la base: La mayor parte de la cartera debe permanecer anclada en oro físico.",
+            "Asume la volatilidad: El platino y el paladio experimentan oscilaciones más intensas que el oro.",
+            "Guarda facturas nominativas y comprobantes para acreditar la fecha de compra ante Hacienda.",
+            "Revisa tu distribución basándote en ratios históricos y no en impulsos a corto plazo."
+          ]
+        },
+        {
+          "id": "sources",
+          "title": "Fuentes y metodología",
+          "paragraphs": [
+            "Datos estadísticos y mineros obtenidos del World Platinum Investment Council (WPIC), London Platinum and Palladium Market (LPPM) y LBMA. MyGoldFolio es una herramienta de organización patrimonial y no ofrece asesoramiento financiero, legal ni fiscal."
+          ],
+          "links": [
+            {
+              "label": "World Platinum Investment Council | WPIC",
+              "href": "https://platinuminvestment.com/"
+            },
+            {
+              "label": "LBMA & LPPM | Precios oficiales",
+              "href": "https://www.lbma.org.uk/"
+            },
+            {
+              "label": "USGS | Estadísticas de metales del grupo del platino",
+              "href": "https://www.usgs.gov/centers/national-minerals-information-center/platinum-group-metals-statistics-and-information"
+            }
+          ]
+        }
+      ],
+      "ctaTitle": "Controla los 4 metales preciosos en una app privada",
+      "ctaText": "MyGoldFolio registra oro, plata, platino y paladio con cotizaciones separadas, márgenes personalizados y gráficos de reparto en tu teléfono Android.",
+      "ctaLabel": "Ver gratis en Google Play",
+      "faq": [
+        {
+          "q": "¿Es el platino más escaso que el oro?",
+          "a": "Sí. La producción minera anual de platino se sitúa en torno a 190 toneladas métricas, frente a las más de 3.000 toneladas de oro. Todo el platino extraído en la historia cabría en un cubo de apenas 8 metros de lado."
+        },
+        {
+          "q": "¿Se aplica la exención por tenencia al platino y paladio físicos?",
+          "a": "En países con regímenes fiscales basados en el tiempo de tenencia de bienes muebles (como Alemania con la regla de 1 año o Francia con abattements por antigüedad), el platino y paladio físicos se benefician igual que el oro."
+        },
+        {
+          "q": "¿Por qué los márgenes comerciales son más amplios en platino y paladio?",
+          "a": "El mercado minorista físico de estos metales es más reducido que el del oro. Los distribuidores asumen mayores costes de inventario y cobertura, lo que amplía la diferencia entre el precio de compra y el de venta."
+        },
+        {
+          "q": "¿Cómo activo el platino y paladio en MyGoldFolio?",
+          "a": "En MyGoldFolio entra en Ajustes → General → Selección de metales. Activa los interruptores de platino y paladio para que aparezcan en tu panel principal con sus respectivas cotizaciones."
+        }
+      ]
+    },
+    "it": {
+      "title": "Oro, argento, platino e palladio: come bilanciare i 4 metalli preziosi nel portafoglio",
+      "seoTitle": "Portafoglio a 4 metalli preziosi: oro, argento, platino, palladio",
+      "description": "Oltre oro e argento: scopri il ruolo di platino e palladio, i rapporti storici di prezzo, la fiscalità e i modelli di ripartizione del portafoglio.",
+      "intro": "Oro e argento rappresentano il fulcro della tutela patrimoniale. Quando però il platino sconta minimi storici rispetto all’oro e il palladio guida l’innovazione industriale, integrare i quattro metalli preziosi crea un portafoglio bilanciato per ogni fase di mercato.",
+      "summary": "Un portafoglio completo in metalli fisici va oltre la classica coppia aurea. Comprendendo la forza monetaria dell’oro, la doppia natura dell’argento, la rarità del platino e la rilevanza industriale del palladio, si difende il capitale cogliendo opportunità asimmetriche.",
+      "sections": [
+        {
+          "id": "beyond-duo",
+          "title": "Oltre il duo classico: i 4 grandi metalli da investimento",
+          "paragraphs": [
+            "La maggior parte degli investitori si concentra unicamente su oro e argento. L’oro garantisce una protezione ineguagliabile contro la svalutazione monetaria, mentre l’argento offre un punto di ingresso accessibile con un forte potenziale industriale.",
+            "Tuttavia, la tavola periodica offre quattro metalli preziosi da investimento: Oro (Au), Argento (Ag), Platino (Pt) e Palladio (Pd). I metalli del gruppo del platino sono molto più rari dell’oro nella crosta terrestre e seguono cicli macroeconomici distinti.",
+            "Aggiungere platino e palladio trasforma una riserva patrimoniale tradizionale in una strategia completa agganciata alle industrie tecnologiche del futuro."
+          ],
+          "bullets": [
+            "Oro (Au, 79): Bene monetario primario, quasi privo di impiego industriale distruttivo.",
+            "Argento (Ag, 47): Ibrido monetario-industriale sostenuto da fotovoltaico ed elettronica.",
+            "Platino (Pt, 78): Metallo di valore a sconto storico, catalisi e celle a combustibile a idrogeno.",
+            "Palladio (Pd, 46): Catalizzatore tecnologico ad alta concentrazione estrattiva."
+          ]
+        },
+        {
+          "id": "metal-personalities",
+          "title": "I profili economici dei 4 metalli preziosi",
+          "paragraphs": [
+            "Ciascuno dei quattro metalli ricopre un ruolo economico ben definito. Trattarli come un’unica classe indifferenziata è un errore strategico.",
+            "L’oro è trainato dagli acquisti delle banche centrali, dai tassi reali e dalla geopolitica. L’argento segue l’oro amplificandone i movimenti grazie all’industria. Il platino e il palladio dipendono invece dal settore automobilistico, dalla transizione ecologica e dall’industria chimica."
+          ],
+          "table": {
+            "head": [
+              "Metallo",
+              "Ruolo primario",
+              "Fattori di domanda",
+              "Quota industriale",
+              "Rarità estrattiva vs oro"
+            ],
+            "rows": [
+              [
+                "Oro (Au)",
+                "Riserva monetaria di valore",
+                "Banche centrali, protezione, oreficeria",
+                "~10 %",
+                "Riferimento (1x)"
+              ],
+              [
+                "Argento (Ag)",
+                "Ibrido monetario e industriale",
+                "Solare fotovoltaico, semiconduttori, lingotti/monete",
+                "~55 %",
+                "~8x più abbondante"
+              ],
+              [
+                "Platino (Pt)",
+                "Valore contrarian & Clean-Tech",
+                "Marmitte catalitiche, idrogeno verde, gioielleria",
+                "~65 %",
+                "~15x a 20x più raro"
+              ],
+              [
+                "Palladio (Pd)",
+                "Catalizzatore industriale puro",
+                "Motori a benzina, microchip, aerospazio",
+                "~85 %",
+                "~15x più raro"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "valuation-ratios",
+          "title": "La divergenza storica dei prezzi: i rapporti da monitorare",
+          "paragraphs": [
+            "I rapporti di prezzo (ratios) consentono di valutare i metalli preziosi nel tempo senza le distorsioni causate dall’inflazione delle valute fiat.",
+            "Per gran parte del Novecento e degli anni Duemila, il platino è stato nettamente più costoso dell’oro, arrivando a valere oltre il doppio. Oggi il rapporto si è capovolto: l’oro vale circa 2,5 - 2,8 volte il platino, una disparità storicamente estrema seguita con attenzione dagli investitori contrarian.",
+            "Anche tra platino e palladio si sono verificate oscillazioni eccezionali: il palladio è balzato oltre 3.000 $ nel 2021/2022 prima di stabilizzarsi intorno a 1.000 $, riallineandosi al platino."
+          ],
+          "bullets": [
+            "Rapporto Oro / Platino: Storicamente inferiore a 1,0; oggi ai massimi storici (>2,5), evidenziando il forte sconto relativo del platino.",
+            "Rapporto Platino / Palladio: Ritornato verso la parità (1,0) dopo anni di forti scostamenti.",
+            "Rischio geopolitico: Oltre il 70 % del platino mondiale proviene dal Sudafrica; per il palladio oltre l’80 % è concentrato tra Russia e Sudafrica."
+          ]
+        },
+        {
+          "id": "friction-factors",
+          "title": "Le regole del mercato fisico: IVA, spread e liquidità",
+          "paragraphs": [
+            "L’acquisto di platino e palladio richiede consapevolezza dei costi accessori del mercato fisico.",
+            "Nell’Unione Europea, l’oro da investimento gode dell’esenzione totale dall’IVA. Argento, platino e palladio sono invece soggetti a IVA ordinaria o a regimi del margine, a meno che non vengano custoditi in depositi franchi doganali.",
+            "Inoltre, la liquidità al dettaglio per lingotti e monete di platino e palladio è inferiore a quella dell’oro. Gli operatori applicano spread bid/ask più ampi, rendendo il punto di pareggio più distante rispetto al prezzo spot."
+          ],
+          "ordered": [
+            "Considera l’impatto dell’IVA o valuta opzioni di custodia extradoganale.",
+            "Scegli lingotti certificati Good Delivery o monete sovrane riconosciute (Filarmonica, Maple Leaf) per facilitare la rivendita.",
+            "Registra il costo totale effettivo comprensivo di spedizione per conoscere il punto di pareggio reale."
+          ]
+        },
+        {
+          "id": "allocation-models",
+          "title": "Tre modelli di allocazione del portafoglio",
+          "paragraphs": [
+            "Non esiste una formula standard. La ripartizione del capitale deve rispecchiare l’orizzonte temporale e la propensione al rischio."
+          ],
+          "table": {
+            "head": [
+              "Strategia",
+              "Oro (Au)",
+              "Argento (Ag)",
+              "Platino (Pt)",
+              "Palladio (Pd)",
+              "Obiettivo strategico"
+            ],
+            "rows": [
+              [
+                "Ancora difensiva",
+                "80 %",
+                "15 %",
+                "5 %",
+                "0 %",
+                "Massima sicurezza monetaria con minima oscillazione."
+              ],
+              [
+                "Stack bilanciato",
+                "65 %",
+                "25 %",
+                "7 %",
+                "3 %",
+                "Nucleo aureo solido con partecipazione alla crescita green-tech."
+              ],
+              [
+                "Opportunità asimmetrica",
+                "50 %",
+                "30 %",
+                "15 %",
+                "5 %",
+                "Allocazione tattica sul recupero del rapporto storico oro/platino."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "tracking-app",
+          "title": "Come MyGoldFolio gestisce il portafoglio a 4 metalli",
+          "paragraphs": [
+            "Monitorare quattro metalli con quotazioni spot diverse, margini commerciali variabili e date di acquisto scaglionate è fonte di errori sui fogli di calcolo.",
+            "MyGoldFolio è progettato specificamente per la gestione multimetallo. Dalle impostazioni puoi attivare oro, argento, platino e palladio, visualizzare i prezzi spot in tempo reale e controllare la composizione del portafoglio sia per peso fino che per controvalore valutario.",
+            "Poiché ogni metallo presenta spread differenti, MyGoldFolio permette di impostare margini di vendita dedicati per ciascun metallo per visualizzare il vero punto di pareggio, calcolando l’anzianità di possesso in modo 100 % privato sul tuo telefono."
+          ],
+          "bullets": [
+            "Abilitazione modulare di ogni singolo metallo nelle impostazioni.",
+            "Quotazioni spot indipendenti per oro, argento, platino e palladio.",
+            "Grafico ad anello della ripartizione patrimoniale per peso e valuta.",
+            "Profili di margine dedicati per metallo per calcolare il vero break-even.",
+            "Monitoraggio delle date di acquisto per verificare i periodi di possesso."
+          ]
+        },
+        {
+          "id": "four-rules",
+          "title": "Quattro regole per gestire i 4 metalli preziosi",
+          "ordered": [
+            "L’oro resta il baricentro: la maggioranza del capitale fisico deve rimanere allocata in oro.",
+            "Considera la volatilità: platino e palladio presentano oscillazioni di prezzo più marcate dell’oro.",
+            "Archivia fatture e ricevute d’acquisto per dimostrare la data di carico.",
+            "Ribilancia le posizioni sulla base dei rapporti storici anziché delle notizie giornaliere."
+          ]
+        },
+        {
+          "id": "sources",
+          "title": "Fonti e metodologia",
+          "paragraphs": [
+            "Dati e statistiche minerarie tratti da World Platinum Investment Council (WPIC), London Platinum and Palladium Market (LPPM) e LBMA. MyGoldFolio è un software di supporto organizzativo e non fornisce consulenza finanziaria, legale o fiscale."
+          ],
+          "links": [
+            {
+              "label": "World Platinum Investment Council | WPIC",
+              "href": "https://platinuminvestment.com/"
+            },
+            {
+              "label": "LBMA & LPPM | Prezzi ufficiali",
+              "href": "https://www.lbma.org.uk/"
+            },
+            {
+              "label": "USGS | Statistiche metalli del gruppo del platino",
+              "href": "https://www.usgs.gov/centers/national-minerals-information-center/platinum-group-metals-statistics-and-information"
+            }
+          ]
+        }
+      ],
+      "ctaTitle": "Monitora tutti e 4 i metalli preziosi in una sola app",
+      "ctaText": "MyGoldFolio gestisce oro, argento, platino e palladio con prezzi spot dedicati, margini personalizzati e grafici di ripartizione sul tuo dispositivo Android.",
+      "ctaLabel": "Scopri gratis su Google Play",
+      "faq": [
+        {
+          "q": "Il platino è più raro dell’oro?",
+          "a": "Sì. L’estrazione mineraria mondiale di platino è di circa 190 tonnellate all’anno, contro le oltre 3.000 tonnellate dell’oro. Tutto il platino mai estratto nella storia dell’umanità entrerebbe in un cubo di circa 8 metri di lato."
+        },
+        {
+          "q": "Le agevolazioni sul periodo di possesso valgono anche per platino e palladio?",
+          "a": "Negli ordinamenti che prevedono esenzioni o aliquote ridotte basate sulla durata di possesso dei beni mobili (come in Germania dopo 1 anno ex § 23 EStG), il platino e il palladio fisici seguono lo stesso principio dell’oro."
+        },
+        {
+          "q": "Perché gli spread di platino e palladio sono più ampi?",
+          "a": "Il mercato fisico al dettaglio per questi metalli è meno liquido di quello dell’oro. I commercianti affrontano maggiori costi di stoccaggio e copertura, allargando la differenza tra prezzo di acquisto e prezzo di riacquisto."
+        },
+        {
+          "q": "Come si attivano platino e palladio in MyGoldFolio?",
+          "a": "In MyGoldFolio apri Impostazioni → Generale → Selezione metalli. Attiva gli interruttori relativi a Platino e Palladio per vederli comparire sulla dashboard con i relativi corsi."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Ouro, prata, platina e paládio: como equilibrar os 4 metais preciosos na sua carteira",
+      "seoTitle": "Carteira de 4 metais preciosos: ouro, prata, platina e paládio",
+      "description": "Além do ouro e da prata: entenda os papéis da platina e do paládio, as relações históricas de preço, tributação e modelos equilibrados de alocação.",
+      "intro": "O ouro e a prata formam a base da preservação patrimonial. Mas com a platina em patamares historicamente atrativos e o paládio impulsionando a alta tecnologia, expandir para os quatro metais preciosos constrói uma carteira equilibrada para qualquer ciclo econômico.",
+      "summary": "Uma carteira completa de metais preciosos vai muito além dos ativos tradicionais. Ao aliar a estabilidade monetária do ouro, o dinamismo da prata, a escassez da platina e a relevância industrial do paládio, você protege seu patrimônio e aproveita oportunidades assimétricas.",
+      "sections": [
+        {
+          "id": "beyond-duo",
+          "title": "Além da dupla clássica: os 4 grandes metais de investimento",
+          "paragraphs": [
+            "A maioria dos investidores foca exclusivamente em ouro e prata. O ouro oferece proteção sólida contra a desvalorização das moedas, enquanto a prata proporciona um ponto de entrada acessível com forte consumo industrial.",
+            "No entanto, a tabela periódica abriga quatro metais nobres de investimento: Ouro (Au), Prata (Ag), Platina (Pt) e Paládio (Pd). Os metais do grupo da platina são muito mais raros na crosta terrestre do que o ouro e acompanham ciclos econômicos bem distintos.",
+            "A inclusão de platina e paládio transforma uma reserva tradicional em uma estratégia ampla de ativos tangíveis conectados à economia moderna."
+          ],
+          "bullets": [
+            "Ouro (Au, 79): Ativo monetário fundamental com quase nenhum uso destrutivo.",
+            "Prata (Ag, 47): Híbrido monetário-industrial impulsionado por energia solar e tecnologia.",
+            "Platina (Pt, 78): Ativo de valor histórico atrativo, catalisadores e células de combustível de hidrogênio.",
+            "Paládio (Pd, 46): Catalisador industrial de ponta com oferta altamente concentrada."
+          ]
+        },
+        {
+          "id": "metal-personalities",
+          "title": "Os perfis econômicos dos 4 metais preciosos",
+          "paragraphs": [
+            "Cada um dos quatro metais cumpre uma função econômica própria. Encará-los como commodities idênticas compromete a estratégia de alocação.",
+            "O ouro reflete a atuação de bancos centrais, juros reais e riscos geopolíticos. A prata amplifica os movimentos do ouro impulsionada pela indústria. A platina e o paládio dependem diretamente do setor automotivo, da transição ecológica e de processos químicos especializados."
+          ],
+          "table": {
+            "head": [
+              "Metal",
+              "Função primária",
+              "Direcionadores de demanda",
+              "Demanda industrial",
+              "Raridade de mineração vs ouro"
+            ],
+            "rows": [
+              [
+                "Ouro (Au)",
+                "Reserva de valor monetária",
+                "Bancos centrais, poupança privada, joalheria",
+                "~10 %",
+                "Referência (1x)"
+              ],
+              [
+                "Prata (Ag)",
+                "Híbrido monetário e industrial",
+                "Painéis solares, eletrônica, moedas/barras",
+                "~55 %",
+                "~8x mais abundante"
+              ],
+              [
+                "Platina (Pt)",
+                "Valor contracíclico & Clean-Tech",
+                "Catalisadores, tecnologia do hidrogênio, joias",
+                "~65 %",
+                "~15x a 20x mais rara"
+              ],
+              [
+                "Paládio (Pd)",
+                "Catalisador industrial puro",
+                "Filtros para veículos a gasolina, chips, aeroespacial",
+                "~85 %",
+                "~15x mais raro"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "valuation-ratios",
+          "title": "A disparidade histórica de preços: relações a acompanhar",
+          "paragraphs": [
+            "As relações de preço (ratios) permitem avaliar o valor relativo dos metais ao longo das décadas sem a distorção inflacionária das moedas fiduciárias.",
+            "Durante a maior parte das últimas décadas, a platina foi cotada com forte ágio em relação ao ouro, chegando a valer mais que o dobro. Hoje o cenário se inverteu: o ouro negocia entre 2,5 e 2,8 vezes o preço da platina, uma disparidade histórica acompanhada com atenção por investidores de valor.",
+            "Entre platina e paládio as oscilações também foram expressivas: o paládio ultrapassou 3.000 $ em 2021/2022 antes de recuar para a faixa de 1.000 $, retornando à paridade com a platina."
+          ],
+          "bullets": [
+            "Relação Ouro / Platina: Historicamente abaixo de 1,0; hoje em patamares recordes (>2,5), indicando desconto atrativo para a platina.",
+            "Relação Platina / Paládio: Retorno à paridade (1,0) após anos de forte divergência.",
+            "Concentração de oferta: Mais de 70 % da platina mundial vem da África do Sul; para o paládio, mais de 80 % concentra-se entre Rússia e África do Sul."
+          ]
+        },
+        {
+          "id": "friction-factors",
+          "title": "Fricções do mercado físico: impostos, ágios e liquidez",
+          "paragraphs": [
+            "Adquirir platina e paládio exige entender os custos operacionais do mercado físico.",
+            "Na União Europeia, o ouro de investimento conta com isenção total de IVA. Já a prata, a platina e o paládio estão sujeitos a alíquotas normais de imposto, salvo se adquiridos e armazenados em depósitos francos sob custódia alfandegária.",
+            "Além disso, o mercado de varejo para barras e moedas de platina e paládio possui menor volume do que o do ouro. Comerciantes aplicam spreads de compra e venda mais amplos, o que distancia o ponto de equilíbrio do preço spot de mercado."
+          ],
+          "ordered": [
+            "Avalie a carga tributária local ou pesquise alternativas em entrepostos aduaneiros.",
+            "Priorize barras certificadas LBMA ou moedas oficiais conhecidas (Filarmônica, Maple Leaf) para facilitar a revenda.",
+            "Registre o custo total de aquisição para conhecer seu ponto de equilíbrio real."
+          ]
+        },
+        {
+          "id": "allocation-models",
+          "title": "Três modelos práticos de alocação de carteira",
+          "paragraphs": [
+            "Não existe fórmula universal. A divisão do seu capital deve refletir seu horizonte temporal e sua tolerância a oscilações."
+          ],
+          "table": {
+            "head": [
+              "Estratégia",
+              "Ouro (Au)",
+              "Prata (Ag)",
+              "Platina (Pt)",
+              "Paládio (Pd)",
+              "Objetivo estratégico"
+            ],
+            "rows": [
+              [
+                "Âncora conservadora",
+                "80 %",
+                "15 %",
+                "5 %",
+                "0 %",
+                "Máxima preservação de capital com mínima volatilidade."
+              ],
+              [
+                "Alocação equilibrada",
+                "65 %",
+                "25 %",
+                "7 %",
+                "3 %",
+                "Núcleo monetário sólido com exposição equilibrada à tecnologia limpa."
+              ],
+              [
+                "Oportunidade contracíclica",
+                "50 %",
+                "30 %",
+                "15 %",
+                "5 %",
+                "Aposta assimétrica no fechamento do spread histórico ouro/platina."
+              ]
+            ]
+          }
+        },
+        {
+          "id": "tracking-app",
+          "title": "Como o MyGoldFolio organiza sua carteira de 4 metais",
+          "paragraphs": [
+            "Controlar quatro metais com cotações spot distintas, diferentes ágios de recompra e compras fracionadas torna-se inviável em planilhas manuais.",
+            "O MyGoldFolio foi planejado desde o início para operações multimetal. Nas configurações, você ativa ouro, prata, platina e paládio separadamente, monitora as cotações em tempo real e visualiza a distribuição da sua carteira por peso fino e valor fiduciário.",
+            "Como cada metal possui margens de revenda próprias, o aplicativo permite definir spreads específicos por metal para exibir o ponto de equilíbrio real, acompanhando os prazos de custódia com privacidade total no seu celular Android."
+          ],
+          "bullets": [
+            "Seleção individual de cada metal nas configurações do aplicativo.",
+            "Cotações spot em tempo real para ouro, prata, platina e paládio.",
+            "Gráfico dinâmico de alocação patrimonial por peso e valor monetário.",
+            "Perfis de margem dedicados para cada metal para cálculo exato do ponto de equilíbrio.",
+            "Acompanhamento de prazos de aquisição para planejamento fiscal."
+          ]
+        },
+        {
+          "id": "four-rules",
+          "title": "Quatro regras essenciais para a carteira de 4 metais",
+          "ordered": [
+            "O ouro é a âncora: A maior parcela do seu patrimônio físico deve continuar alocada em ouro.",
+            "Considere a volatilidade: Platina e paládio apresentam variações de preço mais intensas do que o ouro.",
+            "Guarde notas fiscais e comprovantes para atestar a data de aquisição dos lotes.",
+            "Rebalanceie suas posições com foco em relações históricas, evitando decisões emotivas de curto prazo."
+          ]
+        },
+        {
+          "id": "sources",
+          "title": "Fontes e metodologia",
+          "paragraphs": [
+            "Dados estatísticos e de mineração extraídos do World Platinum Investment Council (WPIC), do London Platinum and Palladium Market (LPPM) e da LBMA. O MyGoldFolio é um aplicativo de organização pessoal e não oferece assessoria de investimentos ou jurídica."
+          ],
+          "links": [
+            {
+              "label": "World Platinum Investment Council | WPIC",
+              "href": "https://platinuminvestment.com/"
+            },
+            {
+              "label": "LBMA & LPPM | Cotações oficiais",
+              "href": "https://www.lbma.org.uk/"
+            },
+            {
+              "label": "USGS | Estatísticas dos metais do grupo da platina",
+              "href": "https://www.usgs.gov/centers/national-minerals-information-center/platinum-group-metals-statistics-and-information"
+            }
+          ]
+        }
+      ],
+      "ctaTitle": "Acompanhe os 4 metais preciosos em um app privado",
+      "ctaText": "O MyGoldFolio registra ouro, prata, platina e paládio com cotações separadas, ágios customizados e gráficos de alocação no seu Android.",
+      "ctaLabel": "Ver grátis no Google Play",
+      "faq": [
+        {
+          "q": "A platina é mais rara do que o ouro?",
+          "a": "Sim. A extração mineral anual de platina no mundo é de aproximadamente 190 toneladas, contra mais de 3.000 toneladas de ouro. Toda a platina minerada na história caberia em um cubo de cerca de 8 metros de aresta."
+        },
+        {
+          "q": "Prazos de custódia trazem benefícios fiscais para platina e paládio?",
+          "a": "Em países com regimes tributários que beneficiam a posse prolongada de bens móveis (como a regra de 1 ano na Alemanha sob o § 23 EStG), a platina e o paládio físicos contam com as mesmas isenções que o ouro."
+        },
+        {
+          "q": "Por que os ágios de platina e paládio costumam ser maiores?",
+          "a": "O mercado físico de varejo para esses metais é menor e menos líquido do que o do ouro. Comerciantes arcam com custos maiores de custódia e proteção, ampliando a diferença entre preço de venda e recompra."
+        },
+        {
+          "q": "Como habilitar platina e paládio no MyGoldFolio?",
+          "a": "No MyGoldFolio vá em Configurações → Geral → Seleção de metais. Ative os interruptores de platina e paládio para incluí-los no seu painel principal."
+        }
+      ]
+    }
+  }
+}
 ];
-
