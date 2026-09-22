@@ -2,7 +2,83 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mygoldfolio.de/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/</loc>
+    <lastmod>2026-09-21</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/changelog/</loc>
+    <lastmod>2026-09-21</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/feedback/</loc>
+    <lastmod>2026-09-21</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/guides/</loc>
+    <lastmod>2026-09-20</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/guides/dollar-cost-averaging-gold-silver/</loc>
+    <lastmod>2026-08-30</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/guides/four-precious-metals-portfolio-allocation/</loc>
+    <lastmod>2026-09-20</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/guides/gold-silver-premiums-break-even/</loc>
+    <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/guides/gold-silver-tax-free-holding-period/</loc>
+    <lastmod>2026-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/guides/page/2/</loc>
+    <lastmod>2026-09-20</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/guides/record-gold-silver-purchases/</loc>
+    <lastmod>2026-08-15</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/guides/track-precious-metals-portfolio/</loc>
+    <lastmod>2026-08-08</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/help/</loc>
+    <lastmod>2026-09-21</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/market/</loc>
+    <lastmod>2026-08-28</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/market/gold/</loc>
+    <lastmod>2026-08-28</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/market/palladium/</loc>
+    <lastmod>2026-08-28</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/market/platinum/</loc>
+    <lastmod>2026-08-28</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/market/silver/</loc>
+    <lastmod>2026-08-28</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/privacy/</loc>
+    <lastmod>2026-09-21</lastmod>
+  </url>
+  <url>
+    <loc>https://mygoldfolio.de/ar/roadmap/</loc>
+    <lastmod>2026-09-21</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/changelog/</loc>
@@ -10,7 +86,7 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/de/changelog/</loc>
@@ -86,7 +162,7 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/es/changelog/</loc>
@@ -166,7 +242,7 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/fr/changelog/</loc>
@@ -278,7 +354,7 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/it/changelog/</loc>
@@ -378,7 +454,7 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/pt/changelog/</loc>
@@ -458,7 +534,7 @@
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
   <url>
     <loc>https://mygoldfolio.de/tr/changelog/</loc>

@@ -20,14 +20,16 @@ const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const diffMode = process.argv.includes('--diff');
 const writeMode = process.argv.includes('--write');
 const BASE = 'https://mygoldfolio.de';
+const FALLBACK_LASTMOD = '2026-09-21';
 
 function gitDate(relPath) {
   try {
-    return execFileSync('git', ['-C', repoRoot, 'log', '-1', '--format=%cs', '--', relPath.replace(/^\//, '')], {
+    const d = execFileSync('git', ['-C', repoRoot, 'log', '-1', '--format=%cs', '--', relPath.replace(/^\//, '')], {
       encoding: 'utf8',
     }).trim();
+    return d || FALLBACK_LASTMOD;
   } catch {
-    return null;
+    return FALLBACK_LASTMOD;
   }
 }
 
@@ -39,14 +41,16 @@ function routes() {
     entries.set(`${BASE}${path}`, lastmod);
   };
 
-  // Homes ×7
-  add('/', gitDate('index.html'));
-  for (const code of localeCodes) add(`/${code}/`, gitDate(`${code}/index.html`));
+  const nonEnLocales = localeCodes.filter(c => c !== 'en');
 
-  // Secondary pages ×7 (segment names identical across locales)
+  // Homes
+  add('/', gitDate('index.html'));
+  for (const code of nonEnLocales) add(`/${code}/`, gitDate(`${code}/index.html`));
+
+  // Secondary pages (segment names identical across locales)
   for (const seg of ['changelog', 'feedback', 'help', 'privacy', 'roadmap']) {
     add(`/${seg}/`, gitDate(`${seg}/index.html`));
-    for (const code of localeCodes) add(`/${code}/${seg}/`, gitDate(`${code}/${seg}/index.html`));
+    for (const code of nonEnLocales) add(`/${code}/${seg}/`, gitDate(`${code}/${seg}/index.html`));
   }
 
   // Guides: hubs (including paginated pages) + articles from the canonical content objects

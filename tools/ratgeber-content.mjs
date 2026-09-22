@@ -2499,3 +2499,38 @@ export const additionalArticles = [{
   }
 }
 ];
+
+import {
+  arLocaleConfig,
+  article1Arabic,
+  article2Arabic,
+  article3Arabic,
+  article4Arabic,
+  article5Arabic,
+  article6Arabic
+} from './ratgeber-content-ar.mjs';
+
+locales.ar = arLocaleConfig;
+
+article.category.ar = article1Arabic.category;
+article.imageAlt.ar = article1Arabic.imageAlt;
+article.locales.ar = article1Arabic.content;
+
+const arArticles = [
+  article2Arabic,
+  article3Arabic,
+  article4Arabic,
+  article5Arabic,
+  article6Arabic
+];
+
+additionalArticles.forEach((art, idx) => {
+  const arData = arArticles[idx];
+  if (arData) {
+    art.paths.ar = arData.path;
+    art.category.ar = arData.category;
+    art.imageAlt.ar = arData.imageAlt;
+    art.locales.ar = arData.content;
+  }
+});
+

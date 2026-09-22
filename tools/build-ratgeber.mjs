@@ -85,7 +85,7 @@ export function consentHead() {
 }
 
 function tailwind() {
-  return `<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  return `<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/assets/css/main.min.css" />
 <script type="module" src="/assets/js/ionicons/ionicons.esm.js"></script><script nomodule src="/assets/js/ionicons/ionicons.js"></script>
 <link rel="stylesheet" href="/images/ratgeber.css" />`;
@@ -129,7 +129,9 @@ function sharedNav(locale, currentArticle) {
 }
 
 function sharedFooter(locale) {
-  return `<footer class="border-t border-border/30 px-6 py-8 text-center text-xs text-muted"><p>© 2026 SmartDailyApps. All rights reserved.</p><div class="mt-3 flex flex-wrap justify-center gap-4"><a href="${locale.code === 'en' ? '/' : `/${locale.code}/`}" class="hover:text-gold">${esc(locale.homeLabel)}</a><a href="${locale.code === 'en' ? '/market/' : `/${locale.code}/market/`}" class="hover:text-gold">${esc(locale.marketLabel || 'Live Market')}</a><a href="${locale.hubPath}" class="hover:text-gold">${esc(locale.hubLabel)}</a><a href="${locale.code === 'en' ? '/help/' : `/${locale.code}/help/`}" class="hover:text-gold">${esc(locale.helpLabel)}</a><a href="${locale.code === 'en' ? '/privacy/' : `/${locale.code}/privacy/`}" class="hover:text-gold">${esc(locale.privacyLabel)}</a></div></footer><script src="/images/play-store-attribution.js"></script><script src="/images/guide-analytics.js"></script><script src="/images/locale-switcher.js"></script>`;
+  const hubLink = locale.hubPath ? `<a href="${locale.hubPath}" class="hover:text-gold">${esc(locale.hubLabel)}</a>` : '';
+  const rightsLabel = locale.rightsLabel || 'All rights reserved.';
+  return `<footer class="border-t border-border/30 px-6 py-8 text-center text-xs text-muted"><p>© 2026 SmartDailyApps. ${esc(rightsLabel)}</p><div class="mt-3 flex flex-wrap justify-center gap-4"><a href="${locale.code === 'en' ? '/' : `/${locale.code}/`}" class="hover:text-gold">${esc(locale.homeLabel)}</a><a href="${locale.code === 'en' ? '/market/' : `/${locale.code}/market/`}" class="hover:text-gold">${esc(locale.marketLabel || 'Live Market')}</a>${hubLink}<a href="${locale.code === 'en' ? '/help/' : `/${locale.code}/help/`}" class="hover:text-gold">${esc(locale.helpLabel)}</a><a href="${locale.code === 'en' ? '/privacy/' : `/${locale.code}/privacy/`}" class="hover:text-gold">${esc(locale.privacyLabel)}</a></div></footer><script src="/images/play-store-attribution.js"></script><script src="/images/guide-analytics.js"></script><script src="/images/locale-switcher.js"></script>`;
 }
 
 function renderTable(table) {
@@ -157,7 +159,7 @@ function renderRelated(locale, articleItem) {
 
   const cards = related.map((relatedArticle) => {
     const content = relatedArticle.locales[locale.code];
-    return `<a href="${articlePath(relatedArticle, locale)}" class="guide-card guide-article-card block">${cardImg(relatedArticle, locale)}<div class="p-5"><p class="guide-eyebrow mb-2">${esc(relatedArticle.category[locale.code])} · ${relatedArticle.readingMinutes} min</p><h3 class="text-xl font-black text-white">${esc(content.title)}</h3><p class="mt-2 leading-relaxed text-gray-400">${esc(content.description)}</p><span class="mt-4 inline-flex items-center gap-2 font-bold text-gold">${esc(locale.readLabel)} <span aria-hidden="true">→</span></span></div></a>`;
+    return `<a href="${articlePath(relatedArticle, locale)}" class="guide-card guide-article-card block">${cardImg(relatedArticle, locale)}<div class="p-5"><p class="guide-eyebrow mb-2">${esc(relatedArticle.category[locale.code])} · ${relatedArticle.readingMinutes} min</p><h3 class="text-xl font-black text-white">${esc(content.title)}</h3><p class="mt-2 leading-relaxed text-gray-400">${esc(content.description)}</p><span class="mt-4 inline-flex items-center gap-2 font-bold text-gold">${esc(locale.readLabel)} <span aria-hidden="true">${locale.code === 'ar' ? '←' : '→'}</span></span></div></a>`;
   }).join('');
   return `<section class="guide-related mt-12"><h2>${esc(locale.relatedLabel)}</h2><div class="grid gap-5">${cards}</div></section>`;
 }
@@ -185,7 +187,7 @@ export function articlePage(locale, articleItem) {
   const sections = content.sections.map(renderSection).join('');
   const faq = content.faq.map((item) => `<details><summary>${esc(item.q)}</summary><p>${esc(item.a)}</p></details>`).join('');
   return `<!DOCTYPE html>
-<html lang="${locale.locale}"><head>
+<html lang="${locale.locale}"${locale.code === 'ar' ? ' dir="rtl"' : ''}><head>
 ${consentHead()}
 <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>${esc(content.seoTitle || content.title)} | MyGoldFolio</title><meta name="description" content="${esc(content.description)}" />
@@ -197,7 +199,7 @@ ${tailwind()}
 </head><body class="bg-navy text-gray-200">
 ${sharedNav(locale, articleItem)}
 <main data-guide-id="${articleItem.id}" data-guide-locale="${locale.code}" data-guide-category="${esc(articleItem.category[locale.code])}"><header class="guide-article-hero">${heroPicture(articleItem, locale)}<div class="guide-shell guide-article-hero__content"><nav class="guide-breadcrumb" aria-label="Breadcrumb"><a href="${locale.code === 'en' ? '/' : `/${locale.code}/`}">${esc(locale.homeLabel)}</a><span aria-hidden="true">/</span><a href="${locale.hubPath}">${esc(locale.hubLabel)}</a></nav><p class="guide-eyebrow mb-4">${esc(articleItem.category[locale.code])} · ${articleItem.readingMinutes} min</p><h1>${esc(content.title)}</h1><p>${esc(content.intro)}</p><p class="guide-article-meta">${articleItem.updated} · ${brandWordmark('font-extrabold tracking-tight text-white')}</p></div></header>
-<div class="guide-shell grid max-w-6xl gap-10 py-14 md:grid-cols-[minmax(0,1fr)_15rem] md:py-20"><article class="guide-prose min-w-0"><div class="guide-kicker"><strong>${esc(content.summary)}</strong></div>${sections}<div class="guide-cta"><p class="mb-3">${brandWordmark()}</p><h2 class="!mt-0 text-2xl">${esc(content.ctaTitle)}</h2><p>${esc(content.ctaText)}</p><a href="${playUrl(articleItem)}" target="_blank" rel="noopener noreferrer" class="guide-cta__action mt-3 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-gold to-amber px-5 py-3 text-sm font-black shadow-xl shadow-gold/25 transition hover:-translate-y-0.5 hover:shadow-gold/35 sm:w-auto" style="color:#0F0F1A !important;text-decoration:none;"><ion-icon name="diamond-outline"></ion-icon>${esc(content.ctaLabel)}</a></div>${renderRelated(locale, articleItem)}<section class="guide-faq mt-12" id="faq"><h2>${esc(locale.faqLabel)}</h2><div class="space-y-3">${faq}</div></section><div class="guide-next"><a href="${locale.hubPath}">← ${esc(locale.backLabel)}</a></div></article><aside class="hidden md:block"><div class="guide-card guide-toc sticky top-24 p-5"><p class="mb-3 text-xs font-extrabold uppercase tracking-[.15em] text-gold">${esc(locale.contentsLabel)}</p>${toc}<a href="#faq">${esc(locale.faqLabel)}</a></div></aside></div></main>
+<div class="guide-shell grid max-w-6xl gap-10 py-14 md:grid-cols-[minmax(0,1fr)_15rem] md:py-20"><article class="guide-prose min-w-0"><div class="guide-kicker"><strong>${esc(content.summary)}</strong></div>${sections}<div class="guide-cta"><p class="mb-3">${brandWordmark()}</p><h2 class="!mt-0 text-2xl">${esc(content.ctaTitle)}</h2><p>${esc(content.ctaText)}</p><a href="${playUrl(articleItem)}" target="_blank" rel="noopener noreferrer" class="guide-cta__action mt-3 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-gold to-amber px-5 py-3 text-sm font-black shadow-xl shadow-gold/25 transition hover:-translate-y-0.5 hover:shadow-gold/35 sm:w-auto" style="color:#0F0F1A !important;text-decoration:none;"><ion-icon name="diamond-outline"></ion-icon>${esc(content.ctaLabel)}</a></div>${renderRelated(locale, articleItem)}<section class="guide-faq mt-12" id="faq"><h2>${esc(locale.faqLabel)}</h2><div class="space-y-3">${faq}</div></section><div class="guide-next"><a href="${locale.hubPath}">${locale.code === 'ar' ? '→' : '←'} ${esc(locale.backLabel)}</a></div></article><aside class="hidden md:block"><div class="guide-card guide-toc sticky top-24 p-5"><p class="mb-3 text-xs font-extrabold uppercase tracking-[.15em] text-gold">${esc(locale.contentsLabel)}</p>${toc}<a href="#faq">${esc(locale.faqLabel)}</a></div></aside></div></main>
 ${sharedFooter(locale)}</body></html>`;
 }
 
@@ -206,20 +208,22 @@ function articleCard(locale, articleItem, isFeatured = false) {
   const badge = isFeatured
     ? `<span class="guide-featured-badge">${esc(locale.featuredBadge || 'Aktueller Guide')}</span>`
     : '';
-  return `<div class="guide-card-wrap">${badge}<a href="${articlePath(articleItem, locale)}" class="guide-card guide-article-card block">${cardImg(articleItem, locale)}<div class="p-6"><p class="guide-eyebrow mb-3">${esc(articleItem.category[locale.code])} · ${articleItem.readingMinutes} min</p><h2 class="text-2xl font-black text-white">${esc(content.title)}</h2><p class="mt-3 leading-relaxed text-gray-400">${esc(content.description)}</p><span class="mt-5 inline-flex items-center gap-2 font-bold text-gold">${esc(locale.readLabel)} <span aria-hidden="true">→</span></span></div></a></div>`;
+  return `<div class="guide-card-wrap">${badge}<a href="${articlePath(articleItem, locale)}" class="guide-card guide-article-card block">${cardImg(articleItem, locale)}<div class="p-6"><p class="guide-eyebrow mb-3">${esc(articleItem.category[locale.code])} · ${articleItem.readingMinutes} min</p><h2 class="text-2xl font-black text-white">${esc(content.title)}</h2><p class="mt-3 leading-relaxed text-gray-400">${esc(content.description)}</p><span class="mt-5 inline-flex items-center gap-2 font-bold text-gold">${esc(locale.readLabel)} <span aria-hidden="true">${locale.code === 'ar' ? '←' : '→'}</span></span></div></a></div>`;
 }
 
 function renderPagination(locale, currentPage, totalPages) {
   if (totalPages <= 1) return '';
 
   const items = [];
+  const prevArrow = locale.code === 'ar' ? '→' : '←';
+  const nextArrow = locale.code === 'ar' ? '←' : '→';
 
   // Previous button
   if (currentPage > 1) {
     const prevPath = hubPagePath(locale, currentPage - 1);
-    items.push(`<a href="${prevPath}" class="guide-pagination-item guide-pagination-item--link" aria-label="${esc(locale.paginationPrev || 'Previous')}">← ${esc(locale.paginationPrev || 'Previous')}</a>`);
+    items.push(`<a href="${prevPath}" class="guide-pagination-item guide-pagination-item--link" aria-label="${esc(locale.paginationPrev || 'Previous')}">${prevArrow} ${esc(locale.paginationPrev || 'Previous')}</a>`);
   } else {
-    items.push(`<span class="guide-pagination-item guide-pagination-item--disabled" aria-disabled="true">← ${esc(locale.paginationPrev || 'Previous')}</span>`);
+    items.push(`<span class="guide-pagination-item guide-pagination-item--disabled" aria-disabled="true">${prevArrow} ${esc(locale.paginationPrev || 'Previous')}</span>`);
   }
 
   // Page numbers 1..totalPages
@@ -236,9 +240,9 @@ function renderPagination(locale, currentPage, totalPages) {
   // Next button
   if (currentPage < totalPages) {
     const nextPath = hubPagePath(locale, currentPage + 1);
-    items.push(`<a href="${nextPath}" class="guide-pagination-item guide-pagination-item--link" aria-label="${esc(locale.paginationNext || 'Next')}">${esc(locale.paginationNext || 'Next')} →</a>`);
+    items.push(`<a href="${nextPath}" class="guide-pagination-item guide-pagination-item--link" aria-label="${esc(locale.paginationNext || 'Next')}">${esc(locale.paginationNext || 'Next')} ${nextArrow}</a>`);
   } else {
-    items.push(`<span class="guide-pagination-item guide-pagination-item--disabled" aria-disabled="true">${esc(locale.paginationNext || 'Next')} →</span>`);
+    items.push(`<span class="guide-pagination-item guide-pagination-item--disabled" aria-disabled="true">${esc(locale.paginationNext || 'Next')} ${nextArrow}</span>`);
   }
 
   return `<nav class="guide-pagination" aria-label="Pagination">${items.join('')}</nav>`;
@@ -260,7 +264,7 @@ export function hubPage(locale, currentPage = 1, totalPages = 1, pageArticles = 
     : '';
 
   return `<!DOCTYPE html>
-<html lang="${locale.locale}"><head>
+<html lang="${locale.locale}"${locale.code === 'ar' ? ' dir="rtl"' : ''}><head>
 ${consentHead()}
 <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>${pageTitle}</title><meta name="description" content="${esc(locale.hubIntro)}" />

@@ -191,3 +191,32 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans
   cursor: not-allowed;
   pointer-events: none;
 }
+
+/* Arabic RTL support */
+[dir="rtl"] body {
+  font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+[dir="rtl"] .guide-kicker {
+  border-left: none;
+  border-right: 3px solid #D4A843;
+  border-radius: 1rem 0 0 1rem;
+}
+[dir="rtl"] .guide-table th {
+  text-align: right;
+}
+[dir="rtl"] .guide-prose ul,
+[dir="rtl"] .guide-prose ol {
+  margin: 0 1.2rem 1.35rem 0;
+}
+[dir="rtl"] .guide-prose li {
+  padding-right: .25rem;
+  padding-left: 0;
+}
+[dir="rtl"] .guide-featured-badge {
+  left: auto;
+  right: 1rem;
+}
+[dir="rtl"] .guide-next::before {
+  background: linear-gradient(-90deg, rgba(226, 184, 75, 0.78), transparent 85%);
+}
+

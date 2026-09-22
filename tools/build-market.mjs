@@ -68,7 +68,7 @@ function marketPage(locale, metal) {
   const commentary = marketCommentary[metal.id]?.[locale.code];
 
   return `<!DOCTYPE html>
-<html lang="${locale.locale}"><head>
+<html lang="${locale.locale}"${locale.code === 'ar' ? ' dir="rtl"' : ''}><head>
 ${consentHead()}
 <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>${esc(content.seoTitle)}</title><meta name="description" content="${esc(content.description)}" />
@@ -76,6 +76,14 @@ ${consentHead()}
 <link rel="icon" href="/images/icon.png" /><link rel="canonical" href="${canonical}" />
 ${hreflang(metal)}
 ${tailwind()}
+
+<style>
+html[dir="rtl"] body {
+  font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+</style>
 <script type="application/ld+json">${JSON.stringify(articleLd)}</script><script type="application/ld+json">${JSON.stringify(breadcrumbLd)}</script>
 <style>
 .tv-placeholder {
@@ -119,6 +127,16 @@ ${tailwind()}
 @media (min-width: 768px) {
   .market-context-panel { padding: 1.75rem 2rem 1.9rem; }
 }
+
+html[dir="rtl"] body {
+  font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+html[dir="rtl"] .market-context-panel {
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: 3px solid rgba(148, 163, 184, 0.62);
+}
 </style>
 </head><body class="bg-navy text-gray-200">
 ${marketNav(locale, metal)}
@@ -149,7 +167,7 @@ ${marketNav(locale, metal)}
             <button data-consent-accept="functional" class="mt-4 rounded-full bg-navy/50 border border-white/10 px-4 py-2 text-xs font-bold hover:bg-navy transition cursor-pointer">${esc(chart.consentButton)}</button>
           </div>
           <!-- Widget container -->
-          <div class="tradingview-widget-container" style="height:100%;width:100%">
+          <div class="tradingview-widget-container" style="height:100%;width:100%" dir="ltr">
             <div id="tradingview_chart" class="tradingview-widget-container__widget" style="height:100%;width:100%"></div>
           </div>
           <div id="tv-fallback" class="tv-placeholder h-full" style="display:none;">
@@ -313,12 +331,12 @@ function marketHubPage(locale) {
       <div class="absolute -top-12 -right-12 w-24 h-24 bg-gold/10 blur-[30px] rounded-full pointer-events-none group-hover:bg-gold/20 transition duration-500"></div>
       <h3 class="text-xl font-bold text-white flex items-center gap-2 mb-2"><ion-icon name="trending-up-outline" class="text-gold"></ion-icon> ${esc(content.title)}</h3>
       <p class="text-gray-400 text-sm line-clamp-2">${esc(content.description)}</p>
-      <span class="mt-4 inline-flex items-center gap-2 font-bold text-gold text-sm group-hover:translate-x-1 transition-transform">${esc(locale.marketLabel)} <span aria-hidden="true">→</span></span>
+      <span class="mt-4 inline-flex items-center gap-2 font-bold text-gold text-sm group-hover:translate-x-1 transition-transform">${esc(locale.marketLabel)} <span aria-hidden="true">${locale.code === 'ar' ? '←' : '→'}</span></span>
     </a>`;
   }).join('\n');
 
   return `<!DOCTYPE html>
-<html lang="${locale.locale}"><head>
+<html lang="${locale.locale}"${locale.code === 'ar' ? ' dir="rtl"' : ''}><head>
 ${consentHead()}
 <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>${esc(locale.marketHubTitle)} | MyGoldFolio</title><meta name="description" content="${esc(locale.marketHubIntro)}" />

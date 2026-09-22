@@ -26,7 +26,7 @@ const strictOrigins = strictAll || args.includes('--strict-origins');
 const REPO = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const ROOT = rootArg ? resolve(rootArg) : REPO;
 const BASE = 'https://mygoldfolio.de';
-const LOCALES = ['en', 'de', 'tr', 'fr', 'es', 'it', 'pt'];
+const LOCALES = ['en', 'de', 'tr', 'fr', 'es', 'it', 'pt', 'ar'];
 
 function walk(dir, out = []) {
   if (!existsSync(dir)) return out;
@@ -120,7 +120,7 @@ function expectedLocaleRoutes() {
   //    (article slugs are per-locale, so the content module is the truth source)
   const routes = [];
   const enPages = publicPages().filter((rel) => {
-    if (/^(de|es|fr|it|pt|tr)\//.test(rel)) return false;
+    if (/^(de|es|fr|it|pt|tr|ar)\//.test(rel)) return false;
     if (rel === '404.html' || rel === 'googlecaf002d6e499638a.html' || rel === 'docs/changelog-internalonly.html') return false;
     if (rel.startsWith('guides/')) return false;
     return true;
@@ -169,8 +169,10 @@ function checkSeoHead(pages, add, warn) {
     const alternates = [...head.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"[^>]*>/gi)].map((m) => [m[1], m[2]]);
     const langs = new Set(alternates.map(([l]) => l));
     const hasXDefault = langs.has('x-default');
+    const isGuide = rel.startsWith('guides/') || /^(de\/ratgeber|fr\/guides|tr\/rehber|es\/guias|it\/guide|pt\/guias|ar\/guides)\//.test(rel);
+    const expectedCount = LOCALES.length;
     const coreLocales = alternates.filter(([l]) => LOCALES.map((x) => (x === 'pt' ? 'pt-BR' : x)).includes(l));
-    if (coreLocales.length !== 7) warn(rel, `hreflang set has ${coreLocales.length}/7 locales`);
+    if (coreLocales.length !== expectedCount) warn(rel, `hreflang set has ${coreLocales.length}/${expectedCount} locales`);
     if (!hasXDefault) warn(rel, 'hreflang x-default missing');
     for (const [, href] of alternates) {
       const targetPath = href.startsWith(BASE) ? href.slice(BASE.length) : href;
